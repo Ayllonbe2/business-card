@@ -50,3 +50,13 @@ body {
   .social-icons a {
     transition: transform 0.3s ease;
   }
+  .languages {
+    margin: 10px 0;
+  }
+  
+  .flag {
+    width: 1px;      /* tamaño pequeño */
+    height: auto;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
