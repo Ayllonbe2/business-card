@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Card</title>
+  <title>Aarón Ayllón Benítez · AI/ML Leader</title>
+  <meta name="description" content="Aarón Ayllón Benítez — AI/ML Leader, Product & Platform Strategy. PhD Computer Science, MSc AI. Based in Madrid." />
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
@@ -11,9 +12,189 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* Opcional: feedback visual de bandera activa */
-    .flag { cursor: pointer; }
-    .active-flag { outline: 2px solid #333; border-radius: 4px; }
+    :root {
+      --accent: #1F3A5F;
+      --text-gray: #404040;
+      --light-gray: #7F7F7F;
+      --bg-soft: #F7F8FA;
+    }
+
+    body { color: var(--text-gray); }
+
+    /* Hero tagline */
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: var(--text-gray);
+      max-width: 780px;
+      margin: 1rem auto 1.5rem;
+      line-height: 1.5;
+      font-style: italic;
+    }
+    .hero-tagline strong { color: var(--accent); font-style: normal; }
+
+    /* Flags */
+    .flag { cursor: pointer; margin: 0 4px; transition: transform 0.15s; }
+    .flag:hover { transform: scale(1.08); }
+    .active-flag { outline: 2px solid var(--accent); border-radius: 4px; }
+
+    /* Section headings */
+    section h2 {
+      color: var(--accent);
+      font-weight: 600;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-bottom: 1.25rem;
+    }
+    section h2.text-center {
+      display: block;
+      border-bottom: none;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    section h2.text-center::after {
+      content: "";
+      width: 60px; height: 2px; background: var(--accent);
+      position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    }
+
+    /* Portfolio cards */
+    .portfolio-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      transition: transform 0.18s, box-shadow 0.18s;
+      height: 100%;
+      overflow: hidden;
+    }
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+    .portfolio-card .card-icon {
+      padding: 1.5rem;
+      font-size: 2.2rem;
+      color: var(--accent);
+      background: var(--bg-soft);
+      text-align: center;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .portfolio-card .badge-type {
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* Timeline */
+    .timeline {
+      list-style: none;
+      padding-left: 0;
+      border-left: 3px solid var(--accent);
+      margin-left: 10px;
+    }
+    .timeline > li {
+      padding: 0.5rem 0 1.5rem 1.5rem;
+      position: relative;
+    }
+    .timeline > li::before {
+      content: "";
+      position: absolute;
+      left: -9px; top: 12px;
+      width: 15px; height: 15px;
+      background: var(--accent);
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+    .timeline h5 { color: var(--accent); font-weight: 600; margin-bottom: 0.2rem; }
+    .timeline .role-dates { color: var(--light-gray); font-style: italic; font-size: 0.9rem; }
+    .timeline ul { margin-top: 0.5rem; padding-left: 1.2rem; font-size: 0.92rem; }
+    .timeline ul li { margin-bottom: 0.35rem; line-height: 1.45; }
+
+    /* Accordion publications */
+    .pub-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+    .pub-header {
+      padding: 0.9rem 1.1rem;
+      background: var(--bg-soft);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .pub-header:hover { background: #eef0f4; }
+    .pub-title { margin: 0; font-weight: 600; color: var(--accent); font-size: 0.98rem; }
+    .pub-venue { color: var(--light-gray); font-size: 0.82rem; margin-top: 0.15rem; }
+    .pub-toggle {
+      font-size: 1.3rem;
+      color: var(--accent);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .pub-card.open .pub-toggle { transform: rotate(45deg); }
+    .pub-body {
+      padding: 0 1.1rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.28s ease, padding 0.28s ease;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .pub-card.open .pub-body {
+      padding: 1rem 1.1rem;
+      max-height: 600px;
+    }
+    .pub-authors { color: var(--text-gray); font-style: italic; margin-bottom: 0.4rem; }
+    .pub-links a {
+      margin-right: 1rem;
+      color: var(--accent);
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+    .pub-links a:hover { text-decoration: underline; }
+
+    /* Teaching + Editorial tables */
+    .simple-table {
+      width: 100%;
+      font-size: 0.92rem;
+    }
+    .simple-table th {
+      color: var(--accent);
+      font-weight: 600;
+      padding: 0.55rem 0.4rem;
+      border-bottom: 2px solid var(--accent);
+      text-align: left;
+    }
+    .simple-table td {
+      padding: 0.55rem 0.4rem;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* Talks list */
+    .talks-list li {
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+    .talks-list strong { color: var(--accent); }
+
+    /* Social icons */
+    .social-icons a { margin: 0 8px; }
+
+    /* Nav polish */
+    .navbar-brand { font-weight: 600; color: var(--accent) !important; }
+    .nav-link { color: var(--text-gray) !important; font-weight: 500; }
+    .nav-link:hover { color: var(--accent) !important; }
+
+    footer { background: var(--accent) !important; }
   </style>
 </head>
 
@@ -26,65 +207,72 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#about" data-i18n="navAbout">About me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" data-i18n="navAbout">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#portfolio" data-i18n="navPortfolio">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="navExperience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publications" data-i18n="navPublications">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#teaching" data-i18n="navTeaching">Teaching</a></li>
+        <li class="nav-item"><a class="nav-link" href="#editorial" data-i18n="navEditorial">Editorial</a></li>
+        <li class="nav-item"><a class="nav-link" href="#talks" data-i18n="navTalks">Talks</a></li>
         <li class="nav-item"><a class="nav-link" href="#education" data-i18n="navEducation">Education</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Sección Hero / Inicio -->
-  <header class="jumbotron jumbotron-fluid text-center" id="home" style="padding-top: 6rem;">
+  <header class="jumbotron jumbotron-fluid text-center" id="home" style="padding-top: 6rem; background: var(--bg-soft);">
     <div class="container">
-      <h1 class="display-4" data-i18n="heroTitle">Welcome to my Business card</h1>
+      <h1 class="display-4" style="color: var(--accent); font-weight: 600;" data-i18n="heroTitle">Aarón Ayllón Benítez</h1>
+      <p class="lead mb-2" data-i18n="heroSubtitle" style="font-weight: 500;">
+        AI / ML Leader · Product &amp; Platform Strategy · Research ↔ Production
+      </p>
+
+      <p class="hero-tagline" data-i18n="heroTagline">
+        <strong>PhD Computer Science</strong> · <strong>MSc Artificial Intelligence</strong> · Four years line-managing ML teams at BASF Digital Solutions. I build the bridge between research rigor and production pragmatism.
+      </p>
 
       <div class="languages mt-3 mb-3">
-        <img src="flags/es.svg" alt="Spanish" class="flag" width="40" data-lang="es">
+        <img src="flags/es.svg" alt="Español" class="flag" width="40" data-lang="es">
         <img src="flags/gb.svg" alt="English" class="flag" width="40" data-lang="en">
-        <img src="flags/fr.svg" alt="French"  class="flag" width="40" data-lang="fr">
+        <img src="flags/fr.svg" alt="Français" class="flag" width="40" data-lang="fr">
       </div>
 
-      <p class="lead" data-i18n="heroSubtitle">Head of Product | Business Impact | People & AI</p>
-    </div>
-
-    <!-- Social Icons Section -->
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/aar%C3%B3n-ayll%C3%B3n-ben%C3%ADtez-ph-d-b5599158/" target="_blank" rel="noopener noreferrer">
-        <img src="linkedin.png" alt="LinkedIn Icon" width="40" height="40" />
-      </a>
-      <a href="https://scholar.google.es/citations?user=m320tuQAAAAJ&hl=es&oi=ao" target="_blank" rel="noopener noreferrer">
-        <img src="scholar.png" alt="Google Scholar Icon" width="40" height="40" />
-      </a>
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/aar%C3%B3n-ayll%C3%B3n-ben%C3%ADtez-ph-d-b5599158/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <img src="linkedin.png" alt="LinkedIn" width="40" height="40" />
+        </a>
+        <a href="https://scholar.google.es/citations?user=m320tuQAAAAJ&hl=es&oi=ao" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+          <img src="scholar.png" alt="Google Scholar" width="40" height="40" />
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Sección Sobre mí -->
+  <!-- Sección About -->
   <section id="about" class="py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 text-center">
-          <img src="Aaron_sin_fondo.png" class="rounded-circle img-fluid" alt="Profile photo" />
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="Aaron_sin_fondo.png" class="rounded-circle img-fluid" alt="Aarón Ayllón Benítez" style="max-width: 260px;" />
         </div>
-
         <div class="col-md-8" style="text-align: justify">
           <h2 data-i18n="aboutExecTitle">Executive Summary</h2>
-          <br>
-
           <p data-i18n="aboutExecText">
-            Product leader with a strong focus on business impact, portfolio rationalization and people management. Experienced in making difficult product decisions, including stopping underperforming initiatives, optimizing costs and reallocating resources to maximize company outcomes. Proven ability to lead cross-functional teams in complex, AI-driven environments, always prioritizing company strategy over individual product survival.
+            Leading ML teams is a translation problem — between research and production, between long-term R&amp;D and short-term commitments, between what models can do and what the business actually needs. I have spent the last four years doing that translation at BASF Digital Solutions, scaling direct reports from 8 to 16 within a 60-person multi-function portfolio, and leading two production ML platforms adopted across multiple internal teams.
+          </p>
+          <p data-i18n="aboutExecText2">
+            My path is deliberate: PhD in Computer Science (Bordeaux), MSc in Artificial Intelligence, postdoctoral research applying ML to gene regulatory networks, first-author publications in Q1 journals and IEEE, and competitive research grants as main author — followed by industry because the most interesting ML problems are the ones that have to ship. Portfolio decisions, team scaling, and platform thinking are where I operate best.
           </p>
 
-          <h2 data-i18n="aboutFocusTitle">Product & Leadership Focus</h2>
-          <br>
-
+          <h2 class="mt-4" data-i18n="aboutFocusTitle">Focus Areas</h2>
           <ul>
-            <li data-i18n="focus1">Product portfolio evaluation and rationalization</li>
-            <li data-i18n="focus2">Cost optimization and ROI-driven product decisions</li>
-            <li data-i18n="focus3">People management: performance assessment, development and accountability</li>
-            <li data-i18n="focus4">Strategic prioritization under financial and organizational constraints</li>
-            <li data-i18n="focus5">AI-driven product strategy and execution</li>
-            <li data-i18n="focus6">Alignment between business, technology and long-term company goals</li>
+            <li data-i18n="focus1">Production ML platforms &amp; self-service data products</li>
+            <li data-i18n="focus2">Portfolio rationalization, ROI-driven decisions, cost avoidance</li>
+            <li data-i18n="focus3">People leadership: hiring, performance, career paths, underperformance management</li>
+            <li data-i18n="focus4">Computer vision, time-series forecasting, knowledge graphs, GenAI applications</li>
+            <li data-i18n="focus5">Research-to-production translation &amp; AI-native engineering culture</li>
+            <li data-i18n="focus6">Cross-functional alignment: business, engineering, data science, operations</li>
           </ul>
         </div>
       </div>
@@ -94,47 +282,67 @@
   <!-- Sección Portfolio -->
   <section id="portfolio" class="bg-light py-5">
     <div class="container">
-      <h2 class="mb-4 text-center" data-i18n="portfolioTitle">Selected Product & Innovation Initiatives</h2>
+      <h2 class="mb-4 text-center" data-i18n="portfolioTitle">Selected Projects &amp; Platforms</h2>
+      <p class="text-center mb-5" style="color: var(--light-gray); max-width: 720px; margin-left: auto; margin-right: auto;" data-i18n="portfolioIntro">
+        Four initiatives that illustrate how I bridge research and production — from academic tools adopted by bioinformatics communities to enterprise ML platforms with measurable business impact.
+      </p>
 
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 h-90">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="" />
+        <!-- CV Platform -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="portfolio-card">
+            <div class="card-icon">⚙️</div>
             <div class="card-body">
-              <h5 class="card-title">
-                <a href="https://gsan.labri.fr/">GSAn</a> - <span data-i18n="portfolioCard1Label">Research project</span>
-              </h5>
-              <br>
-              <p class="card-text" data-i18n="portfolioCard1Text">
-                Led the development of an interactive web platform transforming high-throughput gene data into actionable insights. Focused on usability, scalability and decision-support rather than purely technical output.
+              <span class="badge-type" data-i18n="pfType1">Production Platform</span>
+              <h5 class="card-title mt-3" data-i18n="pfCard1Title">Computer Vision Platform</h5>
+              <p class="card-text" data-i18n="pfCard1Text">
+                Led a Computer Vision platform offering reusable templates for classification, segmentation and detection — now in production across multiple internal teams. Delivered multi-million-euro cumulative cost savings during my ownership.
               </p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card mb-4 h-90">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="" />
+        <!-- Forecasting Platform -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="portfolio-card">
+            <div class="card-icon">📈</div>
             <div class="card-body">
-              <h5 class="card-title">
-                <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1131667/full">EPPO Ontology</a>
-                - <span data-i18n="portfolioCard2Label">Research and Industry project</span>
-              </h5>
-              <p class="card-text" data-i18n="portfolioCard2Text">
-                Contributed to the development of an internal ontology integrating regulatory and external biological data. Enabled more flexible data extraction, improved decision-making and reduced manual effort in crop-protection workflows.
+              <span class="badge-type" data-i18n="pfType2">Self-Service Platform</span>
+              <h5 class="card-title mt-3" data-i18n="pfCard2Title">Forecasting Platform</h5>
+              <p class="card-text" data-i18n="pfCard2Text">
+                Led evolution and maintenance of a self-service time-series forecasting platform aimed at business users rather than data scientists — generating significant recurring annual savings for the organisation.
               </p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card mb-4 h-90">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="" />
+        <!-- GSAn -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="portfolio-card">
+            <div class="card-icon">🧬</div>
             <div class="card-body">
-              <h5 class="card-title" data-i18n="portfolioCard3Title">AI Industry Solution</h5>
-              <br>
-              <p class="card-text" data-i18n="portfolioCard3Text">
-                Led the evolution of an initial concept into a production-ready solution improving user adoption while generating operational cost efficiencies. Ensured integration with existing systems and alignment with quality and business standards.
+              <span class="badge-type" data-i18n="pfType3">Research Software</span>
+              <h5 class="card-title mt-3">
+                <a href="https://gsan.labri.fr/" target="_blank" rel="noopener">GSAn</a>
+              </h5>
+              <p class="card-text" data-i18n="pfCard3Text">
+                Interactive web platform transforming high-throughput gene data into actionable biological insights. Published in NAR Genomics and Bioinformatics (Q1, 2020). Used by researchers as an alternative to classical enrichment analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EPPO Ontology -->
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="portfolio-card">
+            <div class="card-icon">🌱</div>
+            <div class="card-body">
+              <span class="badge-type" data-i18n="pfType4">Research + Industry</span>
+              <h5 class="card-title mt-3">
+                <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1131667/full" target="_blank" rel="noopener">EPPO Ontology</a>
+              </h5>
+              <p class="card-text" data-i18n="pfCard4Text">
+                Contributed to an internal ontology integrating regulatory and biological data. Enabled flexible data extraction, improved decision-making and reduced manual effort in crop-protection workflows. Published in Frontiers in AI (2023).
               </p>
             </div>
           </div>
@@ -150,65 +358,387 @@
 
       <ul class="timeline">
         <li>
-          <h5 data-i18n="exp1Title">Product Manager - BASF Digital Solutions S.L. (Spain)</h5>
-          <span style="font-style: italic;" data-i18n="exp1Dates">2022 - Nowadays</span>
-          <ul style="font-size: small;">
-            <li data-i18n="exp1b1">Own product strategy, roadmap and execution for AI-driven digital solutions in industrial and R&D contexts.</li>
-            <li data-i18n="exp1b2">Lead cross-functional teams of data scientists, business designers, software engineers and DevOps, with responsibility for delivery, cost control and team performance.</li>
-            <li data-i18n="exp1b3">Continuously evaluate the product portfolio to identify low-value or non-performing initiatives, recommending shutdowns, scope reductions or strategic pivots when required.</li>
-            <li data-i18n="exp1b4">Optimize product costs through prioritization, staffing decisions and resource reallocation toward higher-impact initiatives.</li>
-            <li data-i18n="exp1b5">Manage people performance, identifying high-potential talent and addressing low performance through clear accountability and improvement plans.</li>
-            <li data-i18n="exp1b6">Act as a bridge between business stakeholders, technical teams and leadership to ensure product decisions serve company-wide strategic objectives.</li>
+          <h5 data-i18n="exp1Title">Lead Product Manager — BASF Digital Solutions S.L. (Spain)</h5>
+          <span class="role-dates" data-i18n="exp1Dates">2022 – Present</span>
+          <ul>
+            <li data-i18n="exp1b1">Lead two production ML platforms: a Computer Vision platform with templates for classification, segmentation and detection; and a self-service Forecasting platform for time-series data.</li>
+            <li data-i18n="exp1b2">Scaled direct reports from 8 to 16 (data scientists, ML engineers, solution designers); administrative lead for a broader 60-person multi-function portfolio.</li>
+            <li data-i18n="exp1b3">Execute portfolio decisions — including transferring successful products to their best-fit business owners — balancing R&amp;D ambition with operational pragmatism.</li>
+            <li data-i18n="exp1b4">Own full people cycle: hiring, career paths, performance reviews, and underperformance management.</li>
+            <li data-i18n="exp1b5">Partner as technical peer with senior ML engineers — review architecture, pipelines, deployment patterns; challenge trade-offs with quantitative grounding.</li>
+            <li data-i18n="exp1b6">Drive AI-native engineering culture: team adoption of AI dev tools (Copilot, Junie and equivalents) and targeted LLM integration in ML pipelines.</li>
           </ul>
         </li>
 
         <li>
-          <h5 data-i18n="exp2Title">Ontology Lead - BASF Digital Solutions S.L. (Spain)</h5>
-          <span style="font-style: italic;" data-i18n="exp2Dates">2021 - 2022</span>
-          <ul style="font-size: small;">
-            <li data-i18n="exp2b1">Led a specialized team of ontology engineers and data scientists supporting agricultural and crop-protection use cases.</li>
-            <li data-i18n="exp2b2">Defined and executed ontology strategy aligned with both research and industrial business needs.</li>
+          <h5 data-i18n="exp2Title">Ontology Lead — BASF Digital Solutions S.L. (Spain)</h5>
+          <span class="role-dates" data-i18n="exp2Dates">2021 – 2022</span>
+          <ul>
+            <li data-i18n="exp2b1">Owned enterprise ontology and knowledge graph strategy — foundational data infrastructure for interoperability across digital products and machine-readable context for AI systems.</li>
+            <li data-i18n="exp2b2">Managed a specialized team of ontology engineers and data scientists supporting agricultural and crop-protection use cases.</li>
             <li data-i18n="exp2b3">Coordinated multiple stakeholders across R&amp;D, digitalization teams and external partners.</li>
-            <li data-i18n="exp2b4">Owned prioritization, staffing optimization and delivery planning to ensure sustainable execution and long-term value creation.</li>
+            <li data-i18n="exp2b4">Built internal tooling analogous to a platform ecosystem serving other engineering teams.</li>
           </ul>
         </li>
 
         <li>
-          <h5 data-i18n="exp3Title">Postdoc researcher - Umeå Plant Science Centre (Sweden)</h5>
-          <span style="font-style: italic;" data-i18n="exp3Dates">2020 - 2021</span>
-          <ul style="font-size: small;">
-            <li data-i18n="exp3b1">Led the development of AI-based methods combining semantic similarity and machine learning to improve gene prediction in complex biological systems.</li>
-            <li data-i18n="exp3b2">Delivered scalable computational solutions integrating data science, biology and advanced analytics.</li>
+          <h5 data-i18n="exp3Title">Postdoctoral Researcher — Umeå Plant Science Centre (Sweden)</h5>
+          <span class="role-dates" data-i18n="exp3Dates">Feb 2020 – 2021</span>
+          <ul>
+            <li data-i18n="exp3b1">Kempestiftelserna Fellowship — applied machine learning and gene regulatory network inference to improve functional gene annotation in Norway spruce.</li>
+            <li data-i18n="exp3b2">Designed production-oriented ML pipelines with reproducibility, auto-scaling and experiment tracking.</li>
+            <li data-i18n="exp3b3">Secured 2 competitive grants as main author (KSLA &amp; SPPS); Guest Editor for a Q1 journal special issue.</li>
           </ul>
         </li>
 
         <li>
-          <h5 data-i18n="exp4Title">Research engineer - Bordeaux University Hospital (France)</h5>
-          <span style="font-style: italic;" data-i18n="exp4Dates">2019 - 2020</span>
-          <ul><li style="font-size: small;" data-i18n="exp4b1">Developed machine-learning models for viral DNA prediction to support early diagnosis and improved clinical decision-making.</li></ul>
+          <h5 data-i18n="exp4Title">Bioinformatics Engineer — ADERA / INSERM (France)</h5>
+          <span class="role-dates" data-i18n="exp4Dates">Sep 2019 – Jan 2020</span>
+          <ul>
+            <li data-i18n="exp4b1">Developed ML algorithms for medical data analysis — MHC epitope prediction for HIV patients using patient sequence data and state-of-the-art computational methods.</li>
+            <li data-i18n="exp4b2">Earlier engagement with INSERM Bordeaux (Nov 2015 – Aug 2016): developed algorithms for omics data integration and enrichment analysis under Rodolphe Thiébaut.</li>
+          </ul>
         </li>
 
         <li>
-          <h5 data-i18n="exp5Title">Research engineer - LaBRI (France)</h5>
-          <span style="font-style: italic;" data-i18n="exp5Dates">2015 - 2017</span>
-          <ul><li style="font-size: small;" data-i18n="exp5b1">Designed computational methods for synthetic gene set annotation using ontologies, semantic similarity and bioinformatics frameworks.</li></ul>
+          <h5 data-i18n="exp5Title">PhD Researcher — Université de Bordeaux / LaBRI (France)</h5>
+          <span class="role-dates" data-i18n="exp5Dates">Sep 2016 – Sep 2019</span>
+          <ul>
+            <li data-i18n="exp5b1">Ministerial funding (MESR). Thesis: "Development of new computational methods for a synthetic gene set annotation" — semantic similarity, ML, knowledge representation.</li>
+            <li data-i18n="exp5b2">Developed GSAn (gene set analysis web platform) and algorithms leveraging ontology-based visualisation. Published in NAR Genomics and Bioinformatics, PLoS ONE, and IEEE IV.</li>
+          </ul>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- Sección Education -->
-  <section id="education" class="py-5">
+  <!-- Publications -->
+  <section id="publications" class="bg-light py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center" data-i18n="pubTitle">Publications</h2>
+      <p class="text-center mb-4" style="color: var(--light-gray); max-width: 720px; margin-left: auto; margin-right: auto;" data-i18n="pubIntro">
+        First-author peer-reviewed publications in Q1 journals and IEEE proceedings. Click on any item to expand details.
+      </p>
+
+      <!-- Pub 1 -->
+      <div class="pub-card">
+        <div class="pub-header" onclick="togglePub(this)">
+          <div>
+            <p class="pub-title" data-i18n="pub1Title">GSAn: a Web server as an alternative to enrichment analysis for annotating gene sets</p>
+            <div class="pub-venue"><strong>NAR Genomics and Bioinformatics</strong> · 2020 · <em>Q1</em></div>
+          </div>
+          <span class="pub-toggle">+</span>
+        </div>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>A. Ayllon-Benitez</strong>, R. Bourqui, P. Thébault, F. Mougin</div>
+          <p data-i18n="pub1Desc">Presents GSAn, a web server offering an alternative to classical over-representation analysis. Clusters semantic relationships between annotation terms to provide richer, more interpretable gene-set annotations.</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1093/nargab/lqaa017" target="_blank" rel="noopener">DOI ↗</a>
+            <a href="https://gsan.labri.fr/" target="_blank" rel="noopener">Software ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pub 2 -->
+      <div class="pub-card">
+        <div class="pub-header" onclick="togglePub(this)">
+          <div>
+            <p class="pub-title" data-i18n="pub2Title">A new method for evaluating the impacts of semantic similarity measures on the annotation of gene sets</p>
+            <div class="pub-venue"><strong>PLoS ONE</strong> · 2018</div>
+          </div>
+          <span class="pub-toggle">+</span>
+        </div>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>A. Ayllon-Benitez</strong>, F. Mougin, J. Allali, R. Thiébaut, P. Thébault</div>
+          <p data-i18n="pub2Desc">Introduces a novel evaluation methodology for semantic similarity measures applied to gene set annotation, quantifying how measure choice affects downstream biological interpretation.</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1371/journal.pone.0208037" target="_blank" rel="noopener">DOI ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pub 3 -->
+      <div class="pub-card">
+        <div class="pub-header" onclick="togglePub(this)">
+          <div>
+            <p class="pub-title" data-i18n="pub3Title">Deciphering gene sets annotations with ontology-based visualization</p>
+            <div class="pub-venue"><strong>IEEE 21st International Conference on Information Visualization (IV)</strong> · London · 2017</div>
+          </div>
+          <span class="pub-toggle">+</span>
+        </div>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>A. Ayllon-Benitez</strong>, P. Thébault, J.T. Fernández-Breis, M. Quesada-Martinez, F. Mougin, R. Bourqui</div>
+          <p data-i18n="pub3Desc">Proposes an ontology-driven visualization approach for interpreting gene set annotations. Invited talk — travel grant awarded by the Société Française de BioInformatique (SFBI).</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1109/iV.2017.18" target="_blank" rel="noopener">DOI ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pub 4 -->
+      <div class="pub-card">
+        <div class="pub-header" onclick="togglePub(this)">
+          <div>
+            <p class="pub-title" data-i18n="pub4Title">Development and Characterization of a Fixed Repertoire of Blood Transcriptome Modules Based on Co-expression Patterns Across Immunological States</p>
+            <div class="pub-venue"><strong>bioRxiv</strong> · 2019 · <em>Collaborative</em></div>
+          </div>
+          <span class="pub-toggle">+</span>
+        </div>
+        <div class="pub-body">
+          <div class="pub-authors">M.C. Altman, D. Rinchai, N. Baldwin, M. Toufiq, E. Whalen, M. Garand, B. Ahamed Kabeer, M. Alfaki, S. Presnell, P. Khaenam, <strong>A. Ayllon Benitez</strong> et al.</div>
+          <p data-i18n="pub4Desc">Large multi-author collaboration producing a reproducible module framework for blood transcriptome analysis across immunological conditions.</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1101/525709" target="_blank" rel="noopener">DOI ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pub 5 -->
+      <div class="pub-card">
+        <div class="pub-header" onclick="togglePub(this)">
+          <div>
+            <p class="pub-title" data-i18n="pub5Title">EPPO Ontology Application in Crop Protection</p>
+            <div class="pub-venue"><strong>Frontiers in Artificial Intelligence</strong> · 2023 · <em>Industry</em></div>
+          </div>
+          <span class="pub-toggle">+</span>
+        </div>
+        <div class="pub-body">
+          <div class="pub-authors" data-i18n="pub5Authors">Industry contribution — BASF Digital Solutions</div>
+          <p data-i18n="pub5Desc">Contributed to the development of an internal ontology integrating regulatory and external biological data for crop-protection workflows. Enabled flexible data extraction and reduced manual effort.</p>
+          <div class="pub-links">
+            <a href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2023.1131667/full" target="_blank" rel="noopener">Article ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pub 6 -->
+      <div class="pub-card">
+        <div class="pub-header" onclick="togglePub(this)">
+          <div>
+            <p class="pub-title" data-i18n="pub6Title">rGSAn: An R package dedicated to gene set analysis using semantic similarity measures</p>
+            <div class="pub-venue"><strong>useR! Conference</strong> · Toulouse · 2019 · <em>Invited talk</em></div>
+          </div>
+          <span class="pub-toggle">+</span>
+        </div>
+        <div class="pub-body">
+          <div class="pub-authors"><strong>A. Ayllon-Benitez</strong>, F. Mougin, P. Thébault</div>
+          <p data-i18n="pub6Desc">Presented the R implementation of GSAn at the useR! Conference, opening the methodology to the broader R and bioinformatics community.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="https://scholar.google.es/citations?user=m320tuQAAAAJ&hl=es&oi=ao" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 500;" data-i18n="pubScholarLink">See full publication record on Google Scholar →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching & Mentoring -->
+  <section id="teaching" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center" data-i18n="teachTitle">Teaching &amp; Mentoring</h2>
+      <p class="text-center mb-4" style="color: var(--light-gray); max-width: 720px; margin-left: auto; margin-right: auto;" data-i18n="teachIntro">
+        100+ hours of university teaching at the masters and bachelor's level, plus mentoring of 25+ students across four academic years — covering bioinformatics, databases and computer science fundamentals.
+      </p>
+
+      <h5 style="color: var(--accent); margin-top: 1.5rem;" data-i18n="teachSubtitle1">University Teaching</h5>
+      <div class="table-responsive">
+        <table class="simple-table">
+          <thead>
+            <tr>
+              <th data-i18n="teachCol1">Course</th>
+              <th data-i18n="teachCol2">Institution &amp; Level</th>
+              <th data-i18n="teachCol3">Year</th>
+              <th data-i18n="teachCol4">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="teach1">Applied Functional Genomics (VT20)</td>
+              <td data-i18n="teach1b">Umeå University · Master in Biology (2<sup>nd</sup> semester)</td>
+              <td>2019–2020</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td data-i18n="teach2">Introduction to Databases (M1104)</td>
+              <td data-i18n="teach2b">Université de Bordeaux · DUT Informatique</td>
+              <td>2017–2018</td>
+              <td>54</td>
+            </tr>
+            <tr>
+              <td data-i18n="teach3">Introduction to Environment Systems (M1101)</td>
+              <td data-i18n="teach3b">Université de Bordeaux · DUT Informatique</td>
+              <td>2017–2018</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td colspan="3" style="text-align: right; font-weight: 600; color: var(--accent);" data-i18n="teachTotal">Total</td>
+              <td style="font-weight: 600; color: var(--accent);">104</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h5 style="color: var(--accent); margin-top: 2rem;" data-i18n="teachSubtitle2">Student Mentoring</h5>
+      <div class="table-responsive">
+        <table class="simple-table">
+          <thead>
+            <tr>
+              <th data-i18n="mentorCol1">Year</th>
+              <th data-i18n="mentorCol2">Level</th>
+              <th data-i18n="mentorCol3">Students</th>
+              <th data-i18n="mentorCol4">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2019</td>
+              <td data-i18n="mentor1">2<sup>nd</sup> year Master in Software Engineering</td>
+              <td>7</td>
+              <td data-i18n="mentorMonths2">2 months</td>
+            </tr>
+            <tr>
+              <td>2018</td>
+              <td data-i18n="mentor2">2<sup>nd</sup> year Bachelor in Biology</td>
+              <td>1</td>
+              <td data-i18n="mentorMonths2">2 months</td>
+            </tr>
+            <tr>
+              <td>2018</td>
+              <td data-i18n="mentor3">2<sup>nd</sup> year Master in Software Engineering</td>
+              <td>8</td>
+              <td data-i18n="mentorMonths2">2 months</td>
+            </tr>
+            <tr>
+              <td>2017</td>
+              <td data-i18n="mentor4">1<sup>st</sup> year Master in Bioinformatics</td>
+              <td>4</td>
+              <td data-i18n="mentorMonths2">2 months</td>
+            </tr>
+            <tr>
+              <td>2016</td>
+              <td data-i18n="mentor5">1<sup>st</sup> year CS Engineering</td>
+              <td>1</td>
+              <td data-i18n="mentorMonths2">2 months</td>
+            </tr>
+            <tr>
+              <td>2016</td>
+              <td data-i18n="mentor6">1<sup>st</sup> year Master in Bioinformatics</td>
+              <td>4</td>
+              <td data-i18n="mentorMonths2">2 months</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial & Peer Review -->
+  <section id="editorial" class="bg-light py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center" data-i18n="editTitle">Editorial &amp; Peer Review</h2>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h5 style="color: var(--accent);" data-i18n="editSubtitle1">Guest Editor</h5>
+          <p data-i18n="editGuest">
+            <strong>Plants (MDPI, Q1)</strong> — Special issue: <em>"Bridging the Annotation Gap in Non-Model Plant Species"</em>. 2020–present. JCR category rank 58/234 (Q1) in Plant Sciences. Keywords: gene annotation, non-model organisms, gene network inference, machine learning.
+          </p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h5 style="color: var(--accent);" data-i18n="editSubtitle2">Journal Peer Review</h5>
+          <ul style="font-size: 0.95rem; line-height: 1.6;">
+            <li data-i18n="rev1"><strong>Microorganisms</strong> (MDPI) — Reviewer · 2020</li>
+          </ul>
+        </div>
+      </div>
+
+      <h5 style="color: var(--accent);" data-i18n="editSubtitle3">Conference Peer Review</h5>
+      <div class="table-responsive">
+        <table class="simple-table">
+          <thead>
+            <tr>
+              <th data-i18n="revCol1">Conference</th>
+              <th data-i18n="revCol2">Role</th>
+              <th data-i18n="revCol3">Location</th>
+              <th data-i18n="revCol4">Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="rev2">useR! 2020 — The R User Conference</td>
+              <td data-i18n="revRole1">Sub-reviewer</td>
+              <td data-i18n="revLoc1">Virtual</td>
+              <td>2020</td>
+            </tr>
+            <tr>
+              <td data-i18n="rev3">16<sup>th</sup> ISCB Student Council Symposium</td>
+              <td data-i18n="revRole1">Sub-reviewer</td>
+              <td data-i18n="revLoc1">Virtual</td>
+              <td>2020</td>
+            </tr>
+            <tr>
+              <td data-i18n="rev4">15<sup>th</sup> ISCB Student Council Symposium</td>
+              <td data-i18n="revRole1">Sub-reviewer</td>
+              <td data-i18n="revLoc2">Switzerland</td>
+              <td>2019</td>
+            </tr>
+            <tr>
+              <td data-i18n="rev5">3<sup>rd</sup> BR-SCS Network(ING): ISCB Brazilian Student Council Symposium</td>
+              <td data-i18n="revRole1">Sub-reviewer</td>
+              <td data-i18n="revLoc3">Brazil</td>
+              <td>2018</td>
+            </tr>
+            <tr>
+              <td data-i18n="rev6">4<sup>th</sup> International Conference on Technologies and Innovation (CITI)</td>
+              <td data-i18n="revRole2">Reviewer</td>
+              <td data-i18n="revLoc4">Ecuador</td>
+              <td>2018</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Talks & Public Speaking -->
+  <section id="talks" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center" data-i18n="talksTitle">Talks &amp; Public Speaking</h2>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h5 style="color: var(--accent);" data-i18n="talksSubtitle1">Industry Talks &amp; Podcasts</h5>
+          <ul class="talks-list">
+            <li data-i18n="talk1"><strong>Cluster IA Comunidad de Madrid</strong> · Podcast: <em>"Build vs Buy vs Open Source in GenAI"</em> · Apr 2026</li>
+            <li data-i18n="talk2"><strong>Expoquimia 2023</strong> · Barcelona · Industry talk: <em>"Supporting the chemical industry through advanced image analysis"</em></li>
+            <li data-i18n="talk3"><strong>TECNALIA</strong> · Podcast: <em>"Tecnología, Pasión y Futuro"</em> · Jun 2023</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <h5 style="color: var(--accent);" data-i18n="talksSubtitle2">Scientific Communication</h5>
+          <ul class="talks-list">
+            <li data-i18n="talk4"><strong>My PhD in 1024 characters</strong> · Published essay · Bulletin de la société informatique de France · Nov 2019</li>
+            <li data-i18n="talk5"><strong>SMS Debate (Science-Media-Society)</strong> · TousEnScience · Bordeaux · 2018 &amp; 2019 editions</li>
+            <li data-i18n="talk6"><strong>Scientific Game Jam Bordeaux</strong> · <em>1<sup>st</sup> Prize</em> — video game based on PhD research · Mar 2018</li>
+            <li data-i18n="talk7"><strong>My PhD in 180 seconds (MT180s)</strong> · French PhD pitch competition · Bordeaux · Feb 2018</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="bg-light py-5">
     <div class="container">
       <h2 class="mb-4 text-center" data-i18n="educationTitle">Education</h2>
 
       <div class="row">
         <div class="col-md-6">
           <div class="card mb-4 h-100">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="" />
             <div class="card-body">
-              <h5 class="card-title" data-i18n="edu1Title">Master of Artificial Intelligence - UNIR</h5>
-              <p><span style="font-style: italic;" data-i18n="edu1Dates">2023-2024</span></p>
+              <h5 class="card-title" style="color: var(--accent);" data-i18n="edu1Title">MSc Artificial Intelligence</h5>
+              <p style="color: var(--light-gray);"><em data-i18n="edu1Inst">Universidad Internacional de La Rioja (UNIR)</em> · <span data-i18n="edu1Dates">2023–2024</span></p>
               <img src="universidades/UNIR.JPG" alt="UNIR" class="img-fluid" />
             </div>
           </div>
@@ -216,36 +746,31 @@
 
         <div class="col-md-6">
           <div class="card mb-4 h-100">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="" />
             <div class="card-body">
-              <h5 class="card-title" data-i18n="edu2Title">PhD in Informatics - University of Bordeaux</h5>
-              <p><span style="font-style: italic;" data-i18n="edu2Dates">2017-2019</span></p>
-              <img src="universidades/ub.png" alt="UB" class="img-fluid"  />
+              <h5 class="card-title" style="color: var(--accent);" data-i18n="edu2Title">PhD in Computer Science (Informatics)</h5>
+              <p style="color: var(--light-gray);"><em data-i18n="edu2Inst">Université de Bordeaux / LaBRI · Ministerial funding (MESR)</em> · <span data-i18n="edu2Dates">2016–2019</span></p>
+              <img src="universidades/ub.png" alt="UB" class="img-fluid" />
             </div>
           </div>
         </div>
       </div>
 
-      <br />
-
       <div class="row">
         <div class="col-md-6">
           <div class="card mb-4 h-100">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="" />
             <div class="card-body">
-              <h5 class="card-title" data-i18n="edu3Title">Master of Bioinformatics - University of Murcia</h5>
-              <p><span style="font-style: italic;" data-i18n="edu3Dates">2014-2015</span></p>
-              <img src="universidades/UMU.png" alt="UMU" class="img-fluid"  />
+              <h5 class="card-title" style="color: var(--accent);" data-i18n="edu3Title">MSc Bioinformatics (Avg. 9/10)</h5>
+              <p style="color: var(--light-gray);"><em data-i18n="edu3Inst">University of Murcia</em> · <span data-i18n="edu3Dates">2014–2015</span></p>
+              <img src="universidades/UMU.png" alt="UMU" class="img-fluid" />
             </div>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="card mb-4 h-100">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="" />
             <div class="card-body">
-              <h5 class="card-title" data-i18n="edu4Title">Bachelor in Biochemistry - University of Murcia</h5>
-              <p><span style="font-style: italic;" data-i18n="edu4Dates">2009-2013</span></p>
+              <h5 class="card-title" style="color: var(--accent);" data-i18n="edu4Title">BSc Biochemistry</h5>
+              <p style="color: var(--light-gray);"><em data-i18n="edu4Inst">University of Murcia</em> · <span data-i18n="edu4Dates">2009–2013</span></p>
               <img src="universidades/UMU.png" alt="UMU" class="img-fluid" />
             </div>
           </div>
@@ -255,9 +780,9 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-4 bg-dark text-light text-center">
+  <footer class="py-4 text-light text-center">
     <div class="container">
-      <p class="mb-0" data-i18n="footerText">&copy; 2025 Aarón Ayllón Benítez. All rights reserved.</p>
+      <p class="mb-0" data-i18n="footerText">&copy; 2026 Aarón Ayllón Benítez · All rights reserved</p>
     </div>
   </footer>
 
@@ -266,245 +791,417 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <!-- Publications accordion -->
+  <script>
+    function togglePub(header) {
+      const card = header.parentElement;
+      card.classList.toggle('open');
+    }
+  </script>
+
   <!-- i18n -->
   <script>
     const i18n = {
       en: {
         brandName: "Aarón Ayllón Benítez",
-        navAbout: "About me",
-        navPortfolio: "Portfolio",
-        navExperience: "Experience",
-        navEducation: "Education",
-        heroTitle: "Welcome to my Business card",
-        heroSubtitle: "Head of Product | Business Impact | People & AI",
+        navAbout: "About", navPortfolio: "Portfolio", navExperience: "Experience",
+        navPublications: "Publications", navTeaching: "Teaching", navEditorial: "Editorial",
+        navTalks: "Talks", navEducation: "Education",
+
+        heroTitle: "Aarón Ayllón Benítez",
+        heroSubtitle: "AI / ML Leader · Product & Platform Strategy · Research ↔ Production",
+        heroTagline: "PhD Computer Science · MSc Artificial Intelligence · Four years line-managing ML teams at BASF Digital Solutions. I build the bridge between research rigor and production pragmatism.",
 
         aboutExecTitle: "Executive Summary",
-        aboutExecText:
-          "Product leader with a strong focus on business impact, portfolio rationalization and people management. Experienced in making difficult product decisions, including stopping underperforming initiatives, optimizing costs and reallocating resources to maximize company outcomes. Proven ability to lead cross-functional teams in complex, AI-driven environments, always prioritizing company strategy over individual product survival.",
-        aboutFocusTitle: "Product & Leadership Focus",
-        focus1: "Product portfolio evaluation and rationalization",
-        focus2: "Cost optimization and ROI-driven product decisions",
-        focus3: "People management: performance assessment, development and accountability",
-        focus4: "Strategic prioritization under financial and organizational constraints",
-        focus5: "AI-driven product strategy and execution",
-        focus6: "Alignment between business, technology and long-term company goals",
+        aboutExecText: "Leading ML teams is a translation problem — between research and production, between long-term R&D and short-term commitments, between what models can do and what the business actually needs. I have spent the last four years doing that translation at BASF Digital Solutions, scaling direct reports from 8 to 16 within a 60-person multi-function portfolio, and leading two production ML platforms adopted across multiple internal teams.",
+        aboutExecText2: "My path is deliberate: PhD in Computer Science (Bordeaux), MSc in Artificial Intelligence, postdoctoral research applying ML to gene regulatory networks, first-author publications in Q1 journals and IEEE, and competitive research grants as main author — followed by industry because the most interesting ML problems are the ones that have to ship. Portfolio decisions, team scaling, and platform thinking are where I operate best.",
+        aboutFocusTitle: "Focus Areas",
+        focus1: "Production ML platforms & self-service data products",
+        focus2: "Portfolio rationalization, ROI-driven decisions, cost avoidance",
+        focus3: "People leadership: hiring, performance, career paths, underperformance management",
+        focus4: "Computer vision, time-series forecasting, knowledge graphs, GenAI applications",
+        focus5: "Research-to-production translation & AI-native engineering culture",
+        focus6: "Cross-functional alignment: business, engineering, data science, operations",
 
-        portfolioTitle: "Selected Product & Innovation Initiatives",
-        portfolioCard1Label: "Research project",
-        portfolioCard1Text:
-          "Led the development of an interactive web platform transforming high-throughput gene data into actionable insights. Focused on usability, scalability and decision-support rather than purely technical output.",
-        portfolioCard2Label: "Research and Industry project",
-        portfolioCard2Text:
-          "Contributed to the development of an internal ontology integrating regulatory and external biological data. Enabled more flexible data extraction, improved decision-making and reduced manual effort in crop-protection workflows.",
-        portfolioCard3Title: "AI Industry Solution",
-        portfolioCard3Text:
-          "Led the evolution of an initial concept into a production-ready solution improving user adoption while generating operational cost efficiencies. Ensured integration with existing systems and alignment with quality and business standards.",
+        portfolioTitle: "Selected Projects & Platforms",
+        portfolioIntro: "Four initiatives that illustrate how I bridge research and production — from academic tools adopted by bioinformatics communities to enterprise ML platforms with measurable business impact.",
+        pfType1: "Production Platform", pfCard1Title: "Computer Vision Platform",
+        pfCard1Text: "Led a Computer Vision platform offering reusable templates for classification, segmentation and detection — now in production across multiple internal teams. Delivered multi-million-euro cumulative cost savings during my ownership.",
+        pfType2: "Self-Service Platform", pfCard2Title: "Forecasting Platform",
+        pfCard2Text: "Led evolution and maintenance of a self-service time-series forecasting platform aimed at business users rather than data scientists — generating significant recurring annual savings for the organisation.",
+        pfType3: "Research Software",
+        pfCard3Text: "Interactive web platform transforming high-throughput gene data into actionable biological insights. Published in NAR Genomics and Bioinformatics (Q1, 2020). Used by researchers as an alternative to classical enrichment analysis.",
+        pfType4: "Research + Industry",
+        pfCard4Text: "Contributed to an internal ontology integrating regulatory and biological data. Enabled flexible data extraction, improved decision-making and reduced manual effort in crop-protection workflows. Published in Frontiers in AI (2023).",
 
         experienceTitle: "Experience",
-        exp1Title: "Product Manager - BASF Digital Solutions S.L. (Spain)",
-        exp1Dates: "2022 - Nowadays",
-        exp1b1: "Own product strategy, roadmap and execution for AI-driven digital solutions in industrial and R&D contexts.",
-        exp1b2: "Lead cross-functional teams of data scientists, business designers, software engineers and DevOps, with responsibility for delivery, cost control and team performance.",
-        exp1b3: "Continuously evaluate the product portfolio to identify low-value or non-performing initiatives, recommending shutdowns, scope reductions or strategic pivots when required.",
-        exp1b4: "Optimize product costs through prioritization, staffing decisions and resource reallocation toward higher-impact initiatives.",
-        exp1b5: "Manage people performance, identifying high-potential talent and addressing low performance through clear accountability and improvement plans.",
-        exp1b6: "Act as a bridge between business stakeholders, technical teams and leadership to ensure product decisions serve company-wide strategic objectives.",
-
-        exp2Title: "Ontology Lead - BASF Digital Solutions S.L. (Spain)",
-        exp2Dates: "2021 - 2022",
-        exp2b1: "Led a specialized team of ontology engineers and data scientists supporting agricultural and crop-protection use cases.",
-        exp2b2: "Defined and executed ontology strategy aligned with both research and industrial business needs.",
+        exp1Title: "Lead Product Manager — BASF Digital Solutions S.L. (Spain)",
+        exp1Dates: "2022 – Present",
+        exp1b1: "Lead two production ML platforms: a Computer Vision platform with templates for classification, segmentation and detection; and a self-service Forecasting platform for time-series data.",
+        exp1b2: "Scaled direct reports from 8 to 16 (data scientists, ML engineers, solution designers); administrative lead for a broader 60-person multi-function portfolio.",
+        exp1b3: "Execute portfolio decisions — including transferring successful products to their best-fit business owners — balancing R&D ambition with operational pragmatism.",
+        exp1b4: "Own full people cycle: hiring, career paths, performance reviews, and underperformance management.",
+        exp1b5: "Partner as technical peer with senior ML engineers — review architecture, pipelines, deployment patterns; challenge trade-offs with quantitative grounding.",
+        exp1b6: "Drive AI-native engineering culture: team adoption of AI dev tools (Copilot, Junie and equivalents) and targeted LLM integration in ML pipelines.",
+        exp2Title: "Ontology Lead — BASF Digital Solutions S.L. (Spain)",
+        exp2Dates: "2021 – 2022",
+        exp2b1: "Owned enterprise ontology and knowledge graph strategy — foundational data infrastructure for interoperability across digital products and machine-readable context for AI systems.",
+        exp2b2: "Managed a specialized team of ontology engineers and data scientists supporting agricultural and crop-protection use cases.",
         exp2b3: "Coordinated multiple stakeholders across R&D, digitalization teams and external partners.",
-        exp2b4: "Owned prioritization, staffing optimization and delivery planning to ensure sustainable execution and long-term value creation.",
+        exp2b4: "Built internal tooling analogous to a platform ecosystem serving other engineering teams.",
+        exp3Title: "Postdoctoral Researcher — Umeå Plant Science Centre (Sweden)",
+        exp3Dates: "Feb 2020 – 2021",
+        exp3b1: "Kempestiftelserna Fellowship — applied machine learning and gene regulatory network inference to improve functional gene annotation in Norway spruce.",
+        exp3b2: "Designed production-oriented ML pipelines with reproducibility, auto-scaling and experiment tracking.",
+        exp3b3: "Secured 2 competitive grants as main author (KSLA & SPPS); Guest Editor for a Q1 journal special issue.",
+        exp4Title: "Bioinformatics Engineer — ADERA / INSERM (France)",
+        exp4Dates: "Sep 2019 – Jan 2020",
+        exp4b1: "Developed ML algorithms for medical data analysis — MHC epitope prediction for HIV patients using patient sequence data and state-of-the-art computational methods.",
+        exp4b2: "Earlier engagement with INSERM Bordeaux (Nov 2015 – Aug 2016): developed algorithms for omics data integration and enrichment analysis under Rodolphe Thiébaut.",
+        exp5Title: "PhD Researcher — Université de Bordeaux / LaBRI (France)",
+        exp5Dates: "Sep 2016 – Sep 2019",
+        exp5b1: "Ministerial funding (MESR). Thesis: 'Development of new computational methods for a synthetic gene set annotation' — semantic similarity, ML, knowledge representation.",
+        exp5b2: "Developed GSAn (gene set analysis web platform) and algorithms leveraging ontology-based visualisation. Published in NAR Genomics and Bioinformatics, PLoS ONE, and IEEE IV.",
 
-        exp3Title: "Postdoc researcher - Umeå Plant Science Centre (Sweden)",
-        exp3Dates: "2020 - 2021",
-        exp3b1: "Led the development of AI-based methods combining semantic similarity and machine learning to improve gene prediction in complex biological systems.",
-        exp3b2: "Delivered scalable computational solutions integrating data science, biology and advanced analytics.",
+        pubTitle: "Publications",
+        pubIntro: "First-author peer-reviewed publications in Q1 journals and IEEE proceedings. Click on any item to expand details.",
+        pub1Title: "GSAn: a Web server as an alternative to enrichment analysis for annotating gene sets",
+        pub1Desc: "Presents GSAn, a web server offering an alternative to classical over-representation analysis. Clusters semantic relationships between annotation terms to provide richer, more interpretable gene-set annotations.",
+        pub2Title: "A new method for evaluating the impacts of semantic similarity measures on the annotation of gene sets",
+        pub2Desc: "Introduces a novel evaluation methodology for semantic similarity measures applied to gene set annotation, quantifying how measure choice affects downstream biological interpretation.",
+        pub3Title: "Deciphering gene sets annotations with ontology-based visualization",
+        pub3Desc: "Proposes an ontology-driven visualization approach for interpreting gene set annotations. Invited talk — travel grant awarded by the Société Française de BioInformatique (SFBI).",
+        pub4Title: "Development and Characterization of a Fixed Repertoire of Blood Transcriptome Modules Based on Co-expression Patterns Across Immunological States",
+        pub4Desc: "Large multi-author collaboration producing a reproducible module framework for blood transcriptome analysis across immunological conditions.",
+        pub5Title: "EPPO Ontology Application in Crop Protection",
+        pub5Authors: "Industry contribution — BASF Digital Solutions",
+        pub5Desc: "Contributed to the development of an internal ontology integrating regulatory and external biological data for crop-protection workflows. Enabled flexible data extraction and reduced manual effort.",
+        pub6Title: "rGSAn: An R package dedicated to gene set analysis using semantic similarity measures",
+        pub6Desc: "Presented the R implementation of GSAn at the useR! Conference, opening the methodology to the broader R and bioinformatics community.",
+        pubScholarLink: "See full publication record on Google Scholar →",
 
-        exp4Title: "Research engineer - Bordeaux University Hospital (France)",
-        exp4Dates: "2019 - 2020",
-        exp4b1: "Developed machine-learning models for viral DNA prediction to support early diagnosis and improved clinical decision-making.",
+        teachTitle: "Teaching & Mentoring",
+        teachIntro: "100+ hours of university teaching at the masters and bachelor's level, plus mentoring of 25+ students across four academic years — covering bioinformatics, databases and computer science fundamentals.",
+        teachSubtitle1: "University Teaching",
+        teachCol1: "Course", teachCol2: "Institution & Level", teachCol3: "Year", teachCol4: "Hours",
+        teach1: "Applied Functional Genomics (VT20)", teach1b: "Umeå University · Master in Biology (2ⁿᵈ semester)",
+        teach2: "Introduction to Databases (M1104)", teach2b: "Université de Bordeaux · DUT Informatique",
+        teach3: "Introduction to Environment Systems (M1101)", teach3b: "Université de Bordeaux · DUT Informatique",
+        teachTotal: "Total",
+        teachSubtitle2: "Student Mentoring",
+        mentorCol1: "Year", mentorCol2: "Level", mentorCol3: "Students", mentorCol4: "Duration",
+        mentor1: "2ⁿᵈ year Master in Software Engineering", mentor2: "2ⁿᵈ year Bachelor in Biology",
+        mentor3: "2ⁿᵈ year Master in Software Engineering", mentor4: "1ˢᵗ year Master in Bioinformatics",
+        mentor5: "1ˢᵗ year CS Engineering", mentor6: "1ˢᵗ year Master in Bioinformatics",
+        mentorMonths2: "2 months",
 
-        exp5Title: "Research engineer - LaBRI (France)",
-        exp5Dates: "2015 - 2017",
-        exp5b1: "Designed computational methods for synthetic gene set annotation using ontologies, semantic similarity and bioinformatics frameworks.",
+        editTitle: "Editorial & Peer Review",
+        editSubtitle1: "Guest Editor",
+        editGuest: "<strong>Plants (MDPI, Q1)</strong> — Special issue: <em>\"Bridging the Annotation Gap in Non-Model Plant Species\"</em>. 2020–present. JCR category rank 58/234 (Q1) in Plant Sciences. Keywords: gene annotation, non-model organisms, gene network inference, machine learning.",
+        editSubtitle2: "Journal Peer Review",
+        rev1: "<strong>Microorganisms</strong> (MDPI) — Reviewer · 2020",
+        editSubtitle3: "Conference Peer Review",
+        revCol1: "Conference", revCol2: "Role", revCol3: "Location", revCol4: "Year",
+        rev2: "useR! 2020 — The R User Conference",
+        rev3: "16ᵗʰ ISCB Student Council Symposium",
+        rev4: "15ᵗʰ ISCB Student Council Symposium",
+        rev5: "3ʳᵈ BR-SCS Network(ING): ISCB Brazilian Student Council Symposium",
+        rev6: "4ᵗʰ International Conference on Technologies and Innovation (CITI)",
+        revRole1: "Sub-reviewer", revRole2: "Reviewer",
+        revLoc1: "Virtual", revLoc2: "Switzerland", revLoc3: "Brazil", revLoc4: "Ecuador",
+
+        talksTitle: "Talks & Public Speaking",
+        talksSubtitle1: "Industry Talks & Podcasts",
+        talk1: "<strong>Cluster IA Comunidad de Madrid</strong> · Podcast: <em>\"Build vs Buy vs Open Source in GenAI\"</em> · Apr 2026",
+        talk2: "<strong>Expoquimia 2023</strong> · Barcelona · Industry talk: <em>\"Supporting the chemical industry through advanced image analysis\"</em>",
+        talk3: "<strong>TECNALIA</strong> · Podcast: <em>\"Tecnología, Pasión y Futuro\"</em> · Jun 2023",
+        talksSubtitle2: "Scientific Communication",
+        talk4: "<strong>My PhD in 1024 characters</strong> · Published essay · Bulletin de la société informatique de France · Nov 2019",
+        talk5: "<strong>SMS Debate (Science-Media-Society)</strong> · TousEnScience · Bordeaux · 2018 & 2019 editions",
+        talk6: "<strong>Scientific Game Jam Bordeaux</strong> · <em>1ˢᵗ Prize</em> — video game based on PhD research · Mar 2018",
+        talk7: "<strong>My PhD in 180 seconds (MT180s)</strong> · French PhD pitch competition · Bordeaux · Feb 2018",
 
         educationTitle: "Education",
-        edu1Title: "Master of Artificial Intelligence - UNIR",
-        edu1Dates: "2023-2024",
-        edu2Title: "PhD in Informatics - University of Bordeaux",
-        edu2Dates: "2017-2019",
-        edu3Title: "Master of Bioinformatics - University of Murcia",
-        edu3Dates: "2014-2015",
-        edu4Title: "Bachelor in Biochemistry - University of Murcia",
-        edu4Dates: "2009-2013",
+        edu1Title: "MSc Artificial Intelligence", edu1Inst: "Universidad Internacional de La Rioja (UNIR)", edu1Dates: "2023–2024",
+        edu2Title: "PhD in Computer Science (Informatics)", edu2Inst: "Université de Bordeaux / LaBRI · Ministerial funding (MESR)", edu2Dates: "2016–2019",
+        edu3Title: "MSc Bioinformatics (Avg. 9/10)", edu3Inst: "University of Murcia", edu3Dates: "2014–2015",
+        edu4Title: "BSc Biochemistry", edu4Inst: "University of Murcia", edu4Dates: "2009–2013",
 
-        footerText: "© 2025 Aarón Ayllón Benítez. All rights reserved."
+        footerText: "© 2026 Aarón Ayllón Benítez · All rights reserved"
       },
 
       es: {
         brandName: "Aarón Ayllón Benítez",
-        navAbout: "Sobre mí",
-        navPortfolio: "Portafolio",
-        navExperience: "Experiencia",
-        navEducation: "Formación",
-        heroTitle: "Bienvenido/a a mi tarjeta de presentación",
-        heroSubtitle: "Head of Product | Impacto de negocio | Personas e IA",
+        navAbout: "Sobre mí", navPortfolio: "Portafolio", navExperience: "Experiencia",
+        navPublications: "Publicaciones", navTeaching: "Docencia", navEditorial: "Editorial",
+        navTalks: "Ponencias", navEducation: "Formación",
+
+        heroTitle: "Aarón Ayllón Benítez",
+        heroSubtitle: "Líder en IA / ML · Estrategia de Producto y Plataformas · Investigación ↔ Producción",
+        heroTagline: "Doctor en Informática · Máster en Inteligencia Artificial · Cuatro años liderando equipos de ML en BASF Digital Solutions. Construyo el puente entre el rigor de la investigación y el pragmatismo de producción.",
 
         aboutExecTitle: "Resumen ejecutivo",
-        aboutExecText:
-          "Líder de producto con fuerte foco en impacto de negocio, racionalización de portafolio y gestión de personas. Experiencia tomando decisiones complejas, incluyendo detener iniciativas con bajo rendimiento, optimizar costes y reasignar recursos para maximizar resultados. Capacidad probada para liderar equipos multifuncionales en entornos complejos y basados en IA, priorizando siempre la estrategia de la compañía sobre la supervivencia de un producto.",
-        aboutFocusTitle: "Foco en producto y liderazgo",
-        focus1: "Evaluación y racionalización del portafolio de producto",
-        focus2: "Optimización de costes y decisiones basadas en ROI",
-        focus3: "Gestión de personas: evaluación del desempeño, desarrollo y accountability",
-        focus4: "Priorización estratégica bajo restricciones financieras y organizativas",
-        focus5: "Estrategia y ejecución de producto impulsadas por IA",
-        focus6: "Alineación entre negocio, tecnología y objetivos a largo plazo",
+        aboutExecText: "Liderar equipos de ML es un problema de traducción — entre investigación y producción, entre I+D a largo plazo y compromisos a corto, entre lo que los modelos pueden hacer y lo que el negocio realmente necesita. He pasado los últimos cuatro años haciendo esa traducción en BASF Digital Solutions, escalando reportes directos de 8 a 16 dentro de un portafolio multifuncional de 60 personas, y liderando dos plataformas de ML en producción adoptadas por múltiples equipos internos.",
+        aboutExecText2: "Mi trayectoria es deliberada: Doctorado en Informática (Burdeos), Máster en IA, postdoc aplicando ML a redes regulatorias génicas, publicaciones como primer autor en revistas Q1 e IEEE, y becas de investigación competitivas como autor principal — seguido por la industria porque los problemas más interesantes de ML son los que tienen que entregarse. Las decisiones de portafolio, la escalabilidad de equipos y el pensamiento de plataforma son donde mejor opero.",
+        aboutFocusTitle: "Áreas de foco",
+        focus1: "Plataformas de ML en producción y productos de datos self-service",
+        focus2: "Racionalización de portafolio, decisiones basadas en ROI, reducción de costes",
+        focus3: "Liderazgo de personas: hiring, desempeño, planes de carrera, gestión de bajo rendimiento",
+        focus4: "Visión por computador, forecasting de series temporales, knowledge graphs, aplicaciones de GenAI",
+        focus5: "Traducción de research a producción y cultura de ingeniería AI-native",
+        focus6: "Alineación cross-funcional: negocio, ingeniería, data science, operaciones",
 
-        portfolioTitle: "Iniciativas seleccionadas de producto e innovación",
-        portfolioCard1Label: "Proyecto de investigación",
-        portfolioCard1Text:
-          "Lideré el desarrollo de una plataforma web interactiva que transforma datos génicos de alto rendimiento en insights accionables. Enfoque en usabilidad, escalabilidad y soporte a la decisión más que en un resultado puramente técnico.",
-        portfolioCard2Label: "Proyecto de investigación e industria",
-        portfolioCard2Text:
-          "Contribuí al desarrollo de una ontología interna que integra datos regulatorios y biológicos externos. Permitió una extracción de datos más flexible, mejoró la toma de decisiones y redujo el esfuerzo manual en flujos de trabajo de protección de cultivos.",
-        portfolioCard3Title: "Solución industrial de IA",
-        portfolioCard3Text:
-          "Lideré la evolución de un concepto inicial hasta una solución lista para producción, mejorando la adopción y generando eficiencias de coste operativo. Aseguré la integración con sistemas existentes y la alineación con estándares de calidad y negocio.",
+        portfolioTitle: "Proyectos y plataformas destacados",
+        portfolioIntro: "Cuatro iniciativas que ilustran cómo tiendo el puente entre investigación y producción — desde herramientas académicas adoptadas por comunidades de bioinformática hasta plataformas de ML empresariales con impacto medible en el negocio.",
+        pfType1: "Plataforma en producción", pfCard1Title: "Plataforma de Computer Vision",
+        pfCard1Text: "Lideré una plataforma de Computer Vision con plantillas reutilizables para clasificación, segmentación y detección — ahora en producción en múltiples equipos internos. Generó ahorros acumulados de varios millones de euros durante mi titularidad.",
+        pfType2: "Plataforma Self-Service", pfCard2Title: "Plataforma de Forecasting",
+        pfCard2Text: "Lideré la evolución y mantenimiento de una plataforma self-service de forecasting de series temporales dirigida a usuarios de negocio, no a data scientists — generando ahorros anuales recurrentes significativos para la organización.",
+        pfType3: "Software de investigación",
+        pfCard3Text: "Plataforma web interactiva que transforma datos génicos de alto rendimiento en insights biológicos accionables. Publicada en NAR Genomics and Bioinformatics (Q1, 2020). Usada por investigadores como alternativa al análisis de enriquecimiento clásico.",
+        pfType4: "Investigación + Industria",
+        pfCard4Text: "Contribuí a una ontología interna integrando datos regulatorios y biológicos. Permitió extracción de datos flexible, mejora en la toma de decisiones y reducción de esfuerzo manual en flujos de protección de cultivos. Publicado en Frontiers in AI (2023).",
 
         experienceTitle: "Experiencia",
-        exp1Title: "Product Manager - BASF Digital Solutions S.L. (España)",
-        exp1Dates: "2022 - Actualidad",
-        exp1b1: "Responsable de estrategia, roadmap y ejecución de soluciones digitales basadas en IA en contextos industriales y de I+D.",
-        exp1b2: "Lidero equipos multifuncionales de data scientists, business designers, software engineers y DevOps, con responsabilidad en entrega, control de costes y desempeño del equipo.",
-        exp1b3: "Evalúo continuamente el portafolio para identificar iniciativas de bajo valor o rendimiento, recomendando cierres, reducciones de alcance o pivotes estratégicos cuando es necesario.",
-        exp1b4: "Optimizo costes del producto mediante priorización, decisiones de staffing y reasignación de recursos hacia iniciativas de mayor impacto.",
-        exp1b5: "Gestiono el desempeño, identificando talento de alto potencial y abordando bajo rendimiento con responsabilidad clara y planes de mejora.",
-        exp1b6: "Actúo como puente entre negocio, equipos técnicos y liderazgo para asegurar que las decisiones de producto sirven los objetivos estratégicos de la compañía.",
-
-        exp2Title: "Responsable de Ontologías - BASF Digital Solutions S.L. (España)",
-        exp2Dates: "2021 - 2022",
-        exp2b1: "Lideré un equipo especializado de ingenieros de ontologías y data scientists para casos de uso en agricultura y protección de cultivos.",
-        exp2b2: "Definí y ejecuté la estrategia de ontologías alineada con necesidades de investigación e industria.",
+        exp1Title: "Lead Product Manager — BASF Digital Solutions S.L. (España)",
+        exp1Dates: "2022 – Actualidad",
+        exp1b1: "Lidero dos plataformas de ML en producción: una de Computer Vision con plantillas para clasificación, segmentación y detección; y una de Forecasting self-service para datos de series temporales.",
+        exp1b2: "Escalé los reportes directos de 8 a 16 (data scientists, ingenieros de ML, solution designers); responsable administrativo de un portafolio multifuncional más amplio de 60 personas.",
+        exp1b3: "Ejecuto decisiones de portafolio — incluyendo la transferencia de productos exitosos a sus mejores propietarios de negocio — equilibrando la ambición de I+D con el pragmatismo operacional.",
+        exp1b4: "Responsable del ciclo completo de personas: hiring, planes de carrera, evaluaciones de desempeño y gestión de bajo rendimiento.",
+        exp1b5: "Actúo como par técnico con ingenieros de ML senior — reviso arquitectura, pipelines, patrones de despliegue; cuestiono trade-offs con fundamentos cuantitativos.",
+        exp1b6: "Impulso una cultura de ingeniería AI-native: adopción de herramientas IA (Copilot, Junie y equivalentes) e integración focalizada de LLMs en pipelines de ML.",
+        exp2Title: "Responsable de Ontologías — BASF Digital Solutions S.L. (España)",
+        exp2Dates: "2021 – 2022",
+        exp2b1: "Responsable de la estrategia empresarial de ontologías y knowledge graphs — infraestructura fundacional para la interoperabilidad y el contexto legible por máquina para sistemas de IA.",
+        exp2b2: "Gestioné un equipo especializado de ingenieros de ontologías y data scientists para casos de uso en agricultura y protección de cultivos.",
         exp2b3: "Coordiné múltiples stakeholders de I+D, equipos de digitalización y partners externos.",
-        exp2b4: "Gestioné la priorización, optimización de recursos y planificación de entregas para una ejecución sostenible y creación de valor a largo plazo.",
+        exp2b4: "Construí tooling interno análogo a un ecosistema de plataforma al servicio de otros equipos de ingeniería.",
+        exp3Title: "Investigador postdoctoral — Umeå Plant Science Centre (Suecia)",
+        exp3Dates: "Feb 2020 – 2021",
+        exp3b1: "Beca Kempestiftelserna — apliqué machine learning e inferencia de redes regulatorias génicas para mejorar la anotación funcional en Norway spruce.",
+        exp3b2: "Diseñé pipelines de ML orientados a producción con reproducibilidad, auto-scaling y experiment tracking.",
+        exp3b3: "Obtuve 2 becas competitivas como autor principal (KSLA y SPPS); Guest Editor de un número especial en revista Q1.",
+        exp4Title: "Ingeniero Bioinformático — ADERA / INSERM (Francia)",
+        exp4Dates: "Sep 2019 – Ene 2020",
+        exp4b1: "Desarrollé algoritmos de ML para análisis de datos médicos — predicción de epítopos MHC para pacientes con VIH usando datos de secuencias y métodos computacionales del estado del arte.",
+        exp4b2: "Colaboración previa con INSERM Burdeos (Nov 2015 – Ago 2016): desarrollé algoritmos para integración de datos ómicos y análisis de enriquecimiento bajo la dirección de Rodolphe Thiébaut.",
+        exp5Title: "Investigador Doctoral — Université de Bordeaux / LaBRI (Francia)",
+        exp5Dates: "Sep 2016 – Sep 2019",
+        exp5b1: "Financiación ministerial (MESR). Tesis: 'Desarrollo de nuevos métodos computacionales para anotación sintética de conjuntos génicos' — similitud semántica, ML, representación del conocimiento.",
+        exp5b2: "Desarrollé GSAn (plataforma web de análisis de conjuntos génicos) y algoritmos basados en visualización por ontologías. Publicado en NAR Genomics and Bioinformatics, PLoS ONE e IEEE IV.",
 
-        exp3Title: "Investigador postdoctoral - Umeå Plant Science Centre (Suecia)",
-        exp3Dates: "2020 - 2021",
-        exp3b1: "Lideré el desarrollo de métodos basados en IA combinando similitud semántica y machine learning para mejorar la predicción génica en sistemas biológicos complejos.",
-        exp3b2: "Entregué soluciones computacionales escalables integrando ciencia de datos, biología y analítica avanzada.",
+        pubTitle: "Publicaciones",
+        pubIntro: "Publicaciones peer-reviewed como primer autor en revistas Q1 y actas de IEEE. Haz clic en cualquier elemento para expandir detalles.",
+        pub1Title: "GSAn: servidor web como alternativa al análisis de enriquecimiento para la anotación de conjuntos génicos",
+        pub1Desc: "Presenta GSAn, un servidor web que ofrece una alternativa al análisis clásico de sobrerrepresentación. Agrupa relaciones semánticas entre términos de anotación para proporcionar anotaciones más ricas e interpretables.",
+        pub2Title: "Un nuevo método para evaluar el impacto de las medidas de similitud semántica en la anotación de conjuntos génicos",
+        pub2Desc: "Introduce una metodología de evaluación novedosa para medidas de similitud semántica aplicadas a la anotación génica, cuantificando cómo la elección de la medida afecta la interpretación biológica posterior.",
+        pub3Title: "Descifrando anotaciones de conjuntos génicos con visualización basada en ontologías",
+        pub3Desc: "Propone un enfoque de visualización basado en ontologías para interpretar anotaciones. Ponencia invitada — beca de viaje otorgada por la Société Française de BioInformatique (SFBI).",
+        pub4Title: "Desarrollo y caracterización de un repertorio fijo de módulos transcriptómicos sanguíneos basados en patrones de coexpresión a través de estados inmunológicos",
+        pub4Desc: "Gran colaboración multi-autor que produce un marco modular reproducible para el análisis del transcriptoma sanguíneo a través de condiciones inmunológicas.",
+        pub5Title: "Aplicación de la Ontología EPPO en la Protección de Cultivos",
+        pub5Authors: "Contribución industrial — BASF Digital Solutions",
+        pub5Desc: "Contribuí al desarrollo de una ontología interna integrando datos regulatorios y biológicos externos para flujos de protección de cultivos. Permitió extracción de datos flexible y reducción de esfuerzo manual.",
+        pub6Title: "rGSAn: paquete R dedicado al análisis de conjuntos génicos usando medidas de similitud semántica",
+        pub6Desc: "Presenté la implementación en R de GSAn en la conferencia useR!, abriendo la metodología a la comunidad R y bioinformática más amplia.",
+        pubScholarLink: "Ver lista completa de publicaciones en Google Scholar →",
 
-        exp4Title: "Ingeniero de investigación - Hospital Universitario de Burdeos (Francia)",
-        exp4Dates: "2019 - 2020",
-        exp4b1: "Desarrollé modelos de machine learning para predicción de ADN viral, apoyando el diagnóstico temprano y mejorando la toma de decisiones clínicas.",
+        teachTitle: "Docencia y mentoría",
+        teachIntro: "Más de 100 horas de docencia universitaria a nivel de máster y grado, más mentoría de 25+ estudiantes durante cuatro cursos académicos — cubriendo bioinformática, bases de datos y fundamentos de informática.",
+        teachSubtitle1: "Docencia universitaria",
+        teachCol1: "Curso", teachCol2: "Institución y nivel", teachCol3: "Año", teachCol4: "Horas",
+        teach1: "Genómica Funcional Aplicada (VT20)", teach1b: "Universidad de Umeå · Máster en Biología (2º semestre)",
+        teach2: "Introducción a Bases de Datos (M1104)", teach2b: "Université de Bordeaux · DUT Informatique",
+        teach3: "Introducción a Sistemas del Entorno (M1101)", teach3b: "Université de Bordeaux · DUT Informatique",
+        teachTotal: "Total",
+        teachSubtitle2: "Mentoría de estudiantes",
+        mentorCol1: "Año", mentorCol2: "Nivel", mentorCol3: "Estudiantes", mentorCol4: "Duración",
+        mentor1: "2º año Máster en Ingeniería de Software", mentor2: "2º año Grado en Biología",
+        mentor3: "2º año Máster en Ingeniería de Software", mentor4: "1º año Máster en Bioinformática",
+        mentor5: "1º año Ingeniería Informática", mentor6: "1º año Máster en Bioinformática",
+        mentorMonths2: "2 meses",
 
-        exp5Title: "Ingeniero de investigación - LaBRI (Francia)",
-        exp5Dates: "2015 - 2017",
-        exp5b1: "Diseñé métodos computacionales para anotación de conjuntos génicos sintéticos usando ontologías, similitud semántica y frameworks de bioinformática.",
+        editTitle: "Editorial y revisión por pares",
+        editSubtitle1: "Editor invitado",
+        editGuest: "<strong>Plants (MDPI, Q1)</strong> — Número especial: <em>\"Cerrando la brecha de anotación en especies vegetales no modelo\"</em>. 2020–actualidad. Ranking JCR 58/234 (Q1) en Ciencias Vegetales. Keywords: anotación génica, organismos no modelo, inferencia de redes génicas, machine learning.",
+        editSubtitle2: "Revisor de revistas",
+        rev1: "<strong>Microorganisms</strong> (MDPI) — Revisor · 2020",
+        editSubtitle3: "Revisor de conferencias",
+        revCol1: "Conferencia", revCol2: "Rol", revCol3: "Localización", revCol4: "Año",
+        rev2: "useR! 2020 — The R User Conference",
+        rev3: "16º ISCB Student Council Symposium",
+        rev4: "15º ISCB Student Council Symposium",
+        rev5: "3º BR-SCS Network(ING): ISCB Brazilian Student Council Symposium",
+        rev6: "4ª Conferencia Internacional sobre Tecnologías e Innovación (CITI)",
+        revRole1: "Sub-revisor", revRole2: "Revisor",
+        revLoc1: "Virtual", revLoc2: "Suiza", revLoc3: "Brasil", revLoc4: "Ecuador",
+
+        talksTitle: "Ponencias y comunicación",
+        talksSubtitle1: "Ponencias y podcasts",
+        talk1: "<strong>Cluster IA Comunidad de Madrid</strong> · Podcast: <em>\"Build vs Buy vs Open Source en GenAI\"</em> · Abr 2026",
+        talk2: "<strong>Expoquimia 2023</strong> · Barcelona · Ponencia industrial: <em>\"Apoyando a la industria química con análisis de imagen avanzado\"</em>",
+        talk3: "<strong>TECNALIA</strong> · Podcast: <em>\"Tecnología, Pasión y Futuro\"</em> · Jun 2023",
+        talksSubtitle2: "Divulgación científica",
+        talk4: "<strong>Mi Doctorado en 1024 caracteres</strong> · Ensayo publicado · Bulletin de la société informatique de France · Nov 2019",
+        talk5: "<strong>Debate SMS (Ciencia-Medios-Sociedad)</strong> · TousEnScience · Burdeos · ediciones 2018 y 2019",
+        talk6: "<strong>Scientific Game Jam Burdeos</strong> · <em>1º Premio</em> — videojuego basado en mi investigación doctoral · Mar 2018",
+        talk7: "<strong>Mi tesis en 180 segundos (MT180s)</strong> · Concurso francés de pitch doctoral · Burdeos · Feb 2018",
 
         educationTitle: "Formación",
-        edu1Title: "Máster en Inteligencia Artificial - UNIR",
-        edu1Dates: "2023-2024",
-        edu2Title: "Doctorado en Informática - Universidad de Burdeos",
-        edu2Dates: "2017-2019",
-        edu3Title: "Máster en Bioinformática - Universidad de Murcia",
-        edu3Dates: "2014-2015",
-        edu4Title: "Grado en Bioquímica - Universidad de Murcia",
-        edu4Dates: "2009-2013",
+        edu1Title: "Máster en Inteligencia Artificial", edu1Inst: "Universidad Internacional de La Rioja (UNIR)", edu1Dates: "2023–2024",
+        edu2Title: "Doctorado en Informática", edu2Inst: "Université de Bordeaux / LaBRI · Financiación ministerial (MESR)", edu2Dates: "2016–2019",
+        edu3Title: "Máster en Bioinformática (9/10)", edu3Inst: "Universidad de Murcia", edu3Dates: "2014–2015",
+        edu4Title: "Grado en Bioquímica", edu4Inst: "Universidad de Murcia", edu4Dates: "2009–2013",
 
-        footerText: "© 2025 Aarón Ayllón Benítez. Todos los derechos reservados."
+        footerText: "© 2026 Aarón Ayllón Benítez · Todos los derechos reservados"
       },
 
       fr: {
         brandName: "Aarón Ayllón Benítez",
-        navAbout: "À propos",
-        navPortfolio: "Portfolio",
-        navExperience: "Expérience",
-        navEducation: "Formation",
-        heroTitle: "Bienvenue sur ma carte de visite",
-        heroSubtitle: "Head of Product | Impact business | Humain & IA",
+        navAbout: "À propos", navPortfolio: "Portfolio", navExperience: "Expérience",
+        navPublications: "Publications", navTeaching: "Enseignement", navEditorial: "Éditorial",
+        navTalks: "Conférences", navEducation: "Formation",
+
+        heroTitle: "Aarón Ayllón Benítez",
+        heroSubtitle: "Leader IA / ML · Stratégie Produit & Plateforme · Recherche ↔ Production",
+        heroTagline: "Docteur en Informatique · Master Intelligence Artificielle · Quatre ans à la tête d'équipes ML chez BASF Digital Solutions. Je construis le pont entre la rigueur de la recherche et le pragmatisme de la production.",
 
         aboutExecTitle: "Résumé exécutif",
-        aboutExecText:
-          "Leader produit avec un fort focus sur l’impact business, la rationalisation de portefeuille et le management. Expérimenté dans des décisions difficiles, y compris l’arrêt d’initiatives peu performantes, l’optimisation des coûts et la réallocation des ressources pour maximiser les résultats. Capacité éprouvée à diriger des équipes pluridisciplinaires dans des environnements complexes et orientés IA, en priorisant la stratégie de l’entreprise plutôt que la survie d’un produit.",
-        aboutFocusTitle: "Focus Produit & Leadership",
-        focus1: "Évaluation et rationalisation du portefeuille produit",
-        focus2: "Optimisation des coûts et décisions pilotées par le ROI",
-        focus3: "Management : évaluation de performance, développement et responsabilisation",
-        focus4: "Priorisation stratégique sous contraintes financières et organisationnelles",
-        focus5: "Stratégie et exécution produit orientées IA",
-        focus6: "Alignement entre business, technologie et objectifs long terme",
+        aboutExecText: "Diriger des équipes ML est un problème de traduction — entre recherche et production, entre R&D à long terme et engagements à court terme, entre ce que les modèles peuvent faire et ce dont l'entreprise a réellement besoin. J'ai passé les quatre dernières années à effectuer cette traduction chez BASF Digital Solutions, passant de 8 à 16 rapports directs au sein d'un portefeuille pluridisciplinaire de 60 personnes, et dirigeant deux plateformes ML en production adoptées par plusieurs équipes internes.",
+        aboutExecText2: "Mon parcours est délibéré : Doctorat en Informatique (Bordeaux), Master en IA, postdoc appliquant le ML aux réseaux régulateurs géniques, publications en premier auteur dans des revues Q1 et IEEE, et bourses de recherche compétitives en auteur principal — suivi par l'industrie parce que les problèmes ML les plus intéressants sont ceux qui doivent être livrés. Les décisions de portefeuille, le scaling d'équipe et la pensée plateforme sont mes terrains de prédilection.",
+        aboutFocusTitle: "Domaines de focus",
+        focus1: "Plateformes ML en production et produits data self-service",
+        focus2: "Rationalisation de portefeuille, décisions basées sur le ROI, réduction des coûts",
+        focus3: "Management : recrutement, performance, plans de carrière, gestion de la sous-performance",
+        focus4: "Vision par ordinateur, forecasting de séries temporelles, knowledge graphs, applications GenAI",
+        focus5: "Traduction recherche-production et culture d'ingénierie AI-native",
+        focus6: "Alignement pluridisciplinaire : business, ingénierie, data science, opérations",
 
-        portfolioTitle: "Initiatives sélectionnées Produit & Innovation",
-        portfolioCard1Label: "Projet de recherche",
-        portfolioCard1Text:
-          "Pilotage du développement d’une plateforme web interactive transformant des données géniques à haut débit en informations actionnables. Focus sur l’ergonomie, la scalabilité et l’aide à la décision plutôt que sur un résultat purement technique.",
-        portfolioCard2Label: "Projet recherche & industrie",
-        portfolioCard2Text:
-          "Contribution au développement d’une ontologie interne intégrant des données réglementaires et biologiques externes. Extraction plus flexible, amélioration de la décision et réduction des tâches manuelles dans les workflows de protection des cultures.",
-        portfolioCard3Title: "Solution IA industrielle",
-        portfolioCard3Text:
-          "Pilotage de l’évolution d’un concept initial vers une solution prête pour la production, améliorant l’adoption et générant des gains d’efficacité opérationnelle. Intégration aux systèmes existants et alignement avec les standards qualité et business.",
+        portfolioTitle: "Projets & plateformes sélectionnés",
+        portfolioIntro: "Quatre initiatives qui illustrent comment je relie recherche et production — d'outils académiques adoptés par les communautés bioinformatiques à des plateformes ML d'entreprise à impact business mesurable.",
+        pfType1: "Plateforme de production", pfCard1Title: "Plateforme Computer Vision",
+        pfCard1Text: "Pilotage d'une plateforme Computer Vision offrant des templates réutilisables pour classification, segmentation et détection — désormais en production dans plusieurs équipes internes. Économies cumulées de plusieurs millions d'euros pendant ma responsabilité.",
+        pfType2: "Plateforme Self-Service", pfCard2Title: "Plateforme Forecasting",
+        pfCard2Text: "Pilotage de l'évolution et maintenance d'une plateforme self-service de forecasting de séries temporelles destinée aux utilisateurs métier plutôt qu'aux data scientists — générant des économies annuelles récurrentes significatives pour l'organisation.",
+        pfType3: "Logiciel de recherche",
+        pfCard3Text: "Plateforme web interactive transformant des données géniques à haut débit en insights biologiques exploitables. Publiée dans NAR Genomics and Bioinformatics (Q1, 2020). Utilisée par les chercheurs comme alternative à l'analyse d'enrichissement classique.",
+        pfType4: "Recherche + Industrie",
+        pfCard4Text: "Contribution à une ontologie interne intégrant des données réglementaires et biologiques. A permis une extraction de données flexible, une amélioration de la prise de décision et une réduction de l'effort manuel dans les workflows de protection des cultures. Publié dans Frontiers in AI (2023).",
 
         experienceTitle: "Expérience",
-        exp1Title: "Product Manager - BASF Digital Solutions S.L. (Espagne)",
-        exp1Dates: "2022 - Aujourd’hui",
-        exp1b1: "Définition de la stratégie produit, de la roadmap et exécution de solutions digitales orientées IA en contexte industriel et R&D.",
-        exp1b2: "Management d’équipes pluridisciplinaires (data science, business design, logiciel, DevOps) avec responsabilité sur la livraison, les coûts et la performance.",
-        exp1b3: "Évaluation continue du portefeuille pour identifier les initiatives à faible valeur, recommandation d’arrêt, réduction de périmètre ou pivot stratégique si nécessaire.",
-        exp1b4: "Optimisation des coûts via priorisation, décisions de staffing et réallocation vers les initiatives à plus fort impact.",
-        exp1b5: "Gestion de la performance : identification des talents à potentiel et traitement des sous-performances avec responsabilisation et plans d’amélioration.",
-        exp1b6: "Interface entre parties prenantes business, équipes techniques et direction pour aligner les décisions produit avec la stratégie globale.",
+        exp1Title: "Lead Product Manager — BASF Digital Solutions S.L. (Espagne)",
+        exp1Dates: "2022 – Aujourd'hui",
+        exp1b1: "Pilotage de deux plateformes ML en production : Computer Vision avec templates pour classification, segmentation et détection ; et Forecasting self-service pour séries temporelles.",
+        exp1b2: "Rapports directs passés de 8 à 16 (data scientists, ingénieurs ML, solution designers) ; responsable administratif d'un portefeuille pluridisciplinaire plus large de 60 personnes.",
+        exp1b3: "Exécution de décisions de portefeuille — incluant le transfert de produits performants vers leurs meilleurs propriétaires métier — équilibrant ambition R&D et pragmatisme opérationnel.",
+        exp1b4: "Responsable du cycle complet de management : recrutement, plans de carrière, évaluations de performance, gestion de la sous-performance.",
+        exp1b5: "Partenaire technique auprès d'ingénieurs ML seniors — revue d'architecture, pipelines, patterns de déploiement ; challenge des trade-offs avec fondements quantitatifs.",
+        exp1b6: "Impulsion d'une culture d'ingénierie AI-native : adoption d'outils IA (Copilot, Junie et équivalents) et intégration ciblée de LLM dans les pipelines ML.",
+        exp2Title: "Responsable Ontologie — BASF Digital Solutions S.L. (Espagne)",
+        exp2Dates: "2021 – 2022",
+        exp2b1: "Responsable de la stratégie d'ontologie et knowledge graph d'entreprise — infrastructure fondatrice pour l'interopérabilité et le contexte lisible par machine des systèmes IA.",
+        exp2b2: "Management d'une équipe spécialisée d'ingénieurs ontologie et data scientists pour cas d'usage en agriculture et protection des cultures.",
+        exp2b3: "Coordination de multiples parties prenantes R&D, équipes de digitalisation et partenaires externes.",
+        exp2b4: "Construction de tooling interne analogue à un écosystème de plateforme au service d'autres équipes d'ingénierie.",
+        exp3Title: "Chercheur postdoctoral — Umeå Plant Science Centre (Suède)",
+        exp3Dates: "Fév 2020 – 2021",
+        exp3b1: "Bourse Kempestiftelserna — application du machine learning et de l'inférence de réseaux régulateurs géniques pour améliorer l'annotation fonctionnelle chez l'épicéa.",
+        exp3b2: "Conception de pipelines ML orientés production avec reproductibilité, auto-scaling et experiment tracking.",
+        exp3b3: "Obtention de 2 bourses compétitives en auteur principal (KSLA & SPPS) ; Guest Editor pour un numéro spécial de revue Q1.",
+        exp4Title: "Ingénieur Bioinformatique — ADERA / INSERM (France)",
+        exp4Dates: "Sep 2019 – Jan 2020",
+        exp4b1: "Développement d'algorithmes ML pour l'analyse de données médicales — prédiction d'épitopes MHC pour patients VIH à partir de séquences patients et méthodes computationnelles de pointe.",
+        exp4b2: "Engagement antérieur avec INSERM Bordeaux (Nov 2015 – Août 2016) : développement d'algorithmes pour l'intégration de données omiques et l'analyse d'enrichissement sous la direction de Rodolphe Thiébaut.",
+        exp5Title: "Doctorant — Université de Bordeaux / LaBRI (France)",
+        exp5Dates: "Sep 2016 – Sep 2019",
+        exp5b1: "Financement ministériel (MESR). Thèse : « Développement de nouvelles méthodes computationnelles pour l'annotation synthétique d'ensembles de gènes » — similarité sémantique, ML, représentation des connaissances.",
+        exp5b2: "Développement de GSAn (plateforme web d'analyse de jeux de gènes) et d'algorithmes de visualisation basée sur les ontologies. Publié dans NAR Genomics and Bioinformatics, PLoS ONE et IEEE IV.",
 
-        exp2Title: "Responsable Ontologie - BASF Digital Solutions S.L. (Espagne)",
-        exp2Dates: "2021 - 2022",
-        exp2b1: "Management d’une équipe spécialisée (ingénieurs ontologies, data scientists) pour des cas d’usage en agriculture et protection des cultures.",
-        exp2b2: "Définition et exécution de la stratégie ontologique alignée sur les besoins recherche et industrie.",
-        exp2b3: "Coordination de multiples parties prenantes (R&D, digitalisation, partenaires externes).",
-        exp2b4: "Priorisation, optimisation des ressources et planification de livraison pour une exécution durable et une création de valeur long terme.",
+        pubTitle: "Publications",
+        pubIntro: "Publications peer-reviewed en premier auteur dans des revues Q1 et actes IEEE. Cliquez sur un élément pour déplier les détails.",
+        pub1Title: "GSAn : serveur web comme alternative à l'analyse d'enrichissement pour l'annotation d'ensembles de gènes",
+        pub1Desc: "Présente GSAn, un serveur web offrant une alternative à l'analyse classique de sur-représentation. Regroupe les relations sémantiques entre termes d'annotation pour fournir des annotations plus riches et interprétables.",
+        pub2Title: "Une nouvelle méthode pour évaluer l'impact des mesures de similarité sémantique sur l'annotation d'ensembles de gènes",
+        pub2Desc: "Introduit une méthodologie d'évaluation innovante pour les mesures de similarité sémantique appliquées à l'annotation génique, quantifiant comment le choix de la mesure influe sur l'interprétation biologique.",
+        pub3Title: "Décryptage des annotations d'ensembles de gènes par visualisation basée sur les ontologies",
+        pub3Desc: "Propose une approche de visualisation basée sur les ontologies pour interpréter les annotations. Conférence invitée — bourse de voyage accordée par la Société Française de BioInformatique (SFBI).",
+        pub4Title: "Développement et caractérisation d'un répertoire fixe de modules transcriptomiques sanguins basés sur les patterns de co-expression à travers les états immunologiques",
+        pub4Desc: "Grande collaboration multi-auteurs produisant un cadre modulaire reproductible pour l'analyse du transcriptome sanguin à travers les conditions immunologiques.",
+        pub5Title: "Application de l'Ontologie EPPO à la Protection des Cultures",
+        pub5Authors: "Contribution industrielle — BASF Digital Solutions",
+        pub5Desc: "Contribution au développement d'une ontologie interne intégrant des données réglementaires et biologiques pour les workflows de protection des cultures. A permis une extraction flexible et une réduction de l'effort manuel.",
+        pub6Title: "rGSAn : package R dédié à l'analyse d'ensembles de gènes par mesures de similarité sémantique",
+        pub6Desc: "Présentation de l'implémentation R de GSAn à la conférence useR!, ouvrant la méthodologie à la communauté R et bioinformatique plus large.",
+        pubScholarLink: "Voir la liste complète des publications sur Google Scholar →",
 
-        exp3Title: "Chercheur postdoctoral - Umeå Plant Science Centre (Suède)",
-        exp3Dates: "2020 - 2021",
-        exp3b1: "Développement de méthodes IA combinant similarité sémantique et machine learning pour améliorer la prédiction de gènes dans des systèmes biologiques complexes.",
-        exp3b2: "Livraison de solutions computationnelles scalables intégrant data science, biologie et analytics avancés.",
+        teachTitle: "Enseignement & mentorat",
+        teachIntro: "Plus de 100 heures d'enseignement universitaire au niveau master et licence, plus mentorat de 25+ étudiants sur quatre années académiques — couvrant bioinformatique, bases de données et fondamentaux informatiques.",
+        teachSubtitle1: "Enseignement universitaire",
+        teachCol1: "Cours", teachCol2: "Institution & niveau", teachCol3: "Année", teachCol4: "Heures",
+        teach1: "Génomique Fonctionnelle Appliquée (VT20)", teach1b: "Université d'Umeå · Master en Biologie (2ᵉ semestre)",
+        teach2: "Introduction aux Bases de Données (M1104)", teach2b: "Université de Bordeaux · DUT Informatique",
+        teach3: "Introduction aux Systèmes d'Environnement (M1101)", teach3b: "Université de Bordeaux · DUT Informatique",
+        teachTotal: "Total",
+        teachSubtitle2: "Mentorat étudiant",
+        mentorCol1: "Année", mentorCol2: "Niveau", mentorCol3: "Étudiants", mentorCol4: "Durée",
+        mentor1: "2ᵉ année Master Ingénierie Logicielle", mentor2: "2ᵉ année Licence Biologie",
+        mentor3: "2ᵉ année Master Ingénierie Logicielle", mentor4: "1ʳᵉ année Master Bioinformatique",
+        mentor5: "1ʳᵉ année Ingénierie Informatique", mentor6: "1ʳᵉ année Master Bioinformatique",
+        mentorMonths2: "2 mois",
 
-        exp4Title: "Ingénieur de recherche - CHU de Bordeaux (France)",
-        exp4Dates: "2019 - 2020",
-        exp4b1: "Développement de modèles de machine learning pour la prédiction d’ADN viral afin de soutenir le diagnostic précoce et améliorer la décision clinique.",
+        editTitle: "Éditorial & peer review",
+        editSubtitle1: "Éditeur invité",
+        editGuest: "<strong>Plants (MDPI, Q1)</strong> — Numéro spécial : <em>« Combler le fossé d'annotation chez les espèces végétales non-modèles »</em>. 2020–aujourd'hui. Rang JCR 58/234 (Q1) en Sciences Végétales. Mots-clés : annotation génique, organismes non-modèles, inférence de réseaux géniques, machine learning.",
+        editSubtitle2: "Revue d'articles",
+        rev1: "<strong>Microorganisms</strong> (MDPI) — Reviewer · 2020",
+        editSubtitle3: "Revue de conférences",
+        revCol1: "Conférence", revCol2: "Rôle", revCol3: "Lieu", revCol4: "Année",
+        rev2: "useR! 2020 — The R User Conference",
+        rev3: "16ᵉ ISCB Student Council Symposium",
+        rev4: "15ᵉ ISCB Student Council Symposium",
+        rev5: "3ᵉ BR-SCS Network(ING): ISCB Brazilian Student Council Symposium",
+        rev6: "4ᵉ Conférence Internationale sur les Technologies et l'Innovation (CITI)",
+        revRole1: "Sub-reviewer", revRole2: "Reviewer",
+        revLoc1: "Virtuel", revLoc2: "Suisse", revLoc3: "Brésil", revLoc4: "Équateur",
 
-        exp5Title: "Ingénieur de recherche - LaBRI (France)",
-        exp5Dates: "2015 - 2017",
-        exp5b1: "Conception de méthodes computationnelles pour l’annotation de jeux de gènes synthétiques via ontologies, similarité sémantique et frameworks bioinformatiques.",
+        talksTitle: "Conférences & prises de parole",
+        talksSubtitle1: "Conférences & podcasts",
+        talk1: "<strong>Cluster IA Comunidad de Madrid</strong> · Podcast : <em>« Build vs Buy vs Open Source en GenAI »</em> · Avr 2026",
+        talk2: "<strong>Expoquimia 2023</strong> · Barcelone · Conférence : <em>« Soutenir l'industrie chimique par l'analyse d'image avancée »</em>",
+        talk3: "<strong>TECNALIA</strong> · Podcast : <em>« Tecnología, Pasión y Futuro »</em> · Juin 2023",
+        talksSubtitle2: "Communication scientifique",
+        talk4: "<strong>Mon Doctorat en 1024 caractères</strong> · Essai publié · Bulletin de la société informatique de France · Nov 2019",
+        talk5: "<strong>Débats SMS (Science-Médias-Société)</strong> · TousEnScience · Bordeaux · éditions 2018 et 2019",
+        talk6: "<strong>Scientific Game Jam Bordeaux</strong> · <em>1ᵉʳ Prix</em> — jeu vidéo basé sur ma recherche doctorale · Mar 2018",
+        talk7: "<strong>Ma thèse en 180 secondes (MT180s)</strong> · Concours français de pitch doctoral · Bordeaux · Fév 2018",
 
         educationTitle: "Formation",
-        edu1Title: "Master Intelligence Artificielle - UNIR",
-        edu1Dates: "2023-2024",
-        edu2Title: "Doctorat en Informatique - Université de Bordeaux",
-        edu2Dates: "2017-2019",
-        edu3Title: "Master Bioinformatique - Université de Murcie",
-        edu3Dates: "2014-2015",
-        edu4Title: "Licence Biochimie - Université de Murcie",
-        edu4Dates: "2009-2013",
+        edu1Title: "Master Intelligence Artificielle", edu1Inst: "Universidad Internacional de La Rioja (UNIR)", edu1Dates: "2023–2024",
+        edu2Title: "Doctorat en Informatique", edu2Inst: "Université de Bordeaux / LaBRI · Financement ministériel (MESR)", edu2Dates: "2016–2019",
+        edu3Title: "Master Bioinformatique (9/10)", edu3Inst: "Université de Murcie", edu3Dates: "2014–2015",
+        edu4Title: "Licence Biochimie", edu4Inst: "Université de Murcie", edu4Dates: "2009–2013",
 
-        footerText: "© 2025 Aarón Ayllón Benítez. Tous droits réservés."
+        footerText: "© 2026 Aarón Ayllón Benítez · Tous droits réservés"
       }
     };
 
     function setLanguage(lang) {
       const dict = i18n[lang] || i18n.en;
-
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
         if (dict[key] !== undefined) {
-          el.textContent = dict[key];
+          // Some values contain HTML (bold, em). Use innerHTML selectively.
+          if (dict[key].includes("<")) {
+            el.innerHTML = dict[key];
+          } else {
+            el.textContent = dict[key];
+          }
         }
       });
-
       document.documentElement.lang = lang;
       localStorage.setItem("lang", lang);
-
       document.querySelectorAll(".flag[data-lang]").forEach((f) => {
         f.classList.toggle("active-flag", f.dataset.lang === lang);
       });
@@ -514,7 +1211,6 @@
       flag.addEventListener("click", () => setLanguage(flag.dataset.lang));
     });
 
-    // Inglés por defecto (pero respeta preferencia guardada)
     const saved = localStorage.getItem("lang");
     setLanguage(saved || "en");
   </script>
