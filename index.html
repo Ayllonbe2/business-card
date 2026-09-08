@@ -202,6 +202,12 @@
 
     /* ---------- Education ---------- */
     .edu-card { border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; height: 100%; }
+    .edu-logo {
+      height: 40px; width: auto; max-width: 130px; object-fit: contain;
+      margin-bottom: 0.8rem; filter: grayscale(100%); opacity: 0.7;
+      transition: filter 0.2s, opacity 0.2s;
+    }
+    .edu-card:hover .edu-logo { filter: none; opacity: 1; }
     .edu-card h5 { color: var(--accent); font-weight: 600; font-size: 1rem; margin-bottom: 0.3rem; }
     .edu-card p { color: var(--light-gray); font-size: 0.88rem; margin-bottom: 0; }
 
@@ -696,24 +702,28 @@
       <div class="row">
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="edu-card p-3">
+            <img src="universidades/UNIR.JPG" alt="UNIR" class="edu-logo" onerror="this.style.display='none'">
             <h5 data-i18n="edu1Title">MSc Artificial Intelligence</h5>
             <p><span data-i18n="edu1Inst">Universidad Internacional de La Rioja (UNIR)</span> · 2023–2024</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="edu-card p-3">
+            <img src="universidades/ub.png" alt="Université de Bordeaux" class="edu-logo" onerror="this.style.display='none'">
             <h5 data-i18n="edu2Title">PhD Computer Science</h5>
             <p><span data-i18n="edu2Inst">Université de Bordeaux / LaBRI · Ministerial funding (MESR)</span> · 2016–2019</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="edu-card p-3">
+            <img src="universidades/UMU.png" alt="Universidad de Murcia" class="edu-logo" onerror="this.style.display='none'">
             <h5 data-i18n="edu3Title">MSc Bioinformatics</h5>
             <p><span data-i18n="edu3Inst">University of Murcia</span> · 2013–2015</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="edu-card p-3">
+            <img src="universidades/UMU.png" alt="Universidad de Murcia" class="edu-logo" onerror="this.style.display='none'">
             <h5 data-i18n="edu4Title">BSc Biochemistry</h5>
             <p><span data-i18n="edu4Inst">University of Murcia</span> · 2009–2013</p>
           </div>
