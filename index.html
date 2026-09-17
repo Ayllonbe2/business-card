@@ -141,6 +141,9 @@
     .timeline h5 { color: var(--accent); font-weight: 600; margin-bottom: 0.15rem; font-size: 1.05rem; }
     .timeline .role-line { color: var(--accent-soft); font-style: italic; font-size: 0.95rem; }
     .timeline .role-dates { color: var(--light-gray); font-size: 0.88rem; }
+    .timeline .role-official {
+      color: var(--light-gray); font-size: 0.82rem; margin-top: 0.3rem; line-height: 1.4;
+    }
     .timeline ul { margin-top: 0.6rem; padding-left: 1.2rem; font-size: 0.92rem; }
     .timeline ul li { margin-bottom: 0.4rem; line-height: 1.5; }
     .timeline .early-role ul { font-size: 0.88rem; }
@@ -420,10 +423,12 @@
       <ul class="timeline">
         <li>
           <h5 data-i18n="exp1Company">BASF Digital Solutions S.L. — Madrid, Spain</h5>
-          <div class="role-line" data-i18n="exp1Role">Lead Product Manager, AI &amp; Data Platforms</div>
+          <div class="role-line" data-i18n="exp1Role">Head of Advanced Imaging &amp; Forecasting Solutions — AI &amp; ML Platforms</div>
           <span class="role-dates" data-i18n="exp1Dates">2022 – Present</span>
+          <div class="role-official" data-i18n="exp1Official">Official BASF title: Product Manager · scope equivalent to Head of Product / Global Product Line Manager</div>
           <ul>
             <li data-i18n="exp1b1">Lead a team of 16 (data scientists, ML and software engineers, solution designers) scaled from 8, owning hiring, career paths, mentoring of both managers and junior scientists, performance and underperformance management.</li>
+            <li data-i18n="exp1b1b">Own portfolio strategy, investment priorities and product roadmaps across computer vision, MLOps, forecasting and semantic infrastructure, serving BASF's global data science community.</li>
             <li data-i18n="exp1b2">Led portfolio decisions with direct financial impact: transferred the computer vision / MLOps platform to its best-fit owner (~€2M recurring savings, 70 reusable templates, ~90% effort reduction for ~100 data scientists) and recommended closure of the forecasting platform after an ROI and adoption review (~€1.5M savings).</li>
             <li data-i18n="exp1b3">Deliver the full analytical journey from descriptive to predictive: a self-service forecasting platform for business users and a computer vision platform for classification, segmentation and object detection — both deployed at scale in the cloud.</li>
             <li data-i18n="exp1b4">Own demand intake, prioritisation and delivery for stakeholders across three departments and multiple European markets, running biweekly strategic reviews to align roadmaps and arbitrate competing priorities.</li>
@@ -435,12 +440,14 @@
 
         <li>
           <h5 data-i18n="exp2Company">BASF Digital Solutions S.L. — Madrid, Spain</h5>
-          <div class="role-line" data-i18n="exp2Role">Product Component Manager, Ontology Lead</div>
+          <div class="role-line" data-i18n="exp2Role">Technical Product Manager — Ontology &amp; Semantic Layer</div>
           <span class="role-dates" data-i18n="exp2Dates">2021 – 2022</span>
+          <div class="role-official" data-i18n="exp2Official">Official BASF title: Product Component Manager · foundation for the AI &amp; ML platform portfolio taken on next</div>
           <ul>
             <li data-i18n="exp2b1">Owned enterprise ontology and knowledge-graph strategy — the semantic foundation that makes heterogeneous data interoperable and machine-readable for AI and agentic systems.</li>
             <li data-i18n="exp2b2">Led 5 engineers and 2 external partners to deliver 20 bio-ontologies adopted as the vocabulary standard across the R&amp;D Agricultural Solutions department by every internal tool within 6–12 months.</li>
             <li data-i18n="exp2b3">Co-authored BASF's GOMO ontology governance framework (published, ISMB 2022) with the Ontology Engineering Group at Universidad Politécnica de Madrid.</li>
+            <li data-i18n="exp2b3b">Led the EPPO ontology for plant and pest code representation, published in Frontiers in Artificial Intelligence and released as open source.</li>
             <li data-i18n="exp2b4">Established and led a biweekly data steward community of 10 governing vocabulary standardisation, processing 10–15 terminology requests per month.</li>
           </ul>
         </li>
@@ -512,7 +519,7 @@
         <div class="col-12">
           <div class="lead-card">
             <h5 data-i18n="ventTitle">Entrepreneurship — Proyecto Vigía · 2026 – Present</h5>
-            <p data-i18n="ventText">Co-founder (50%) of a B2B marketplace for a regulated Spanish services sector, currently in closed beta. I designed and built the entire platform end to end, single-handedly — backend, frontend, identity and access management, geospatial data, document processing, GDPR machinery and compliant e-invoicing — and I own monetisation strategy, fraud-risk design, infrastructure cost optimisation and the partnership protection framework.<!----></p>
+            <p data-i18n="ventText">Co-founder (50%) of a B2B marketplace for a regulated Spanish services sector, currently in closed beta. I designed and built the entire platform end to end, single-handedly — backend, frontend, identity and access management, geospatial data, document processing, GDPR machinery and compliant e-invoicing — and I own monetisation strategy, fraud-risk design, infrastructure cost optimisation and the partnership protection framework.</p>
           </div>
         </div>
       </div>
@@ -804,9 +811,11 @@
 
         experienceTitle: "Experience",
         exp1Company: "BASF Digital Solutions S.L. — Madrid, Spain",
-        exp1Role: "Lead Product Manager, AI & Data Platforms",
+        exp1Role: "Head of Advanced Imaging & Forecasting Solutions — AI & ML Platforms",
         exp1Dates: "2022 – Present",
+        exp1Official: "Official BASF title: Product Manager · scope equivalent to Head of Product / Global Product Line Manager",
         exp1b1: "Lead a team of 16 (data scientists, ML and software engineers, solution designers) scaled from 8, owning hiring, career paths, mentoring of both managers and junior scientists, performance and underperformance management.",
+        exp1b1b: "Own portfolio strategy, investment priorities and product roadmaps across computer vision, MLOps, forecasting and semantic infrastructure, serving BASF's global data science community.",
         exp1b2: "Led portfolio decisions with direct financial impact: transferred the computer vision / MLOps platform to its best-fit owner (~€2M recurring savings, 70 reusable templates, ~90% effort reduction for ~100 data scientists) and recommended closure of the forecasting platform after an ROI and adoption review (~€1.5M savings).",
         exp1b3: "Deliver the full analytical journey from descriptive to predictive: a self-service forecasting platform for business users and a computer vision platform for classification, segmentation and object detection — both deployed at scale in the cloud.",
         exp1b4: "Own demand intake, prioritisation and delivery for stakeholders across three departments and multiple European markets, running biweekly strategic reviews to align roadmaps and arbitrate competing priorities.",
@@ -814,11 +823,13 @@
         exp1b6: "Won backing for five innovation initiatives worth €360K by turning analytical opportunities into quantified business cases and presenting them to senior leadership.",
         exp1b7: "Acted as Business Transformation Coordinator for Spain, Portugal and Italy through a legally constrained restructuring, aligning business units and site managing directors while the department was integrated into the commodity business.",
         exp2Company: "BASF Digital Solutions S.L. — Madrid, Spain",
-        exp2Role: "Product Component Manager, Ontology Lead",
+        exp2Role: "Technical Product Manager — Ontology & Semantic Layer",
         exp2Dates: "2021 – 2022",
+        exp2Official: "Official BASF title: Product Component Manager · foundation for the AI & ML platform portfolio taken on next",
         exp2b1: "Owned enterprise ontology and knowledge-graph strategy — the semantic foundation that makes heterogeneous data interoperable and machine-readable for AI and agentic systems.",
         exp2b2: "Led 5 engineers and 2 external partners to deliver 20 bio-ontologies adopted as the vocabulary standard across the R&D Agricultural Solutions department by every internal tool within 6–12 months.",
         exp2b3: "Co-authored BASF's GOMO ontology governance framework (published, ISMB 2022) with the Ontology Engineering Group at Universidad Politécnica de Madrid.",
+        exp2b3b: "Led the EPPO ontology for plant and pest code representation, published in Frontiers in Artificial Intelligence and released as open source.",
         exp2b4: "Established and led a biweekly data steward community of 10 governing vocabulary standardisation, processing 10–15 terminology requests per month.",
         exp3Company: "Umeå Plant Science Centre — Umeå, Sweden",
         exp3Role: "Postdoctoral Researcher, Machine Learning",
@@ -931,9 +942,11 @@
 
         experienceTitle: "Experiencia",
         exp1Company: "BASF Digital Solutions S.L. — Madrid, España",
-        exp1Role: "Lead Product Manager, Plataformas de IA y Datos",
+        exp1Role: "Head of Advanced Imaging & Forecasting Solutions — Plataformas de IA y ML",
         exp1Dates: "2022 – Actualidad",
+        exp1Official: "Título oficial en BASF: Product Manager · alcance equivalente a Head of Product / Global Product Line Manager",
         exp1b1: "Dirijo un equipo de 16 personas (científicos de datos, ingenieros de ML y software, solution designers) escalado desde 8, con responsabilidad sobre contratación, planes de carrera, mentoría de managers y científicos junior, desempeño y gestión del bajo rendimiento.",
+        exp1b1b: "Soy responsable de la estrategia de portafolio, las prioridades de inversión y las hojas de ruta de producto en visión por computador, MLOps, forecasting e infraestructura semántica, al servicio de la comunidad global de ciencia de datos de BASF.",
         exp1b2: "Lideré decisiones de portafolio con impacto financiero directo: transferí la plataforma de visión por computador / MLOps a su mejor propietario (~2M€ de ahorro recurrente, 70 plantillas reutilizables, ~90% menos esfuerzo para ~100 científicos de datos) y recomendé el cierre de la plataforma de forecasting tras una revisión de ROI y adopción (~1,5M€ de ahorro).",
         exp1b3: "Entrego el recorrido analítico completo, de lo descriptivo a lo predictivo: una plataforma self-service de forecasting para usuarios de negocio y una plataforma de visión por computador para clasificación, segmentación y detección de objetos, ambas desplegadas a escala en la nube.",
         exp1b4: "Gestiono la entrada, priorización y entrega de demanda para stakeholders de tres departamentos y varios mercados europeos, con revisiones estratégicas quincenales para alinear hojas de ruta y arbitrar prioridades en conflicto.",
@@ -941,11 +954,13 @@
         exp1b6: "Obtuve respaldo para cinco iniciativas de innovación por valor de 360K€ convirtiendo oportunidades analíticas en casos de negocio cuantificados y presentándolos a la dirección.",
         exp1b7: "Actué como Business Transformation Coordinator para España, Portugal e Italia durante una reestructuración legalmente condicionada, alineando unidades de negocio y directores de planta mientras el departamento se integraba en el negocio de commodities.",
         exp2Company: "BASF Digital Solutions S.L. — Madrid, España",
-        exp2Role: "Product Component Manager, Responsable de Ontologías",
+        exp2Role: "Technical Product Manager — Ontologías y Capa Semántica",
         exp2Dates: "2021 – 2022",
+        exp2Official: "Título oficial en BASF: Product Component Manager · base del portafolio de plataformas de IA y ML asumido después",
         exp2b1: "Responsable de la estrategia corporativa de ontologías y knowledge graphs: la base semántica que hace los datos heterogéneos interoperables y legibles por máquina para sistemas de IA y agénticos.",
         exp2b2: "Dirigí a 5 ingenieros y 2 partners externos para entregar 20 bio-ontologías adoptadas como estándar de vocabulario en todo el departamento de I+D de Agricultural Solutions por todas las herramientas internas en 6–12 meses.",
         exp2b3: "Coautor del marco de gobierno de ontologías GOMO de BASF (publicado, ISMB 2022) con el Ontology Engineering Group de la Universidad Politécnica de Madrid.",
+        exp2b3b: "Lideré la ontología EPPO para la representación de códigos de plantas y plagas, publicada en Frontiers in Artificial Intelligence y liberada como open source.",
         exp2b4: "Creé y lideré una comunidad quincenal de 10 data stewards para la estandarización de vocabulario, procesando 10–15 peticiones terminológicas al mes.",
         exp3Company: "Umeå Plant Science Centre — Umeå, Suecia",
         exp3Role: "Investigador postdoctoral, Machine Learning",
@@ -1058,9 +1073,11 @@
 
         experienceTitle: "Expérience",
         exp1Company: "BASF Digital Solutions S.L. — Madrid, Espagne",
-        exp1Role: "Lead Product Manager, Plateformes IA & Data",
+        exp1Role: "Head of Advanced Imaging & Forecasting Solutions — Plateformes IA & ML",
         exp1Dates: "2022 – Aujourd'hui",
+        exp1Official: "Intitulé officiel BASF : Product Manager · périmètre équivalent à Head of Product / Global Product Line Manager",
         exp1b1: "Je dirige une équipe de 16 personnes (data scientists, ingénieurs ML et logiciel, solution designers) passée de 8, avec la responsabilité du recrutement, des plans de carrière, du mentorat des managers et des scientifiques juniors, de la performance et de la sous-performance.",
+        exp1b1b: "Je suis responsable de la stratégie de portefeuille, des priorités d'investissement et des roadmaps produit en vision par ordinateur, MLOps, forecasting et infrastructure sémantique, au service de la communauté data science mondiale de BASF.",
         exp1b2: "J'ai piloté des décisions de portefeuille à impact financier direct : transfert de la plateforme vision par ordinateur / MLOps à son meilleur propriétaire (~2M€ d'économies récurrentes, 70 templates réutilisables, ~90% d'effort en moins pour ~100 data scientists) et recommandation de fermeture de la plateforme de forecasting après une revue de ROI et d'adoption (~1,5M€ d'économies).",
         exp1b3: "Je livre le parcours analytique complet, du descriptif au prédictif : une plateforme self-service de forecasting pour les utilisateurs métier et une plateforme de vision par ordinateur pour la classification, la segmentation et la détection d'objets, toutes deux déployées à l'échelle dans le cloud.",
         exp1b4: "Je gère la captation, la priorisation et la livraison de la demande pour des parties prenantes de trois départements et plusieurs marchés européens, avec des revues stratégiques bimensuelles pour aligner les roadmaps et arbitrer les priorités concurrentes.",
@@ -1068,11 +1085,13 @@
         exp1b6: "J'ai obtenu le soutien de cinq initiatives d'innovation d'une valeur de 360K€ en transformant des opportunités analytiques en business cases chiffrés présentés à la direction.",
         exp1b7: "J'ai été Business Transformation Coordinator pour l'Espagne, le Portugal et l'Italie lors d'une restructuration sous contrainte légale, en alignant les unités business et les directeurs de site pendant l'intégration du département dans le business des commodités.",
         exp2Company: "BASF Digital Solutions S.L. — Madrid, Espagne",
-        exp2Role: "Product Component Manager, Responsable Ontologies",
+        exp2Role: "Technical Product Manager — Ontologies & Couche Sémantique",
         exp2Dates: "2021 – 2022",
+        exp2Official: "Intitulé officiel BASF : Product Component Manager · socle du portefeuille de plateformes IA & ML repris ensuite",
         exp2b1: "Responsable de la stratégie d'ontologies et de knowledge graphs d'entreprise — la fondation sémantique qui rend les données hétérogènes interopérables et lisibles par machine pour les systèmes IA et agentiques.",
         exp2b2: "J'ai dirigé 5 ingénieurs et 2 partenaires externes pour livrer 20 bio-ontologies adoptées comme standard de vocabulaire dans tout le département R&D Agricultural Solutions par l'ensemble des outils internes en 6–12 mois.",
         exp2b3: "Co-auteur du cadre de gouvernance d'ontologies GOMO de BASF (publié, ISMB 2022) avec l'Ontology Engineering Group de l'Universidad Politécnica de Madrid.",
+        exp2b3b: "J'ai piloté l'ontologie EPPO pour la représentation des codes de plantes et de ravageurs, publiée dans Frontiers in Artificial Intelligence et publiée en open source.",
         exp2b4: "J'ai créé et animé une communauté bimensuelle de 10 data stewards pour la standardisation du vocabulaire, traitant 10–15 demandes terminologiques par mois.",
         exp3Company: "Umeå Plant Science Centre — Umeå, Suède",
         exp3Role: "Chercheur postdoctoral, Machine Learning",
