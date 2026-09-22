@@ -4,12 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aarón Ayllón Benítez · AI &amp; Data Science Leader</title>
-  <meta name="description" content="Aarón Ayllón Benítez — AI &amp; Data Science Leader. Team of 16, two production AI/ML platforms, €3M+ recurring savings from portfolio decisions. PhD Computer Science, MSc AI. Madrid." />
+  <meta name="description" content="Aarón Ayllón Benítez, PhD — AI &amp; Data Science Leader. Team of 16, ~€1.3M platform budget, two production AI/ML platforms, €3.5M+ recurring savings from portfolio decisions. PhD Computer Science, MSc AI. Madrid." />
 
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
 
   <style>
     :root {
@@ -62,6 +60,8 @@
       width: 60px; height: 2px; background: var(--accent);
       position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
     }
+    .exec-summary p { text-align: left; }
+    @media (min-width: 768px) { .exec-summary p { text-align: justify; } }
     .section-intro {
       color: var(--light-gray); max-width: 760px; margin: 0 auto 2.5rem; text-align: center;
     }
@@ -147,6 +147,51 @@
     .timeline ul { margin-top: 0.6rem; padding-left: 1.2rem; font-size: 0.92rem; }
     .timeline ul li { margin-bottom: 0.4rem; line-height: 1.5; }
     .timeline .early-role ul { font-size: 0.88rem; }
+    .role-summary {
+      font-style: italic; font-size: 0.92rem; line-height: 1.55; margin: 0.6rem 0 0;
+    }
+
+    /* ---------- Core skills ---------- */
+    .skill-row {
+      display: grid; grid-template-columns: 190px 1fr; gap: 0.35rem 1.25rem;
+      padding: 0.7rem 0; border-bottom: 1px solid #eef0f3;
+      font-size: 0.93rem; line-height: 1.55;
+    }
+    .skill-row:last-child { border-bottom: none; }
+    .skill-label { color: var(--accent); font-weight: 600; }
+    @media (max-width: 767.98px) {
+      .skill-row { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- Entrepreneurship ---------- */
+    .venture-card {
+      background: #fff; border: 1px solid #e5e7eb; border-left: 3px solid var(--accent);
+      border-radius: 8px; padding: 1.5rem 1.6rem;
+    }
+    .venture-card h5 { color: var(--accent); font-weight: 600; font-size: 1.05rem; margin-bottom: 0.15rem; }
+    .venture-card .role-line { color: var(--accent-soft); font-style: italic; font-size: 0.95rem; }
+    .venture-card .role-dates { color: var(--light-gray); font-size: 0.88rem; }
+    .venture-card ul { margin: 0.8rem 0 0; padding-left: 1.2rem; font-size: 0.92rem; }
+    .venture-card ul li { margin-bottom: 0.4rem; line-height: 1.5; }
+    .venture-access {
+      margin: 0.8rem 0 0; padding: 0.6rem 0.85rem; background: var(--bg-soft);
+      border-radius: 6px; font-size: 0.88rem; line-height: 1.5;
+    }
+    .venture-access a { color: var(--accent); font-weight: 600; }
+    .beta-badge {
+      display: inline-block; background: var(--accent); color: #fff;
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.3px;
+      padding: 2px 7px; border-radius: 3px; margin: 0 0.35rem; vertical-align: 1px;
+    }
+
+    /* ---------- Languages ---------- */
+    .lang-item { text-align: center; padding: 0.4rem 0.5rem; }
+    .lang-name { color: var(--accent); font-weight: 600; font-size: 0.98rem; }
+    .lang-level { color: var(--light-gray); font-size: 0.88rem; }
+
+    /* ---------- Line breaking: avoid a single word alone on the last line ---------- */
+    p, li, .impact-cap, .pf-metric, .role-official, .skill-list, .pub-venue, .pub-authors { text-wrap: pretty; }
+    h1, h2, h5, .lead, .pub-title { text-wrap: balance; }
 
     /* ---------- Publications accordion ---------- */
     .pub-card {
@@ -242,6 +287,7 @@
         <li class="nav-item"><a class="nav-link" href="#platforms" data-i18n="navPlatforms">Platforms</a></li>
         <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="navExperience">Experience</a></li>
         <li class="nav-item"><a class="nav-link" href="#leadership" data-i18n="navLeadership">Leadership</a></li>
+        <li class="nav-item"><a class="nav-link" href="#venture" data-i18n="navVenture">Entrepreneurship</a></li>
         <li class="nav-item"><a class="nav-link" href="#research" data-i18n="navResearch">Research</a></li>
         <li class="nav-item"><a class="nav-link" href="#education" data-i18n="navEducation">Education</a></li>
       </ul>
@@ -251,13 +297,13 @@
   <!-- Hero -->
   <header class="jumbotron jumbotron-fluid text-center mb-0" id="home" style="padding-top: 6rem; padding-bottom: 3rem; background: var(--bg-soft);">
     <div class="container">
-      <h1 class="display-4" style="color: var(--accent); font-weight: 600;" data-i18n="heroTitle">Aarón Ayllón Benítez</h1>
+      <h1 class="display-4" style="color: var(--accent); font-weight: 600;" data-i18n="heroTitle">Aarón Ayllón Benítez, PhD</h1>
       <p class="lead mb-2" data-i18n="heroSubtitle" style="font-weight: 500; color: var(--accent);">
-        AI &amp; Data Science Leader · Enterprise ML, GenAI &amp; Agentic Platforms · Team and Portfolio Ownership
+        AI &amp; Data Science Leader — Enterprise ML, GenAI &amp; Agentic Platforms · Team and Portfolio Ownership
       </p>
 
       <p class="hero-tagline" data-i18n="heroTagline">
-        <strong>PhD Computer Science · MSc Artificial Intelligence.</strong> I lead a team of 16 data scientists and engineers at BASF Digital Solutions, own two production AI/ML platforms, and make the portfolio calls that follow — including recommending the closure of one of my own.
+        <strong>PhD Computer Science · MSc Artificial Intelligence.</strong> I lead a 16-person team and a ~€1.3M platform budget at BASF Digital Solutions, own two production AI/ML platforms, and make the portfolio calls that follow — including recommending the closure of one of my own.
       </p>
 
       <div class="languages mt-3 mb-3">
@@ -287,7 +333,7 @@
       <div class="row">
         <div class="col-6 col-md-3">
           <div class="impact-item">
-            <div class="impact-num">€3M+</div>
+            <div class="impact-num">€3.5M+</div>
             <div class="impact-cap" data-i18n="impact1">recurring savings from portfolio decisions</div>
           </div>
         </div>
@@ -306,7 +352,7 @@
         <div class="col-6 col-md-3">
           <div class="impact-item">
             <div class="impact-num">~100</div>
-            <div class="impact-cap" data-i18n="impact4">data scientists served by the platforms owned</div>
+            <div class="impact-cap" data-i18n="impact4">the whole of BASF's global data science community</div>
           </div>
         </div>
       </div>
@@ -320,24 +366,40 @@
         <div class="col-md-4 text-center mb-4 mb-md-0">
           <img src="Aaron_sin_fondo.png" class="rounded-circle img-fluid" alt="Aarón Ayllón Benítez" style="max-width: 260px;" />
         </div>
-        <div class="col-md-8" style="text-align: justify">
+        <div class="col-md-8 exec-summary">
           <h2 data-i18n="aboutExecTitle">Executive Summary</h2>
           <p data-i18n="aboutExecText">
-            Data scientist turned AI/ML leader. Over the past five years at BASF Digital Solutions I scaled a team from 8 to 16 data scientists, ML and software engineers and solution designers, and owned two production AI/ML platforms covering the full analytics journey from descriptive to predictive — delivering recurring savings above €3M. I own demand intake and prioritisation across three departments and multiple European markets, and I make the portfolio calls: what to scale, what to hand over, and what to shut down.
+            Data scientist turned AI/ML leader (PhD Computer Science, MSc Artificial Intelligence) with five-plus years building and running multidisciplinary data science teams and a ~€1.3M platform budget inside a global corporation. I scaled a team from 8 to 16 data scientists, ML/software engineers and solution designers, and owned two production AI/ML platforms covering the full analytics journey from descriptive to predictive, delivering recurring savings above €3.5M.
           </p>
           <p data-i18n="aboutExecText2">
-            The technical depth is not decorative. PhD in Computer Science (Bordeaux), MSc in Artificial Intelligence, postdoctoral machine learning research, first-author publications in Q1 journals and IEEE, competitive grants as main author. I moved to industry because the most interesting ML problems are the ones that have to ship — and because a team of scientists is led better by someone who can still challenge a model choice on its merits.
+            I own the portfolio calls that follow — what to scale, what to hand over and what to shut down — alongside vendor strategy, demand intake and prioritisation across departments and European markets. I combine hands-on technical depth in ML, LLMs and agentic workflows, still shipping production code solo as co-founder of a live B2B SaaS platform, with life-sciences training in biochemistry, bioinformatics and biomedical machine learning on patient-derived data, and a track record of translating analytics into quantified business cases defended in front of senior leadership.
           </p>
+        </div>
+      </div>
 
-          <h2 class="mt-4" data-i18n="aboutFocusTitle">Where I Operate</h2>
-          <ul>
-            <li data-i18n="focus1">Team leadership: hiring, career paths, performance, coaching the managers who report in</li>
-            <li data-i18n="focus2">Portfolio governance: ROI-driven build, scale, hand-over and sunset decisions</li>
-            <li data-i18n="focus3">Production ML platforms and self-service data products at enterprise scale</li>
-            <li data-i18n="focus4">GenAI, LLMs and agentic workflows integrated into real ML pipelines</li>
-            <li data-i18n="focus5">Computer vision, time-series forecasting, knowledge graphs and ontologies</li>
-            <li data-i18n="focus6">Executive communication: quantified business cases defended in front of senior leadership</li>
-          </ul>
+      <div class="row mt-5">
+        <div class="col-12">
+          <h2 data-i18n="skillsTitle">Core Skills</h2>
+          <div class="skill-row">
+            <div class="skill-label" data-i18n="skill1Label">AI &amp; Data Science</div>
+            <div class="skill-list" data-i18n="skill1">Machine Learning, Deep Learning, Computer Vision, Time-series Forecasting, MLOps, Agentic workflows (multi-step reasoning, tool calling, evaluation), Descriptive → Predictive Analytics, GenAI &amp; LLMs, Knowledge Graphs &amp; Ontologies</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label" data-i18n="skill2Label">Leadership</div>
+            <div class="skill-list" data-i18n="skill2">Hiring &amp; team building, Mentoring managers and junior scientists, Cross-functional alignment, Multi-market coordination, Performance and underperformance management, Career paths, Executive communication &amp; storytelling</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label" data-i18n="skill3Label">Portfolio &amp; Delivery</div>
+            <div class="skill-list" data-i18n="skill3">Portfolio governance &amp; rationalisation, Budget ownership &amp; P&amp;L, Vendor evaluation &amp; build-vs-buy decisions, Product line management, Build / scale / hand-over / sunset decisions, Product strategy &amp; roadmap, Demand intake &amp; prioritisation, Enterprise platform delivery</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label" data-i18n="skill4Label">Technical</div>
+            <div class="skill-list" data-i18n="skill4">Python, R, SQL, advanced statistics, Azure &amp; Azure DevOps, APIs / MCP, data engineering workflows, CI/CD, Power BI, AI development tools</div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-label" data-i18n="skill5Label">Domains</div>
+            <div class="skill-list" data-i18n="skill5">Life sciences, healthcare &amp; biomedical data, pharma and agricultural R&amp;D, industrial and commodity business</div>
+          </div>
         </div>
       </div>
     </div>
@@ -360,7 +422,7 @@
               <span class="badge-type" data-i18n="pfType1">Scaled &amp; transferred</span>
               <h5 class="card-title mt-3" data-i18n="pfCard1Title">Computer Vision / MLOps Platform</h5>
               <p class="card-text" data-i18n="pfCard1Text">
-                Owned an enterprise computer vision platform for classification, segmentation and object detection, with reusable templates deployed at cloud scale. Once mature, I transferred it to its best-fit business owner rather than holding on to it.
+                Owned BASF's enterprise computer vision / MLOps platform, with a peer-reviewed library of 70 reusable templates and platform health tracked through active-user adoption and time saved per user. Once mature, I transferred it to its best-fit owner rather than holding on to it.
               </p>
               <span class="pf-metric" data-i18n="pfMetric1">~€2M recurring savings · 70 templates · ~90% effort reduction for ~100 data scientists</span>
             </div>
@@ -373,7 +435,7 @@
             <div class="card-icon">📈</div>
             <div class="card-body">
               <span class="badge-type" data-i18n="pfType2">Reviewed &amp; sunset</span>
-              <h5 class="card-title mt-3" data-i18n="pfCard2Title">Self-Service Forecasting Platform</h5>
+              <h5 class="card-title mt-3" data-i18n="pfCard2Title">Self‑Service Forecasting Platform</h5>
               <p class="card-text" data-i18n="pfCard2Text">
                 Led a self-service time-series platform giving business users forecasting and decision support without a data scientist in the loop. After an ROI and adoption review, I recommended closing it — a platform I owned — and defended that call with numbers.
               </p>
@@ -387,12 +449,12 @@
           <div class="portfolio-card">
             <div class="card-icon">🤖</div>
             <div class="card-body">
-              <span class="badge-type" data-i18n="pfType3">Funded &amp; in build</span>
-              <h5 class="card-title mt-3" data-i18n="pfCard3Title">GenAI Intelligent Labelling</h5>
+              <span class="badge-type" data-i18n="pfType3">Business case funded</span>
+              <h5 class="card-title mt-3" data-i18n="pfCard3Title">GenAI Labelling Automation</h5>
               <p class="card-text" data-i18n="pfCard3Text">
-                Turned an image-analysis bottleneck into a quantified business case and secured internal funding for GenAI-powered intelligent labelling and workflow automation, alongside LLM integration into production ML pipelines.
+                Turned an image-labelling bottleneck into a quantified business case presented directly to VP stakeholders, and secured funding for GenAI-powered labelling automation. Ran a proof-of-concept of SIGMA AI and benchmarked competing tools to inform the build-vs-buy decision.
               </p>
-              <span class="pf-metric" data-i18n="pfMetric3">€200K internal funding secured · part of €360K across five initiatives</span>
+              <span class="pf-metric" data-i18n="pfMetric3">€560K secured · GenAI labelling plus five further innovation initiatives</span>
             </div>
           </div>
         </div>
@@ -405,7 +467,7 @@
               <span class="badge-type" data-i18n="pfType4">Enterprise standard</span>
               <h5 class="card-title mt-3" data-i18n="pfCard4Title">Ontology &amp; Knowledge Graph Programme</h5>
               <p class="card-text" data-i18n="pfCard4Text">
-                Built the semantic foundation that makes heterogeneous enterprise data interoperable and machine-readable for AI and agentic systems, and the governance model that keeps it alive after launch.
+                Owned BASF's Ontology Management Framework: the semantic foundation that makes heterogeneous enterprise data interoperable and machine-readable for AI and agentic systems, and the governance model that keeps it alive after launch.
               </p>
               <span class="pf-metric" data-i18n="pfMetric4">20 bio-ontologies adopted as department standard · GOMO framework published</span>
             </div>
@@ -426,15 +488,14 @@
           <div class="role-line" data-i18n="exp1Role">Head of Advanced Imaging &amp; Forecasting Solutions — AI &amp; ML Platforms</div>
           <span class="role-dates" data-i18n="exp1Dates">2022 – Present</span>
           <div class="role-official" data-i18n="exp1Official">Official BASF title: Product Manager · scope equivalent to Head of Product / Global Product Line Manager</div>
+          <p class="role-summary" data-i18n="exp1Summary">Own a ~€1.3M annual platform budget and a 16-person team (scaled from 8: data scientists, ML/software engineers, solution designers) across BASF's computer vision, MLOps and forecasting platforms, serving the company's global data science community. Accountable for portfolio strategy, vendor decisions and demand prioritisation across three departments and multiple European markets, reporting monthly to Finance and presenting investment cases at VP level.</p>
           <ul>
-            <li data-i18n="exp1b1">Lead a team of 16 (data scientists, ML and software engineers, solution designers) scaled from 8, owning hiring, career paths, mentoring of both managers and junior scientists, performance and underperformance management.</li>
-            <li data-i18n="exp1b1b">Own portfolio strategy, investment priorities and product roadmaps across computer vision, MLOps, forecasting and semantic infrastructure, serving BASF's global data science community.</li>
-            <li data-i18n="exp1b2">Led portfolio decisions with direct financial impact: transferred the computer vision / MLOps platform to its best-fit owner (~€2M recurring savings, 70 reusable templates, ~90% effort reduction for ~100 data scientists) and recommended closure of the forecasting platform after an ROI and adoption review (~€1.5M savings).</li>
-            <li data-i18n="exp1b3">Deliver the full analytical journey from descriptive to predictive: a self-service forecasting platform for business users and a computer vision platform for classification, segmentation and object detection — both deployed at scale in the cloud.</li>
-            <li data-i18n="exp1b4">Own demand intake, prioritisation and delivery for stakeholders across three departments and multiple European markets, running biweekly strategic reviews to align roadmaps and arbitrate competing priorities.</li>
-            <li data-i18n="exp1b5">Secured €200K in internal funding for GenAI-powered intelligent labelling and automation of image-analysis workflows; drove an AI-native engineering culture with LLM integration into ML pipelines and team-wide adoption of AI development tools.</li>
-            <li data-i18n="exp1b6">Won backing for five innovation initiatives worth €360K by turning analytical opportunities into quantified business cases and presenting them to senior leadership.</li>
-            <li data-i18n="exp1b7">Acted as Business Transformation Coordinator for Spain, Portugal and Italy through a legally constrained restructuring, aligning business units and site managing directors while the department was integrated into the commodity business.</li>
+            <li data-i18n="exp1b1">Scaled the team from 8 to 16 through structured hiring and career-path design, directly mentoring both managers and junior scientists and owning performance — including underperformance — management.</li>
+            <li data-i18n="exp1b2">Transferred the CV/MLOps platform to its best-fit owner (~€2M recurring savings, 70 reusable templates, ~90% effort reduction for ~100 data scientists) and closed the forecasting platform after ROI review (~€1.5M savings).</li>
+            <li data-i18n="exp1b3">Instituted peer-reviewed governance for the 70-template library and tracked platform health via active-user adoption and time saved per user, validated through internal satisfaction surveys.</li>
+            <li data-i18n="exp1b4">Secured €560K in funding — GenAI-powered labelling automation plus five further innovation initiatives — presenting quantified business cases directly to VP stakeholders.</li>
+            <li data-i18n="exp1b5">Solidified an exclusive delivery partnership with Tecnalia, ran a proof-of-concept evaluation of SIGMA AI for image labelling, and benchmarked competing tools to inform build-vs-buy decisions.</li>
+            <li data-i18n="exp1b6">Co-led BASF's cross-departmental Phenotyping working group with Agriculture, standardising multi-site image acquisition and integrating the CV platform with adjacent phenotyping tools.</li>
           </ul>
         </li>
 
@@ -443,11 +504,11 @@
           <div class="role-line" data-i18n="exp2Role">Technical Product Manager — Ontology &amp; Semantic Layer</div>
           <span class="role-dates" data-i18n="exp2Dates">2021 – 2022</span>
           <div class="role-official" data-i18n="exp2Official">Official BASF title: Product Component Manager · foundation for the AI &amp; ML platform portfolio taken on next</div>
+          <p class="role-summary" data-i18n="exp2Summary">Owned BASF's Ontology Management Framework (OMF) — enterprise strategy, governance and technology stack (Protégé, RDFlib, Virtuoso, automated curation pipeline) for bio-ontologies underpinning downstream AI and agentic systems, including ontologies authored in-house. Led 5 engineers and 2 external partners, evaluated Stardog as an alternative before retaining and extending the incumbent stack, and communicated ontology strategy and adoption from general-audience sessions up to VP-level stakeholders across the business.</p>
           <ul>
-            <li data-i18n="exp2b1">Owned enterprise ontology and knowledge-graph strategy — the semantic foundation that makes heterogeneous data interoperable and machine-readable for AI and agentic systems.</li>
-            <li data-i18n="exp2b2">Led 5 engineers and 2 external partners to deliver 20 bio-ontologies adopted as the vocabulary standard across the R&amp;D Agricultural Solutions department by every internal tool within 6–12 months.</li>
-            <li data-i18n="exp2b3">Co-authored BASF's GOMO ontology governance framework (published, ISMB 2022) with the Ontology Engineering Group at Universidad Politécnica de Madrid.</li>
-            <li data-i18n="exp2b3b">Led the EPPO ontology for plant and pest code representation, published in Frontiers in Artificial Intelligence and released as open source.</li>
+            <li data-i18n="exp2b1">Delivered 20 bio-ontologies, several authored in-house, adopted as the vocabulary standard across the R&amp;D Agricultural Solutions department by every internal tool within 6–12 months.</li>
+            <li data-i18n="exp2b2">Co-authored BASF's GOMO ontology governance framework (published, ISMB 2022) with the Ontology Engineering Group at Universidad Politécnica de Madrid.</li>
+            <li data-i18n="exp2b3">Led the EPPO Ontology development for plant and pest code representation, published in Frontiers in Artificial Intelligence and released as open source.</li>
             <li data-i18n="exp2b4">Established and led a biweekly data steward community of 10 governing vocabulary standardisation, processing 10–15 terminology requests per month.</li>
           </ul>
         </li>
@@ -457,9 +518,11 @@
           <div class="role-line" data-i18n="exp3Role">Postdoctoral Researcher, Machine Learning</div>
           <span class="role-dates" data-i18n="exp3Dates">2020 – 2021</span>
           <ul>
-            <li data-i18n="exp3b1">Kempestiftelserna Fellowship: applied machine learning and gene regulatory network inference to improve functional annotation at genome scale.</li>
-            <li data-i18n="exp3b2">Designed production-oriented ML pipelines with reproducibility, auto-scaling and experiment tracking, translating research workflows into deployable systems.</li>
-            <li data-i18n="exp3b3">Secured 2 competitive research grants as main author (KSLA, SPPS); Guest Editor for a Q1 journal special issue.</li>
+            <li data-i18n="exp3b1">Awarded the Kempestiftelserna Fellowship, plus two further competitive grants as main author (KSLA, SPPS), to pursue a research niche combining the ontology-based semantic similarity methods from my PhD with deep learning to infer functional gene annotation in non-model organisms such as <em>Picea abies</em> (Norway spruce) — where multi-decade growth cycles make direct experimental validation infeasible — through homology-based transfer from characterised model-organism genomes.</li>
+            <li data-i18n="exp3b2">Designed production-oriented ML pipelines, containerized with Docker and run on the university's HPC cluster, with reproducibility, auto-scaling and experiment tracking — later used as the starting point for Master's students' thesis work.</li>
+            <li data-i18n="exp3b3">Contributed to a doctoral student's research, co-authoring “<a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=m320tuQAAAAJ&amp;citation_for_view=m320tuQAAAAJ:_FxGoFyzp5QC" target="_blank" rel="noopener">lincRNA annotation in Norway spruce</a>” (Physiologia Plantarum, 2024), while supporting other PhD students during the fellowship.</li>
+            <li data-i18n="exp3b4">Served as Guest Editor for a special issue on AI in non-model plants in <em>Plants</em> (MDPI, Q1), managing peer review for ~10 submitted articles over the course of the fellowship.</li>
+            <li data-i18n="exp3b5">Delivered 25 hours of Master's-level teaching and supported faculty in introductory bioinformatics courses.</li>
           </ul>
         </li>
 
@@ -467,10 +530,12 @@
           <h5 data-i18n="exp5Company">Université de Bordeaux / LaBRI — Bordeaux, France</h5>
           <div class="role-line" data-i18n="exp5Role">PhD Researcher, Computer Science</div>
           <span class="role-dates" data-i18n="exp5Dates">2016 – 2019</span>
+          <div class="role-official" data-i18n="exp5Official">Ministerial funding (MESR)</div>
           <ul>
-            <li data-i18n="exp5b1">Ministerial funding (MESR). Built <a href="https://gsan.labri.fr/" target="_blank" rel="noopener">GSAn</a>, a gene-set annotation web platform still live and in use, and ontology-based ML methods for semantic similarity and knowledge representation.</li>
-            <li data-i18n="exp5b2">Published across Q1 journals and IEEE; co-supervised a Master's student with the thesis director; first prize, Scientific Game Jam Bordeaux.</li>
-            <li data-i18n="exp5b3">Ran an externally funded applied-ML engagement alongside the thesis: MHC epitope prediction in HIV patients from patient-derived sequence data — hands-on biomedical machine learning in a clinical research setting.</li>
+            <li data-i18n="exp5b1">Originated an ontology-based semantic-similarity methodology for gene-set annotation — the approach that would later underpin ontology governance work at BASF (GOMO, EPPO) — evaluating nine semantic similarity measures over Gene Ontology terms to identify the optimal trade-off between minimizing retained annotation terms and maximizing gene coverage, outperforming standard enrichment-analysis tools.</li>
+            <li data-i18n="exp5b2">Built the method into <a href="https://gsan.labri.fr/" target="_blank" rel="noopener">GSAn</a>, a public gene-set annotation web platform still in active use today (18+ citations), including as the research foundation for a subsequent PhD student under my supervisors.</li>
+            <li data-i18n="exp5b3">Co-supervised a Master's student on parallel research benchmarking GSAn against existing gene-set annotation tools.</li>
+            <li data-i18n="exp5b4">Ran an applied-ML engagement funded by Bordeaux University Hospital during the closing months of the thesis, applying MHC epitope prediction to patient-derived HIV sequence data and surfacing a promising, unpublished finding — hands-on biomedical machine learning in a clinical research setting.</li>
           </ul>
         </li>
 
@@ -479,7 +544,8 @@
           <div class="role-line" data-i18n="exp4Role">Bioinformatics Engineer</div>
           <span class="role-dates" data-i18n="exp4Dates">2015 – 2016</span>
           <ul>
-            <li data-i18n="exp4b1">Developed algorithms for multi-omics data integration and enrichment analysis in a clinical research setting, under Rodolphe Thiébaut — later a co-author on the resulting doctoral publications.</li>
+            <li data-i18n="exp4b1">Ran a solo, fully autonomous pre-doctoral engagement integrating genomic and transcriptomic data from HIV patients using standard Gene Set Enrichment Analysis (GSEA), reporting directly to Rodolphe Thiébaut and my future PhD supervisors throughout the engagement.</li>
+            <li data-i18n="exp4b2">Identified the limitations of standard enrichment analysis on real multi-omics data — the insight that directly seeded the semantic-similarity methodology later developed into GSAn during my PhD — and published the resulting work as first author in PLoS ONE (2018), with Thiébaut as co-author.</li>
           </ul>
         </li>
       </ul>
@@ -491,14 +557,14 @@
     <div class="container">
       <h2 class="mb-3 text-center" data-i18n="leadTitle">Leadership Approach</h2>
       <p class="section-intro" data-i18n="leadIntro">
-        Three principles that have survived contact with a real portfolio, a real team and a real restructuring.
+        Three principles tested against a real portfolio, a real team and real investment decisions.
       </p>
 
       <div class="row">
         <div class="col-md-4 mb-4">
           <div class="lead-card">
             <h5 data-i18n="lead1Title">Build the bench, not just the backlog</h5>
-            <p data-i18n="lead1Text">Doubled the team through deliberate hiring, individual career paths and coaching of the managers who report into the role — including the hard conversations around underperformance rather than routing around them.</p>
+            <p data-i18n="lead1Text">Doubled the team through deliberate hiring, individual career paths and coaching of the managers who report into the role — including the hard conversations around underperformance rather than routing around them, because a team's ceiling is set by its weakest link.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
@@ -514,20 +580,35 @@
           </div>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-12">
-          <div class="lead-card">
-            <h5 data-i18n="ventTitle">Entrepreneurship — Proyecto Vigía · 2026 – Present</h5>
-            <p data-i18n="ventText">Co-founder (50%) of a B2B marketplace for a regulated Spanish services sector, currently in closed beta. I designed and built the entire platform end to end, single-handedly — backend, frontend, identity and access management, geospatial data, document processing, GDPR machinery and compliant e-invoicing — and I own monetisation strategy, fraud-risk design, infrastructure cost optimisation and the partnership protection framework.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
+  <!-- Entrepreneurship -->
+  <section id="venture" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center" data-i18n="ventTitle">Entrepreneurship</h2>
+
+      <div class="venture-card">
+        <h5 data-i18n="ventCompany">Proyecto Vigía — Spain</h5>
+        <div class="role-line" data-i18n="ventRole">Co-founder (50%) &amp; Sole Developer</div>
+        <span class="role-dates" data-i18n="ventDates">2026 – Present</span>
+        <p class="venture-access">
+          <a href="https://vigiaprl.es" target="_blank" rel="noopener">vigiaprl.es ↗</a>
+          <span class="beta-badge" data-i18n="ventBeta">Closed beta</span>
+          <span data-i18n="ventAccess">Access requires invitation credentials.</span>
+        </p>
+        <p class="role-summary" data-i18n="ventSummary">Co-founded and single-handedly designed and built, end to end, a B2B marketplace platform for a regulated Spanish services sector: Java/Spring Boot backend, React/TypeScript frontend, Keycloak-based identity and access management, geospatial PostgreSQL/PostGIS, document-processing pipeline with OCR, GDPR-compliant data handling, and Verifactu-compliant e-invoicing — from architecture through production deployment.</p>
+        <ul>
+          <li data-i18n="ventB1">Took the platform from architecture to closed beta solo in ~3 months (June–September 2026), using AI-assisted development tooling (Claude Code) to accelerate delivery; now collecting structured feedback from the closed-beta cohort ahead of a planned public launch.</li>
+          <li data-i18n="ventB2">Conducted a self-led security review of the platform, identifying and remediating several vulnerabilities before the beta launch.</li>
+          <li data-i18n="ventB3">Optimised infrastructure cost by architecting on ARM-based cloud instances (Hetzner), balancing performance against a bootstrapped budget without compromising reliability.</li>
+          <li data-i18n="ventB4">Evaluating monetisation models — transaction-based commission versus a premium subscription tier — to shape the platform's go-to-market approach.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <!-- Research & Industry Visibility -->
-  <section id="research" class="py-5">
+  <section id="research" class="bg-light py-5">
     <div class="container">
       <h2 class="mb-3 text-center" data-i18n="resTitle">Research &amp; Industry Visibility</h2>
       <p class="section-intro" data-i18n="resIntro">
@@ -544,7 +625,7 @@
               <div class="pub-header" onclick="togglePub(this)">
                 <div>
                   <p class="pub-title" data-i18n="pub4Title">Development of a fixed module repertoire for the analysis and interpretation of blood transcriptome data</p>
-                  <div class="pub-venue"><strong>Nature Communications</strong> · 2021 · <em>Q1</em></div>
+                  <div class="pub-venue"><strong>Nature Communications</strong> · 2021 · <em>Q1 · Contributor</em></div>
                 </div>
                 <span class="pub-toggle">+</span>
               </div>
@@ -581,7 +662,7 @@
               <div class="pub-header" onclick="togglePub(this)">
                 <div>
                   <p class="pub-title" data-i18n="pub1Title">EPPO Ontology: A Semantic-Driven Approach for Plant and Pest Codes Representation</p>
-                  <div class="pub-venue"><strong>Frontiers in Artificial Intelligence</strong> · 2023 · <em>Industry</em></div>
+                  <div class="pub-venue"><strong>Frontiers in Artificial Intelligence</strong> · 2023 · <em>First author · Industry</em></div>
                 </div>
                 <span class="pub-toggle">+</span>
               </div>
@@ -702,7 +783,7 @@
   </section>
 
   <!-- Education -->
-  <section id="education" class="bg-light py-5">
+  <section id="education" class="py-5">
     <div class="container">
       <h2 class="mb-4 text-center" data-i18n="educationTitle">Education</h2>
 
@@ -737,6 +818,21 @@
         </div>
       </div>
 
+      <h2 class="mt-4 mb-4 text-center" data-i18n="langTitle">Languages</h2>
+      <div class="row justify-content-center">
+        <div class="col-sm-4 lang-item">
+          <div class="lang-name" data-i18n="lang1Name">Spanish</div>
+          <div class="lang-level" data-i18n="lang1Level">Native</div>
+        </div>
+        <div class="col-sm-4 lang-item">
+          <div class="lang-name" data-i18n="lang2Name">English</div>
+          <div class="lang-level" data-i18n="lang2Level">Full professional proficiency</div>
+        </div>
+        <div class="col-sm-4 lang-item">
+          <div class="lang-name" data-i18n="lang3Name">French</div>
+          <div class="lang-level" data-i18n="lang3Level">Full professional proficiency</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -768,45 +864,50 @@
         brandName: "Aarón Ayllón Benítez",
         navAbout: "About", navPlatforms: "Platforms", navExperience: "Experience",
         navLeadership: "Leadership", navResearch: "Research", navEducation: "Education",
+        navVenture: "Entrepreneurship",
 
-        heroTitle: "Aarón Ayllón Benítez",
-        heroSubtitle: "AI & Data Science Leader · Enterprise ML, GenAI & Agentic Platforms · Team and Portfolio Ownership",
-        heroTagline: "<strong>PhD Computer Science · MSc Artificial Intelligence.</strong> I lead a team of 16 data scientists and engineers at BASF Digital Solutions, own two production AI/ML platforms, and make the portfolio calls that follow — including recommending the closure of one of my own.",
+        heroTitle: "Aarón Ayllón Benítez, PhD",
+        heroSubtitle: "AI & Data Science Leader — Enterprise ML, GenAI & Agentic Platforms · Team and Portfolio Ownership",
+        heroTagline: "<strong>PhD Computer Science · MSc Artificial Intelligence.</strong> I lead a 16-person team and a ~€1.3M platform budget at BASF Digital Solutions, own two production AI/ML platforms, and make the portfolio calls that follow — including recommending the closure of one of my own.",
         ctaCV: "Download CV (PDF)",
 
         impact1: "recurring savings from portfolio decisions",
         impact2: "team scaled, hired and developed",
         impact3: "less effort per new project after standardisation",
-        impact4: "data scientists served by the platforms owned",
+        impact4: "the whole of BASF's global data science community",
 
         aboutExecTitle: "Executive Summary",
-        aboutExecText: "Data scientist turned AI/ML leader. Over the past five years at BASF Digital Solutions I scaled a team from 8 to 16 data scientists, ML and software engineers and solution designers, and owned two production AI/ML platforms covering the full analytics journey from descriptive to predictive — delivering recurring savings above €3M. I own demand intake and prioritisation across three departments and multiple European markets, and I make the portfolio calls: what to scale, what to hand over, and what to shut down.",
-        aboutExecText2: "The technical depth is not decorative. PhD in Computer Science (Bordeaux), MSc in Artificial Intelligence, postdoctoral machine learning research, first-author publications in Q1 journals and IEEE, competitive grants as main author. I moved to industry because the most interesting ML problems are the ones that have to ship — and because a team of scientists is led better by someone who can still challenge a model choice on its merits.",
-        aboutFocusTitle: "Where I Operate",
-        focus1: "Team leadership: hiring, career paths, performance, coaching the managers who report in",
-        focus2: "Portfolio governance: ROI-driven build, scale, hand-over and sunset decisions",
-        focus3: "Production ML platforms and self-service data products at enterprise scale",
-        focus4: "GenAI, LLMs and agentic workflows integrated into real ML pipelines",
-        focus5: "Computer vision, time-series forecasting, knowledge graphs and ontologies",
-        focus6: "Executive communication: quantified business cases defended in front of senior leadership",
+        aboutExecText: "Data scientist turned AI/ML leader (PhD Computer Science, MSc Artificial Intelligence) with five-plus years building and running multidisciplinary data science teams and a ~€1.3M platform budget inside a global corporation. I scaled a team from 8 to 16 data scientists, ML/software engineers and solution designers, and owned two production AI/ML platforms covering the full analytics journey from descriptive to predictive, delivering recurring savings above €3.5M.",
+        aboutExecText2: "I own the portfolio calls that follow — what to scale, what to hand over and what to shut down — alongside vendor strategy, demand intake and prioritisation across departments and European markets. I combine hands-on technical depth in ML, LLMs and agentic workflows, still shipping production code solo as co-founder of a live B2B SaaS platform, with life-sciences training in biochemistry, bioinformatics and biomedical machine learning on patient-derived data, and a track record of translating analytics into quantified business cases defended in front of senior leadership.",
+        skillsTitle: "Core Skills",
+        skill1Label: "AI & Data Science",
+        skill1: "Machine Learning, Deep Learning, Computer Vision, Time-series Forecasting, MLOps, Agentic workflows (multi-step reasoning, tool calling, evaluation), Descriptive → Predictive Analytics, GenAI & LLMs, Knowledge Graphs & Ontologies",
+        skill2Label: "Leadership",
+        skill2: "Hiring & team building, Mentoring managers and junior scientists, Cross-functional alignment, Multi-market coordination, Performance and underperformance management, Career paths, Executive communication & storytelling",
+        skill3Label: "Portfolio & Delivery",
+        skill3: "Portfolio governance & rationalisation, Budget ownership & P&L, Vendor evaluation & build-vs-buy decisions, Product line management, Build / scale / hand-over / sunset decisions, Product strategy & roadmap, Demand intake & prioritisation, Enterprise platform delivery",
+        skill4Label: "Technical",
+        skill4: "Python, R, SQL, advanced statistics, Azure & Azure DevOps, APIs / MCP, data engineering workflows, CI/CD, Power BI, AI development tools",
+        skill5Label: "Domains",
+        skill5: "Life sciences, healthcare & biomedical data, pharma and agricultural R&D, industrial and commodity business",
 
         platformsTitle: "Platforms & Portfolio Decisions",
         platformsIntro: "Four initiatives that show how I run an AI portfolio: what gets built, what gets scaled, what gets handed over — and what gets shut down.",
         pfType1: "Scaled & transferred",
         pfCard1Title: "Computer Vision / MLOps Platform",
-        pfCard1Text: "Owned an enterprise computer vision platform for classification, segmentation and object detection, with reusable templates deployed at cloud scale. Once mature, I transferred it to its best-fit business owner rather than holding on to it.",
+        pfCard1Text: "Owned BASF's enterprise computer vision / MLOps platform, with a peer-reviewed library of 70 reusable templates and platform health tracked through active-user adoption and time saved per user. Once mature, I transferred it to its best-fit owner rather than holding on to it.",
         pfMetric1: "~€2M recurring savings · 70 templates · ~90% effort reduction for ~100 data scientists",
         pfType2: "Reviewed & sunset",
-        pfCard2Title: "Self-Service Forecasting Platform",
+        pfCard2Title: "Self‑Service Forecasting Platform",
         pfCard2Text: "Led a self-service time-series platform giving business users forecasting and decision support without a data scientist in the loop. After an ROI and adoption review, I recommended closing it — a platform I owned — and defended that call with numbers.",
         pfMetric2: "~€1.5M savings from the closure decision",
-        pfType3: "Funded & in build",
-        pfCard3Title: "GenAI Intelligent Labelling",
-        pfCard3Text: "Turned an image-analysis bottleneck into a quantified business case and secured internal funding for GenAI-powered intelligent labelling and workflow automation, alongside LLM integration into production ML pipelines.",
-        pfMetric3: "€200K internal funding secured · part of €360K across five initiatives",
+        pfType3: "Business case funded",
+        pfCard3Title: "GenAI Labelling Automation",
+        pfCard3Text: "Turned an image-labelling bottleneck into a quantified business case presented directly to VP stakeholders, and secured funding for GenAI-powered labelling automation. Ran a proof-of-concept of SIGMA AI and benchmarked competing tools to inform the build-vs-buy decision.",
+        pfMetric3: "€560K secured · GenAI labelling plus five further innovation initiatives",
         pfType4: "Enterprise standard",
         pfCard4Title: "Ontology & Knowledge Graph Programme",
-        pfCard4Text: "Built the semantic foundation that makes heterogeneous enterprise data interoperable and machine-readable for AI and agentic systems, and the governance model that keeps it alive after launch.",
+        pfCard4Text: "Owned BASF's Ontology Management Framework: the semantic foundation that makes heterogeneous enterprise data interoperable and machine-readable for AI and agentic systems, and the governance model that keeps it alive after launch.",
         pfMetric4: "20 bio-ontologies adopted as department standard · GOMO framework published",
 
         experienceTitle: "Experience",
@@ -814,44 +915,48 @@
         exp1Role: "Head of Advanced Imaging & Forecasting Solutions — AI & ML Platforms",
         exp1Dates: "2022 – Present",
         exp1Official: "Official BASF title: Product Manager · scope equivalent to Head of Product / Global Product Line Manager",
-        exp1b1: "Lead a team of 16 (data scientists, ML and software engineers, solution designers) scaled from 8, owning hiring, career paths, mentoring of both managers and junior scientists, performance and underperformance management.",
-        exp1b1b: "Own portfolio strategy, investment priorities and product roadmaps across computer vision, MLOps, forecasting and semantic infrastructure, serving BASF's global data science community.",
-        exp1b2: "Led portfolio decisions with direct financial impact: transferred the computer vision / MLOps platform to its best-fit owner (~€2M recurring savings, 70 reusable templates, ~90% effort reduction for ~100 data scientists) and recommended closure of the forecasting platform after an ROI and adoption review (~€1.5M savings).",
-        exp1b3: "Deliver the full analytical journey from descriptive to predictive: a self-service forecasting platform for business users and a computer vision platform for classification, segmentation and object detection — both deployed at scale in the cloud.",
-        exp1b4: "Own demand intake, prioritisation and delivery for stakeholders across three departments and multiple European markets, running biweekly strategic reviews to align roadmaps and arbitrate competing priorities.",
-        exp1b5: "Secured €200K in internal funding for GenAI-powered intelligent labelling and automation of image-analysis workflows; drove an AI-native engineering culture with LLM integration into ML pipelines and team-wide adoption of AI development tools.",
-        exp1b6: "Won backing for five innovation initiatives worth €360K by turning analytical opportunities into quantified business cases and presenting them to senior leadership.",
-        exp1b7: "Acted as Business Transformation Coordinator for Spain, Portugal and Italy through a legally constrained restructuring, aligning business units and site managing directors while the department was integrated into the commodity business.",
+        exp1Summary: "Own a ~€1.3M annual platform budget and a 16-person team (scaled from 8: data scientists, ML/software engineers, solution designers) across BASF's computer vision, MLOps and forecasting platforms, serving the company's global data science community. Accountable for portfolio strategy, vendor decisions and demand prioritisation across three departments and multiple European markets, reporting monthly to Finance and presenting investment cases at VP level.",
+        exp1b1: "Scaled the team from 8 to 16 through structured hiring and career-path design, directly mentoring both managers and junior scientists and owning performance — including underperformance — management.",
+        exp1b2: "Transferred the CV/MLOps platform to its best-fit owner (~€2M recurring savings, 70 reusable templates, ~90% effort reduction for ~100 data scientists) and closed the forecasting platform after ROI review (~€1.5M savings).",
+        exp1b3: "Instituted peer-reviewed governance for the 70-template library and tracked platform health via active-user adoption and time saved per user, validated through internal satisfaction surveys.",
+        exp1b4: "Secured €560K in funding — GenAI-powered labelling automation plus five further innovation initiatives — presenting quantified business cases directly to VP stakeholders.",
+        exp1b5: "Solidified an exclusive delivery partnership with Tecnalia, ran a proof-of-concept evaluation of SIGMA AI for image labelling, and benchmarked competing tools to inform build-vs-buy decisions.",
+        exp1b6: "Co-led BASF's cross-departmental Phenotyping working group with Agriculture, standardising multi-site image acquisition and integrating the CV platform with adjacent phenotyping tools.",
         exp2Company: "BASF Digital Solutions S.L. — Madrid, Spain",
         exp2Role: "Technical Product Manager — Ontology & Semantic Layer",
         exp2Dates: "2021 – 2022",
         exp2Official: "Official BASF title: Product Component Manager · foundation for the AI & ML platform portfolio taken on next",
-        exp2b1: "Owned enterprise ontology and knowledge-graph strategy — the semantic foundation that makes heterogeneous data interoperable and machine-readable for AI and agentic systems.",
-        exp2b2: "Led 5 engineers and 2 external partners to deliver 20 bio-ontologies adopted as the vocabulary standard across the R&D Agricultural Solutions department by every internal tool within 6–12 months.",
-        exp2b3: "Co-authored BASF's GOMO ontology governance framework (published, ISMB 2022) with the Ontology Engineering Group at Universidad Politécnica de Madrid.",
-        exp2b3b: "Led the EPPO ontology for plant and pest code representation, published in Frontiers in Artificial Intelligence and released as open source.",
+        exp2Summary: "Owned BASF's Ontology Management Framework (OMF) — enterprise strategy, governance and technology stack (Protégé, RDFlib, Virtuoso, automated curation pipeline) for bio-ontologies underpinning downstream AI and agentic systems, including ontologies authored in-house. Led 5 engineers and 2 external partners, evaluated Stardog as an alternative before retaining and extending the incumbent stack, and communicated ontology strategy and adoption from general-audience sessions up to VP-level stakeholders across the business.",
+        exp2b1: "Delivered 20 bio-ontologies, several authored in-house, adopted as the vocabulary standard across the R&D Agricultural Solutions department by every internal tool within 6–12 months.",
+        exp2b2: "Co-authored BASF's GOMO ontology governance framework (published, ISMB 2022) with the Ontology Engineering Group at Universidad Politécnica de Madrid.",
+        exp2b3: "Led the EPPO Ontology development for plant and pest code representation, published in Frontiers in Artificial Intelligence and released as open source.",
         exp2b4: "Established and led a biweekly data steward community of 10 governing vocabulary standardisation, processing 10–15 terminology requests per month.",
         exp3Company: "Umeå Plant Science Centre — Umeå, Sweden",
         exp3Role: "Postdoctoral Researcher, Machine Learning",
         exp3Dates: "2020 – 2021",
-        exp3b1: "Kempestiftelserna Fellowship: applied machine learning and gene regulatory network inference to improve functional annotation at genome scale.",
-        exp3b2: "Designed production-oriented ML pipelines with reproducibility, auto-scaling and experiment tracking, translating research workflows into deployable systems.",
-        exp3b3: "Secured 2 competitive research grants as main author (KSLA, SPPS); Guest Editor for a Q1 journal special issue.",
+        exp3b1: "Awarded the Kempestiftelserna Fellowship, plus two further competitive grants as main author (KSLA, SPPS), to pursue a research niche combining the ontology-based semantic similarity methods from my PhD with deep learning to infer functional gene annotation in non-model organisms such as <em>Picea abies</em> (Norway spruce) — where multi-decade growth cycles make direct experimental validation infeasible — through homology-based transfer from characterised model-organism genomes.",
+        exp3b2: "Designed production-oriented ML pipelines, containerized with Docker and run on the university's HPC cluster, with reproducibility, auto-scaling and experiment tracking — later used as the starting point for Master's students' thesis work.",
+        exp3b3: "Contributed to a doctoral student's research, co-authoring “<a href='https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=m320tuQAAAAJ&amp;citation_for_view=m320tuQAAAAJ:_FxGoFyzp5QC' target='_blank' rel='noopener'>lincRNA annotation in Norway spruce</a>” (Physiologia Plantarum, 2024), while supporting other PhD students during the fellowship.",
+        exp3b4: "Served as Guest Editor for a special issue on AI in non-model plants in <em>Plants</em> (MDPI, Q1), managing peer review for ~10 submitted articles over the course of the fellowship.",
+        exp3b5: "Delivered 25 hours of Master's-level teaching and supported faculty in introductory bioinformatics courses.",
         exp4Company: "INSERM — Bordeaux, France",
         exp4Role: "Bioinformatics Engineer",
         exp4Dates: "2015 – 2016",
-        exp4b1: "Developed algorithms for multi-omics data integration and enrichment analysis in a clinical research setting, under Rodolphe Thiébaut — later a co-author on the resulting doctoral publications.",
+        exp4b1: "Ran a solo, fully autonomous pre-doctoral engagement integrating genomic and transcriptomic data from HIV patients using standard Gene Set Enrichment Analysis (GSEA), reporting directly to Rodolphe Thiébaut and my future PhD supervisors throughout the engagement.",
+        exp4b2: "Identified the limitations of standard enrichment analysis on real multi-omics data — the insight that directly seeded the semantic-similarity methodology later developed into GSAn during my PhD — and published the resulting work as first author in PLoS ONE (2018), with Thiébaut as co-author.",
         exp5Company: "Université de Bordeaux / LaBRI — Bordeaux, France",
         exp5Role: "PhD Researcher, Computer Science",
         exp5Dates: "2016 – 2019",
-        exp5b1: "Ministerial funding (MESR). Built <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, a gene-set annotation web platform still live and in use, and ontology-based ML methods for semantic similarity and knowledge representation.",
-        exp5b2: "Published across Q1 journals and IEEE; co-supervised a Master's student with the thesis director; first prize, Scientific Game Jam Bordeaux.",
-        exp5b3: "Ran an externally funded applied-ML engagement alongside the thesis: MHC epitope prediction in HIV patients from patient-derived sequence data — hands-on biomedical machine learning in a clinical research setting.",
+        exp5Official: "Ministerial funding (MESR)",
+        exp5b1: "Originated an ontology-based semantic-similarity methodology for gene-set annotation — the approach that would later underpin ontology governance work at BASF (GOMO, EPPO) — evaluating nine semantic similarity measures over Gene Ontology terms to identify the optimal trade-off between minimizing retained annotation terms and maximizing gene coverage, outperforming standard enrichment-analysis tools.",
+        exp5b2: "Built the method into <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, a public gene-set annotation web platform still in active use today (18+ citations), including as the research foundation for a subsequent PhD student under my supervisors.",
+        exp5b3: "Co-supervised a Master's student on parallel research benchmarking GSAn against existing gene-set annotation tools.",
+        exp5b4: "Ran an applied-ML engagement funded by Bordeaux University Hospital during the closing months of the thesis, applying MHC epitope prediction to patient-derived HIV sequence data and surfacing a promising, unpublished finding — hands-on biomedical machine learning in a clinical research setting.",
 
         leadTitle: "Leadership Approach",
-        leadIntro: "Three principles that have survived contact with a real portfolio, a real team and a real restructuring.",
+        leadIntro: "Three principles tested against a real portfolio, a real team and real investment decisions.",
         lead1Title: "Build the bench, not just the backlog",
-        lead1Text: "Doubled the team through deliberate hiring, individual career paths and coaching of the managers who report into the role — including the hard conversations around underperformance rather than routing around them.",
+        lead1Text: "Doubled the team through deliberate hiring, individual career paths and coaching of the managers who report into the role — including the hard conversations around underperformance rather than routing around them, because a team's ceiling is set by its weakest link.",
         lead2Title: "Decide with evidence, and be willing to kill your own product",
         lead2Text: "Recommended closing a platform I owned once the ROI and adoption data no longer supported it, and transferred another to a better-fit owner — both decisions defended with numbers in front of senior leadership.",
         lead3Title: "Translate between worlds",
@@ -889,8 +994,24 @@
         edu2Title: "PhD Computer Science", edu2Inst: "Université de Bordeaux / LaBRI · Ministerial funding (MESR)",
         edu3Title: "MSc Bioinformatics", edu3Inst: "University of Murcia",
         edu4Title: "BSc Biochemistry", edu4Inst: "University of Murcia",
-        ventTitle: "Entrepreneurship — Proyecto Vigía · 2026 – Present",
-        ventText: "Co-founder (50%) of a B2B marketplace for a regulated Spanish services sector, currently in closed beta. I designed and built the entire platform end to end, single-handedly — backend, frontend, identity and access management, geospatial data, document processing, GDPR machinery and compliant e-invoicing — and I own monetisation strategy, fraud-risk design, infrastructure cost optimisation and the partnership protection framework.",
+        ventTitle: "Entrepreneurship",
+        ventCompany: "Proyecto Vigía — Spain",
+        ventRole: "Co-founder (50%) & Sole Developer",
+        ventDates: "2026 – Present",
+        ventBeta: "Closed beta",
+        ventAccess: "Access requires invitation credentials.",
+        ventSummary: "Co-founded and single-handedly designed and built, end to end, a B2B marketplace platform for a regulated Spanish services sector: Java/Spring Boot backend, React/TypeScript frontend, Keycloak-based identity and access management, geospatial PostgreSQL/PostGIS, document-processing pipeline with OCR, GDPR-compliant data handling, and Verifactu-compliant e-invoicing — from architecture through production deployment.",
+        ventB1: "Took the platform from architecture to closed beta solo in ~3 months (June–September 2026), using AI-assisted development tooling (Claude Code) to accelerate delivery; now collecting structured feedback from the closed-beta cohort ahead of a planned public launch.",
+        ventB2: "Conducted a self-led security review of the platform, identifying and remediating several vulnerabilities before the beta launch.",
+        ventB3: "Optimised infrastructure cost by architecting on ARM-based cloud instances (Hetzner), balancing performance against a bootstrapped budget without compromising reliability.",
+        ventB4: "Evaluating monetisation models — transaction-based commission versus a premium subscription tier — to shape the platform's go-to-market approach.",
+        langTitle: "Languages",
+        lang1Name: "Spanish",
+        lang1Level: "Native",
+        lang2Name: "English",
+        lang2Level: "Full professional proficiency",
+        lang3Name: "French",
+        lang3Level: "Full professional proficiency",
 
         footerText: "© 2026 Aarón Ayllón Benítez · All rights reserved"
       },
@@ -899,45 +1020,50 @@
         brandName: "Aarón Ayllón Benítez",
         navAbout: "Sobre mí", navPlatforms: "Plataformas", navExperience: "Experiencia",
         navLeadership: "Liderazgo", navResearch: "Investigación", navEducation: "Formación",
+        navVenture: "Emprendimiento",
 
-        heroTitle: "Aarón Ayllón Benítez",
-        heroSubtitle: "Líder de IA y Data Science · Plataformas de ML, GenAI y sistemas agénticos · Equipo y portafolio",
-        heroTagline: "<strong>Doctor en Informática · Máster en Inteligencia Artificial.</strong> Dirijo un equipo de 16 científicos de datos e ingenieros en BASF Digital Solutions, soy responsable de dos plataformas de IA/ML en producción y tomo las decisiones de portafolio que vienen después, incluida la de recomendar el cierre de una de ellas.",
+        heroTitle: "Aarón Ayllón Benítez, PhD",
+        heroSubtitle: "Líder de IA y Data Science — Plataformas empresariales de ML, GenAI y sistemas agénticos · Equipo y portafolio",
+        heroTagline: "<strong>Doctor en Informática · Máster en Inteligencia Artificial.</strong> Dirijo un equipo de 16 personas y un presupuesto de plataformas de ~1,3M€ en BASF Digital Solutions, soy responsable de dos plataformas de IA/ML en producción y tomo las decisiones de portafolio que vienen después, incluida la de recomendar el cierre de una de ellas.",
         ctaCV: "Descargar CV (PDF)",
 
         impact1: "de ahorro recurrente por decisiones de portafolio",
         impact2: "equipo escalado, contratado y desarrollado",
         impact3: "menos esfuerzo por proyecto nuevo tras la estandarización",
-        impact4: "científicos de datos atendidos por las plataformas",
+        impact4: "toda la comunidad global de ciencia de datos de BASF",
 
         aboutExecTitle: "Resumen ejecutivo",
-        aboutExecText: "Científico de datos convertido en líder de IA/ML. En los últimos cinco años en BASF Digital Solutions he escalado un equipo de 8 a 16 científicos de datos, ingenieros de ML y software y solution designers, y he sido responsable de dos plataformas de IA/ML en producción que cubren el recorrido analítico completo, de lo descriptivo a lo predictivo, con más de 3M€ de ahorro recurrente. Gestiono la entrada y priorización de demanda de tres departamentos y varios mercados europeos, y tomo las decisiones de portafolio: qué escalar, qué transferir y qué cerrar.",
-        aboutExecText2: "La profundidad técnica no es decorativa. Doctorado en Informática (Burdeos), Máster en IA, investigación postdoctoral en machine learning, publicaciones como primer autor en revistas Q1 e IEEE, becas competitivas como autor principal. Pasé a la industria porque los problemas de ML más interesantes son los que tienen que llegar a producción, y porque un equipo de científicos se lidera mejor desde alguien que todavía puede discutir una decisión de modelo por sus méritos.",
-        aboutFocusTitle: "Dónde opero",
-        focus1: "Liderazgo de equipos: contratación, planes de carrera, desempeño y coaching de los managers que me reportan",
-        focus2: "Gobierno de portafolio: decisiones de construir, escalar, transferir o cerrar basadas en ROI",
-        focus3: "Plataformas de ML en producción y productos de datos self-service a escala empresarial",
-        focus4: "GenAI, LLMs y flujos agénticos integrados en pipelines de ML reales",
-        focus5: "Visión por computador, forecasting de series temporales, knowledge graphs y ontologías",
-        focus6: "Comunicación ejecutiva: casos de negocio cuantificados y defendidos ante dirección",
+        aboutExecText: "Científico de datos convertido en líder de IA/ML (Doctor en Informática, Máster en Inteligencia Artificial), con más de cinco años construyendo y dirigiendo equipos multidisciplinares de ciencia de datos y un presupuesto de plataformas de ~1,3M€ dentro de una corporación global. He escalado un equipo de 8 a 16 científicos de datos, ingenieros de ML/software y solution designers, y he sido responsable de dos plataformas de IA/ML en producción que cubren el recorrido analítico completo, de lo descriptivo a lo predictivo, con más de 3,5M€ de ahorro recurrente.",
+        aboutExecText2: "Tomo las decisiones de portafolio que vienen después (qué escalar, qué transferir y qué cerrar), junto con la estrategia de proveedores y la entrada y priorización de demanda entre departamentos y mercados europeos. Combino profundidad técnica práctica en ML, LLMs y flujos agénticos, y sigo escribiendo código de producción yo solo como cofundador de una plataforma SaaS B2B en marcha, con formación en ciencias de la vida (bioquímica, bioinformática y machine learning biomédico sobre datos de pacientes) y un historial traduciendo la analítica en casos de negocio cuantificados y defendidos ante la alta dirección.",
+        skillsTitle: "Competencias clave",
+        skill1Label: "IA y Data Science",
+        skill1: "Machine Learning, Deep Learning, visión por computador, forecasting de series temporales, MLOps, flujos agénticos (razonamiento multipaso, tool calling, evaluación), analítica descriptiva → predictiva, GenAI y LLMs, knowledge graphs y ontologías",
+        skill2Label: "Liderazgo",
+        skill2: "Contratación y construcción de equipos, mentoría de managers y científicos junior, alineamiento transversal, coordinación multimercado, gestión del desempeño y del bajo rendimiento, planes de carrera, comunicación ejecutiva y storytelling",
+        skill3Label: "Portafolio y entrega",
+        skill3: "Gobierno y racionalización de portafolio, gestión de presupuesto y P&L, evaluación de proveedores y decisiones build-vs-buy, gestión de línea de producto, decisiones de construir / escalar / transferir / cerrar, estrategia y roadmap de producto, entrada y priorización de demanda, entrega de plataformas empresariales",
+        skill4Label: "Técnico",
+        skill4: "Python, R, SQL, estadística avanzada, Azure y Azure DevOps, APIs / MCP, flujos de ingeniería de datos, CI/CD, Power BI, herramientas de desarrollo con IA",
+        skill5Label: "Dominios",
+        skill5: "Ciencias de la vida, datos sanitarios y biomédicos, I+D farmacéutica y agrícola, negocio industrial y de commodities",
 
         platformsTitle: "Plataformas y decisiones de portafolio",
         platformsIntro: "Cuatro iniciativas que muestran cómo gestiono un portafolio de IA: qué se construye, qué se escala, qué se transfiere y qué se cierra.",
         pfType1: "Escalada y transferida",
         pfCard1Title: "Plataforma de Computer Vision / MLOps",
-        pfCard1Text: "Responsable de una plataforma empresarial de visión por computador para clasificación, segmentación y detección de objetos, con plantillas reutilizables desplegadas a escala en la nube. Una vez madura, la transferí a su mejor propietario de negocio en lugar de retenerla.",
+        pfCard1Text: "Responsable de la plataforma empresarial de visión por computador / MLOps de BASF, con una biblioteca de 70 plantillas reutilizables revisadas por pares y la salud de la plataforma medida por la adopción de usuarios activos y el tiempo ahorrado por usuario. Una vez madura, la transferí a su mejor propietario en lugar de retenerla.",
         pfMetric1: "~2M€ de ahorro recurrente · 70 plantillas · ~90% menos esfuerzo para ~100 científicos de datos",
         pfType2: "Revisada y cerrada",
-        pfCard2Title: "Plataforma de Forecasting self-service",
+        pfCard2Title: "Plataforma self‑service de forecasting",
         pfCard2Text: "Lideré una plataforma self-service de series temporales que daba a usuarios de negocio capacidad de previsión y soporte a la decisión sin un científico de datos de por medio. Tras una revisión de ROI y adopción, recomendé cerrarla —siendo mi propia plataforma— y defendí esa decisión con números.",
         pfMetric2: "~1,5M€ de ahorro derivados de la decisión de cierre",
-        pfType3: "Financiada y en construcción",
-        pfCard3Title: "Etiquetado inteligente con GenAI",
-        pfCard3Text: "Convertí un cuello de botella en análisis de imagen en un caso de negocio cuantificado y conseguí financiación interna para etiquetado inteligente con GenAI y automatización del flujo de trabajo, junto con la integración de LLMs en pipelines de ML en producción.",
-        pfMetric3: "200K€ de financiación interna · parte de 360K€ en cinco iniciativas",
+        pfType3: "Caso de negocio financiado",
+        pfCard3Title: "Automatización del etiquetado con GenAI",
+        pfCard3Text: "Convertí un cuello de botella en el etiquetado de imágenes en un caso de negocio cuantificado, presentado directamente a VPs, y conseguí financiación para automatizar el etiquetado con GenAI. Ejecuté una prueba de concepto de SIGMA AI y comparé herramientas competidoras para fundamentar la decisión de construir o comprar.",
+        pfMetric3: "560K€ conseguidos · etiquetado con GenAI y otras cinco iniciativas de innovación",
         pfType4: "Estándar corporativo",
         pfCard4Title: "Programa de ontologías y knowledge graph",
-        pfCard4Text: "Construí la base semántica que hace que datos heterogéneos sean interoperables y legibles por máquina para sistemas de IA y agénticos, y el modelo de gobierno que la mantiene viva después del lanzamiento.",
+        pfCard4Text: "Responsable del Ontology Management Framework de BASF: la base semántica que hace que datos heterogéneos sean interoperables y legibles por máquina para sistemas de IA y agénticos, y el modelo de gobierno que la mantiene viva después del lanzamiento.",
         pfMetric4: "20 bio-ontologías adoptadas como estándar del departamento · marco GOMO publicado",
 
         experienceTitle: "Experiencia",
@@ -945,44 +1071,48 @@
         exp1Role: "Head of Advanced Imaging & Forecasting Solutions — Plataformas de IA y ML",
         exp1Dates: "2022 – Actualidad",
         exp1Official: "Título oficial en BASF: Product Manager · alcance equivalente a Head of Product / Global Product Line Manager",
-        exp1b1: "Dirijo un equipo de 16 personas (científicos de datos, ingenieros de ML y software, solution designers) escalado desde 8, con responsabilidad sobre contratación, planes de carrera, mentoría de managers y científicos junior, desempeño y gestión del bajo rendimiento.",
-        exp1b1b: "Soy responsable de la estrategia de portafolio, las prioridades de inversión y las hojas de ruta de producto en visión por computador, MLOps, forecasting e infraestructura semántica, al servicio de la comunidad global de ciencia de datos de BASF.",
-        exp1b2: "Lideré decisiones de portafolio con impacto financiero directo: transferí la plataforma de visión por computador / MLOps a su mejor propietario (~2M€ de ahorro recurrente, 70 plantillas reutilizables, ~90% menos esfuerzo para ~100 científicos de datos) y recomendé el cierre de la plataforma de forecasting tras una revisión de ROI y adopción (~1,5M€ de ahorro).",
-        exp1b3: "Entrego el recorrido analítico completo, de lo descriptivo a lo predictivo: una plataforma self-service de forecasting para usuarios de negocio y una plataforma de visión por computador para clasificación, segmentación y detección de objetos, ambas desplegadas a escala en la nube.",
-        exp1b4: "Gestiono la entrada, priorización y entrega de demanda para stakeholders de tres departamentos y varios mercados europeos, con revisiones estratégicas quincenales para alinear hojas de ruta y arbitrar prioridades en conflicto.",
-        exp1b5: "Conseguí 200K€ de financiación interna para etiquetado inteligente con GenAI y automatización de flujos de análisis de imagen; impulsé una cultura de ingeniería AI-native con integración de LLMs en pipelines de ML y adopción de herramientas de IA en todo el equipo.",
-        exp1b6: "Obtuve respaldo para cinco iniciativas de innovación por valor de 360K€ convirtiendo oportunidades analíticas en casos de negocio cuantificados y presentándolos a la dirección.",
-        exp1b7: "Actué como Business Transformation Coordinator para España, Portugal e Italia durante una reestructuración legalmente condicionada, alineando unidades de negocio y directores de planta mientras el departamento se integraba en el negocio de commodities.",
+        exp1Summary: "Responsable de un presupuesto anual de plataformas de ~1,3M€ y de un equipo de 16 personas (escalado desde 8: científicos de datos, ingenieros de ML/software, solution designers) en las plataformas de visión por computador, MLOps y forecasting de BASF, al servicio de la comunidad global de ciencia de datos de la compañía. Responsable de la estrategia de portafolio, las decisiones sobre proveedores y la priorización de demanda de tres departamentos y varios mercados europeos, con reporte mensual a Finanzas y presentación de casos de inversión a nivel de VP.",
+        exp1b1: "Escalé el equipo de 8 a 16 personas con una contratación estructurada y el diseño de planes de carrera, mentorizando directamente tanto a managers como a científicos junior y asumiendo la gestión del desempeño, incluido el bajo rendimiento.",
+        exp1b2: "Transferí la plataforma de visión por computador / MLOps a su mejor propietario (~2M€ de ahorro recurrente, 70 plantillas reutilizables, ~90% menos esfuerzo para ~100 científicos de datos) y cerré la plataforma de forecasting tras una revisión de ROI (~1,5M€ de ahorro).",
+        exp1b3: "Instauré un gobierno con revisión por pares para la biblioteca de 70 plantillas y medí la salud de la plataforma mediante la adopción de usuarios activos y el tiempo ahorrado por usuario, validado con encuestas internas de satisfacción.",
+        exp1b4: "Conseguí 560K€ de financiación (automatización del etiquetado con GenAI y otras cinco iniciativas de innovación) presentando casos de negocio cuantificados directamente a VPs.",
+        exp1b5: "Consolidé una alianza de entrega exclusiva con Tecnalia, realicé una evaluación en prueba de concepto de SIGMA AI para el etiquetado de imágenes y comparé herramientas competidoras para fundamentar las decisiones de construir o comprar.",
+        exp1b6: "Codirigí el grupo de trabajo interdepartamental de Fenotipado de BASF junto con Agricultura, estandarizando la adquisición de imágenes en varios centros e integrando la plataforma de visión por computador con herramientas de fenotipado adyacentes.",
         exp2Company: "BASF Digital Solutions S.L. — Madrid, España",
         exp2Role: "Technical Product Manager — Ontologías y Capa Semántica",
         exp2Dates: "2021 – 2022",
         exp2Official: "Título oficial en BASF: Product Component Manager · base del portafolio de plataformas de IA y ML asumido después",
-        exp2b1: "Responsable de la estrategia corporativa de ontologías y knowledge graphs: la base semántica que hace los datos heterogéneos interoperables y legibles por máquina para sistemas de IA y agénticos.",
-        exp2b2: "Dirigí a 5 ingenieros y 2 partners externos para entregar 20 bio-ontologías adoptadas como estándar de vocabulario en todo el departamento de I+D de Agricultural Solutions por todas las herramientas internas en 6–12 meses.",
-        exp2b3: "Coautor del marco de gobierno de ontologías GOMO de BASF (publicado, ISMB 2022) con el Ontology Engineering Group de la Universidad Politécnica de Madrid.",
-        exp2b3b: "Lideré la ontología EPPO para la representación de códigos de plantas y plagas, publicada en Frontiers in Artificial Intelligence y liberada como open source.",
+        exp2Summary: "Responsable del Ontology Management Framework (OMF) de BASF: estrategia corporativa, gobierno y stack tecnológico (Protégé, RDFlib, Virtuoso, pipeline de curación automatizada) de las bio-ontologías que sustentan sistemas de IA y agénticos, incluidas ontologías desarrolladas internamente. Dirigí a 5 ingenieros y 2 partners externos, evalué Stardog como alternativa antes de mantener y ampliar el stack existente, y comuniqué la estrategia y la adopción de ontologías desde sesiones divulgativas hasta stakeholders de nivel VP en toda la organización.",
+        exp2b1: "Entregué 20 bio-ontologías, varias desarrolladas internamente, adoptadas como estándar de vocabulario en todo el departamento de I+D de Agricultural Solutions por todas las herramientas internas en 6–12 meses.",
+        exp2b2: "Coautor del marco de gobierno de ontologías GOMO de BASF (publicado, ISMB 2022) con el Ontology Engineering Group de la Universidad Politécnica de Madrid.",
+        exp2b3: "Lideré el desarrollo de la ontología EPPO para la representación de códigos de plantas y plagas, publicada en Frontiers in Artificial Intelligence y liberada como open source.",
         exp2b4: "Creé y lideré una comunidad quincenal de 10 data stewards para la estandarización de vocabulario, procesando 10–15 peticiones terminológicas al mes.",
         exp3Company: "Umeå Plant Science Centre — Umeå, Suecia",
         exp3Role: "Investigador postdoctoral, Machine Learning",
         exp3Dates: "2020 – 2021",
-        exp3b1: "Beca Kempestiftelserna: apliqué machine learning e inferencia de redes regulatorias génicas para mejorar la anotación funcional a escala de genoma.",
-        exp3b2: "Diseñé pipelines de ML orientados a producción con reproducibilidad, auto-scaling y experiment tracking, traduciendo flujos de investigación en sistemas desplegables.",
-        exp3b3: "Obtuve 2 becas de investigación competitivas como autor principal (KSLA, SPPS); Guest Editor de un número especial en revista Q1.",
+        exp3b1: "Obtuve la beca Kempestiftelserna y otras dos becas competitivas como autor principal (KSLA, SPPS) para desarrollar una línea de investigación que combinaba los métodos de similitud semántica basados en ontologías de mi doctorado con deep learning, con el fin de inferir la anotación funcional de genes en organismos no modelo como <em>Picea abies</em> (pícea de Noruega), cuyos ciclos de crecimiento de varias décadas hacen inviable la validación experimental directa, mediante transferencia por homología desde genomas caracterizados de organismos modelo.",
+        exp3b2: "Diseñé pipelines de ML orientados a producción, contenerizados con Docker y ejecutados en el clúster HPC de la universidad, con reproducibilidad, auto-scaling y experiment tracking, que después sirvieron como punto de partida para trabajos de fin de máster.",
+        exp3b3: "Contribuí a la investigación de un doctorando como coautor de «<a href='https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=m320tuQAAAAJ&amp;citation_for_view=m320tuQAAAAJ:_FxGoFyzp5QC' target='_blank' rel='noopener'>lincRNA annotation in Norway spruce</a>» (Physiologia Plantarum, 2024), además de apoyar a otros doctorandos durante la beca.",
+        exp3b4: "Guest Editor de un número especial sobre IA en plantas no modelo en <em>Plants</em> (MDPI, Q1), gestionando la revisión por pares de ~10 artículos enviados durante la beca.",
+        exp3b5: "Impartí 25 horas de docencia de máster y apoyé al profesorado en cursos introductorios de bioinformática.",
         exp4Company: "INSERM — Burdeos, Francia",
         exp4Role: "Ingeniero Bioinformático",
         exp4Dates: "2015 – 2016",
-        exp4b1: "Desarrollé algoritmos para la integración de datos multi-ómicos y el análisis de enriquecimiento en un entorno de investigación clínica, bajo la dirección de Rodolphe Thiébaut, después coautor de las publicaciones derivadas de la tesis.",
+        exp4b1: "Llevé a cabo en solitario y con plena autonomía un encargo predoctoral de integración de datos genómicos y transcriptómicos de pacientes con VIH mediante Gene Set Enrichment Analysis (GSEA) estándar, reportando directamente a Rodolphe Thiébaut y a mis futuros directores de tesis durante todo el proyecto.",
+        exp4b2: "Identifiqué las limitaciones del análisis de enriquecimiento estándar sobre datos multi-ómicos reales (la idea que dio origen directamente a la metodología de similitud semántica que después se convirtió en GSAn durante mi doctorado) y publiqué el trabajo resultante como primer autor en PLoS ONE (2018), con Thiébaut como coautor.",
         exp5Company: "Université de Bordeaux / LaBRI — Burdeos, Francia",
         exp5Role: "Investigador doctoral, Informática",
         exp5Dates: "2016 – 2019",
-        exp5b1: "Financiación ministerial (MESR). Construí <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, una plataforma web de anotación de conjuntos génicos aún operativa y en uso, y métodos de ML basados en ontologías para similitud semántica y representación del conocimiento.",
-        exp5b2: "Publiqué en revistas Q1 e IEEE; co-supervisé a un estudiante de máster junto al director de tesis; primer premio en la Scientific Game Jam de Burdeos.",
-        exp5b3: "En paralelo a la tesis, ejecuté un encargo de ML aplicado con financiación externa: predicción de epítopos MHC en pacientes con VIH a partir de datos de secuencia de paciente, machine learning biomédico en un entorno de investigación clínica.",
+        exp5Official: "Financiación ministerial (MESR)",
+        exp5b1: "Creé una metodología de similitud semántica basada en ontologías para la anotación de conjuntos de genes (el enfoque que después sustentaría el trabajo de gobierno de ontologías en BASF: GOMO, EPPO), evaluando nueve medidas de similitud semántica sobre términos de Gene Ontology para identificar el equilibrio óptimo entre minimizar los términos de anotación retenidos y maximizar la cobertura de genes, superando a las herramientas estándar de análisis de enriquecimiento.",
+        exp5b2: "Integré el método en <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, una plataforma web pública de anotación de conjuntos de genes que sigue en uso activo (18+ citas) y que sirvió además como base de investigación para un doctorando posterior con mis mismos directores.",
+        exp5b3: "Co-supervisé a un estudiante de máster en una investigación paralela que comparaba GSAn con las herramientas existentes de anotación de conjuntos de genes.",
+        exp5b4: "Durante los últimos meses de la tesis, ejecuté un encargo de ML aplicado financiado por el Hospital Universitario de Burdeos: predicción de epítopos MHC sobre datos de secuencia de VIH de pacientes, con un hallazgo prometedor aún no publicado. Machine learning biomédico práctico en un entorno de investigación clínica.",
 
         leadTitle: "Enfoque de liderazgo",
-        leadIntro: "Tres principios que han sobrevivido al contacto con un portafolio real, un equipo real y una reestructuración real.",
+        leadIntro: "Tres principios puestos a prueba con un portafolio real, un equipo real y decisiones de inversión reales.",
         lead1Title: "Construir el equipo, no solo el backlog",
-        lead1Text: "Dupliqué el equipo con contratación deliberada, planes de carrera individuales y coaching de los managers que reportan al puesto, incluidas las conversaciones difíciles sobre bajo rendimiento en lugar de esquivarlas.",
+        lead1Text: "Dupliqué el equipo con contratación deliberada, planes de carrera individuales y coaching de los managers que reportan al puesto, incluidas las conversaciones difíciles sobre bajo rendimiento en lugar de esquivarlas, porque el techo de un equipo lo marca su eslabón más débil.",
         lead2Title: "Decidir con evidencia, y estar dispuesto a matar tu propio producto",
         lead2Text: "Recomendé cerrar una plataforma de la que era responsable cuando el ROI y los datos de adopción dejaron de sostenerla, y transferí otra a un propietario más adecuado: ambas decisiones defendidas con números ante la dirección.",
         lead3Title: "Traducir entre mundos",
@@ -1020,8 +1150,24 @@
         edu2Title: "Doctorado en Informática", edu2Inst: "Université de Bordeaux / LaBRI · Financiación ministerial (MESR)",
         edu3Title: "Máster en Bioinformática", edu3Inst: "Universidad de Murcia",
         edu4Title: "Grado en Bioquímica", edu4Inst: "Universidad de Murcia",
-        ventTitle: "Emprendimiento — Proyecto Vigía · 2026 – Actualidad",
-        ventText: "Cofundador (50%) de un marketplace B2B para un sector de servicios regulado en España, en beta cerrada. He diseñado y desarrollado la plataforma completa yo solo, de extremo a extremo: backend, frontend, gestión de identidad y accesos, datos geoespaciales, procesamiento documental, maquinaria de RGPD y facturación electrónica conforme. Además llevo la estrategia de monetización, el diseño de riesgo de fraude, la optimización de costes de infraestructura y el marco de protección de la sociedad.",
+        ventTitle: "Emprendimiento",
+        ventCompany: "Proyecto Vigía — España",
+        ventRole: "Cofundador (50%) y único desarrollador",
+        ventDates: "2026 – Actualidad",
+        ventBeta: "Beta cerrada",
+        ventAccess: "El acceso requiere credenciales de invitación.",
+        ventSummary: "Cofundé y diseñé y desarrollé yo solo, de extremo a extremo, un marketplace B2B para un sector de servicios regulado en España: backend en Java/Spring Boot, frontend en React/TypeScript, gestión de identidad y accesos con Keycloak, datos geoespaciales en PostgreSQL/PostGIS, pipeline de procesamiento documental con OCR, tratamiento de datos conforme al RGPD y facturación electrónica conforme a Verifactu, desde la arquitectura hasta el despliegue en producción.",
+        ventB1: "Llevé la plataforma de la arquitectura a la beta cerrada yo solo en ~3 meses (junio–septiembre de 2026), con herramientas de desarrollo asistido por IA (Claude Code) para acelerar la entrega; ahora recojo feedback estructurado de la cohorte de la beta antes del lanzamiento público previsto.",
+        ventB2: "Realicé una revisión de seguridad propia de la plataforma, identificando y corrigiendo varias vulnerabilidades antes del lanzamiento de la beta.",
+        ventB3: "Optimicé el coste de infraestructura con una arquitectura sobre instancias cloud ARM (Hetzner), equilibrando rendimiento y un presupuesto bootstrapped sin comprometer la fiabilidad.",
+        ventB4: "Evalúo modelos de monetización (comisión por transacción frente a una suscripción premium) para definir la estrategia de salida al mercado de la plataforma.",
+        langTitle: "Idiomas",
+        lang1Name: "Español",
+        lang1Level: "Nativo",
+        lang2Name: "Inglés",
+        lang2Level: "Competencia profesional plena",
+        lang3Name: "Francés",
+        lang3Level: "Competencia profesional plena",
 
         footerText: "© 2026 Aarón Ayllón Benítez · Todos los derechos reservados"
       },
@@ -1030,45 +1176,50 @@
         brandName: "Aarón Ayllón Benítez",
         navAbout: "À propos", navPlatforms: "Plateformes", navExperience: "Expérience",
         navLeadership: "Leadership", navResearch: "Recherche", navEducation: "Formation",
+        navVenture: "Entrepreneuriat",
 
-        heroTitle: "Aarón Ayllón Benítez",
-        heroSubtitle: "Leader IA & Data Science · Plateformes ML, GenAI & agentiques · Équipe et portefeuille",
-        heroTagline: "<strong>Docteur en Informatique · Master Intelligence Artificielle.</strong> Je dirige une équipe de 16 data scientists et ingénieurs chez BASF Digital Solutions, je suis responsable de deux plateformes IA/ML en production et je prends les décisions de portefeuille qui suivent — y compris recommander la fermeture de l'une des miennes.",
+        heroTitle: "Aarón Ayllón Benítez, PhD",
+        heroSubtitle: "Leader IA & Data Science — Plateformes ML, GenAI & agentiques d'entreprise · Équipe et portefeuille",
+        heroTagline: "<strong>Docteur en Informatique · Master Intelligence Artificielle.</strong> Je dirige une équipe de 16 personnes et un budget plateformes d'environ 1,3M€ chez BASF Digital Solutions, je suis responsable de deux plateformes IA/ML en production et je prends les décisions de portefeuille qui suivent — y compris recommander la fermeture de l'une des miennes.",
         ctaCV: "Télécharger le CV (PDF)",
 
         impact1: "d'économies récurrentes issues des décisions de portefeuille",
         impact2: "équipe passée à cette taille, recrutée et développée",
         impact3: "d'effort en moins par nouveau projet après la standardisation",
-        impact4: "data scientists servis par les plateformes",
+        impact4: "toute la communauté data science mondiale de BASF",
 
         aboutExecTitle: "Résumé exécutif",
-        aboutExecText: "Data scientist devenu leader IA/ML. Ces cinq dernières années chez BASF Digital Solutions, j'ai fait passer une équipe de 8 à 16 data scientists, ingénieurs ML et logiciel et solution designers, et j'ai été responsable de deux plateformes IA/ML en production couvrant tout le parcours analytique, du descriptif au prédictif, avec plus de 3M€ d'économies récurrentes. Je gère la captation et la priorisation de la demande de trois départements et de plusieurs marchés européens, et je prends les décisions de portefeuille : quoi passer à l'échelle, quoi transférer, quoi arrêter.",
-        aboutExecText2: "La profondeur technique n'est pas décorative. Doctorat en Informatique (Bordeaux), Master en IA, recherche postdoctorale en machine learning, publications en premier auteur dans des revues Q1 et IEEE, bourses compétitives en auteur principal. Je suis passé à l'industrie parce que les problèmes ML les plus intéressants sont ceux qui doivent être livrés — et parce qu'une équipe de scientifiques est mieux dirigée par quelqu'un qui peut encore discuter un choix de modèle sur le fond.",
-        aboutFocusTitle: "Où j'interviens",
-        focus1: "Management d'équipe : recrutement, plans de carrière, performance, coaching des managers qui me rapportent",
-        focus2: "Gouvernance de portefeuille : décisions de construire, passer à l'échelle, transférer ou arrêter, fondées sur le ROI",
-        focus3: "Plateformes ML en production et produits data self-service à l'échelle de l'entreprise",
-        focus4: "GenAI, LLM et workflows agentiques intégrés dans de vrais pipelines ML",
-        focus5: "Vision par ordinateur, forecasting de séries temporelles, knowledge graphs et ontologies",
-        focus6: "Communication exécutive : business cases chiffrés et défendus devant la direction",
+        aboutExecText: "Data scientist devenu leader IA/ML (Doctorat en Informatique, Master en Intelligence Artificielle), avec plus de cinq ans à construire et diriger des équipes data science pluridisciplinaires et un budget plateformes d'environ 1,3M€ au sein d'un groupe international. J'ai fait passer une équipe de 8 à 16 data scientists, ingénieurs ML/logiciel et solution designers, et j'ai été responsable de deux plateformes IA/ML en production couvrant tout le parcours analytique, du descriptif au prédictif, avec plus de 3,5M€ d'économies récurrentes.",
+        aboutExecText2: "Je prends les décisions de portefeuille qui en découlent — quoi passer à l'échelle, quoi transférer, quoi arrêter — ainsi que la stratégie fournisseurs, la captation et la priorisation de la demande entre départements et marchés européens. J'allie une profondeur technique concrète en ML, LLM et workflows agentiques, en livrant encore seul du code en production comme cofondateur d'une plateforme SaaS B2B en activité, à une formation en sciences du vivant (biochimie, bioinformatique et machine learning biomédical sur données de patients) et à une pratique éprouvée de la traduction de l'analytique en business cases chiffrés, défendus devant la direction.",
+        skillsTitle: "Compétences clés",
+        skill1Label: "IA & Data Science",
+        skill1: "Machine Learning, Deep Learning, vision par ordinateur, forecasting de séries temporelles, MLOps, workflows agentiques (raisonnement multi-étapes, tool calling, évaluation), analytique descriptive → prédictive, GenAI & LLM, knowledge graphs & ontologies",
+        skill2Label: "Leadership",
+        skill2: "Recrutement et construction d'équipe, mentorat de managers et de scientifiques juniors, alignement transverse, coordination multi-marchés, gestion de la performance et de la sous-performance, plans de carrière, communication exécutive & storytelling",
+        skill3Label: "Portefeuille & delivery",
+        skill3: "Gouvernance et rationalisation de portefeuille, responsabilité budgétaire & P&L, évaluation de fournisseurs et décisions build-vs-buy, gestion de ligne produit, décisions construire / passer à l'échelle / transférer / arrêter, stratégie et roadmap produit, captation et priorisation de la demande, delivery de plateformes d'entreprise",
+        skill4Label: "Technique",
+        skill4: "Python, R, SQL, statistiques avancées, Azure & Azure DevOps, APIs / MCP, workflows de data engineering, CI/CD, Power BI, outils de développement IA",
+        skill5Label: "Domaines",
+        skill5: "Sciences du vivant, données de santé et biomédicales, R&D pharmaceutique et agricole, business industriel et des commodités",
 
         platformsTitle: "Plateformes et décisions de portefeuille",
         platformsIntro: "Quatre initiatives qui montrent comment je pilote un portefeuille IA : ce qu'on construit, ce qu'on passe à l'échelle, ce qu'on transfère — et ce qu'on arrête.",
         pfType1: "Mise à l'échelle et transférée",
         pfCard1Title: "Plateforme Computer Vision / MLOps",
-        pfCard1Text: "Responsable d'une plateforme d'entreprise de vision par ordinateur pour la classification, la segmentation et la détection d'objets, avec des templates réutilisables déployés à l'échelle dans le cloud. Une fois mature, je l'ai transférée à son meilleur propriétaire métier plutôt que de la garder.",
+        pfCard1Text: "Responsable de la plateforme d'entreprise vision par ordinateur / MLOps de BASF, avec une bibliothèque de 70 templates réutilisables relus par les pairs et une santé de plateforme suivie via l'adoption des utilisateurs actifs et le temps gagné par utilisateur. Une fois mature, je l'ai transférée à son meilleur propriétaire plutôt que de la garder.",
         pfMetric1: "~2M€ d'économies récurrentes · 70 templates · ~90% d'effort en moins pour ~100 data scientists",
         pfType2: "Évaluée et arrêtée",
-        pfCard2Title: "Plateforme de Forecasting self-service",
+        pfCard2Title: "Plateforme self‑service de forecasting",
         pfCard2Text: "J'ai piloté une plateforme self-service de séries temporelles donnant aux utilisateurs métier des prévisions et une aide à la décision sans data scientist dans la boucle. Après une revue de ROI et d'adoption, j'ai recommandé sa fermeture — ma propre plateforme — et défendu cette décision avec des chiffres.",
         pfMetric2: "~1,5M€ d'économies issues de la décision de fermeture",
-        pfType3: "Financée et en construction",
-        pfCard3Title: "Étiquetage intelligent par GenAI",
-        pfCard3Text: "J'ai transformé un goulot d'étranglement en analyse d'image en business case chiffré et obtenu un financement interne pour l'étiquetage intelligent par GenAI et l'automatisation du workflow, avec l'intégration de LLM dans les pipelines ML en production.",
-        pfMetric3: "200K€ de financement interne · sur 360K€ répartis en cinq initiatives",
+        pfType3: "Business case financé",
+        pfCard3Title: "Automatisation de l'étiquetage par GenAI",
+        pfCard3Text: "J'ai transformé un goulot d'étranglement dans l'étiquetage d'images en business case chiffré, présenté directement aux VP, et obtenu le financement de l'automatisation de l'étiquetage par GenAI. J'ai mené une preuve de concept de SIGMA AI et comparé les outils concurrents pour éclairer la décision build-vs-buy.",
+        pfMetric3: "560K€ obtenus · étiquetage GenAI et cinq autres initiatives d'innovation",
         pfType4: "Standard d'entreprise",
         pfCard4Title: "Programme d'ontologies et knowledge graph",
-        pfCard4Text: "J'ai construit la fondation sémantique qui rend des données hétérogènes interopérables et lisibles par machine pour les systèmes IA et agentiques, ainsi que le modèle de gouvernance qui la maintient vivante après le lancement.",
+        pfCard4Text: "Responsable de l'Ontology Management Framework de BASF : la fondation sémantique qui rend des données hétérogènes interopérables et lisibles par machine pour les systèmes IA et agentiques, ainsi que le modèle de gouvernance qui la maintient vivante après le lancement.",
         pfMetric4: "20 bio-ontologies adoptées comme standard du département · cadre GOMO publié",
 
         experienceTitle: "Expérience",
@@ -1076,44 +1227,48 @@
         exp1Role: "Head of Advanced Imaging & Forecasting Solutions — Plateformes IA & ML",
         exp1Dates: "2022 – Aujourd'hui",
         exp1Official: "Intitulé officiel BASF : Product Manager · périmètre équivalent à Head of Product / Global Product Line Manager",
-        exp1b1: "Je dirige une équipe de 16 personnes (data scientists, ingénieurs ML et logiciel, solution designers) passée de 8, avec la responsabilité du recrutement, des plans de carrière, du mentorat des managers et des scientifiques juniors, de la performance et de la sous-performance.",
-        exp1b1b: "Je suis responsable de la stratégie de portefeuille, des priorités d'investissement et des roadmaps produit en vision par ordinateur, MLOps, forecasting et infrastructure sémantique, au service de la communauté data science mondiale de BASF.",
-        exp1b2: "J'ai piloté des décisions de portefeuille à impact financier direct : transfert de la plateforme vision par ordinateur / MLOps à son meilleur propriétaire (~2M€ d'économies récurrentes, 70 templates réutilisables, ~90% d'effort en moins pour ~100 data scientists) et recommandation de fermeture de la plateforme de forecasting après une revue de ROI et d'adoption (~1,5M€ d'économies).",
-        exp1b3: "Je livre le parcours analytique complet, du descriptif au prédictif : une plateforme self-service de forecasting pour les utilisateurs métier et une plateforme de vision par ordinateur pour la classification, la segmentation et la détection d'objets, toutes deux déployées à l'échelle dans le cloud.",
-        exp1b4: "Je gère la captation, la priorisation et la livraison de la demande pour des parties prenantes de trois départements et plusieurs marchés européens, avec des revues stratégiques bimensuelles pour aligner les roadmaps et arbitrer les priorités concurrentes.",
-        exp1b5: "J'ai obtenu 200K€ de financement interne pour l'étiquetage intelligent par GenAI et l'automatisation des workflows d'analyse d'image ; j'ai impulsé une culture d'ingénierie AI-native avec l'intégration de LLM dans les pipelines ML et l'adoption d'outils IA par toute l'équipe.",
-        exp1b6: "J'ai obtenu le soutien de cinq initiatives d'innovation d'une valeur de 360K€ en transformant des opportunités analytiques en business cases chiffrés présentés à la direction.",
-        exp1b7: "J'ai été Business Transformation Coordinator pour l'Espagne, le Portugal et l'Italie lors d'une restructuration sous contrainte légale, en alignant les unités business et les directeurs de site pendant l'intégration du département dans le business des commodités.",
+        exp1Summary: "Responsable d'un budget annuel plateformes d'environ 1,3M€ et d'une équipe de 16 personnes (passée de 8 : data scientists, ingénieurs ML/logiciel, solution designers) sur les plateformes vision par ordinateur, MLOps et forecasting de BASF, au service de la communauté data science mondiale du groupe. Responsable de la stratégie de portefeuille, des décisions fournisseurs et de la priorisation de la demande de trois départements et plusieurs marchés européens, avec un reporting mensuel à la Finance et des business cases d'investissement présentés au niveau VP.",
+        exp1b1: "J'ai fait passer l'équipe de 8 à 16 personnes grâce à un recrutement structuré et à la conception de plans de carrière, en accompagnant directement managers et scientifiques juniors et en assumant la gestion de la performance — y compris la sous-performance.",
+        exp1b2: "J'ai transféré la plateforme vision par ordinateur / MLOps à son meilleur propriétaire (~2M€ d'économies récurrentes, 70 templates réutilisables, ~90% d'effort en moins pour ~100 data scientists) et fermé la plateforme de forecasting après une revue de ROI (~1,5M€ d'économies).",
+        exp1b3: "J'ai instauré une gouvernance avec relecture par les pairs pour la bibliothèque de 70 templates et suivi la santé de la plateforme via l'adoption des utilisateurs actifs et le temps gagné par utilisateur, validés par des enquêtes de satisfaction internes.",
+        exp1b4: "J'ai obtenu 560K€ de financement — automatisation de l'étiquetage par GenAI et cinq autres initiatives d'innovation — en présentant des business cases chiffrés directement aux VP.",
+        exp1b5: "J'ai consolidé un partenariat de delivery exclusif avec Tecnalia, mené une évaluation en preuve de concept de SIGMA AI pour l'étiquetage d'images et comparé les outils concurrents pour éclairer les décisions build-vs-buy.",
+        exp1b6: "J'ai co-piloté le groupe de travail transverse Phénotypage de BASF avec l'Agriculture, en standardisant l'acquisition d'images multi-sites et en intégrant la plateforme de vision par ordinateur aux outils de phénotypage voisins.",
         exp2Company: "BASF Digital Solutions S.L. — Madrid, Espagne",
         exp2Role: "Technical Product Manager — Ontologies & Couche Sémantique",
         exp2Dates: "2021 – 2022",
         exp2Official: "Intitulé officiel BASF : Product Component Manager · socle du portefeuille de plateformes IA & ML repris ensuite",
-        exp2b1: "Responsable de la stratégie d'ontologies et de knowledge graphs d'entreprise — la fondation sémantique qui rend les données hétérogènes interopérables et lisibles par machine pour les systèmes IA et agentiques.",
-        exp2b2: "J'ai dirigé 5 ingénieurs et 2 partenaires externes pour livrer 20 bio-ontologies adoptées comme standard de vocabulaire dans tout le département R&D Agricultural Solutions par l'ensemble des outils internes en 6–12 mois.",
-        exp2b3: "Co-auteur du cadre de gouvernance d'ontologies GOMO de BASF (publié, ISMB 2022) avec l'Ontology Engineering Group de l'Universidad Politécnica de Madrid.",
-        exp2b3b: "J'ai piloté l'ontologie EPPO pour la représentation des codes de plantes et de ravageurs, publiée dans Frontiers in Artificial Intelligence et publiée en open source.",
+        exp2Summary: "Responsable de l'Ontology Management Framework (OMF) de BASF — stratégie d'entreprise, gouvernance et stack technologique (Protégé, RDFlib, Virtuoso, pipeline de curation automatisé) — pour les bio-ontologies qui sous-tendent les systèmes IA et agentiques en aval, dont des ontologies conçues en interne. J'ai dirigé 5 ingénieurs et 2 partenaires externes, évalué Stardog comme alternative avant de conserver et d'étendre le stack en place, et porté la stratégie et l'adoption des ontologies, des sessions grand public jusqu'aux VP de l'entreprise.",
+        exp2b1: "J'ai livré 20 bio-ontologies, dont plusieurs conçues en interne, adoptées comme standard de vocabulaire dans tout le département R&D Agricultural Solutions par l'ensemble des outils internes en 6–12 mois.",
+        exp2b2: "Co-auteur du cadre de gouvernance d'ontologies GOMO de BASF (publié, ISMB 2022) avec l'Ontology Engineering Group de l'Universidad Politécnica de Madrid.",
+        exp2b3: "J'ai piloté le développement de l'ontologie EPPO pour la représentation des codes de plantes et de ravageurs, publiée dans Frontiers in Artificial Intelligence et diffusée en open source.",
         exp2b4: "J'ai créé et animé une communauté bimensuelle de 10 data stewards pour la standardisation du vocabulaire, traitant 10–15 demandes terminologiques par mois.",
         exp3Company: "Umeå Plant Science Centre — Umeå, Suède",
         exp3Role: "Chercheur postdoctoral, Machine Learning",
         exp3Dates: "2020 – 2021",
-        exp3b1: "Bourse Kempestiftelserna : application du machine learning et de l'inférence de réseaux régulateurs géniques pour améliorer l'annotation fonctionnelle à l'échelle du génome.",
-        exp3b2: "Conception de pipelines ML orientés production avec reproductibilité, auto-scaling et experiment tracking, traduisant des workflows de recherche en systèmes déployables.",
-        exp3b3: "Obtention de 2 bourses de recherche compétitives en auteur principal (KSLA, SPPS) ; Guest Editor d'un numéro spécial de revue Q1.",
+        exp3b1: "Lauréat de la bourse Kempestiftelserna et de deux autres financements compétitifs en auteur principal (KSLA, SPPS) pour mener une niche de recherche associant les méthodes de similarité sémantique à base d'ontologies issues de ma thèse au deep learning, afin d'inférer l'annotation fonctionnelle de gènes chez des organismes non-modèles comme <em>Picea abies</em> (épicéa commun) — dont les cycles de croissance de plusieurs décennies rendent la validation expérimentale directe impossible — par transfert par homologie depuis des génomes caractérisés d'organismes modèles.",
+        exp3b2: "Conception de pipelines ML orientés production, conteneurisés avec Docker et exécutés sur le cluster HPC de l'université, avec reproductibilité, auto-scaling et experiment tracking — repris ensuite comme point de départ de mémoires de master.",
+        exp3b3: "Contribution aux travaux d'un doctorant en tant que co-auteur de « <a href='https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=m320tuQAAAAJ&amp;citation_for_view=m320tuQAAAAJ:_FxGoFyzp5QC' target='_blank' rel='noopener'>lincRNA annotation in Norway spruce</a> » (Physiologia Plantarum, 2024), tout en accompagnant d'autres doctorants pendant la bourse.",
+        exp3b4: "Guest Editor d'un numéro spécial sur l'IA chez les plantes non-modèles dans <em>Plants</em> (MDPI, Q1), avec la gestion de la relecture par les pairs d'environ 10 articles soumis pendant la bourse.",
+        exp3b5: "25 heures d'enseignement en master et appui aux enseignants dans des cours d'introduction à la bioinformatique.",
         exp4Company: "INSERM — Bordeaux, France",
         exp4Role: "Ingénieur bioinformatique",
         exp4Dates: "2015 – 2016",
-        exp4b1: "Développement d'algorithmes pour l'intégration de données multi-omiques et l'analyse d'enrichissement en recherche clinique, sous la direction de Rodolphe Thiébaut, ensuite co-auteur des publications issues de la thèse.",
+        exp4b1: "Mission prédoctorale menée seul et en totale autonomie, intégrant des données génomiques et transcriptomiques de patients VIH par Gene Set Enrichment Analysis (GSEA) standard, en rendant compte directement à Rodolphe Thiébaut et à mes futurs directeurs de thèse tout au long de la mission.",
+        exp4b2: "Identification des limites de l'analyse d'enrichissement standard sur de vraies données multi-omiques — l'intuition à l'origine directe de la méthodologie de similarité sémantique devenue GSAn pendant ma thèse — et publication des résultats en premier auteur dans PLoS ONE (2018), avec Thiébaut en co-auteur.",
         exp5Company: "Université de Bordeaux / LaBRI — Bordeaux, France",
         exp5Role: "Doctorant, Informatique",
         exp5Dates: "2016 – 2019",
-        exp5b1: "Financement ministériel (MESR). Construction de <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, plateforme web d'annotation de jeux de gènes toujours en ligne et utilisée, et de méthodes ML fondées sur les ontologies pour la similarité sémantique et la représentation des connaissances.",
-        exp5b2: "Publications dans des revues Q1 et IEEE ; co-encadrement d'un étudiant de master avec le directeur de thèse ; premier prix, Scientific Game Jam Bordeaux.",
-        exp5b3: "En parallèle de la thèse, réalisation d'une mission de ML appliqué financée en externe : prédiction d'épitopes MHC chez des patients VIH à partir de données de séquences patients — machine learning biomédical en recherche clinique.",
+        exp5Official: "Financement ministériel (MESR)",
+        exp5b1: "Création d'une méthodologie de similarité sémantique à base d'ontologies pour l'annotation de jeux de gènes — l'approche qui sous-tendra plus tard le travail de gouvernance d'ontologies chez BASF (GOMO, EPPO) — en évaluant neuf mesures de similarité sémantique sur les termes de la Gene Ontology pour trouver le compromis optimal entre minimiser les termes d'annotation retenus et maximiser la couverture des gènes, avec de meilleurs résultats que les outils standards d'analyse d'enrichissement.",
+        exp5b2: "Intégration de la méthode dans <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, plateforme web publique d'annotation de jeux de gènes toujours activement utilisée (18+ citations), qui a aussi servi de base de recherche à un doctorant suivant sous la direction de mes directeurs de thèse.",
+        exp5b3: "Co-encadrement d'un étudiant de master sur des travaux parallèles comparant GSAn aux outils existants d'annotation de jeux de gènes.",
+        exp5b4: "Mission de ML appliqué financée par le CHU de Bordeaux pendant les derniers mois de la thèse : prédiction d'épitopes MHC sur des données de séquences VIH de patients, avec un résultat prometteur non publié — du machine learning biomédical concret en recherche clinique.",
 
         leadTitle: "Approche de leadership",
-        leadIntro: "Trois principes qui ont survécu au contact d'un vrai portefeuille, d'une vraie équipe et d'une vraie restructuration.",
+        leadIntro: "Trois principes éprouvés face à un vrai portefeuille, une vraie équipe et de vraies décisions d'investissement.",
         lead1Title: "Construire l'équipe, pas seulement le backlog",
-        lead1Text: "J'ai doublé l'équipe par un recrutement délibéré, des plans de carrière individuels et le coaching des managers qui rapportent au poste — y compris les conversations difficiles sur la sous-performance plutôt que de les contourner.",
+        lead1Text: "J'ai doublé l'équipe par un recrutement délibéré, des plans de carrière individuels et le coaching des managers qui rapportent au poste — y compris les conversations difficiles sur la sous-performance plutôt que de les contourner, car le plafond d'une équipe est fixé par son maillon le plus faible.",
         lead2Title: "Décider avec des preuves, et accepter de tuer son propre produit",
         lead2Text: "J'ai recommandé la fermeture d'une plateforme dont j'étais responsable lorsque le ROI et les données d'adoption ne la soutenaient plus, et transféré une autre à un propriétaire plus adapté : deux décisions défendues avec des chiffres devant la direction.",
         lead3Title: "Traduire entre deux mondes",
@@ -1151,12 +1306,58 @@
         edu2Title: "Doctorat en Informatique", edu2Inst: "Université de Bordeaux / LaBRI · Financement ministériel (MESR)",
         edu3Title: "Master Bioinformatique", edu3Inst: "Université de Murcie",
         edu4Title: "Licence Biochimie", edu4Inst: "Université de Murcie",
-        ventTitle: "Entrepreneuriat — Proyecto Vigía · 2026 – Aujourd'hui",
-        ventText: "Cofondateur (50%) d'une marketplace B2B pour un secteur de services réglementé en Espagne, en bêta fermée. J'ai conçu et développé seul la totalité de la plateforme, de bout en bout : backend, frontend, gestion des identités et des accès, données géospatiales, traitement documentaire, dispositif RGPD et facturation électronique conforme. Je pilote également la stratégie de monétisation, la conception du risque de fraude, l'optimisation des coûts d'infrastructure et le cadre de protection du partenariat.",
+        ventTitle: "Entrepreneuriat",
+        ventCompany: "Proyecto Vigía — Espagne",
+        ventRole: "Cofondateur (50%) & seul développeur",
+        ventDates: "2026 – Aujourd'hui",
+        ventBeta: "Bêta fermée",
+        ventAccess: "L'accès nécessite des identifiants d'invitation.",
+        ventSummary: "Cofondateur, j'ai conçu et développé seul, de bout en bout, une marketplace B2B pour un secteur de services réglementé en Espagne : backend Java/Spring Boot, frontend React/TypeScript, gestion des identités et des accès avec Keycloak, données géospatiales PostgreSQL/PostGIS, pipeline de traitement documentaire avec OCR, traitement des données conforme au RGPD et facturation électronique conforme à Verifactu — de l'architecture jusqu'au déploiement en production.",
+        ventB1: "J'ai mené seul la plateforme de l'architecture à la bêta fermée en ~3 mois (juin–septembre 2026), avec des outils de développement assisté par IA (Claude Code) pour accélérer la livraison ; je recueille désormais des retours structurés auprès de la cohorte de bêta avant un lancement public prévu.",
+        ventB2: "J'ai mené moi-même une revue de sécurité de la plateforme, en identifiant et corrigeant plusieurs vulnérabilités avant le lancement de la bêta.",
+        ventB3: "J'ai optimisé le coût d'infrastructure en architecturant sur des instances cloud ARM (Hetzner), en équilibrant performance et budget bootstrappé sans compromettre la fiabilité.",
+        ventB4: "J'évalue les modèles de monétisation — commission par transaction ou abonnement premium — pour définir l'approche go-to-market de la plateforme.",
+        langTitle: "Langues",
+        lang1Name: "Espagnol",
+        lang1Level: "Langue maternelle",
+        lang2Name: "Anglais",
+        lang2Level: "Compétence professionnelle complète",
+        lang3Name: "Français",
+        lang3Level: "Compétence professionnelle complète",
 
         footerText: "© 2026 Aarón Ayllón Benítez · Tous droits réservés"
       }
     };
+
+    // Glue the last two words of each text block with a non-breaking space so a
+    // single word never ends up alone on the last line, at any viewport width.
+    const WIDOW_SELECTOR = "p, li, h1, h2, h5, .impact-cap, .pf-metric, .role-line, .role-official, .skill-list, .pub-venue, .pub-authors, .lang-level";
+    function preventWidow(el) {
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      let seenWord = false;
+      for (let i = nodes.length - 1; i >= 0; i--) {
+        const text = nodes[i].nodeValue;
+        for (let j = text.length - 1; j >= 0; j--) {
+          const c = text[j];
+          if (c === " ") {
+            if (seenWord) return; // already glued
+          } else if (/\s/.test(c)) {
+            if (!seenWord) continue; // trailing whitespace
+            let k = j;
+            while (k > 0 && /\s/.test(text[k - 1]) && text[k - 1] !== " ") k--;
+            nodes[i].nodeValue = text.slice(0, k) + " " + text.slice(j + 1);
+            return;
+          } else {
+            seenWord = true;
+          }
+        }
+      }
+    }
+    function preventWidows() {
+      document.querySelectorAll(WIDOW_SELECTOR).forEach(preventWidow);
+    }
 
     function setLanguage(lang) {
       const dict = i18n[lang] || i18n.en;
@@ -1171,6 +1372,7 @@
         }
       });
       document.documentElement.lang = lang;
+      preventWidows();
       try { localStorage.setItem("lang", lang); } catch (e) { /* storage unavailable */ }
       document.querySelectorAll(".flag[data-lang]").forEach((f) => {
         f.classList.toggle("active-flag", f.dataset.lang === lang);
