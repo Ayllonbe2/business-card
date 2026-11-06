@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "title": {
+      "en": "Aarón Ayllón Benítez · AI & Data Science Leader",
+      "es": "Aarón Ayllón Benítez · Líder de IA y Data Science",
+      "fr": "Aarón Ayllón Benítez · Leader IA & Data Science"
+    },
+    "description": {
+      "en": "Aarón Ayllón Benítez, PhD — AI & Data Science Leader. Team of 16, ~€1.3M platform budget, two production AI/ML platforms, €3.5M+ recurring savings from portfolio decisions. PhD Computer Science, MSc AI. Madrid.",
+      "es": "Aarón Ayllón Benítez, PhD — Líder de IA y Data Science. Equipo de 16 personas, ~1,3M€ de presupuesto de plataformas, dos plataformas de IA/ML en producción, más de 3,5M€ de ahorro recurrente por decisiones de portafolio. Doctor en Informática, Máster en IA. Madrid.",
+      "fr": "Aarón Ayllón Benítez, PhD — Leader IA & Data Science. Équipe de 16 personnes, budget plateformes d'environ 1,3M€, deux plateformes IA/ML en production, plus de 3,5M€ d'économies récurrentes. Doctorat en informatique, master en IA. Madrid."
+    }
+  },
+  "hero": {
+    "title": {
+      "en": "Aarón Ayllón Benítez, PhD",
+      "es": "Aarón Ayllón Benítez, PhD",
+      "fr": "Aarón Ayllón Benítez, PhD"
+    },
+    "subtitle": {
+      "en": "AI & Data Science Leader — Enterprise ML, GenAI & Agentic Platforms · Team and Portfolio Ownership",
+      "es": "Líder de IA y Data Science — Plataformas empresariales de ML, GenAI y sistemas agénticos · Equipo y portafolio",
+      "fr": "Leader IA & Data Science — Plateformes ML, GenAI & agentiques d'entreprise · Équipe et portefeuille"
+    },
+    "tagline": {
+      "en": "<strong>PhD Computer Science · MSc Artificial Intelligence.</strong> I lead a 16-person team and a ~€1.3M platform budget at BASF Digital Solutions, own two production AI/ML platforms, and make the portfolio calls that follow — including recommending the closure of one of my own.",
+      "es": "<strong>Doctor en Informática · Máster en Inteligencia Artificial.</strong> Dirijo un equipo de 16 personas y un presupuesto de plataformas de ~1,3M€ en BASF Digital Solutions, soy responsable de dos plataformas de IA/ML en producción y tomo las decisiones de portafolio que vienen después, incluida la de recomendar el cierre de una de ellas.",
+      "fr": "<strong>Docteur en Informatique · Master Intelligence Artificielle.</strong> Je dirige une équipe de 16 personnes et un budget plateformes d'environ 1,3M€ chez BASF Digital Solutions, je suis responsable de deux plateformes IA/ML en production et je prends les décisions de portefeuille qui suivent — y compris recommander la fermeture de l'une des miennes."
+    }
+  },
+  "impact": [
+    {
+      "num": {
+        "en": "€3.5M+",
+        "es": "3,5M€+",
+        "fr": "3,5M€+"
+      },
+      "caption": {
+        "en": "recurring savings from portfolio decisions",
+        "es": "de ahorro recurrente por decisiones de portafolio",
+        "fr": "d'économies récurrentes issues des décisions de portefeuille"
+      }
+    },
+    {
+      "num": {
+        "en": "8 → 16",
+        "es": "8 → 16",
+        "fr": "8 → 16"
+      },
+      "caption": {
+        "en": "team scaled, hired and developed",
+        "es": "equipo escalado, contratado y desarrollado",
+        "fr": "équipe passée à cette taille, recrutée et développée"
+      }
+    },
+    {
+      "num": {
+        "en": "~90%",
+        "es": "~90%",
+        "fr": "~90%"
+      },
+      "caption": {
+        "en": "less effort per new project after standardisation",
+        "es": "menos esfuerzo por proyecto nuevo tras la estandarización",
+        "fr": "d'effort en moins par nouveau projet après la standardisation"
+      }
+    },
+    {
+      "num": {
+        "en": "~100",
+        "es": "~100",
+        "fr": "~100"
+      },
+      "caption": {
+        "en": "the whole of BASF's global data science community",
+        "es": "toda la comunidad global de ciencia de datos de BASF",
+        "fr": "toute la communauté data science mondiale de BASF"
+      }
+    }
+  ],
+  "about": {
+    "text": {
+      "en": "Data scientist turned AI/ML leader — PhD in Computer Science, MSc in Artificial Intelligence. I lead a multidisciplinary team and a ~€1.3M platform budget at BASF Digital Solutions and make the portfolio calls: what to scale, what to hand over, what to shut down.",
+      "es": "Científico de datos convertido en líder de IA/ML — Doctor en Informática y Máster en Inteligencia Artificial. Dirijo un equipo multidisciplinar y un presupuesto de plataformas de ~1,3M€ en BASF Digital Solutions, y tomo las decisiones de portafolio: qué escalar, qué transferir y qué cerrar.",
+      "fr": "Data scientist devenu leader IA/ML — doctorat en informatique, master en intelligence artificielle. Je dirige une équipe pluridisciplinaire et un budget plateformes d'environ 1,3M€ chez BASF Digital Solutions, et je prends les décisions de portefeuille : quoi passer à l'échelle, quoi transférer, quoi arrêter."
+    },
+    "cta": {
+      "en": "Read the full profile",
+      "es": "Leer el perfil completo",
+      "fr": "Lire le profil complet"
+    }
+  },
+  "experience": {
+    "text": {
+      "en": "From bioinformatics research in Bordeaux and Umeå to leading BASF's AI and ML platforms in Madrid: five roles across research, ontologies and platform leadership.",
+      "es": "De la investigación en bioinformática en Burdeos y Umeå a dirigir las plataformas de IA y ML de BASF en Madrid: cinco puestos entre investigación, ontologías y liderazgo de plataformas.",
+      "fr": "De la recherche en bioinformatique à Bordeaux et Umeå à la direction des plateformes IA et ML de BASF à Madrid : cinq postes entre recherche, ontologies et pilotage de plateformes."
+    },
+    "cta": {
+      "en": "Full career timeline",
+      "es": "Trayectoria completa",
+      "fr": "Parcours complet"
+    }
+  },
+  "projects": {
+    "text": {
+      "en": "Four BASF platform initiatives — what was scaled, transferred, sunset and funded — plus a B2B venture in closed beta and public research tools.",
+      "es": "Cuatro iniciativas de plataforma en BASF —qué se escaló, se transfirió, se cerró y se financió—, además de un proyecto B2B en beta cerrada y herramientas de investigación públicas.",
+      "fr": "Quatre initiatives de plateforme chez BASF — ce qui a été passé à l'échelle, transféré, arrêté et financé — ainsi qu'un projet B2B en bêta fermée et des outils de recherche publics."
+    },
+    "cta": {
+      "en": "All projects",
+      "es": "Todos los proyectos",
+      "fr": "Tous les projets"
+    },
+    "featured": [
+      "cv-mlops",
+      "forecasting",
+      "genai-labelling",
+      "ontology-kg",
+      "vigia",
+      "gsan"
+    ]
+  },
+  "research": {
+    "text": {
+      "en": "The scientific track record behind the leadership: peer-reviewed publications in Q1 journals, industry speaking, editorial work and teaching.",
+      "es": "El histórico científico que sostiene el liderazgo: publicaciones revisadas por pares en revistas Q1, ponencias en industria, trabajo editorial y docencia.",
+      "fr": "Le socle scientifique derrière le leadership : publications à comité de lecture dans des revues Q1, conférences industrielles, travail éditorial et enseignement."
+    },
+    "cta": {
+      "en": "All publications, talks and media",
+      "es": "Todas las publicaciones, ponencias y medios",
+      "fr": "Toutes les publications, conférences et médias"
+    },
+    "featured": [
+      "nature-comms",
+      "gsan-nar",
+      "eppo-frontiers"
+    ]
+  },
+  "education": {
+    "text": {
+      "en": "Computer science and artificial intelligence on top of a life-sciences foundation — biochemistry, bioinformatics, a PhD and an MSc in AI — plus professional certifications and courses in data, cloud and AI.",
+      "es": "Informática e inteligencia artificial sobre una base de ciencias de la vida —bioquímica, bioinformática, un doctorado y un máster en IA—, además de certificaciones y cursos profesionales en datos, nube e IA.",
+      "fr": "L'informatique et l'intelligence artificielle sur une base en sciences du vivant — biochimie, bioinformatique, un doctorat et un master en IA — ainsi que des certifications et des cours professionnels en données, cloud et IA."
+    },
+    "cta": {
+      "en": "Education details",
+      "es": "Detalle de la formación",
+      "fr": "Détail de la formation"
+    }
+  },
+  "leadership": {
+    "title": {
+      "en": "Leadership Approach",
+      "es": "Enfoque de liderazgo",
+      "fr": "Approche de leadership"
+    },
+    "text": {
+      "en": "Three principles tested against a real portfolio, a real team and real investment decisions.",
+      "es": "Tres principios puestos a prueba con un portafolio real, un equipo real y decisiones de inversión reales.",
+      "fr": "Trois principes éprouvés face à un vrai portefeuille, une vraie équipe et de vraies décisions d'investissement."
+    },
+    "cta": {
+      "en": "How I lead",
+      "es": "Cómo lidero",
+      "fr": "Ma façon de diriger"
+    }
+  }
+}

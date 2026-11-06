@@ -1,0 +1,452 @@
+{
+  "intro": {
+    "en": "Degrees, certifications, fellowships, teaching and languages.",
+    "es": "Titulaciones, certificaciones, becas, docencia e idiomas.",
+    "fr": "Diplômes, certifications, bourses, enseignement et langues."
+  },
+  "degrees_title": {
+    "en": "Degrees",
+    "es": "Titulaciones",
+    "fr": "Diplômes"
+  },
+  "degrees": [
+    {
+      "logo": "universidades/UNIR.JPG",
+      "alt": "UNIR",
+      "title": {
+        "en": "MSc Artificial Intelligence",
+        "es": "Máster en Inteligencia Artificial",
+        "fr": "Master Intelligence Artificielle"
+      },
+      "inst": {
+        "en": "Universidad Internacional de La Rioja (UNIR)",
+        "es": "Universidad Internacional de La Rioja (UNIR)",
+        "fr": "Universidad Internacional de La Rioja (UNIR)"
+      },
+      "years": "2023–2024"
+    },
+    {
+      "logo": "universidades/ub.png",
+      "alt": "Université de Bordeaux",
+      "title": {
+        "en": "PhD Computer Science",
+        "es": "Doctorado en Informática",
+        "fr": "Doctorat en Informatique"
+      },
+      "inst": {
+        "en": "Université de Bordeaux / LaBRI · Ministerial funding (MESR)",
+        "es": "Université de Bordeaux / LaBRI · Financiación ministerial (MESR)",
+        "fr": "Université de Bordeaux / LaBRI · Financement ministériel (MESR)"
+      },
+      "years": "2016–2019"
+    },
+    {
+      "logo": "universidades/UMU.png",
+      "alt": "Universidad de Murcia",
+      "title": {
+        "en": "MSc Bioinformatics",
+        "es": "Máster en Bioinformática",
+        "fr": "Master Bioinformatique"
+      },
+      "inst": {
+        "en": "University of Murcia",
+        "es": "Universidad de Murcia",
+        "fr": "Université de Murcie"
+      },
+      "years": "2013–2015"
+    },
+    {
+      "logo": "universidades/UMU.png",
+      "alt": "Universidad de Murcia",
+      "title": {
+        "en": "BSc Biochemistry",
+        "es": "Grado en Bioquímica",
+        "fr": "Licence Biochimie"
+      },
+      "inst": {
+        "en": "University of Murcia",
+        "es": "Universidad de Murcia",
+        "fr": "Université de Murcie"
+      },
+      "years": "2009–2013"
+    }
+  ],
+  "certifications_title": {
+    "en": "Certifications & training",
+    "es": "Certificaciones y formación",
+    "fr": "Certifications et formations"
+  },
+  "certifications": [
+    {
+      "year": "2026",
+      "title": {
+        "en": "Databricks Fundamentals Accreditation",
+        "es": "Databricks Fundamentals Accreditation",
+        "fr": "Databricks Fundamentals Accreditation"
+      },
+      "issuer": {
+        "en": "Databricks",
+        "es": "Databricks",
+        "fr": "Databricks"
+      },
+      "kind": {
+        "en": "Certification",
+        "es": "Certificación",
+        "fr": "Certification"
+      },
+      "featured": true
+    },
+    {
+      "year": "2023",
+      "title": {
+        "en": "AZ-900: Microsoft Azure Fundamentals",
+        "es": "AZ-900: Microsoft Azure Fundamentals",
+        "fr": "AZ-900: Microsoft Azure Fundamentals"
+      },
+      "issuer": {
+        "en": "Microsoft",
+        "es": "Microsoft",
+        "fr": "Microsoft"
+      },
+      "kind": {
+        "en": "Certification",
+        "es": "Certificación",
+        "fr": "Certification"
+      },
+      "featured": true
+    },
+    {
+      "year": "2023",
+      "title": {
+        "en": "Advanced University Course in Data Analyst for Artificial Intelligence",
+        "es": "Curso Universitario Avanzado en Data analyst para Inteligencia Artificial",
+        "fr": "Cours universitaire avancé en Data analyst pour l'intelligence artificielle"
+      },
+      "issuer": {
+        "en": "Universidad Internacional de La Rioja (UNIR)",
+        "es": "Universidad Internacional de La Rioja (UNIR)",
+        "fr": "Universidad Internacional de La Rioja (UNIR)"
+      },
+      "kind": {
+        "en": "University course",
+        "es": "Curso universitario",
+        "fr": "Cours universitaire"
+      },
+      "featured": true
+    }
+  ],
+  "grants_title": {
+    "en": "Fellowships & grants",
+    "es": "Becas y ayudas",
+    "fr": "Bourses et financements"
+  },
+  "grants": [
+    {
+      "year": "2020–2021",
+      "title": {
+        "en": "Kempestiftelserna Fellowship",
+        "es": "Beca Kempestiftelserna",
+        "fr": "Bourse Kempestiftelserna"
+      },
+      "text": {
+        "en": "Postdoctoral fellowship at Umeå Plant Science Centre to combine ontology-based semantic similarity with deep learning for functional gene annotation in non-model organisms.",
+        "es": "Beca postdoctoral en el Umeå Plant Science Centre para combinar la similitud semántica basada en ontologías con deep learning en la anotación funcional de genes de organismos no modelo.",
+        "fr": "Bourse postdoctorale à l'Umeå Plant Science Centre pour associer similarité sémantique à base d'ontologies et deep learning dans l'annotation fonctionnelle de gènes chez des organismes non-modèles."
+      }
+    },
+    {
+      "year": "2020–2021",
+      "title": {
+        "en": "KSLA and SPPS grants",
+        "es": "Becas KSLA y SPPS",
+        "fr": "Financements KSLA et SPPS"
+      },
+      "text": {
+        "en": "Two further competitive research grants, secured as main author.",
+        "es": "Otras dos becas de investigación competitivas, obtenidas como autor principal.",
+        "fr": "Deux autres financements de recherche compétitifs, obtenus en auteur principal."
+      }
+    },
+    {
+      "year": "2017",
+      "title": {
+        "en": "SFBI travel grant",
+        "es": "Beca de viaje SFBI",
+        "fr": "Bourse de voyage SFBI"
+      },
+      "text": {
+        "en": "Travel grant from the Société Française de BioInformatique (SFBI) for the invited talk at IEEE Information Visualization in London.",
+        "es": "Beca de viaje de la Société Française de BioInformatique (SFBI) para la ponencia invitada en IEEE Information Visualization en Londres.",
+        "fr": "Bourse de voyage de la Société Française de BioInformatique (SFBI) pour la conférence invitée à IEEE Information Visualization à Londres."
+      }
+    }
+  ],
+  "teaching_title": {
+    "en": "Teaching & mentoring",
+    "es": "Docencia y mentoría",
+    "fr": "Enseignement et mentorat"
+  },
+  "teaching": {
+    "en": "100+ hours of university teaching at master's and bachelor's level (Umeå University, Université de Bordeaux), covering applied functional genomics, databases and computer science fundamentals. Mentored 25+ students across four academic years, plus co-supervision of a master's thesis.",
+    "es": "Más de 100 horas de docencia universitaria a nivel de máster y grado (Universidad de Umeå, Université de Bordeaux), en genómica funcional aplicada, bases de datos y fundamentos de informática. Mentoría de más de 25 estudiantes en cuatro cursos académicos, además de la co-supervisión de un trabajo de máster.",
+    "fr": "Plus de 100 heures d'enseignement universitaire en master et licence (Université d'Umeå, Université de Bordeaux), en génomique fonctionnelle appliquée, bases de données et fondamentaux informatiques. Mentorat de plus de 25 étudiants sur quatre années académiques, plus le co-encadrement d'un mémoire de master."
+  },
+  "teaching_detail": {
+    "courses": {
+      "title": {
+        "en": "Teaching experience",
+        "es": "Experiencia docente",
+        "fr": "Expérience d'enseignement"
+      },
+      "columns": {
+        "course": {
+          "en": "Course",
+          "es": "Asignatura",
+          "fr": "Intitulé"
+        },
+        "lead": {
+          "en": "Course lead",
+          "es": "Responsable",
+          "fr": "Responsable"
+        },
+        "level": {
+          "en": "Level",
+          "es": "Nivel",
+          "fr": "Niveau"
+        },
+        "years": {
+          "en": "Year",
+          "es": "Curso",
+          "fr": "Année"
+        },
+        "hours": {
+          "en": "Hours",
+          "es": "Horas",
+          "fr": "Heures"
+        }
+      },
+      "rows": [
+        {
+          "course": {
+            "en": "Applied Functional Genomics (VT20)",
+            "es": "Applied Functional Genomics (VT20)",
+            "fr": "Applied Functional Genomics (VT20)"
+          },
+          "lead": "N. Street",
+          "level": {
+            "en": "Master in Biology, 2nd semester",
+            "es": "Máster en Biología, 2.º semestre",
+            "fr": "Master en Biologie, 2ème semestre"
+          },
+          "years": "2019–2020",
+          "hours": 40
+        },
+        {
+          "course": {
+            "en": "Introduction to computer systems (M1101)",
+            "es": "Introducción a los sistemas informáticos (M1101)",
+            "fr": "Introduction aux systèmes informatiques (M1101)"
+          },
+          "lead": "R. Giot",
+          "level": {
+            "en": "DUT Computer Science, 1st semester",
+            "es": "DUT en Informática, 1.er semestre",
+            "fr": "DUT Informatique, 1er semestre"
+          },
+          "years": "2017–2018",
+          "hours": 10
+        },
+        {
+          "course": {
+            "en": "Introduction to databases (M1104)",
+            "es": "Introducción a las bases de datos (M1104)",
+            "fr": "Introduction aux bases de données (M1104)"
+          },
+          "lead": "E. Sopena",
+          "level": {
+            "en": "DUT Computer Science, 1st semester",
+            "es": "DUT en Informática, 1.er semestre",
+            "fr": "DUT Informatique, 1er semestre"
+          },
+          "years": "2017–2018",
+          "hours": 54
+        }
+      ],
+      "total_label": {
+        "en": "Total",
+        "es": "Total",
+        "fr": "Total"
+      },
+      "total": 104
+    },
+    "supervision": {
+      "title": {
+        "en": "Student supervision",
+        "es": "Supervisión de estudiantes",
+        "fr": "Expérience d'encadrement"
+      },
+      "columns": {
+        "what": {
+          "en": "Supervised students",
+          "es": "Estudiantes supervisados",
+          "fr": "Étudiants encadrés"
+        },
+        "first": {
+          "en": "First supervisor",
+          "es": "Primer supervisor/a",
+          "fr": "1er encadrant"
+        },
+        "level": {
+          "en": "Level",
+          "es": "Nivel",
+          "fr": "Niveau"
+        },
+        "year": {
+          "en": "Year",
+          "es": "Año",
+          "fr": "Année"
+        },
+        "months": {
+          "en": "Months",
+          "es": "Meses",
+          "fr": "Mois"
+        }
+      },
+      "rows": [
+        {
+          "what": {
+            "en": "7 Master's students in software engineering",
+            "es": "7 estudiantes de Máster en ingeniería del software",
+            "fr": "7 étudiants de Master en génie logiciel"
+          },
+          "first": null,
+          "level": {
+            "en": "Master, year 2 (M2)",
+            "es": "Máster, 2.º año (M2)",
+            "fr": "M2"
+          },
+          "year": 2019,
+          "months": 2
+        },
+        {
+          "what": {
+            "en": "1 Bachelor's student in biology",
+            "es": "1 estudiante de Grado en Biología",
+            "fr": "1 étudiante de Licence en biologie"
+          },
+          "first": null,
+          "level": {
+            "en": "2nd year",
+            "es": "2.º curso",
+            "fr": "2ème année"
+          },
+          "year": 2018,
+          "months": 2
+        },
+        {
+          "what": {
+            "en": "8 Master's students in software engineering",
+            "es": "8 estudiantes de Máster en ingeniería del software",
+            "fr": "8 étudiants de Master en génie logiciel"
+          },
+          "first": "Patricia Thébault",
+          "level": {
+            "en": "Master, year 2 (M2)",
+            "es": "Máster, 2.º año (M2)",
+            "fr": "M2"
+          },
+          "year": 2018,
+          "months": 2
+        },
+        {
+          "what": {
+            "en": "4 Master's students in bioinformatics",
+            "es": "4 estudiantes de Máster en Bioinformática",
+            "fr": "4 étudiants de Master en bioinformatique"
+          },
+          "first": null,
+          "level": {
+            "en": "Master, year 1 (M1)",
+            "es": "Máster, 1.er año (M1)",
+            "fr": "M1"
+          },
+          "year": 2017,
+          "months": 2
+        },
+        {
+          "what": {
+            "en": "1 computer engineering student",
+            "es": "1 estudiante de ingeniería informática",
+            "fr": "1 étudiante de l'ingénierie en informatique"
+          },
+          "first": null,
+          "level": {
+            "en": "1st year",
+            "es": "1.er curso",
+            "fr": "1ère année"
+          },
+          "year": 2016,
+          "months": 2
+        },
+        {
+          "what": {
+            "en": "4 Master's students in bioinformatics",
+            "es": "4 estudiantes de Máster en Bioinformática",
+            "fr": "4 étudiants de Master en bioinformatique"
+          },
+          "first": null,
+          "level": {
+            "en": "Master, year 1 (M1)",
+            "es": "Máster, 1.er año (M1)",
+            "fr": "M1"
+          },
+          "year": 2016,
+          "months": 2
+        }
+      ]
+    }
+  },
+  "languages_title": {
+    "en": "Languages",
+    "es": "Idiomas",
+    "fr": "Langues"
+  },
+  "languages": [
+    {
+      "name": {
+        "en": "Spanish",
+        "es": "Español",
+        "fr": "Espagnol"
+      },
+      "level": {
+        "en": "Native",
+        "es": "Nativo",
+        "fr": "Langue maternelle"
+      }
+    },
+    {
+      "name": {
+        "en": "English",
+        "es": "Inglés",
+        "fr": "Anglais"
+      },
+      "level": {
+        "en": "Full professional proficiency",
+        "es": "Competencia profesional plena",
+        "fr": "Compétence professionnelle complète"
+      }
+    },
+    {
+      "name": {
+        "en": "French",
+        "es": "Francés",
+        "fr": "Français"
+      },
+      "level": {
+        "en": "Full professional proficiency",
+        "es": "Competencia profesional plena",
+        "fr": "Compétence professionnelle complète"
+      }
+    }
+  ]
+}

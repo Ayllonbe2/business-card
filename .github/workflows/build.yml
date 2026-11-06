@@ -1,0 +1,33 @@
+name: Build site
+
+# Builds the site on every push and pull request. It fails when a string is missing a language,
+# markup is unbalanced, a reference is unknown or an internal link / anchor is broken.
+# Deployment is done by Cloudflare (see README), which runs the same `python3 build.py`.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build
+        run: python build.py
+
+      - name: Keep the built site for download (preview)
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: public
+          retention-days: 7

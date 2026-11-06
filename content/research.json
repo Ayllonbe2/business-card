@@ -1,0 +1,420 @@
+{
+  "intro": {
+    "en": "The scientific track record behind the leadership: peer-reviewed publications in Q1 journals, industry speaking, editorial work and teaching.",
+    "es": "El histórico científico que sostiene el liderazgo: publicaciones revisadas por pares en revistas Q1, ponencias en industria, trabajo editorial y docencia.",
+    "fr": "Le socle scientifique derrière le leadership : publications à comité de lecture dans des revues Q1, conférences industrielles, travail éditorial et enseignement."
+  },
+  "scholar_cta": {
+    "en": "See full record on Google Scholar (132+ citations, <span class='nw'>h-index 5) →</span>",
+    "es": "Ver historial completo en Google Scholar (132+ citas, <span class='nw'>h-index 5) →</span>",
+    "fr": "Voir l'historique complet sur Google Scholar (132+ citations, <span class='nw'>h-index 5) →</span>"
+  },
+  "publications": [
+    {
+      "id": "eppo-frontiers",
+      "featured": true,
+      "venue": "Frontiers in Artificial Intelligence",
+      "year": 2023,
+      "badge": {
+        "en": "First author · Industry",
+        "es": "Primer autor · Industria",
+        "fr": "Premier auteur · Industrie"
+      },
+      "title": {
+        "en": "EPPO Ontology: A Semantic-Driven Approach for Plant and Pest Codes Representation",
+        "es": "Ontología EPPO: un enfoque semántico para la representación de códigos de plantas y plagas",
+        "fr": "Ontologie EPPO : une approche sémantique pour la représentation des codes de plantes et de ravageurs"
+      },
+      "desc": {
+        "en": "Development of an internal BASF ontology representing EPPO plant and pest codes, enriched with NCBI Taxon data, plus its adoption within BASF's Agricultural Solutions division and the lessons learned.",
+        "es": "Desarrollo de una ontología interna de BASF que representa los códigos EPPO de plantas y plagas, enriquecida con datos de NCBI Taxon, además de su adopción en la división de Agricultural Solutions y las lecciones aprendidas.",
+        "fr": "Développement d'une ontologie interne BASF représentant les codes EPPO de plantes et de ravageurs, enrichie des données NCBI Taxon, ainsi que son adoption dans la division Agricultural Solutions et les leçons tirées."
+      },
+      "authors": "<strong>A. Ayllon Benitez</strong>, J.A. Bernabe Diaz, I. Esnaola Gonzalez, P.P. Espinoza Arias, B.C. McCaig, K. Hanzlik, D.S. Beeckman, T. Cools, C. Castro Iragorri, N. Palacios",
+      "links": [
+        {
+          "label": {
+            "en": "Article ↗",
+            "es": "Artículo ↗",
+            "fr": "Article ↗"
+          },
+          "url": "https://www.frontiersin.org/articles/10.3389/frai.2023.1131667/full"
+        }
+      ]
+    },
+    {
+      "id": "gomo-ismb",
+      "featured": false,
+      "venue": "ISMB 2022 — Bio-Ontologies",
+      "year": 2022,
+      "badge": {
+        "en": "Industry",
+        "es": "Industria",
+        "fr": "Industrie"
+      },
+      "title": {
+        "en": "Ontology Management in an Industrial Environment: The BASF Governance Operational Model for Ontologies (GOMO)",
+        "es": "Gestión de ontologías en un entorno industrial: el modelo de gobierno de ontologías de BASF (GOMO)",
+        "fr": "Gestion d'ontologies en environnement industriel : le modèle de gouvernance d'ontologies de BASF (GOMO)"
+      },
+      "desc": {
+        "en": "BASF's Governance Operational Model for Ontologies (GOMO), a framework covering the full ontology lifecycle inside a large industrial organisation. Collaboration with the Ontology Engineering Group at UPM.",
+        "es": "El modelo operacional de gobierno de ontologías (GOMO) de BASF, un marco que cubre todo el ciclo de vida de las ontologías dentro de una gran organización industrial. Colaboración con el Ontology Engineering Group de la UPM.",
+        "fr": "Le modèle opérationnel de gouvernance d'ontologies (GOMO) de BASF, cadre couvrant tout le cycle de vie des ontologies dans une grande organisation industrielle. Collaboration avec l'Ontology Engineering Group de l'UPM."
+      },
+      "authors": "A. Iglesias-Molina, J.A. Bernabé-Díaz, P. Deshmukh, P. Espinoza-Arias, <strong>A. Ayllón-Benítez</strong>, A. Fernández-Izquierdo, J.M. Ponce-Bernabé, S. Pérez, E. Ruckhaus, O. Corcho, J.L. Sánchez-Fernández",
+      "links": [
+        {
+          "label": {
+            "en": "UPM Archive ↗",
+            "es": "Archivo UPM ↗",
+            "fr": "Archive UPM ↗"
+          },
+          "url": "https://oa.upm.es/74363/"
+        },
+        {
+          "label": {
+            "en": "DOI ↗",
+            "es": "DOI ↗",
+            "fr": "DOI ↗"
+          },
+          "url": "https://doi.org/10.5281/zenodo.7007495"
+        }
+      ],
+      "place": "Madison, WI"
+    },
+    {
+      "id": "federated-ismb",
+      "featured": false,
+      "venue": "ISMB 2022 — Bio-Ontologies",
+      "year": 2022,
+      "badge": {
+        "en": "Industry",
+        "es": "Industria",
+        "fr": "Industrie"
+      },
+      "title": {
+        "en": "Federating and querying heterogeneous and distributed Web APIs and triple stores",
+        "es": "Federando y consultando APIs web y triple stores heterogéneos y distribuidos",
+        "fr": "Fédération et interrogation d'APIs Web et triple stores hétérogènes et distribués"
+      },
+      "desc": {
+        "en": "A federated data integration architecture for an industrial setup, using ontology-based data access to homogenise fragmented Web APIs and triple stores at BASF. Most queries answered in under a second.",
+        "es": "Arquitectura de integración federada de datos en un entorno industrial, usando acceso a datos basado en ontologías para homogeneizar APIs web y triple stores fragmentados en BASF. La mayoría de consultas se resuelven en menos de un segundo.",
+        "fr": "Architecture d'intégration de données fédérée en environnement industriel, utilisant l'accès aux données basé sur les ontologies pour homogénéiser des APIs Web et triple stores fragmentés chez BASF. La plupart des requêtes en moins d'une seconde."
+      },
+      "authors": "T. Mendes de Farias, C. Dessimoz, <strong>A. Ayllón-Benítez</strong>, C. Yang, J. Long, A.-C. Sima",
+      "links": [
+        {
+          "label": {
+            "en": "Zenodo ↗",
+            "es": "Zenodo ↗",
+            "fr": "Zenodo ↗"
+          },
+          "url": "https://zenodo.org/records/6952236"
+        }
+      ]
+    },
+    {
+      "id": "nature-comms",
+      "featured": true,
+      "venue": "Nature Communications",
+      "year": 2021,
+      "badge": {
+        "en": "Q1 · Contributor",
+        "es": "Q1 · Colaborador",
+        "fr": "Q1 · Contributeur"
+      },
+      "title": {
+        "en": "Development of a fixed module repertoire for the analysis and interpretation of blood transcriptome data",
+        "es": "Desarrollo de un repertorio fijo de módulos para el análisis e interpretación de datos transcriptómicos sanguíneos",
+        "fr": "Développement d'un répertoire fixe de modules pour l'analyse et l'interprétation de données transcriptomiques sanguines"
+      },
+      "desc": {
+        "en": "Multi-author collaboration presenting BloodGen3, a reusable framework of 382 transcriptional modules for analysing blood transcriptome data across immunological states. My contribution: functional annotation of modules using <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>.",
+        "es": "Colaboración multi-autor que presenta BloodGen3, un marco reutilizable de 382 módulos transcripcionales para analizar datos transcriptómicos sanguíneos en distintos estados inmunológicos. Mi contribución: anotación funcional de los módulos con <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>.",
+        "fr": "Collaboration multi-auteurs présentant BloodGen3, un cadre réutilisable de 382 modules transcriptionnels pour analyser des données transcriptomiques sanguines à travers les états immunologiques. Ma contribution : annotation fonctionnelle des modules via <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>."
+      },
+      "authors": "M.C. Altman, D. Rinchai, N. Baldwin, M. Toufiq, E. Whalen, M. Garand, et al., <strong>A. Ayllón-Benítez</strong>, F. Mougin, P. Thébault, R. Thiebaut, et al.",
+      "links": [
+        {
+          "label": {
+            "en": "Article ↗",
+            "es": "Artículo ↗",
+            "fr": "Article ↗"
+          },
+          "url": "https://www.nature.com/articles/s41467-021-24584-w"
+        }
+      ]
+    },
+    {
+      "id": "gsan-nar",
+      "featured": true,
+      "venue": "NAR Genomics and Bioinformatics",
+      "year": 2020,
+      "badge": {
+        "en": "Q1 · First author",
+        "es": "Q1 · Primer autor",
+        "fr": "Q1 · Premier auteur"
+      },
+      "title": {
+        "en": "GSAn: a Web server as an alternative to enrichment analysis for annotating gene sets",
+        "es": "GSAn: servidor web como alternativa al análisis de enriquecimiento para la anotación de conjuntos génicos",
+        "fr": "GSAn : serveur web comme alternative à l'analyse d'enrichissement pour l'annotation de jeux de gènes"
+      },
+      "desc": {
+        "en": "Presents <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, a web server offering an alternative to classical over-representation analysis. Clusters semantic relationships between annotation terms to provide richer, more interpretable gene-set annotations. Still live and in use.",
+        "es": "Presenta <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, un servidor web que ofrece una alternativa al análisis clásico de sobrerrepresentación. Agrupa relaciones semánticas entre términos de anotación para dar anotaciones más ricas e interpretables. Sigue operativo y en uso.",
+        "fr": "Présente <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, serveur web offrant une alternative à l'analyse classique de sur-représentation. Regroupe les relations sémantiques entre termes d'annotation pour des annotations plus riches et interprétables. Toujours en ligne et utilisé."
+      },
+      "authors": "<strong>A. Ayllon-Benitez</strong>, R. Bourqui, P. Thébault, F. Mougin",
+      "links": [
+        {
+          "label": {
+            "en": "DOI ↗",
+            "es": "DOI ↗",
+            "fr": "DOI ↗"
+          },
+          "url": "https://doi.org/10.1093/nargab/lqaa017"
+        },
+        {
+          "label": {
+            "en": "Software ↗",
+            "es": "Software ↗",
+            "fr": "Logiciel ↗"
+          },
+          "url": "https://gsan.labri.fr/"
+        }
+      ]
+    },
+    {
+      "id": "plos-one",
+      "featured": false,
+      "venue": "PLoS ONE",
+      "year": 2018,
+      "badge": {
+        "en": "First author",
+        "es": "Primer autor",
+        "fr": "Premier auteur"
+      },
+      "title": {
+        "en": "A new method for evaluating the impacts of semantic similarity measures on the annotation of gene sets",
+        "es": "Un nuevo método para evaluar el impacto de las medidas de similitud semántica en la anotación de conjuntos génicos",
+        "fr": "Une nouvelle méthode pour évaluer l'impact des mesures de similarité sémantique sur l'annotation de jeux de gènes"
+      },
+      "desc": {
+        "en": "A novel evaluation methodology for semantic similarity measures applied to gene set annotation, quantifying how measure choice affects downstream biological interpretation.",
+        "es": "Metodología de evaluación novedosa para medidas de similitud semántica aplicadas a la anotación génica, cuantificando cómo la elección de la medida afecta a la interpretación biológica posterior.",
+        "fr": "Méthodologie d'évaluation innovante pour les mesures de similarité sémantique appliquées à l'annotation génique, quantifiant l'effet du choix de la mesure sur l'interprétation biologique."
+      },
+      "authors": "<strong>A. Ayllon-Benitez</strong>, F. Mougin, J. Allali, R. Thiébaut, P. Thébault",
+      "links": [
+        {
+          "label": {
+            "en": "DOI ↗",
+            "es": "DOI ↗",
+            "fr": "DOI ↗"
+          },
+          "url": "https://doi.org/10.1371/journal.pone.0208037"
+        }
+      ]
+    },
+    {
+      "id": "ieee-iv",
+      "featured": false,
+      "venue": "IEEE Information Visualization (IV)",
+      "year": 2017,
+      "badge": {
+        "en": "First author · Invited talk",
+        "es": "Primer autor · Ponencia invitada",
+        "fr": "Premier auteur · Conférence invitée"
+      },
+      "title": {
+        "en": "Deciphering gene sets annotations with ontology-based visualization",
+        "es": "Descifrando anotaciones de conjuntos génicos con visualización basada en ontologías",
+        "fr": "Décryptage des annotations de jeux de gènes par visualisation basée sur les ontologies"
+      },
+      "desc": {
+        "en": "An ontology-driven visualization approach for interpreting gene set annotations. Invited talk — travel grant awarded by the Société Française de BioInformatique (SFBI).",
+        "es": "Enfoque de visualización basado en ontologías para interpretar anotaciones de conjuntos génicos. Ponencia invitada — beca de viaje otorgada por la Société Française de BioInformatique (SFBI).",
+        "fr": "Approche de visualisation fondée sur les ontologies pour interpréter les annotations de jeux de gènes. Conférence invitée — bourse de voyage accordée par la Société Française de BioInformatique (SFBI)."
+      },
+      "authors": "<strong>A. Ayllon-Benitez</strong>, P. Thébault, J.T. Fernández-Breis, M. Quesada-Martinez, F. Mougin, R. Bourqui",
+      "links": [
+        {
+          "label": {
+            "en": "DOI ↗",
+            "es": "DOI ↗",
+            "fr": "DOI ↗"
+          },
+          "url": "https://doi.org/10.1109/iV.2017.18"
+        }
+      ],
+      "place": "London"
+    }
+  ],
+  "talks_title": {
+    "en": "Speaking & media",
+    "es": "Ponencias y medios",
+    "fr": "Conférences et médias"
+  },
+  "talks": [
+    {
+      "year": 2026,
+      "text": {
+        "en": "<strong>Tech Show Madrid 2026</strong> (AI Cluster of the Community of Madrid) — roundtable panelist: \"Generative AI, creativity and new digital business models\".",
+        "es": "<strong>Tech Show Madrid 2026</strong> (Clúster IA de la Comunidad de Madrid) — participante en la mesa redonda «IA generativa, creatividad y nuevos modelos de negocio digitales».",
+        "fr": "<strong>Tech Show Madrid 2026</strong> (Cluster IA de la Communauté de Madrid) — intervenant à la table ronde « IA générative, créativité et nouveaux modèles économiques numériques »."
+      }
+    },
+    {
+      "year": 2026,
+      "text": {
+        "en": "<strong>AI Cluster of the Community of Madrid</strong> — podcast guest: \"Build vs Buy vs Open Source in GenAI\" (2026).",
+        "es": "<strong>Clúster IA de la Comunidad de Madrid</strong> — invitado en podcast: «Build vs Buy vs Open Source en GenAI» (2026).",
+        "fr": "<strong>Cluster IA de la Communauté de Madrid</strong> — invité podcast : « Build vs Buy vs Open Source en GenAI » (2026)."
+      }
+    },
+    {
+      "year": 2023,
+      "text": {
+        "en": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — industry showcase speaker on advanced image analysis for the chemical industry, plus roundtable participation.",
+        "es": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — ponente en el showcase industrial sobre análisis de imagen avanzado para la industria química, además de participación en mesa redonda.",
+        "fr": "<strong>EXPOQUIMIA 2023</strong>, Barcelone — intervenant du showcase industriel sur l'analyse d'image avancée pour l'industrie chimique, plus participation à une table ronde."
+      }
+    },
+    {
+      "year": 2023,
+      "text": {
+        "en": "<strong>TECNALIA</strong> — podcast guest: \"Tecnología, Pasión y Futuro\" (2023).",
+        "es": "<strong>TECNALIA</strong> — invitado en podcast: «Tecnología, Pasión y Futuro» (2023).",
+        "fr": "<strong>TECNALIA</strong> — invité podcast : « Tecnología, Pasión y Futuro » (2023)."
+      }
+    }
+  ],
+  "editorial_title": {
+    "en": "Editorial & funding",
+    "es": "Editorial y financiación",
+    "fr": "Éditorial et financement"
+  },
+  "editorial": {
+    "en": "Guest Editor, <strong>Plants</strong> (MDPI, Q1) special issue on bridging the annotation gap in non-model plant species. Kempestiftelserna Fellowship and 2 competitive research grants secured as main author (KSLA, SPPS).",
+    "es": "Guest Editor en <strong>Plants</strong> (MDPI, Q1), número especial sobre la brecha de anotación en especies vegetales no modelo. Beca Kempestiftelserna y 2 becas de investigación competitivas como autor principal (KSLA, SPPS).",
+    "fr": "Guest Editor, <strong>Plants</strong> (MDPI, Q1), numéro spécial sur le fossé d'annotation chez les espèces végétales non-modèles. Bourse Kempestiftelserna et 2 bourses de recherche compétitives en auteur principal (KSLA, SPPS)."
+  },
+  "publications_title": {
+    "en": "Publications",
+    "es": "Publicaciones",
+    "fr": "Publications"
+  },
+  "peer_review": {
+    "title": {
+      "en": "Peer review",
+      "es": "Revisión por pares",
+      "fr": "Comités de lecture"
+    },
+    "columns": {
+      "venue": {
+        "en": "Conference / journal",
+        "es": "Congreso / revista",
+        "fr": "Conférence / revue"
+      },
+      "role": {
+        "en": "Role",
+        "es": "Rol",
+        "fr": "Rôle"
+      },
+      "place": {
+        "en": "Location",
+        "es": "Lugar",
+        "fr": "Localisation"
+      },
+      "year": {
+        "en": "Year",
+        "es": "Año",
+        "fr": "Année"
+      }
+    },
+    "rows": [
+      {
+        "venue": "useR! 2020 The R User Conference",
+        "role": {
+          "en": "sub-reviewer",
+          "es": "sub-reviewer",
+          "fr": "sub-reviewer"
+        },
+        "place": {
+          "en": "Virtual",
+          "es": "Virtual",
+          "fr": "Virtuel"
+        },
+        "year": "2020"
+      },
+      {
+        "venue": "16th ISCB Student Council Symposium",
+        "role": {
+          "en": "sub-reviewer",
+          "es": "sub-reviewer",
+          "fr": "sub-reviewer"
+        },
+        "place": {
+          "en": "Virtual",
+          "es": "Virtual",
+          "fr": "Virtuel"
+        },
+        "year": "2020"
+      },
+      {
+        "venue": "15th ISCB Student Council Symposium",
+        "role": {
+          "en": "sub-reviewer",
+          "es": "sub-reviewer",
+          "fr": "sub-reviewer"
+        },
+        "place": {
+          "en": "Switzerland",
+          "es": "Suiza",
+          "fr": "Suisse"
+        },
+        "year": "2019"
+      },
+      {
+        "venue": "3rd BR-SCS: Network(ING): ISCB - Brazilian Student Council Symposium",
+        "role": {
+          "en": "sub-reviewer",
+          "es": "sub-reviewer",
+          "fr": "sub-reviewer"
+        },
+        "place": {
+          "en": "Brazil",
+          "es": "Brasil",
+          "fr": "Brésil"
+        },
+        "year": "2018"
+      },
+      {
+        "venue": "4th International Conference on Technologies and Innovation (CITI)",
+        "role": {
+          "en": "reviewer",
+          "es": "reviewer",
+          "fr": "reviewer"
+        },
+        "place": {
+          "en": "Ecuador",
+          "es": "Ecuador",
+          "fr": "Équateur"
+        },
+        "year": "2018"
+      },
+      {
+        "venue": "Microorganisms (MDPI)",
+        "role": {
+          "en": "reviewer",
+          "es": "reviewer",
+          "fr": "reviewer"
+        },
+        "year": ""
+      }
+    ]
+  }
+}
