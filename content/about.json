@@ -1,0 +1,139 @@
+{
+  "intro": {
+    "en": "Profile, core skills and the principles I lead by.",
+    "es": "Perfil, competencias clave y los principios con los que lidero.",
+    "fr": "Profil, compétences clés et principes qui guident mon leadership."
+  },
+  "summary_title": {
+    "en": "Executive Summary",
+    "es": "Resumen ejecutivo",
+    "fr": "Résumé exécutif"
+  },
+  "summary": [
+    {
+      "en": "Data scientist turned AI/ML leader (PhD Computer Science, MSc Artificial Intelligence) with five-plus years building and running multidisciplinary data science teams and a ~€1.3M platform budget inside a global corporation. I scaled a team from 8 to 16 data scientists, ML/software engineers and solution designers, and owned two production AI/ML platforms covering the full analytics journey from descriptive to predictive, delivering recurring savings above €3.5M.",
+      "es": "Científico de datos convertido en líder de IA/ML (Doctor en Informática, Máster en Inteligencia Artificial), con más de cinco años construyendo y dirigiendo equipos multidisciplinares de ciencia de datos y un presupuesto de plataformas de ~1,3M€ dentro de una corporación global. He escalado un equipo de 8 a 16 científicos de datos, ingenieros de ML/software y solution designers, y he sido responsable de dos plataformas de IA/ML en producción que cubren el recorrido analítico completo, de lo descriptivo a lo predictivo, con más de 3,5M€ de ahorro recurrente.",
+      "fr": "Data scientist devenu leader IA/ML (Doctorat en Informatique, Master en Intelligence Artificielle), avec plus de cinq ans à construire et diriger des équipes data science pluridisciplinaires et un budget plateformes d'environ 1,3M€ au sein d'un groupe international. J'ai fait passer une équipe de 8 à 16 data scientists, ingénieurs ML/logiciel et solution designers, et j'ai été responsable de deux plateformes IA/ML en production couvrant tout le parcours analytique, du descriptif au prédictif, avec plus de 3,5M€ d'économies récurrentes."
+    },
+    {
+      "en": "I own the portfolio calls that follow — what to scale, what to hand over and what to shut down — alongside vendor strategy, demand intake and prioritisation across departments and European markets. I combine hands-on technical depth in ML, LLMs and agentic workflows, still shipping production code solo as co-founder of a live B2B SaaS platform, with life-sciences training in biochemistry, bioinformatics and biomedical machine learning on patient-derived data, and a track record of translating analytics into quantified business cases defended in front of senior leadership.",
+      "es": "Tomo las decisiones de portafolio que vienen después (qué escalar, qué transferir y qué cerrar), junto con la estrategia de proveedores y la entrada y priorización de demanda entre departamentos y mercados europeos. Combino profundidad técnica práctica en ML, LLMs y flujos agénticos, y sigo escribiendo código de producción yo solo como cofundador de una plataforma SaaS B2B en marcha, con formación en ciencias de la vida (bioquímica, bioinformática y machine learning biomédico sobre datos de pacientes) y un historial traduciendo la analítica en casos de negocio cuantificados y defendidos ante la alta dirección.",
+      "fr": "Je prends les décisions de portefeuille qui en découlent — quoi passer à l'échelle, quoi transférer, quoi arrêter — ainsi que la stratégie fournisseurs, la captation et la priorisation de la demande entre départements et marchés européens. J'allie une profondeur technique concrète en ML, LLM et workflows agentiques, en livrant encore seul du code en production comme cofondateur d'une plateforme SaaS B2B en activité, à une formation en sciences du vivant (biochimie, bioinformatique et machine learning biomédical sur données de patients) et à une pratique éprouvée de la traduction de l'analytique en business cases chiffrés, défendus devant la direction."
+    }
+  ],
+  "skills_title": {
+    "en": "Core Skills",
+    "es": "Competencias clave",
+    "fr": "Compétences clés"
+  },
+  "skills": [
+    {
+      "label": {
+        "en": "AI & Data Science",
+        "es": "IA y Data Science",
+        "fr": "IA & Data Science"
+      },
+      "list": {
+        "en": "Machine Learning, Deep Learning, Computer Vision, Time-series Forecasting, MLOps, Agentic workflows (multi-step reasoning, tool calling, evaluation), Descriptive → Predictive Analytics, GenAI & LLMs, Knowledge Graphs & Ontologies",
+        "es": "Machine Learning, Deep Learning, visión por computador, forecasting de series temporales, MLOps, flujos agénticos (razonamiento multipaso, tool calling, evaluación), analítica descriptiva → predictiva, GenAI y LLMs, knowledge graphs y ontologías",
+        "fr": "Machine Learning, Deep Learning, vision par ordinateur, forecasting de séries temporelles, MLOps, workflows agentiques (raisonnement multi-étapes, tool calling, évaluation), analytique descriptive → prédictive, GenAI & LLM, knowledge graphs & ontologies"
+      }
+    },
+    {
+      "label": {
+        "en": "Leadership",
+        "es": "Liderazgo",
+        "fr": "Leadership"
+      },
+      "list": {
+        "en": "Hiring & team building, Mentoring managers and junior scientists, Cross-functional alignment, Multi-market coordination, Performance and underperformance management, Career paths, Executive communication & storytelling",
+        "es": "Contratación y construcción de equipos, mentoría de managers y científicos junior, alineamiento transversal, coordinación multimercado, gestión del desempeño y del bajo rendimiento, planes de carrera, comunicación ejecutiva y storytelling",
+        "fr": "Recrutement et construction d'équipe, mentorat de managers et de scientifiques juniors, alignement transverse, coordination multi-marchés, gestion de la performance et de la sous-performance, plans de carrière, communication exécutive & storytelling"
+      }
+    },
+    {
+      "label": {
+        "en": "Portfolio & Delivery",
+        "es": "Portafolio y entrega",
+        "fr": "Portefeuille & delivery"
+      },
+      "list": {
+        "en": "Portfolio governance & rationalisation, Budget ownership & P&L, Vendor evaluation & build-vs-buy decisions, Product line management, Build / scale / hand-over / sunset decisions, Product strategy & roadmap, Demand intake & prioritisation, Enterprise platform delivery",
+        "es": "Gobierno y racionalización de portafolio, gestión de presupuesto y P&L, evaluación de proveedores y decisiones build-vs-buy, gestión de línea de producto, decisiones de construir / escalar / transferir / cerrar, estrategia y roadmap de producto, entrada y priorización de demanda, entrega de plataformas empresariales",
+        "fr": "Gouvernance et rationalisation de portefeuille, responsabilité budgétaire & P&L, évaluation de fournisseurs et décisions build-vs-buy, gestion de ligne produit, décisions construire / passer à l'échelle / transférer / arrêter, stratégie et roadmap produit, captation et priorisation de la demande, delivery de plateformes d'entreprise"
+      }
+    },
+    {
+      "label": {
+        "en": "Technical",
+        "es": "Técnico",
+        "fr": "Technique"
+      },
+      "list": {
+        "en": "Python, R, SQL, advanced statistics, Azure & Azure DevOps, APIs / MCP, data engineering workflows, CI/CD, Power BI, AI development tools",
+        "es": "Python, R, SQL, estadística avanzada, Azure y Azure DevOps, APIs / MCP, flujos de ingeniería de datos, CI/CD, Power BI, herramientas de desarrollo con IA",
+        "fr": "Python, R, SQL, statistiques avancées, Azure & Azure DevOps, APIs / MCP, workflows de data engineering, CI/CD, Power BI, outils de développement IA"
+      }
+    },
+    {
+      "label": {
+        "en": "Domains",
+        "es": "Dominios",
+        "fr": "Domaines"
+      },
+      "list": {
+        "en": "Life sciences, healthcare & biomedical data, pharma and agricultural R&D, industrial and commodity business",
+        "es": "Ciencias de la vida, datos sanitarios y biomédicos, I+D farmacéutica y agrícola, negocio industrial y de commodities",
+        "fr": "Sciences du vivant, données de santé et biomédicales, R&D pharmaceutique et agricole, business industriel et des commodités"
+      }
+    }
+  ],
+  "leadership_title": {
+    "en": "Leadership Approach",
+    "es": "Enfoque de liderazgo",
+    "fr": "Approche de leadership"
+  },
+  "leadership_intro": {
+    "en": "Three principles tested against a real portfolio, a real team and real investment decisions.",
+    "es": "Tres principios puestos a prueba con un portafolio real, un equipo real y decisiones de inversión reales.",
+    "fr": "Trois principes éprouvés face à un vrai portefeuille, une vraie équipe et de vraies décisions d'investissement."
+  },
+  "principles": [
+    {
+      "title": {
+        "en": "Build the bench, not just the backlog",
+        "es": "Construir el equipo, no solo el backlog",
+        "fr": "Construire l'équipe, pas seulement le backlog"
+      },
+      "text": {
+        "en": "Doubled the team through deliberate hiring, individual career paths and coaching of the managers who report into the role — including the hard conversations around underperformance rather than routing around them, because a team's ceiling is set by its weakest link.",
+        "es": "Dupliqué el equipo con contratación deliberada, planes de carrera individuales y coaching de los managers que reportan al puesto, incluidas las conversaciones difíciles sobre bajo rendimiento en lugar de esquivarlas, porque el techo de un equipo lo marca su eslabón más débil.",
+        "fr": "J'ai doublé l'équipe par un recrutement délibéré, des plans de carrière individuels et le coaching des managers qui rapportent au poste — y compris les conversations difficiles sur la sous-performance plutôt que de les contourner, car le plafond d'une équipe est fixé par son maillon le plus faible."
+      }
+    },
+    {
+      "title": {
+        "en": "Decide with evidence, and be willing to kill your own product",
+        "es": "Decidir con evidencia, y estar dispuesto a matar tu propio producto",
+        "fr": "Décider avec des preuves, et accepter de tuer son propre produit"
+      },
+      "text": {
+        "en": "Recommended closing a platform I owned once the ROI and adoption data no longer supported it, and transferred another to a better-fit owner — both decisions defended with numbers in front of senior leadership.",
+        "es": "Recomendé cerrar una plataforma de la que era responsable cuando el ROI y los datos de adopción dejaron de sostenerla, y transferí otra a un propietario más adecuado: ambas decisiones defendidas con números ante la dirección.",
+        "fr": "J'ai recommandé la fermeture d'une plateforme dont j'étais responsable lorsque le ROI et les données d'adoption ne la soutenaient plus, et transféré une autre à un propriétaire plus adapté : deux décisions défendues avec des chiffres devant la direction."
+      }
+    },
+    {
+      "title": {
+        "en": "Translate between worlds",
+        "es": "Traducir entre mundos",
+        "fr": "Traduire entre deux mondes"
+      },
+      "text": {
+        "en": "Comfortable challenging model choices with ML engineers in the morning and framing the same problem as a business case for executives in the afternoon; this is where most analytics value is won or lost.",
+        "es": "Cómodo cuestionando decisiones de modelo con ingenieros de ML por la mañana y planteando el mismo problema como caso de negocio para ejecutivos por la tarde; ahí es donde se gana o se pierde la mayor parte del valor analítico.",
+        "fr": "À l'aise pour challenger des choix de modèle avec des ingénieurs ML le matin et présenter le même problème comme un business case à des dirigeants l'après-midi ; c'est là que se gagne ou se perd l'essentiel de la valeur analytique."
+      }
+    }
+  ]
+}

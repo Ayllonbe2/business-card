@@ -1,0 +1,366 @@
+{
+  "intro": {
+    "en": "The initiatives behind the portfolio: what each one was, what I did and what it delivered.",
+    "es": "Las iniciativas detrás del portafolio: qué fue cada una, qué hice y qué consiguió.",
+    "fr": "Les initiatives derrière le portefeuille : ce qu'était chacune, ce que j'ai fait et ce qu'elle a produit."
+  },
+  "groups": [
+    {
+      "id": "platforms",
+      "title": {
+        "en": "Platforms & Portfolio Decisions",
+        "es": "Plataformas y decisiones de portafolio",
+        "fr": "Plateformes et décisions de portefeuille"
+      },
+      "intro": {
+        "en": "Four initiatives that show how I run an AI portfolio: what gets built, what gets scaled, what gets handed over — and what gets shut down.",
+        "es": "Cuatro iniciativas que muestran cómo gestiono un portafolio de IA: qué se construye, qué se escala, qué se transfiere y qué se cierra.",
+        "fr": "Quatre initiatives qui montrent comment je pilote un portefeuille IA : ce qu'on construit, ce qu'on passe à l'échelle, ce qu'on transfère — et ce qu'on arrête."
+      },
+      "note": {
+        "en": "Transferred the CV/MLOps platform to its best-fit owner (~€2M recurring savings, 70 reusable templates, ~90% effort reduction for ~100 data scientists) and closed the forecasting platform after ROI review (~€1.5M savings).",
+        "es": "Transferí la plataforma de visión por computador / MLOps a su mejor propietario (~2M€ de ahorro recurrente, 70 plantillas reutilizables, ~90% menos esfuerzo para ~100 científicos de datos) y cerré la plataforma de forecasting tras una revisión de ROI (~1,5M€ de ahorro).",
+        "fr": "J'ai transféré la plateforme vision par ordinateur / MLOps à son meilleur propriétaire (~2M€ d'économies récurrentes, 70 templates réutilisables, ~90% d'effort en moins pour ~100 data scientists) et fermé la plateforme de forecasting après une revue de ROI (~1,5M€ d'économies)."
+      },
+      "items": [
+        {
+          "id": "cv-mlops",
+          "icon": "eye",
+          "role": "basf-head",
+          "badge": {
+            "en": "Scaled & transferred",
+            "es": "Escalada y transferida",
+            "fr": "Mise à l'échelle et transférée"
+          },
+          "title": {
+            "en": "Computer Vision / MLOps Platform",
+            "es": "Plataforma de Computer Vision / MLOps",
+            "fr": "Plateforme Computer Vision / MLOps"
+          },
+          "short": {
+            "en": "Enterprise computer vision / MLOps platform with 70 reusable templates, transferred to its best-fit owner.",
+            "es": "Plataforma empresarial de visión por computador / MLOps con 70 plantillas reutilizables, transferida a su mejor propietario.",
+            "fr": "Plateforme d'entreprise de vision par ordinateur / MLOps avec 70 templates réutilisables, transférée à son meilleur propriétaire."
+          },
+          "body": [
+            {
+              "en": "Owned BASF's enterprise computer vision / MLOps platform, with a peer-reviewed library of 70 reusable templates and platform health tracked through active-user adoption and time saved per user. Once mature, I transferred it to its best-fit owner rather than holding on to it.",
+              "es": "Responsable de la plataforma empresarial de visión por computador / MLOps de BASF, con una biblioteca de 70 plantillas reutilizables revisadas por pares y la salud de la plataforma medida por la adopción de usuarios activos y el tiempo ahorrado por usuario. Una vez madura, la transferí a su mejor propietario en lugar de retenerla.",
+              "fr": "Responsable de la plateforme d'entreprise vision par ordinateur / MLOps de BASF, avec une bibliothèque de 70 templates réutilisables relus par les pairs et une santé de plateforme suivie via l'adoption des utilisateurs actifs et le temps gagné par utilisateur. Une fois mature, je l'ai transférée à son meilleur propriétaire plutôt que de la garder."
+            }
+          ],
+          "points": [
+            {
+              "en": "Instituted peer-reviewed governance for the 70-template library and tracked platform health via active-user adoption and time saved per user, validated through internal satisfaction surveys.",
+              "es": "Instauré un gobierno con revisión por pares para la biblioteca de 70 plantillas y medí la salud de la plataforma mediante la adopción de usuarios activos y el tiempo ahorrado por usuario, validado con encuestas internas de satisfacción.",
+              "fr": "J'ai instauré une gouvernance avec relecture par les pairs pour la bibliothèque de 70 templates et suivi la santé de la plateforme via l'adoption des utilisateurs actifs et le temps gagné par utilisateur, validés par des enquêtes de satisfaction internes."
+            },
+            {
+              "en": "Co-led BASF's cross-departmental Phenotyping working group with Agriculture, standardising multi-site image acquisition and integrating the CV platform with adjacent phenotyping tools.",
+              "es": "Codirigí el grupo de trabajo interdepartamental de Fenotipado de BASF junto con Agricultura, estandarizando la adquisición de imágenes en varios centros e integrando la plataforma de visión por computador con herramientas de fenotipado adyacentes.",
+              "fr": "J'ai co-piloté le groupe de travail transverse Phénotypage de BASF avec l'Agriculture, en standardisant l'acquisition d'images multi-sites et en intégrant la plateforme de vision par ordinateur aux outils de phénotypage voisins."
+            }
+          ],
+          "metric": {
+            "en": "~€2M recurring savings · 70 templates · ~90% effort reduction for ~100 data scientists",
+            "es": "~2M€ de ahorro recurrente · 70 plantillas · ~90% menos esfuerzo para ~100 científicos de datos",
+            "fr": "~2M€ d'économies récurrentes · 70 templates · ~90% d'effort en moins pour ~100 data scientists"
+          },
+          "links": []
+        },
+        {
+          "id": "forecasting",
+          "icon": "chart",
+          "role": "basf-head",
+          "badge": {
+            "en": "Reviewed & sunset",
+            "es": "Revisada y cerrada",
+            "fr": "Évaluée et arrêtée"
+          },
+          "title": {
+            "en": "Self‑Service Forecasting Platform",
+            "es": "Plataforma self‑service de forecasting",
+            "fr": "Plateforme self‑service de forecasting"
+          },
+          "short": {
+            "en": "Self-service time-series platform for business users, closed after an ROI and adoption review.",
+            "es": "Plataforma self-service de series temporales para usuarios de negocio, cerrada tras una revisión de ROI y adopción.",
+            "fr": "Plateforme self-service de séries temporelles pour les utilisateurs métier, arrêtée après une revue de ROI et d'adoption."
+          },
+          "body": [
+            {
+              "en": "Led a self-service time-series platform giving business users forecasting and decision support without a data scientist in the loop. After an ROI and adoption review, I recommended closing it — a platform I owned — and defended that call with numbers.",
+              "es": "Lideré una plataforma self-service de series temporales que daba a usuarios de negocio capacidad de previsión y soporte a la decisión sin un científico de datos de por medio. Tras una revisión de ROI y adopción, recomendé cerrarla —siendo mi propia plataforma— y defendí esa decisión con números.",
+              "fr": "J'ai piloté une plateforme self-service de séries temporelles donnant aux utilisateurs métier des prévisions et une aide à la décision sans data scientist dans la boucle. Après une revue de ROI et d'adoption, j'ai recommandé sa fermeture — ma propre plateforme — et défendu cette décision avec des chiffres."
+            }
+          ],
+          "points": [],
+          "metric": {
+            "en": "~€1.5M savings from the closure decision",
+            "es": "~1,5M€ de ahorro derivados de la decisión de cierre",
+            "fr": "~1,5M€ d'économies issues de la décision de fermeture"
+          },
+          "links": []
+        },
+        {
+          "id": "genai-labelling",
+          "icon": "sparkles",
+          "role": "basf-head",
+          "badge": {
+            "en": "Business case funded",
+            "es": "Caso de negocio financiado",
+            "fr": "Business case financé"
+          },
+          "title": {
+            "en": "GenAI Labelling Automation",
+            "es": "Automatización del etiquetado con GenAI",
+            "fr": "Automatisation de l'étiquetage par GenAI"
+          },
+          "short": {
+            "en": "A quantified business case that secured funding for GenAI-powered image-labelling automation.",
+            "es": "Un caso de negocio cuantificado que consiguió financiación para automatizar con GenAI el etiquetado de imágenes.",
+            "fr": "Un business case chiffré qui a obtenu le financement de l'automatisation de l'étiquetage d'images par GenAI."
+          },
+          "body": [
+            {
+              "en": "Turned an image-labelling bottleneck into a quantified business case presented directly to VP stakeholders, and secured funding for GenAI-powered labelling automation. Ran a proof-of-concept of SIGMA AI and benchmarked competing tools to inform the build-vs-buy decision.",
+              "es": "Convertí un cuello de botella en el etiquetado de imágenes en un caso de negocio cuantificado, presentado directamente a VPs, y conseguí financiación para automatizar el etiquetado con GenAI. Ejecuté una prueba de concepto de SIGMA AI y comparé herramientas competidoras para fundamentar la decisión de construir o comprar.",
+              "fr": "J'ai transformé un goulot d'étranglement dans l'étiquetage d'images en business case chiffré, présenté directement aux VP, et obtenu le financement de l'automatisation de l'étiquetage par GenAI. J'ai mené une preuve de concept de SIGMA AI et comparé les outils concurrents pour éclairer la décision build-vs-buy."
+            }
+          ],
+          "points": [
+            {
+              "en": "Secured €560K in funding — GenAI-powered labelling automation plus five further innovation initiatives — presenting quantified business cases directly to VP stakeholders.",
+              "es": "Conseguí 560K€ de financiación (automatización del etiquetado con GenAI y otras cinco iniciativas de innovación) presentando casos de negocio cuantificados directamente a VPs.",
+              "fr": "J'ai obtenu 560K€ de financement — automatisation de l'étiquetage par GenAI et cinq autres initiatives d'innovation — en présentant des business cases chiffrés directement aux VP."
+            },
+            {
+              "en": "Solidified an exclusive delivery partnership with Tecnalia, ran a proof-of-concept evaluation of SIGMA AI for image labelling, and benchmarked competing tools to inform build-vs-buy decisions.",
+              "es": "Consolidé una alianza de entrega exclusiva con Tecnalia, realicé una evaluación en prueba de concepto de SIGMA AI para el etiquetado de imágenes y comparé herramientas competidoras para fundamentar las decisiones de construir o comprar.",
+              "fr": "J'ai consolidé un partenariat de delivery exclusif avec Tecnalia, mené une évaluation en preuve de concept de SIGMA AI pour l'étiquetage d'images et comparé les outils concurrents pour éclairer les décisions build-vs-buy."
+            }
+          ],
+          "metric": {
+            "en": "€560K secured · GenAI labelling plus five further innovation initiatives",
+            "es": "560K€ conseguidos · etiquetado con GenAI y otras cinco iniciativas de innovación",
+            "fr": "560K€ obtenus · étiquetage GenAI et cinq autres initiatives d'innovation"
+          },
+          "links": []
+        },
+        {
+          "id": "ontology-kg",
+          "icon": "network",
+          "role": "basf-ontology",
+          "badge": {
+            "en": "Enterprise standard",
+            "es": "Estándar corporativo",
+            "fr": "Standard d'entreprise"
+          },
+          "title": {
+            "en": "Ontology & Knowledge Graph Programme",
+            "es": "Programa de ontologías y knowledge graph",
+            "fr": "Programme d'ontologies et knowledge graph"
+          },
+          "short": {
+            "en": "The semantic foundation that makes enterprise data interoperable for AI and agentic systems.",
+            "es": "La base semántica que hace interoperables los datos de la empresa para sistemas de IA y agénticos.",
+            "fr": "La fondation sémantique qui rend les données de l'entreprise interopérables pour les systèmes IA et agentiques."
+          },
+          "body": [
+            {
+              "en": "Owned BASF's Ontology Management Framework: the semantic foundation that makes heterogeneous enterprise data interoperable and machine-readable for AI and agentic systems, and the governance model that keeps it alive after launch.",
+              "es": "Responsable del Ontology Management Framework de BASF: la base semántica que hace que datos heterogéneos sean interoperables y legibles por máquina para sistemas de IA y agénticos, y el modelo de gobierno que la mantiene viva después del lanzamiento.",
+              "fr": "Responsable de l'Ontology Management Framework de BASF : la fondation sémantique qui rend des données hétérogènes interopérables et lisibles par machine pour les systèmes IA et agentiques, ainsi que le modèle de gouvernance qui la maintient vivante après le lancement."
+            }
+          ],
+          "points": [],
+          "metric": {
+            "en": "20 bio-ontologies adopted as department standard · GOMO framework published",
+            "es": "20 bio-ontologías adoptadas como estándar del departamento · marco GOMO publicado",
+            "fr": "20 bio-ontologies adoptées comme standard du département · cadre GOMO publié"
+          },
+          "pubs": [
+            "gomo-ismb",
+            "eppo-frontiers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "venture",
+      "title": {
+        "en": "Entrepreneurship",
+        "es": "Emprendimiento",
+        "fr": "Entrepreneuriat"
+      },
+      "items": [
+        {
+          "id": "vigia",
+          "icon": "briefcase",
+          "badge": {
+            "en": "Closed beta",
+            "es": "Beta cerrada",
+            "fr": "Bêta fermée"
+          },
+          "title": {
+            "en": "Proyecto Vigía — Spain",
+            "es": "Proyecto Vigía — España",
+            "fr": "Proyecto Vigía — Espagne"
+          },
+          "subtitle": {
+            "en": "Co-founder (50%) & Sole Developer",
+            "es": "Cofundador (50%) y único desarrollador",
+            "fr": "Cofondateur (50%) & seul développeur"
+          },
+          "dates": {
+            "en": "2026 – Present",
+            "es": "2026 – Actualidad",
+            "fr": "2026 – Aujourd'hui"
+          },
+          "short": {
+            "en": "B2B marketplace for a regulated Spanish services sector, built end to end and now in closed beta.",
+            "es": "Marketplace B2B para un sector de servicios regulado en España, construido de extremo a extremo y ahora en beta cerrada.",
+            "fr": "Marketplace B2B pour un secteur de services réglementé en Espagne, construit de bout en bout et désormais en bêta fermée."
+          },
+          "body": [
+            {
+              "en": "Co-founded and single-handedly designed and built, end to end, a B2B marketplace platform for a regulated Spanish services sector: Java/Spring Boot backend, React/TypeScript frontend, Keycloak-based identity and access management, geospatial PostgreSQL/PostGIS, document-processing pipeline with OCR, GDPR-compliant data handling, and Verifactu-compliant e-invoicing — from architecture through production deployment.",
+              "es": "Cofundé y diseñé y desarrollé yo solo, de extremo a extremo, un marketplace B2B para un sector de servicios regulado en España: backend en Java/Spring Boot, frontend en React/TypeScript, gestión de identidad y accesos con Keycloak, datos geoespaciales en PostgreSQL/PostGIS, pipeline de procesamiento documental con OCR, tratamiento de datos conforme al RGPD y facturación electrónica conforme a Verifactu, desde la arquitectura hasta el despliegue en producción.",
+              "fr": "Cofondateur, j'ai conçu et développé seul, de bout en bout, une marketplace B2B pour un secteur de services réglementé en Espagne : backend Java/Spring Boot, frontend React/TypeScript, gestion des identités et des accès avec Keycloak, données géospatiales PostgreSQL/PostGIS, pipeline de traitement documentaire avec OCR, traitement des données conforme au RGPD et facturation électronique conforme à Verifactu — de l'architecture jusqu'au déploiement en production."
+            }
+          ],
+          "points": [
+            {
+              "en": "Took the platform from architecture to closed beta solo in ~3 months (June–September 2026), using AI-assisted development tooling (Claude Code) to accelerate delivery; now collecting structured feedback from the closed-beta cohort ahead of a planned public launch.",
+              "es": "Llevé la plataforma de la arquitectura a la beta cerrada yo solo en ~3 meses (junio–septiembre de 2026), con herramientas de desarrollo asistido por IA (Claude Code) para acelerar la entrega; ahora recojo feedback estructurado de la cohorte de la beta antes del lanzamiento público previsto.",
+              "fr": "J'ai mené seul la plateforme de l'architecture à la bêta fermée en ~3 mois (juin–septembre 2026), avec des outils de développement assisté par IA (Claude Code) pour accélérer la livraison ; je recueille désormais des retours structurés auprès de la cohorte de bêta avant un lancement public prévu."
+            },
+            {
+              "en": "Conducted a self-led security review of the platform, identifying and remediating several vulnerabilities before the beta launch.",
+              "es": "Realicé una revisión de seguridad propia de la plataforma, identificando y corrigiendo varias vulnerabilidades antes del lanzamiento de la beta.",
+              "fr": "J'ai mené moi-même une revue de sécurité de la plateforme, en identifiant et corrigeant plusieurs vulnérabilités avant le lancement de la bêta."
+            },
+            {
+              "en": "Optimised infrastructure cost by architecting on ARM-based cloud instances (Hetzner), balancing performance against a bootstrapped budget without compromising reliability.",
+              "es": "Optimicé el coste de infraestructura con una arquitectura sobre instancias cloud ARM (Hetzner), equilibrando rendimiento y un presupuesto bootstrapped sin comprometer la fiabilidad.",
+              "fr": "J'ai optimisé le coût d'infrastructure en architecturant sur des instances cloud ARM (Hetzner), en équilibrant performance et budget bootstrappé sans compromettre la fiabilité."
+            },
+            {
+              "en": "Evaluating monetisation models — transaction-based commission versus a premium subscription tier — to shape the platform's go-to-market approach.",
+              "es": "Evalúo modelos de monetización (comisión por transacción frente a una suscripción premium) para definir la estrategia de salida al mercado de la plataforma.",
+              "fr": "J'évalue les modèles de monétisation — commission par transaction ou abonnement premium — pour définir l'approche go-to-market de la plateforme."
+            }
+          ],
+          "metric": {
+            "en": "Architecture to closed beta in ~3 months, solo",
+            "es": "De la arquitectura a la beta cerrada en ~3 meses, en solitario",
+            "fr": "De l'architecture à la bêta fermée en ~3 mois, seul"
+          },
+          "access": {
+            "en": "Access requires invitation credentials.",
+            "es": "El acceso requiere credenciales de invitación.",
+            "fr": "L'accès nécessite des identifiants d'invitation."
+          },
+          "links": [
+            {
+              "label": {
+                "en": "vigiaprl.es ↗",
+                "es": "vigiaprl.es ↗",
+                "fr": "vigiaprl.es ↗"
+              },
+              "url": "https://vigiaprl.es"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": {
+        "en": "Research tools & open ontologies",
+        "es": "Herramientas de investigación y ontologías abiertas",
+        "fr": "Outils de recherche et ontologies ouvertes"
+      },
+      "items": [
+        {
+          "id": "gsan",
+          "icon": "flask",
+          "role": "bordeaux-phd",
+          "badge": {
+            "en": "Public tool",
+            "es": "Herramienta pública",
+            "fr": "Outil public"
+          },
+          "title": {
+            "en": "GSAn",
+            "es": "GSAn",
+            "fr": "GSAn"
+          },
+          "short": {
+            "en": "Public web server for gene-set annotation, built during the PhD and still in use.",
+            "es": "Servidor web público de anotación de conjuntos génicos, creado durante el doctorado y todavía en uso.",
+            "fr": "Serveur web public d'annotation de jeux de gènes, créé pendant la thèse et toujours utilisé."
+          },
+          "body": [
+            {
+              "en": "Presents <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, a web server offering an alternative to classical over-representation analysis. Clusters semantic relationships between annotation terms to provide richer, more interpretable gene-set annotations. Still live and in use.",
+              "es": "Presenta <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, un servidor web que ofrece una alternativa al análisis clásico de sobrerrepresentación. Agrupa relaciones semánticas entre términos de anotación para dar anotaciones más ricas e interpretables. Sigue operativo y en uso.",
+              "fr": "Présente <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, serveur web offrant une alternative à l'analyse classique de sur-représentation. Regroupe les relations sémantiques entre termes d'annotation pour des annotations plus riches et interprétables. Toujours en ligne et utilisé."
+            }
+          ],
+          "points": [],
+          "metric": {
+            "en": "18+ citations · still in active use",
+            "es": "18+ citas · todavía en uso activo",
+            "fr": "18+ citations · toujours activement utilisé"
+          },
+          "links": [
+            {
+              "label": {
+                "en": "Software ↗",
+                "es": "Software ↗",
+                "fr": "Logiciel ↗"
+              },
+              "url": "https://gsan.labri.fr/"
+            }
+          ],
+          "pubs": [
+            "gsan-nar"
+          ]
+        },
+        {
+          "id": "eppo",
+          "icon": "leaf",
+          "role": "basf-ontology",
+          "badge": {
+            "en": "Open source",
+            "es": "Código abierto",
+            "fr": "Open source"
+          },
+          "title": {
+            "en": "EPPO Ontology",
+            "es": "Ontología EPPO",
+            "fr": "Ontologie EPPO"
+          },
+          "short": {
+            "en": "Open-source ontology for plant and pest codes, adopted across BASF's Agricultural Solutions division.",
+            "es": "Ontología de código abierto para códigos de plantas y plagas, adoptada en la división Agricultural Solutions de BASF.",
+            "fr": "Ontologie open source pour les codes de plantes et de ravageurs, adoptée dans la division Agricultural Solutions de BASF."
+          },
+          "body": [
+            {
+              "en": "Development of an internal BASF ontology representing EPPO plant and pest codes, enriched with NCBI Taxon data, plus its adoption within BASF's Agricultural Solutions division and the lessons learned.",
+              "es": "Desarrollo de una ontología interna de BASF que representa los códigos EPPO de plantas y plagas, enriquecida con datos de NCBI Taxon, además de su adopción en la división de Agricultural Solutions y las lecciones aprendidas.",
+              "fr": "Développement d'une ontologie interne BASF représentant les codes EPPO de plantes et de ravageurs, enrichie des données NCBI Taxon, ainsi que son adoption dans la division Agricultural Solutions et les leçons tirées."
+            }
+          ],
+          "points": [],
+          "links": [],
+          "pubs": [
+            "eppo-frontiers"
+          ]
+        }
+      ]
+    }
+  ]
+}

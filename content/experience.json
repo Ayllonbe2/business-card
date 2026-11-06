@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "title": null,
+    "description": null
+  },
+  "intro": {
+    "en": "Five roles from bioinformatics research to leading AI and ML platforms. Platform outcomes are detailed on the Projects page.",
+    "es": "Cinco puestos, de la investigación en bioinformática a liderar plataformas de IA y ML. Los resultados de las plataformas se detallan en la página de Proyectos.",
+    "fr": "Cinq postes, de la recherche en bioinformatique à la direction de plateformes IA et ML. Les résultats des plateformes sont détaillés dans la page Projets."
+  },
+  "roles": [
+    {
+      "id": "basf-head",
+      "current": true,
+      "early": false,
+      "dates": {
+        "en": "2022 – Present",
+        "es": "2022 – Actualidad",
+        "fr": "2022 – Aujourd'hui"
+      },
+      "company": {
+        "en": "BASF Digital Solutions S.L. — Madrid, Spain",
+        "es": "BASF Digital Solutions S.L. — Madrid, España",
+        "fr": "BASF Digital Solutions S.L. — Madrid, Espagne"
+      },
+      "role": {
+        "en": "Head of Advanced Imaging & Forecasting Solutions — AI & ML Platforms",
+        "es": "Head of Advanced Imaging & Forecasting Solutions — Plataformas de IA y ML",
+        "fr": "Head of Advanced Imaging & Forecasting Solutions — Plateformes IA & ML"
+      },
+      "projects": [
+        "cv-mlops",
+        "forecasting",
+        "genai-labelling"
+      ],
+      "bullets": [
+        {
+          "en": "Scaled the team from 8 to 16 data scientists, ML/software engineers and solution designers through structured hiring and career-path design, directly mentoring both managers and junior scientists and owning performance management, including underperformance.",
+          "es": "Escalé el equipo de 8 a 16 científicos de datos, ingenieros de ML/software y solution designers con una contratación estructurada y el diseño de planes de carrera, mentorizando directamente tanto a managers como a científicos junior y asumiendo la gestión del desempeño, incluido el bajo rendimiento.",
+          "fr": "J'ai fait passer l'équipe de 8 à 16 data scientists, ingénieurs ML/logiciel et solution designers grâce à un recrutement structuré et à la conception de plans de carrière, en accompagnant directement managers et scientifiques juniors et en assumant la gestion de la performance, y compris la sous-performance."
+        },
+        {
+          "en": "Own a ~€1.3M annual platform budget, with monthly financial reporting to Finance and investment cases defended in front of VP stakeholders.",
+          "es": "Gestiono un presupuesto anual de plataformas de ~1,3M€, con reporting financiero mensual a Finanzas y casos de inversión defendidos ante VPs.",
+          "fr": "Je gère un budget annuel plateformes d'environ 1,3M€, avec un reporting financier mensuel à la Finance et des business cases d'investissement défendus devant les VP."
+        },
+        {
+          "en": "Coordinate demand intake and prioritisation across three business departments and multiple European markets, including BASF's cross-departmental Phenotyping working group with Agriculture and an exclusive delivery partnership with Tecnalia.",
+          "es": "Coordino la entrada y priorización de demanda de tres departamentos de negocio y varios mercados europeos, incluido el grupo de trabajo interdepartamental de Fenotipado de BASF con Agricultura y una alianza de entrega exclusiva con Tecnalia.",
+          "fr": "Je coordonne la captation et la priorisation de la demande de trois départements métier et de plusieurs marchés européens, y compris le groupe de travail transverse Phénotypage de BASF avec l'Agriculture et un partenariat de delivery exclusif avec Tecnalia."
+        }
+      ],
+      "official": {
+        "en": "Official BASF title: Product Manager · scope equivalent to Head of Product / Global Product Line Manager",
+        "es": "Título oficial en BASF: Product Manager · alcance equivalente a Head of Product / Global Product Line Manager",
+        "fr": "Intitulé officiel BASF : Product Manager · périmètre équivalent à Head of Product / Global Product Line Manager"
+      },
+      "summary": {
+        "en": "Own the product line and organisation behind BASF's computer vision, MLOps and forecasting platforms, serving the company's global data science community — accountable for portfolio strategy, vendor decisions and delivery.",
+        "es": "Al frente de la línea de producto y de la organización de las plataformas de visión por computador, MLOps y forecasting de BASF, al servicio de la comunidad global de ciencia de datos de la compañía, con responsabilidad sobre la estrategia de portafolio, las decisiones de proveedores y la entrega.",
+        "fr": "À la tête de la ligne produit et de l'organisation derrière les plateformes vision par ordinateur, MLOps et forecasting de BASF, au service de la communauté data science mondiale du groupe, avec la responsabilité de la stratégie de portefeuille, des décisions fournisseurs et du delivery."
+      }
+    },
+    {
+      "id": "basf-ontology",
+      "current": false,
+      "early": false,
+      "dates": {
+        "en": "2021 – 2022",
+        "es": "2021 – 2022",
+        "fr": "2021 – 2022"
+      },
+      "company": {
+        "en": "BASF Digital Solutions S.L. — Madrid, Spain",
+        "es": "BASF Digital Solutions S.L. — Madrid, España",
+        "fr": "BASF Digital Solutions S.L. — Madrid, Espagne"
+      },
+      "role": {
+        "en": "Technical Product Manager — Ontology & Semantic Layer",
+        "es": "Technical Product Manager — Ontologías y Capa Semántica",
+        "fr": "Technical Product Manager — Ontologies & Couche Sémantique"
+      },
+      "projects": [
+        "ontology-kg",
+        "eppo"
+      ],
+      "bullets": [
+        {
+          "en": "Delivered 20 bio-ontologies, several authored in-house, adopted as the vocabulary standard across the R&D Agricultural Solutions department by every internal tool within 6–12 months.",
+          "es": "Entregué 20 bio-ontologías, varias desarrolladas internamente, adoptadas como estándar de vocabulario en todo el departamento de I+D de Agricultural Solutions por todas las herramientas internas en 6–12 meses.",
+          "fr": "J'ai livré 20 bio-ontologies, dont plusieurs conçues en interne, adoptées comme standard de vocabulaire dans tout le département R&D Agricultural Solutions par l'ensemble des outils internes en 6–12 mois."
+        },
+        {
+          "en": "Co-authored BASF's GOMO ontology governance framework (published, ISMB 2022) with the Ontology Engineering Group at Universidad Politécnica de Madrid.",
+          "es": "Coautor del marco de gobierno de ontologías GOMO de BASF (publicado, ISMB 2022) con el Ontology Engineering Group de la Universidad Politécnica de Madrid.",
+          "fr": "Co-auteur du cadre de gouvernance d'ontologies GOMO de BASF (publié, ISMB 2022) avec l'Ontology Engineering Group de l'Universidad Politécnica de Madrid."
+        },
+        {
+          "en": "Led the EPPO Ontology development for plant and pest code representation, published in Frontiers in Artificial Intelligence and released as open source.",
+          "es": "Lideré el desarrollo de la ontología EPPO para la representación de códigos de plantas y plagas, publicada en Frontiers in Artificial Intelligence y liberada como open source.",
+          "fr": "J'ai piloté le développement de l'ontologie EPPO pour la représentation des codes de plantes et de ravageurs, publiée dans Frontiers in Artificial Intelligence et diffusée en open source."
+        },
+        {
+          "en": "Established and led a biweekly data steward community of 10 governing vocabulary standardisation, processing 10–15 terminology requests per month.",
+          "es": "Creé y lideré una comunidad quincenal de 10 data stewards para la estandarización de vocabulario, procesando 10–15 peticiones terminológicas al mes.",
+          "fr": "J'ai créé et animé une communauté bimensuelle de 10 data stewards pour la standardisation du vocabulaire, traitant 10–15 demandes terminologiques par mois."
+        }
+      ],
+      "official": {
+        "en": "Official BASF title: Product Component Manager · foundation for the AI & ML platform portfolio taken on next",
+        "es": "Título oficial en BASF: Product Component Manager · base del portafolio de plataformas de IA y ML asumido después",
+        "fr": "Intitulé officiel BASF : Product Component Manager · socle du portefeuille de plateformes IA & ML repris ensuite"
+      },
+      "summary": {
+        "en": "Owned BASF's Ontology Management Framework (OMF) — enterprise strategy, governance and technology stack (Protégé, RDFlib, Virtuoso, automated curation pipeline) for bio-ontologies underpinning downstream AI and agentic systems, including ontologies authored in-house. Led 5 engineers and 2 external partners, evaluated Stardog as an alternative before retaining and extending the incumbent stack, and communicated ontology strategy and adoption from general-audience sessions up to VP-level stakeholders across the business.",
+        "es": "Responsable del Ontology Management Framework (OMF) de BASF: estrategia corporativa, gobierno y stack tecnológico (Protégé, RDFlib, Virtuoso, pipeline de curación automatizada) de las bio-ontologías que sustentan sistemas de IA y agénticos, incluidas ontologías desarrolladas internamente. Dirigí a 5 ingenieros y 2 partners externos, evalué Stardog como alternativa antes de mantener y ampliar el stack existente, y comuniqué la estrategia y la adopción de ontologías desde sesiones divulgativas hasta stakeholders de nivel VP en toda la organización.",
+        "fr": "Responsable de l'Ontology Management Framework (OMF) de BASF — stratégie d'entreprise, gouvernance et stack technologique (Protégé, RDFlib, Virtuoso, pipeline de curation automatisé) — pour les bio-ontologies qui sous-tendent les systèmes IA et agentiques en aval, dont des ontologies conçues en interne. J'ai dirigé 5 ingénieurs et 2 partenaires externes, évalué Stardog comme alternative avant de conserver et d'étendre le stack en place, et porté la stratégie et l'adoption des ontologies, des sessions grand public jusqu'aux VP de l'entreprise."
+      }
+    },
+    {
+      "id": "umea-postdoc",
+      "current": false,
+      "early": true,
+      "dates": {
+        "en": "2020 – 2021",
+        "es": "2020 – 2021",
+        "fr": "2020 – 2021"
+      },
+      "company": {
+        "en": "Umeå Plant Science Centre — Umeå, Sweden",
+        "es": "Umeå Plant Science Centre — Umeå, Suecia",
+        "fr": "Umeå Plant Science Centre — Umeå, Suède"
+      },
+      "role": {
+        "en": "Postdoctoral Researcher, Machine Learning",
+        "es": "Investigador postdoctoral, Machine Learning",
+        "fr": "Chercheur postdoctoral, Machine Learning"
+      },
+      "projects": [],
+      "bullets": [
+        {
+          "en": "Awarded the Kempestiftelserna Fellowship, plus two further competitive grants as main author (KSLA, SPPS), to pursue a research niche combining the ontology-based semantic similarity methods from my PhD with deep learning to infer functional gene annotation in non-model organisms such as <em>Picea abies</em> (Norway spruce) — where multi-decade growth cycles make direct experimental validation infeasible — through homology-based transfer from characterised model-organism genomes.",
+          "es": "Obtuve la beca Kempestiftelserna y otras dos becas competitivas como autor principal (KSLA, SPPS) para desarrollar una línea de investigación que combinaba los métodos de similitud semántica basados en ontologías de mi doctorado con deep learning, con el fin de inferir la anotación funcional de genes en organismos no modelo como <em>Picea abies</em> (pícea de Noruega), cuyos ciclos de crecimiento de varias décadas hacen inviable la validación experimental directa, mediante transferencia por homología desde genomas caracterizados de organismos modelo.",
+          "fr": "Lauréat de la bourse Kempestiftelserna et de deux autres financements compétitifs en auteur principal (KSLA, SPPS) pour mener une niche de recherche associant les méthodes de similarité sémantique à base d'ontologies issues de ma thèse au deep learning, afin d'inférer l'annotation fonctionnelle de gènes chez des organismes non-modèles comme <em>Picea abies</em> (épicéa commun) — dont les cycles de croissance de plusieurs décennies rendent la validation expérimentale directe impossible — par transfert par homologie depuis des génomes caractérisés d'organismes modèles."
+        },
+        {
+          "en": "Designed production-oriented ML pipelines, containerized with Docker and run on the university's HPC cluster, with reproducibility, auto-scaling and experiment tracking — later used as the starting point for Master's students' thesis work.",
+          "es": "Diseñé pipelines de ML orientados a producción, contenerizados con Docker y ejecutados en el clúster HPC de la universidad, con reproducibilidad, auto-scaling y experiment tracking, que después sirvieron como punto de partida para trabajos de fin de máster.",
+          "fr": "Conception de pipelines ML orientés production, conteneurisés avec Docker et exécutés sur le cluster HPC de l'université, avec reproductibilité, auto-scaling et experiment tracking — repris ensuite comme point de départ de mémoires de master."
+        },
+        {
+          "en": "Contributed to a doctoral student's research, co-authoring “<a href='https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=m320tuQAAAAJ&amp;citation_for_view=m320tuQAAAAJ:_FxGoFyzp5QC' target='_blank' rel='noopener'>lincRNA annotation in Norway spruce</a>” (Physiologia Plantarum, 2024), while supporting other PhD students during the fellowship.",
+          "es": "Contribuí a la investigación de un doctorando como coautor de «<a href='https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=m320tuQAAAAJ&amp;citation_for_view=m320tuQAAAAJ:_FxGoFyzp5QC' target='_blank' rel='noopener'>lincRNA annotation in Norway spruce</a>» (Physiologia Plantarum, 2024), además de apoyar a otros doctorandos durante la beca.",
+          "fr": "Contribution aux travaux d'un doctorant en tant que co-auteur de « <a href='https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=m320tuQAAAAJ&amp;citation_for_view=m320tuQAAAAJ:_FxGoFyzp5QC' target='_blank' rel='noopener'>lincRNA annotation in Norway spruce</a> » (Physiologia Plantarum, 2024), tout en accompagnant d'autres doctorants pendant la bourse."
+        },
+        {
+          "en": "Served as Guest Editor for a special issue on AI in non-model plants in <em>Plants</em> (MDPI, Q1), managing peer review for ~10 submitted articles over the course of the fellowship.",
+          "es": "Guest Editor de un número especial sobre IA en plantas no modelo en <em>Plants</em> (MDPI, Q1), gestionando la revisión por pares de ~10 artículos enviados durante la beca.",
+          "fr": "Guest Editor d'un numéro spécial sur l'IA chez les plantes non-modèles dans <em>Plants</em> (MDPI, Q1), avec la gestion de la relecture par les pairs d'environ 10 articles soumis pendant la bourse."
+        },
+        {
+          "en": "Delivered 25 hours of Master's-level teaching and supported faculty in introductory bioinformatics courses.",
+          "es": "Impartí 25 horas de docencia de máster y apoyé al profesorado en cursos introductorios de bioinformática.",
+          "fr": "25 heures d'enseignement en master et appui aux enseignants dans des cours d'introduction à la bioinformatique."
+        }
+      ]
+    },
+    {
+      "id": "bordeaux-phd",
+      "current": false,
+      "early": true,
+      "dates": {
+        "en": "2016 – 2019",
+        "es": "2016 – 2019",
+        "fr": "2016 – 2019"
+      },
+      "company": {
+        "en": "Université de Bordeaux / LaBRI — Bordeaux, France",
+        "es": "Université de Bordeaux / LaBRI — Burdeos, Francia",
+        "fr": "Université de Bordeaux / LaBRI — Bordeaux, France"
+      },
+      "role": {
+        "en": "PhD Researcher, Computer Science",
+        "es": "Investigador doctoral, Informática",
+        "fr": "Doctorant, Informatique"
+      },
+      "projects": [
+        "gsan"
+      ],
+      "bullets": [
+        {
+          "en": "Originated an ontology-based semantic-similarity methodology for gene-set annotation — the approach that would later underpin ontology governance work at BASF (GOMO, EPPO) — evaluating nine semantic similarity measures over Gene Ontology terms to identify the optimal trade-off between minimizing retained annotation terms and maximizing gene coverage, outperforming standard enrichment-analysis tools.",
+          "es": "Creé una metodología de similitud semántica basada en ontologías para la anotación de conjuntos de genes (el enfoque que después sustentaría el trabajo de gobierno de ontologías en BASF: GOMO, EPPO), evaluando nueve medidas de similitud semántica sobre términos de Gene Ontology para identificar el equilibrio óptimo entre minimizar los términos de anotación retenidos y maximizar la cobertura de genes, superando a las herramientas estándar de análisis de enriquecimiento.",
+          "fr": "Création d'une méthodologie de similarité sémantique à base d'ontologies pour l'annotation de jeux de gènes — l'approche qui sous-tendra plus tard le travail de gouvernance d'ontologies chez BASF (GOMO, EPPO) — en évaluant neuf mesures de similarité sémantique sur les termes de la Gene Ontology pour trouver le compromis optimal entre minimiser les termes d'annotation retenus et maximiser la couverture des gènes, avec de meilleurs résultats que les outils standards d'analyse d'enrichissement."
+        },
+        {
+          "en": "Built the method into <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, a public gene-set annotation web platform still in active use today (18+ citations), including as the research foundation for a subsequent PhD student under my supervisors.",
+          "es": "Integré el método en <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, una plataforma web pública de anotación de conjuntos de genes que sigue en uso activo (18+ citas) y que sirvió además como base de investigación para un doctorando posterior con mis mismos directores.",
+          "fr": "Intégration de la méthode dans <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, plateforme web publique d'annotation de jeux de gènes toujours activement utilisée (18+ citations), qui a aussi servi de base de recherche à un doctorant suivant sous la direction de mes directeurs de thèse."
+        },
+        {
+          "en": "Co-supervised a Master's student on parallel research benchmarking GSAn against existing gene-set annotation tools.",
+          "es": "Co-supervisé a un estudiante de máster en una investigación paralela que comparaba GSAn con las herramientas existentes de anotación de conjuntos de genes.",
+          "fr": "Co-encadrement d'un étudiant de master sur des travaux parallèles comparant GSAn aux outils existants d'annotation de jeux de gènes."
+        },
+        {
+          "en": "Ran an applied-ML engagement funded by Bordeaux University Hospital during the closing months of the thesis, applying MHC epitope prediction to patient-derived HIV sequence data and surfacing a promising, unpublished finding — hands-on biomedical machine learning in a clinical research setting.",
+          "es": "Durante los últimos meses de la tesis, ejecuté un encargo de ML aplicado financiado por el Hospital Universitario de Burdeos: predicción de epítopos MHC sobre datos de secuencia de VIH de pacientes, con un hallazgo prometedor aún no publicado. Machine learning biomédico práctico en un entorno de investigación clínica.",
+          "fr": "Mission de ML appliqué financée par le CHU de Bordeaux pendant les derniers mois de la thèse : prédiction d'épitopes MHC sur des données de séquences VIH de patients, avec un résultat prometteur non publié — du machine learning biomédical concret en recherche clinique."
+        }
+      ],
+      "official": {
+        "en": "Ministerial funding (MESR)",
+        "es": "Financiación ministerial (MESR)",
+        "fr": "Financement ministériel (MESR)"
+      }
+    },
+    {
+      "id": "inserm",
+      "current": false,
+      "early": true,
+      "dates": {
+        "en": "2015 – 2016",
+        "es": "2015 – 2016",
+        "fr": "2015 – 2016"
+      },
+      "company": {
+        "en": "INSERM — Bordeaux, France",
+        "es": "INSERM — Burdeos, Francia",
+        "fr": "INSERM — Bordeaux, France"
+      },
+      "role": {
+        "en": "Bioinformatics Engineer",
+        "es": "Ingeniero Bioinformático",
+        "fr": "Ingénieur bioinformatique"
+      },
+      "projects": [],
+      "bullets": [
+        {
+          "en": "Ran a solo, fully autonomous pre-doctoral engagement integrating genomic and transcriptomic data from HIV patients using standard Gene Set Enrichment Analysis (GSEA), reporting directly to Rodolphe Thiébaut and my future PhD supervisors throughout the engagement.",
+          "es": "Llevé a cabo en solitario y con plena autonomía un encargo predoctoral de integración de datos genómicos y transcriptómicos de pacientes con VIH mediante Gene Set Enrichment Analysis (GSEA) estándar, reportando directamente a Rodolphe Thiébaut y a mis futuros directores de tesis durante todo el proyecto.",
+          "fr": "Mission prédoctorale menée seul et en totale autonomie, intégrant des données génomiques et transcriptomiques de patients VIH par Gene Set Enrichment Analysis (GSEA) standard, en rendant compte directement à Rodolphe Thiébaut et à mes futurs directeurs de thèse tout au long de la mission."
+        },
+        {
+          "en": "Identified the limitations of standard enrichment analysis on real multi-omics data — the insight that directly seeded the semantic-similarity methodology later developed into <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a> during my PhD — and published the resulting work as first author in PLoS ONE (2018), with Thiébaut as co-author.",
+          "es": "Identifiqué las limitaciones del análisis de enriquecimiento estándar sobre datos multi-ómicos reales (la idea que dio origen directamente a la metodología de similitud semántica que después se convirtió en <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a> durante mi doctorado) y publiqué el trabajo resultante como primer autor en PLoS ONE (2018), con Thiébaut como coautor.",
+          "fr": "Identification des limites de l'analyse d'enrichissement standard sur de vraies données multi-omiques — l'intuition à l'origine directe de la méthodologie de similarité sémantique devenue <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a> pendant ma thèse — et publication des résultats en premier auteur dans PLoS ONE (2018), avec Thiébaut en co-auteur."
+        }
+      ]
+    }
+  ]
+}

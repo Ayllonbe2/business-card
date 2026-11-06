@@ -1,0 +1,139 @@
+{
+  "name": "Aarón Ayllón Benítez",
+  "base_url": "",
+  "email": "ayllonbenitez.aaron@gmail.com",
+  "location": {
+    "en": "Madrid, Spain",
+    "es": "Madrid, España",
+    "fr": "Madrid, Espagne"
+  },
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/aar%C3%B3n-ayll%C3%B3n-ben%C3%ADtez-ph-d-b5599158/",
+    "scholar": "https://scholar.google.es/citations?user=m320tuQAAAAJ&hl=es&oi=ao",
+    "cv": "CV_Aaron_Ayllon_Benitez.pdf"
+  },
+  "nav": [
+    {
+      "id": "experience",
+      "label": {
+        "en": "Experience",
+        "es": "Experiencia",
+        "fr": "Expérience"
+      }
+    },
+    {
+      "id": "projects",
+      "label": {
+        "en": "Projects",
+        "es": "Proyectos",
+        "fr": "Projets"
+      }
+    },
+    {
+      "id": "research",
+      "label": {
+        "en": "Research",
+        "es": "Investigación",
+        "fr": "Recherche"
+      }
+    },
+    {
+      "id": "education",
+      "label": {
+        "en": "Education",
+        "es": "Formación",
+        "fr": "Formation"
+      }
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "es": "Sobre mí",
+        "fr": "À propos"
+      }
+    }
+  ],
+  "ui": {
+    "primary_nav": {
+      "en": "Primary",
+      "es": "Principal",
+      "fr": "Principale"
+    },
+    "toggle_nav": {
+      "en": "Toggle navigation",
+      "es": "Mostrar u ocultar el menú",
+      "fr": "Afficher ou masquer le menu"
+    },
+    "language": {
+      "en": "Language",
+      "es": "Idioma",
+      "fr": "Langue"
+    },
+    "download_cv": {
+      "en": "Download CV (PDF)",
+      "es": "Descargar CV (PDF)",
+      "fr": "Télécharger le CV (PDF)"
+    },
+    "related_projects": {
+      "en": "Related projects",
+      "es": "Proyectos relacionados",
+      "fr": "Projets associés"
+    },
+    "role_details": {
+      "en": "Role details",
+      "es": "Detalle del puesto",
+      "fr": "Détail du poste"
+    },
+    "more": {
+      "en": "Read more",
+      "es": "Leer más",
+      "fr": "En savoir plus"
+    },
+    "present_stats": {
+      "en": "132+ citations · h-index 5",
+      "es": "132+ citas · h-index 5",
+      "fr": "132+ citations · h-index 5"
+    },
+    "footer_nav": {
+      "en": "Footer",
+      "es": "Pie de página",
+      "fr": "Pied de page"
+    },
+    "related_pubs": {
+      "en": "Related publications",
+      "es": "Publicaciones relacionadas",
+      "fr": "Publications associées"
+    },
+    "contact": {
+      "en": "Contact",
+      "es": "Contacto",
+      "fr": "Contact"
+    },
+    "skip": {
+      "en": "Skip to content",
+      "es": "Saltar al contenido",
+      "fr": "Aller au contenu"
+    },
+    "not_found_title": {
+      "en": "Page not found",
+      "es": "Página no encontrada",
+      "fr": "Page introuvable"
+    },
+    "not_found_text": {
+      "en": "The page you are looking for does not exist.",
+      "es": "La página que buscas no existe.",
+      "fr": "La page que vous cherchez n'existe pas."
+    },
+    "back_home": {
+      "en": "Back to home",
+      "es": "Volver al inicio",
+      "fr": "Retour à l'accueil"
+    }
+  },
+  "footer_rights": {
+    "en": "© 2026 Aarón Ayllón Benítez · All rights reserved",
+    "es": "© 2026 Aarón Ayllón Benítez · Todos los derechos reservados",
+    "fr": "© 2026 Aarón Ayllón Benítez · Tous droits réservés"
+  }
+}
