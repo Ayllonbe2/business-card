@@ -46,10 +46,17 @@ such as “—”, “·”, “:” attached to the preceding word. It contains
 
 ## Deploy (GitHub → Cloudflare)
 
-* **Production:** every push to `main` is built and published by Cloudflare Workers Builds.
-  In the Cloudflare dashboard (Workers & Pages → `business-card` → Settings → Build) set
-  **Build command** `python3 build.py` and keep **Deploy command** `npx wrangler deploy`.
-* **Previews:** pushes to any other branch are uploaded as a preview version (`npx wrangler versions upload`).
+* **Production:** every push to `main` is built and published by Cloudflare Workers Builds. `public/` is not in git,
+  so `wrangler.jsonc` carries `build.command = "python3 build.py"`: wrangler generates the site itself before it
+  uploads it, and no dashboard setting is needed. In the dashboard (Workers & Pages → `business-card` → Settings →
+  Build) leave **Build command** empty (a second `build.py` run would only repeat the first) and keep
+  **Deploy command** `npx wrangler deploy`.
+* **Previews:** pushes to any other branch are uploaded as a preview version (`npx wrangler versions upload`),
+  which runs the same build command.
+* **Only one Cloudflare project should be connected to this repo.** If the repo also appears under *Workers & Pages →
+  Pages* (`*.pages.dev`), disconnect that one: it is a second, unrelated deployment of the same repository.
+* **Reproduce a Cloudflare build locally** from a clean clone: `npx wrangler deploy --dry-run`
+  (fails with “assets.directory … does not exist” if the build step is missing).
 * **CI:** `.github/workflows/build.yml` runs `python build.py` on every push and pull request, so a broken
   translation or link is caught before it reaches production. The built site is attached to the run as a download.
 * **If the Cloudflare build image has no Python:** remove `public/` from `.gitignore`, run `python build.py` locally
