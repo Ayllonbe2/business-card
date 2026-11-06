@@ -30,6 +30,14 @@
       }
     },
     {
+      "id": "achievements",
+      "label": {
+        "en": "Achievements",
+        "es": "Logros",
+        "fr": "Réalisations"
+      }
+    },
+    {
       "id": "research",
       "label": {
         "en": "Research",

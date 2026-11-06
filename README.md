@@ -1,6 +1,6 @@
 # Aarón Ayllón Benítez — career archive
 
-A small static site: a short landing page plus detail pages (Experience, Projects, Research, Education, About),
+A small static site: a short landing page plus detail pages (Experience, Projects, Achievements, Research, Education, About),
 published in English (`/`), Spanish (`/es/`) and French (`/fr/`). Deployed as Cloudflare static assets from `public/`.
 
 ## Layout
@@ -18,10 +18,11 @@ published in English (`/`), Spanish (`/es/`) and French (`/fr/`). Deployed as Cl
 ```
 python build.py          # validate content, render public/, check every internal link and anchor
 python build.py --check  # same, without writing public/
+python build.py --pending  # also list achievement strings that still lack an es/fr translation
 python -m http.server 8000 --directory public   # preview at http://localhost:8000
 ```
 
-The build fails if any string is missing a language, if markup inside a string is unbalanced, if an entry points to
+The build fails if any string is missing a language (achievement entries are the exception, see below), if markup inside a string is unbalanced, if an entry points to
 an unknown project/publication/role, or if an internal link or `#anchor` does not resolve.
 
 ## Adding content
@@ -33,8 +34,42 @@ an unknown project/publication/role, or if an internal link or `#anchor` does no
   To show it on the landing page, add its id to `projects.featured` in `content/home.json`.
 * **A publication** — add it to `publications` in `content/research.json`. `featured: true` puts it on the landing page and
   must match `research.featured` in `content/home.json`.
+* **An achievement** — add an object to `items` in `content/achievements.json` (see *Achievements log* below).
 * **A certification or course** — add an object to `certifications` in `content/education.json` (`year`, `title`, `issuer`, `kind`; optional `url` links the credential; `featured: true` also lists it on the landing page). Newest year first on the page.
 * **Talks, grants, degrees, skills, principles** — the matching arrays in `research.json`, `education.json`, `about.json`.
+
+## Achievements log
+
+`content/achievements.json` is the place to record every result as it happens. The landing page shows the newest
+`featured` ones (as many as `achievements.limit` in `content/home.json`); `/achievements/` lists all of them by year.
+Entries are sorted by `date`, newest first; entries with the same date keep their order in the file.
+
+```json
+{
+  "id": "short-kebab-id",
+  "date": "2026-09",
+  "until": "present",
+  "type": "impact",
+  "title":  { "en": "What happened", "es": "…", "fr": "…" },
+  "body":   { "en": "Context and your part in it", "es": "…", "fr": "…" },
+  "metric": { "en": "The number that matters", "es": "…", "fr": "…" },
+  "role": "basf-head",
+  "projects": ["cv-mlops"],
+  "pubs": ["gsan-nar"],
+  "links": [{ "label": { "en": "Press", "es": "Prensa", "fr": "Presse" }, "url": "https://…" }],
+  "featured": true
+}
+```
+
+* Required: `id` (unique, lowercase, hyphens), `date` (`YYYY` or `YYYY-MM`), `type` (one of `types` in the same file:
+  `impact`, `leadership`, `research`, `recognition`, `venture`), `title`. Everything else is optional.
+* `until` (`YYYY`, `YYYY-MM` or `"present"`) turns the date into a range such as “2022 – Present”.
+* `role`, `projects` and `pubs` must be existing ids; they become chips linking to those pages. A typo fails the build,
+  and so does any unknown field name.
+* **Translations are optional here**: only `en` is required. A missing `es` / `fr` falls back to the English text
+  (marked `lang="en"`) and is listed by `python build.py --pending`, so you can log a result in one minute and translate later.
+  Everywhere else on the site all three languages remain mandatory.
+* Each entry is linkable as `/achievements/#a-<id>` (it is highlighted when opened that way).
 
 Strings that contain `<` are treated as HTML (`<strong>`, `<em>`, `<a href=…>`); plain strings are escaped.
 Set `base_url` in `content/site.json` to enable canonical/hreflang tags, `sitemap.xml` and `robots.txt`.
@@ -46,10 +81,17 @@ such as “—”, “·”, “:” attached to the preceding word. It contains
 
 ## Deploy (GitHub → Cloudflare)
 
-* **Production:** every push to `main` is built and published by Cloudflare Workers Builds.
-  In the Cloudflare dashboard (Workers & Pages → `business-card` → Settings → Build) set
-  **Build command** `python3 build.py` and keep **Deploy command** `npx wrangler deploy`.
-* **Previews:** pushes to any other branch are uploaded as a preview version (`npx wrangler versions upload`).
+* **Production:** every push to `main` is built and published by Cloudflare Workers Builds. `public/` is not in git,
+  so `wrangler.jsonc` carries `build.command = "python3 build.py"`: wrangler generates the site itself before it
+  uploads it, and no dashboard setting is needed. In the dashboard (Workers & Pages → `business-card` → Settings →
+  Build) leave **Build command** empty (a second `build.py` run would only repeat the first) and keep
+  **Deploy command** `npx wrangler deploy`.
+* **Previews:** pushes to any other branch are uploaded as a preview version (`npx wrangler versions upload`),
+  which runs the same build command.
+* **Only one Cloudflare project should be connected to this repo.** If the repo also appears under *Workers & Pages →
+  Pages* (`*.pages.dev`), disconnect that one: it is a second, unrelated deployment of the same repository.
+* **Reproduce a Cloudflare build locally** from a clean clone: `npx wrangler deploy --dry-run`
+  (fails with “assets.directory … does not exist” if the build step is missing).
 * **CI:** `.github/workflows/build.yml` runs `python build.py` on every push and pull request, so a broken
   translation or link is caught before it reaches production. The built site is attached to the run as a download.
 * **If the Cloudflare build image has no Python:** remove `public/` from `.gitignore`, run `python build.py` locally
