@@ -3,9 +3,12 @@
 
     python build.py            validate content, render public/, check links
     python build.py --check    validate content and rendering without writing public/
+    python build.py --pending  also list the achievement strings that still have no es/fr translation
 
 Content lives in content/*.json. Every user-visible string is a {"en", "es", "fr"} object and the build
-fails when a language is missing. Output: public/ (English at /, Spanish at /es/, French at /fr/).
+fails when a language is missing -- except in the "items" of content/achievements.json, where only English
+is required: a missing es/fr falls back to the English text (marked lang="en") and is reported as pending.
+Output: public/ (English at /, Spanish at /es/, French at /fr/).
 """
 import html
 import json
@@ -20,7 +23,18 @@ CONTENT, STATIC, OUT = ROOT / "content", ROOT / "static", ROOT / "public"
 LANGS = ("en", "es", "fr")
 LANG_NAMES = {"en": "English", "es": "Español", "fr": "Français"}
 OG_LOCALE = {"en": "en_US", "es": "es_ES", "fr": "fr_FR"}
-PAGES = ("", "experience", "projects", "research", "education", "about")
+PAGES = ("", "experience", "projects", "achievements", "research", "education", "about")
+
+# Short month names for achievement dates ("2026-09" -> "Sep 2026").
+MONTHS = {
+    "en": ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"),
+    "es": ("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"),
+    "fr": ("janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."),
+}
+ACH_KEYS = {"id", "date", "until", "type", "title", "body", "metric", "role", "projects", "pubs", "links", "featured"}
+ACH_REQUIRED = ("id", "date", "type", "title")
+ACH_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+ACH_DATE = re.compile(r"^(\d{4})(?:-(0[1-9]|1[0-2]))?$")
 
 ICONS = {
     "eye": '<path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>',
@@ -98,9 +112,58 @@ def validate(obj, where):
             validate(v, f"{where}[{i}]")
 
 
+def validate_partial(obj, where, pending):
+    """Like validate(), but only English is required. A missing es/fr is allowed: the page falls back to the
+    English text (marked lang="en") and the gap is recorded in `pending` so it can be listed and translated later."""
+    if isinstance(obj, dict):
+        keys = set(obj)
+        if keys and keys <= set(LANGS):
+            if not (isinstance(obj.get("en"), str) and obj["en"].strip()):
+                raise BuildError(f"{where}: the English text is required (have {sorted(keys)})")
+            for l in LANGS:
+                if l not in obj:
+                    pending.append((where, l))
+                elif not (isinstance(obj[l], str) and obj[l].strip()):
+                    raise BuildError(f"{where}.{l}: empty text (remove the key to fall back to English)")
+                else:
+                    check_markup(obj[l], f"{where}.{l}")
+            return
+        for k, v in obj.items():
+            validate_partial(v, f"{where}.{k}", pending)
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            validate_partial(v, f"{where}[{i}]", pending)
+
+
 # ------------------------------------------------------------------------------ small helpers
 def t(v, lang):
     return v[lang] if isinstance(v, dict) and "en" in v else v
+
+
+def loc(v, lang):
+    """(text, fell_back): the text in `lang`, or the English text when that translation is missing."""
+    return (v[lang], False) if lang in v else (v["en"], True)
+
+
+def ar(v, lang):
+    """rich() for strings that may lack a translation: an English fallback is wrapped in lang="en"."""
+    s, fell_back = loc(v, lang)
+    out = s if "<" in s else html.escape(s, quote=False)
+    return f'<span lang="en">{out}</span>' if fell_back else out
+
+
+def date_key(d):
+    year, _, month = d.partition("-")
+    return int(year), int(month or 0)
+
+
+def fmt_date(d, lang):
+    year, month = date_key(d)
+    return f"{MONTHS[lang][month - 1]} {year}" if month else str(year)
+
+
+def pub_label(pb):
+    return pb["venue"] if str(pb["year"]) in pb["venue"] else f'{pb["venue"]}, {pb["year"]}'
 
 
 def rich(v, lang):
@@ -141,15 +204,23 @@ class Site:
         self.res = load("research")
         self.edu = load("education")
         self.about = load("about")
+        self.ach = load("achievements")
         for name, data in (("site", self.site), ("home", self.home), ("experience", self.exp), ("projects", self.proj),
-                           ("research", self.res), ("education", self.edu), ("about", self.about)):
+                           ("research", self.res), ("education", self.edu), ("about", self.about),
+                           # everything but the entries themselves needs all three languages
+                           ("achievements", {k: v for k, v in self.ach.items() if k != "items"})):
             validate(data, name)
         self.projects = {i["id"]: i for g in self.proj["groups"] for i in g["items"]}
         self.pubs = {p["id"]: p for p in self.res["publications"]}
         self.roles = {r["id"]: r for r in self.exp["roles"]}
         self.nav = {n["id"]: n["label"] for n in self.site["nav"]}
         self.ui = self.site["ui"]
+        self.atypes = {x["id"]: x["label"] for x in self.ach["types"]}
+        self.pending = []  # (where, lang) of achievement strings that fall back to English
         self._check_refs()
+        self._check_achievements()
+        # Newest first; entries with the same date keep the order they have in the file.
+        self.achievements = sorted(self.ach["items"], key=lambda a: date_key(a["date"]), reverse=True)
 
     def _check_refs(self):
         for r in self.exp["roles"]:
@@ -171,6 +242,57 @@ class Site:
         flagged = {p["id"] for p in self.res["publications"] if p.get("featured")}
         if flagged != set(self.home["research"]["featured"]):
             raise BuildError("research 'featured' flags and home.research.featured differ")
+
+    def _check_achievements(self):
+        limit = self.home["achievements"].get("limit")
+        if not isinstance(limit, int) or isinstance(limit, bool) or limit < 1:
+            raise BuildError("home.achievements.limit must be a whole number >= 1")
+        if len(self.atypes) != len(self.ach["types"]):
+            raise BuildError("achievements.types: duplicate type id")
+        seen = set()
+        for i, a in enumerate(self.ach["items"]):
+            where = f"achievements.items[{i}]" + (f" ({a['id']})" if isinstance(a, dict) and isinstance(a.get("id"), str) else "")
+            if not isinstance(a, dict):
+                raise BuildError(f"{where}: must be an object")
+            if set(a) - ACH_KEYS:
+                raise BuildError(f"{where}: unknown field(s) {sorted(set(a) - ACH_KEYS)} (allowed: {sorted(ACH_KEYS)})")
+            missing = [k for k in ACH_REQUIRED if k not in a]
+            if missing:
+                raise BuildError(f"{where}: missing required field(s) {missing}")
+            if not isinstance(a["id"], str) or not ACH_ID.match(a["id"]):
+                raise BuildError(f"{where}: id must be lowercase letters, digits and hyphens")
+            if a["id"] in seen:
+                raise BuildError(f"{where}: duplicate id")
+            seen.add(a["id"])
+            if not isinstance(a["date"], str) or not ACH_DATE.match(a["date"]):
+                raise BuildError(f"{where}: date must be YYYY or YYYY-MM, got {a['date']!r}")
+            if "until" in a:
+                u = a["until"]
+                if u != "present" and not (isinstance(u, str) and ACH_DATE.match(u)):
+                    raise BuildError(f"{where}: until must be YYYY, YYYY-MM or \"present\", got {u!r}")
+                if u != "present" and date_key(u) < date_key(a["date"]):
+                    raise BuildError(f"{where}: until ({u}) is before date ({a['date']})")
+            if a["type"] not in self.atypes:
+                raise BuildError(f"{where}: unknown type '{a['type']}' (known: {sorted(self.atypes)})")
+            if "featured" in a and not isinstance(a["featured"], bool):
+                raise BuildError(f"{where}: featured must be true or false")
+            for k in ("title", "body", "metric"):
+                if k in a and not (isinstance(a[k], dict) and a[k] and set(a[k]) <= set(LANGS)):
+                    raise BuildError(f"{where}: {k} must be an object like {{\"en\": ..., \"es\": ..., \"fr\": ...}}")
+            if a.get("role") and a["role"] not in self.roles:
+                raise BuildError(f"{where}: unknown role '{a['role']}'")
+            for pid in a.get("projects", []):
+                if pid not in self.projects:
+                    raise BuildError(f"{where}: unknown project '{pid}'")
+            for pb in a.get("pubs", []):
+                if pb not in self.pubs:
+                    raise BuildError(f"{where}: unknown publication '{pb}'")
+            for j, l in enumerate(a.get("links", [])):
+                if not (isinstance(l, dict) and set(l) == {"label", "url"} and isinstance(l["url"], str) and l["url"].startswith(("http://", "https://"))):
+                    raise BuildError(f"{where}: links[{j}] must be {{\"label\": {{...}}, \"url\": \"https://...\"}}")
+            for k in ("title", "body", "metric", "links"):
+                if k in a:
+                    validate_partial(a[k], f"{where}.{k}", self.pending)
 
 
 # ------------------------------------------------------------------------------ shared chrome
@@ -359,6 +481,26 @@ def render_home(S, lang):
         for c in cert_items(S) if c.get("featured")
     )
     cert_block = f'            <div class="glance-label">{rich(S.edu["certifications_title"], lang)}</div>' + chr(10) + cert_rows if cert_rows else ""
+    ach_rows = "".join(
+        f"""            <div class="glance-row">
+              <div class="glance-when">{ach_when(S, a, lang)}</div>
+              <div class="glance-what"><strong><a href="{url(lang, "achievements", "a-" + a["id"])}">{ar(a["title"], lang)}</a></strong><span>{rich(S.atypes[a["type"]], lang)}</span></div>
+            </div>
+"""
+        for a in [x for x in S.achievements if x.get("featured")][: H["achievements"]["limit"]]
+    )
+    ach_section = f"""    <section class="section section-tint" id="achievements">
+      <div class="container split">
+        <div>
+          <h2 class="section-title">{rich(S.nav["achievements"], lang)}</h2>
+          <p class="section-intro">{rich(H["achievements"]["text"], lang)}</p>
+          <p class="cta-row">{more_link(lang, "achievements", H["achievements"]["cta"])}</p>
+        </div>
+        <div class="card glance">
+{ach_rows}        </div>
+      </div>
+    </section>
+""" if ach_rows else ""
     main = f"""    <header class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -425,7 +567,8 @@ def render_home(S, lang):
       </div>
     </section>
 
-    <section class="section section-tint" id="research">
+{ach_section}
+    <section class="section" id="research">
       <div class="container split">
         <div>
           <h2 class="section-title">{rich(S.nav["research"], lang)}</h2>
@@ -438,7 +581,7 @@ def render_home(S, lang):
       </div>
     </section>
 
-    <section class="section" id="education">
+    <section class="section section-tint" id="education">
       <div class="container split">
         <div>
           <h2 class="section-title">{rich(S.nav["education"], lang)}</h2>
@@ -450,7 +593,7 @@ def render_home(S, lang):
       </div>
     </section>
 
-    <section class="section section-tint" id="leadership">
+    <section class="section" id="leadership">
       <div class="container">
         <div class="section-head section-head--row">
           <div class="lead-text">
@@ -516,8 +659,6 @@ def project_article(S, lang, p):
     metric = f'\n          <span class="pf-metric">{rich(p["metric"], lang)}</span>' if p.get("metric") else ""
     foot = list(foot_links)
     if p.get("pubs"):
-        def pub_label(pb):
-            return pb["venue"] if str(pb["year"]) in pb["venue"] else f'{pb["venue"]}, {pb["year"]}'
         pubs = " · ".join(
             f'<a href="{url(lang, "research", "pub-" + pid)}" title="{attr(plain(S.pubs[pid]["title"], lang))}">{html.escape(pub_label(S.pubs[pid]))}</a>'
             for pid in p["pubs"]
@@ -553,6 +694,65 @@ def render_projects(S, lang):
       </section>""")
     main = page_head(S, lang, "projects", S.proj["intro"]) + "\n" + wrap_body("\n".join(groups))
     return f"{plain(S.nav['projects'], lang)} · {S.site['name']}", plain(S.proj["intro"], lang), main
+
+
+def ach_when(S, a, lang):
+    """'Sep 2026', '2023', or a range such as '2022 – Present' / '2021 – 2022'."""
+    start = fmt_date(a["date"], lang)
+    until = a.get("until")
+    if not until:
+        return start
+    end = rich(S.ach["present"], lang) if until == "present" else fmt_date(until, lang)
+    return f"{start} – {end}"
+
+
+def ach_chips(S, lang, a):
+    chips = [f'<a class="chip" href="{url(lang, "projects", pid)}">{rich(S.projects[pid]["title"], lang)}</a>' for pid in a.get("projects", [])]
+    chips += [
+        f'<a class="chip" href="{url(lang, "research", "pub-" + pid)}" title="{attr(plain(S.pubs[pid]["title"], lang))}">{html.escape(pub_label(S.pubs[pid]))}</a>'
+        for pid in a.get("pubs", [])
+    ]
+    if a.get("role"):
+        company = split_company(t(S.roles[a["role"]]["company"], lang))[0]
+        chips.append(f'<a class="chip" href="{url(lang, "experience", a["role"])}">{html.escape(company)}</a>')
+    chips += [f'<a class="chip" href="{attr(l["url"])}" target="_blank" rel="noopener">{ar(l["label"], lang)}</a>' for l in a.get("links", [])]
+    if not chips:
+        return ""
+    return f'\n            <div class="chips"><span class="label">{rich(S.ach["related"], lang)}</span>{"".join(chips)}</div>'
+
+
+def achievement_entry(S, lang, a):
+    body = f'\n            <p class="ach-text">{ar(a["body"], lang)}</p>' if a.get("body") else ""
+    metric = f'\n            <p class="ach-metric">{ar(a["metric"], lang)}</p>' if a.get("metric") else ""
+    return f"""          <div class="ach" id="a-{a["id"]}">
+            <div class="ach-when">{ach_when(S, a, lang)}</div>
+            <div class="ach-main">
+              <span class="badge-type">{rich(S.atypes[a["type"]], lang)}</span>
+              <h3>{ar(a["title"], lang)}</h3>{body}{metric}{ach_chips(S, lang, a)}
+            </div>
+          </div>"""
+
+
+def render_achievements(S, lang):
+    A = S.ach
+    by_year = {}
+    for a in S.achievements:  # already newest first
+        by_year.setdefault(date_key(a["date"])[0], []).append(a)
+    year_nav = ""
+    if len(by_year) > 1:
+        links = "".join(f'<a class="chip" href="#y{y}">{y}</a>' for y in by_year)
+        year_nav = f'        <nav class="year-nav chips" aria-label="{attr(plain(A["years_label"], lang))}">{links}</nav>\n'
+    blocks = "\n".join(
+        f"""        <section class="block" id="y{y}">
+          <h2 class="block-title">{y}</h2>
+          <div class="card pad">
+{chr(10).join(achievement_entry(S, lang, a) for a in items)}
+          </div>
+        </section>"""
+        for y, items in by_year.items()
+    )
+    main = page_head(S, lang, "achievements", A["intro"]) + "\n" + wrap_body(year_nav + blocks)
+    return f"{plain(S.nav['achievements'], lang)} · {S.site['name']}", plain(A["intro"], lang), main
 
 
 def render_research(S, lang):
@@ -735,7 +935,7 @@ def render_about(S, lang):
 
 
 RENDER = {
-    "": render_home, "experience": render_experience, "projects": render_projects,
+    "": render_home, "experience": render_experience, "projects": render_projects, "achievements": render_achievements,
     "research": render_research, "education": render_education, "about": render_about,
 }
 
@@ -784,7 +984,7 @@ def check_links(out_root):
     return sorted(set(problems))
 
 
-def build(write=True):
+def build(write=True, show_pending=False):
     S = Site()
     tmp = ROOT / ".build-tmp"
     if tmp.exists():
@@ -815,6 +1015,11 @@ def build(write=True):
             shutil.move(str(tmp), str(OUT))
         print(f"OK: {count} pages + 404 ({len(LANGS)} languages){' -> ' + str(OUT) if write else ' (check only)'}"
               + ("" if base else "; base_url not set: no canonical/hreflang/sitemap"))
+        print(f"{len(S.achievements)} achievements ({sum(1 for a in S.achievements if a.get('featured'))} featured)"
+              + (f"; {len(S.pending)} string(s) fall back to English (python build.py --pending)" if S.pending else ""))
+        if show_pending:
+            for where, l in S.pending:
+                print(f"  pending {l}: {where}")
     finally:
         if tmp.exists():
             shutil.rmtree(tmp)
@@ -822,7 +1027,7 @@ def build(write=True):
 
 if __name__ == "__main__":
     try:
-        build(write="--check" not in sys.argv)
+        build(write="--check" not in sys.argv, show_pending="--pending" in sys.argv)
     except BuildError as e:
         print(f"BUILD FAILED: {e}", file=sys.stderr)
         sys.exit(1)
