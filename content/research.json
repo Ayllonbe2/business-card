@@ -11,6 +11,38 @@
   },
   "publications": [
     {
+      "id": "lincrna-physiol-plant",
+      "featured": false,
+      "venue": "Physiologia Plantarum",
+      "year": 2024,
+      "badge": {
+        "en": "Co-author",
+        "es": "Coautor",
+        "fr": "Coauteur"
+      },
+      "title": {
+        "en": "A resource of identified and annotated lincRNAs expressed during somatic embryogenesis development in Norway spruce",
+        "es": "Un recurso de lincRNA identificados y anotados expresados durante el desarrollo de la embriogénesis somática en el abeto de Noruega",
+        "fr": "Une ressource de lincRNA identifiés et annotés exprimés durant le développement de l'embryogenèse somatique chez l'épicéa commun"
+      },
+      "desc": {
+        "en": "Resource of long intergenic non-coding RNAs (lincRNAs) identified and annotated during somatic embryogenesis in Norway spruce, co-authored while at the Umeå Plant Science Centre.",
+        "es": "Recurso de ARN largos intergénicos no codificantes (lincRNA) identificados y anotados durante la embriogénesis somática del abeto de Noruega, coescrito durante mi etapa en el Umeå Plant Science Centre.",
+        "fr": "Ressource d'ARN longs intergéniques non codants (lincRNA) identifiés et annotés durant l'embryogenèse somatique de l'épicéa commun, coécrite pendant mon passage à l'Umeå Plant Science Centre."
+      },
+      "authors": "C. Canovi, K. Stojkovič, <strong>A. Ayllon-Benitez</strong>, N. Delhomme, U. Egertsdotter, N.R. Street",
+      "links": [
+        {
+          "label": {
+            "en": "DOI ↗",
+            "es": "DOI ↗",
+            "fr": "DOI ↗"
+          },
+          "url": "https://doi.org/10.1111/ppl.14537"
+        }
+      ]
+    },
+    {
       "id": "eppo-frontiers",
       "featured": true,
       "venue": "Frontiers in Artificial Intelligence",
@@ -112,6 +144,14 @@
             "fr": "Zenodo ↗"
           },
           "url": "https://zenodo.org/records/6952236"
+        },
+        {
+          "label": {
+            "en": "arXiv ↗",
+            "es": "arXiv ↗",
+            "fr": "arXiv ↗"
+          },
+          "url": "https://arxiv.org/abs/2206.01594"
         }
       ]
     },
@@ -144,6 +184,38 @@
             "fr": "Article ↗"
           },
           "url": "https://www.nature.com/articles/s41467-021-24584-w"
+        }
+      ]
+    },
+    {
+      "id": "plantgenie-plaza",
+      "featured": false,
+      "venue": "DiVA (Umeå University) — preprint",
+      "year": 2021,
+      "badge": {
+        "en": "Preprint · Co-author",
+        "es": "Preprint · Coautor",
+        "fr": "Preprint · Coauteur"
+      },
+      "title": {
+        "en": "PlantGenIE-PLAZA: integrating orthology into the PlantGenIE.org resource using the PLAZA pipeline",
+        "es": "PlantGenIE-PLAZA: integración de la ortología en el recurso PlantGenIE.org mediante el pipeline de PLAZA",
+        "fr": "PlantGenIE-PLAZA : intégration de l'orthologie dans la ressource PlantGenIE.org grâce au pipeline PLAZA"
+      },
+      "desc": {
+        "en": "Preprint on integrating orthology into the PlantGenIE.org plant genomics resource using the PLAZA pipeline. It remained a preprint.",
+        "es": "Preprint sobre la integración de la ortología en el recurso de genómica vegetal PlantGenIE.org mediante el pipeline de PLAZA. Se quedó en preprint.",
+        "fr": "Preprint sur l'intégration de l'orthologie dans la ressource de génomique végétale PlantGenIE.org grâce au pipeline PLAZA. Il est resté à l'état de preprint."
+      },
+      "authors": "C. Mannapperuma, H. Liu, M. Bel, N. Delhomme, A. Serrano, B. Schiffthaler, T.R. Hvidsten, K. Vandepoele, <strong>A. Ayllon-Benitez</strong>, N. Street",
+      "links": [
+        {
+          "label": {
+            "en": "Preprint ↗",
+            "es": "Preprint ↗",
+            "fr": "Preprint ↗"
+          },
+          "url": "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A1426556"
         }
       ]
     },
@@ -188,6 +260,54 @@
       ]
     },
     {
+      "id": "jobim-2019-talk",
+      "featured": false,
+      "venue": "JOBIM 2019",
+      "year": 2019,
+      "place": "Nantes",
+      "badge": {
+        "en": "First author · Highlight talk",
+        "es": "Primer autor · Charla destacada",
+        "fr": "Premier auteur · Highlight talk"
+      },
+      "title": {
+        "en": "A new method for evaluating the impact of semantic similarity measures on the annotation of a gene set",
+        "es": "Un nuevo método para evaluar el impacto de las medidas de similitud semántica en la anotación de un conjunto génico",
+        "fr": "Une nouvelle méthode pour évaluer l'impact des mesures de similarité sémantique sur l'annotation d'un groupe de gènes"
+      },
+      "desc": {
+        "en": "French national bioinformatics conference (Journées Ouvertes en Biologie, Informatique et Mathématiques). Presents the work published in PLoS ONE (2018). Proceedings pp. 118–119.",
+        "es": "Congreso nacional francés de bioinformática (Journées Ouvertes en Biologie, Informatique et Mathématiques). Presenta el trabajo publicado en PLoS ONE (2018). Actas, pp. 118–119.",
+        "fr": "Conférence nationale française de bioinformatique (Journées Ouvertes en Biologie, Informatique et Mathématiques). Présente le travail publié dans PLoS ONE (2018). Actes, p. 118-119."
+      },
+      "authors": "<strong>A. Ayllon-Benitez</strong>, P. Thébault, F. Mougin",
+      "links": []
+    },
+    {
+      "id": "jobim-2019-poster",
+      "featured": false,
+      "venue": "JOBIM 2019",
+      "year": 2019,
+      "place": "Nantes",
+      "badge": {
+        "en": "First author · Poster",
+        "es": "Primer autor · Póster",
+        "fr": "Premier auteur · Poster"
+      },
+      "title": {
+        "en": "GSAn: an alternative to statistical analyses of gene sets",
+        "es": "GSAn: una alternativa a los análisis estadísticos de conjuntos génicos",
+        "fr": "GSAn : une alternative aux analyses statistiques des groupes de gènes"
+      },
+      "desc": {
+        "en": "Poster presenting the GSAn web server, later published in NAR Genomics and Bioinformatics (2020). Proceedings p. 268.",
+        "es": "Póster que presenta el servidor web GSAn, publicado después en NAR Genomics and Bioinformatics (2020). Actas, p. 268.",
+        "fr": "Poster présentant le serveur web GSAn, publié ensuite dans NAR Genomics and Bioinformatics (2020). Actes, p. 268."
+      },
+      "authors": "<strong>A. Ayllon-Benitez</strong>, P. Thébault, F. Mougin",
+      "links": []
+    },
+    {
       "id": "plos-one",
       "featured": false,
       "venue": "PLoS ONE",
@@ -216,6 +336,39 @@
             "fr": "DOI ↗"
           },
           "url": "https://doi.org/10.1371/journal.pone.0208037"
+        }
+      ]
+    },
+    {
+      "id": "jobim-2018-motvis",
+      "featured": false,
+      "venue": "JOBIM 2018",
+      "year": 2018,
+      "place": "Marseille",
+      "badge": {
+        "en": "First author · Poster",
+        "es": "Primer autor · Póster",
+        "fr": "Premier auteur · Poster"
+      },
+      "title": {
+        "en": "Deciphering functional annotation of multiple gene sets with MOTVIS",
+        "es": "Descifrando la anotación funcional de múltiples conjuntos génicos con MOTVIS",
+        "fr": "Décryptage de l'annotation fonctionnelle de plusieurs jeux de gènes avec MOTVIS"
+      },
+      "desc": {
+        "en": "Poster presenting MoTVIS, an interactive visualisation that combines a treemap and an indented tree to explore the annotations of several gene sets at once. Proceedings pp. 373–377.",
+        "es": "Póster que presenta MoTVIS, una visualización interactiva que combina un treemap y un árbol con sangría para explorar las anotaciones de varios conjuntos génicos a la vez. Actas, pp. 373–377.",
+        "fr": "Poster présentant MoTVIS, une visualisation interactive qui combine un treemap et un arbre indenté pour explorer simultanément les annotations de plusieurs jeux de gènes. Actes, p. 373-377."
+      },
+      "authors": "<strong>A. Ayllon-Benitez</strong>, F. Mougin, M. Quesada-Martínez, J.T. Fernández-Breis, R. Bourqui, P. Thébault",
+      "links": [
+        {
+          "label": {
+            "en": "Proceedings ↗",
+            "es": "Actas ↗",
+            "fr": "Actes ↗"
+          },
+          "url": "https://jobim2018.sciencesconf.org/data/pages/Book_JOBIM2018_V3.pdf"
         }
       ]
     },
@@ -251,6 +404,38 @@
         }
       ],
       "place": "London"
+    },
+    {
+      "id": "bmc-biophysics",
+      "featured": false,
+      "venue": "BMC Biophysics",
+      "year": 2015,
+      "badge": {
+        "en": "First author",
+        "es": "Primer autor",
+        "fr": "Premier auteur"
+      },
+      "title": {
+        "en": "Prediction of solution properties and dynamics of RNAs by means of Brownian dynamics simulation of coarse-grained models: Ribosomal 5S RNA and phenylalanine transfer RNA",
+        "es": "Predicción de propiedades en disolución y dinámica de ARN mediante simulación de dinámica browniana de modelos de grano grueso: ARN ribosómico 5S y ARN de transferencia de fenilalanina",
+        "fr": "Prédiction des propriétés en solution et de la dynamique des ARN par simulation de dynamique brownienne de modèles gros-grain : ARN ribosomique 5S et ARN de transfert de la phénylalanine"
+      },
+      "desc": {
+        "en": "Brownian dynamics simulations of coarse-grained models to predict solution properties and dynamics of RNA molecules (ribosomal 5S RNA and phenylalanine transfer RNA).",
+        "es": "Simulaciones de dinámica browniana de modelos de grano grueso para predecir las propiedades en disolución y la dinámica de moléculas de ARN (ARN ribosómico 5S y ARN de transferencia de fenilalanina).",
+        "fr": "Simulations de dynamique brownienne de modèles gros-grain pour prédire les propriétés en solution et la dynamique de molécules d'ARN (ARN ribosomique 5S et ARN de transfert de la phénylalanine)."
+      },
+      "authors": "<strong>A. Ayllon-Benitez</strong>, J.G. Hernández Cifre, F.G. Díaz Baños, J.G. de la Torre",
+      "links": [
+        {
+          "label": {
+            "en": "DOI ↗",
+            "es": "DOI ↗",
+            "fr": "DOI ↗"
+          },
+          "url": "https://doi.org/10.1186/s13628-015-0025-7"
+        }
+      ]
     }
   ],
   "talks_title": {
@@ -264,9 +449,9 @@
     "fr": "Éditorial et financement"
   },
   "editorial": {
-    "en": "Guest Editor, <strong>Plants</strong> (MDPI, Q1) special issue on bridging the annotation gap in non-model plant species. Kempestiftelserna Fellowship and 2 competitive research grants secured as main author (KSLA, SPPS).",
-    "es": "Guest Editor en <strong>Plants</strong> (MDPI, Q1), número especial sobre la brecha de anotación en especies vegetales no modelo. Beca Kempestiftelserna y 2 becas de investigación competitivas como autor principal (KSLA, SPPS).",
-    "fr": "Guest Editor, <strong>Plants</strong> (MDPI, Q1), numéro spécial sur le fossé d'annotation chez les espèces végétales non-modèles. Bourse Kempestiftelserna et 2 bourses de recherche compétitives en auteur principal (KSLA, SPPS)."
+    "en": "Guest Editor, <strong>Plants</strong> (MDPI, Q1; Apr 2020 – Apr 2021), special issue on bridging the annotation gap in non-model plant species: sourced and contacted authors and made the first decision on which papers went to reviewers. Kempestiftelserna Fellowship and 2 competitive research grants secured as main author (KSLA, SPPS).",
+    "es": "Guest Editor en <strong>Plants</strong> (MDPI, Q1; abr 2020 – abr 2021), número especial sobre la brecha de anotación en especies vegetales no modelo: busqué y contacté a los autores y tomé la primera decisión sobre qué artículos enviar a revisión. Beca Kempestiftelserna y 2 becas de investigación competitivas como autor principal (KSLA, SPPS).",
+    "fr": "Guest Editor, <strong>Plants</strong> (MDPI, Q1 ; avr. 2020 – avr. 2021), numéro spécial sur le fossé d'annotation chez les espèces végétales non-modèles : recherche et contact des auteurs, et première décision sur les articles envoyés aux relecteurs. Bourse Kempestiftelserna et 2 bourses de recherche compétitives en auteur principal (KSLA, SPPS)."
   },
   "publications_title": {
     "en": "Publications",
@@ -303,6 +488,15 @@
     },
     "rows": [
       {
+        "venue": "Genomics, Proteomics and Bioinformatics (Elsevier)",
+        "role": {
+          "en": "reviewer",
+          "es": "reviewer",
+          "fr": "reviewer"
+        },
+        "year": "2021"
+      },
+      {
         "venue": "useR! 2020 The R User Conference",
         "role": {
           "en": "sub-reviewer",
@@ -327,6 +521,15 @@
           "en": "Virtual",
           "es": "Virtual",
           "fr": "Virtuel"
+        },
+        "year": "2020"
+      },
+      {
+        "venue": "Microorganisms (MDPI)",
+        "role": {
+          "en": "reviewer",
+          "es": "reviewer",
+          "fr": "reviewer"
         },
         "year": "2020"
       },
@@ -371,16 +574,40 @@
           "fr": "Équateur"
         },
         "year": "2018"
-      },
-      {
-        "venue": "Microorganisms (MDPI)",
-        "role": {
-          "en": "reviewer",
-          "es": "reviewer",
-          "fr": "reviewer"
-        },
-        "year": ""
       }
     ]
-  }
+  },
+  "service_title": {
+    "en": "Service & community",
+    "es": "Servicio y comunidad",
+    "fr": "Engagement et vie collective"
+  },
+  "service": [
+    {
+      "date": "2020-09/2021-06",
+      "title": {
+        "en": "Umeå Postdoc Society — executive board",
+        "es": "Umeå Postdoc Society — junta directiva",
+        "fr": "Umeå Postdoc Society — comité exécutif"
+      },
+      "text": {
+        "en": "Open and inclusive society for postdocs in Umeå. Chaired the website group, in charge of maintaining the society's website, and represented the postdocs of the Umeå Plant Science Centre.",
+        "es": "Sociedad abierta e inclusiva para posdoctorandos de Umeå. Presidí el grupo web, encargado de mantener el sitio de la sociedad, y representé a los posdoctorandos del Umeå Plant Science Centre.",
+        "fr": "Société ouverte et inclusive pour les postdoctorants d'Umeå. J'ai présidé le groupe web, chargé de la maintenance du site de la société, et représenté les postdoctorants de l'Umeå Plant Science Centre."
+      }
+    },
+    {
+      "date": "2018/2019",
+      "title": {
+        "en": "LaBRI laboratory council — PhD student representative",
+        "es": "Consejo del laboratorio LaBRI — representante de doctorandos",
+        "fr": "Conseil du laboratoire LaBRI — représentant des doctorants"
+      },
+      "text": {
+        "en": "Represented the PhD students on the council of LaBRI (UMR 5800), taking part in the discussions and votes on collective decisions, twice a year.",
+        "es": "Representé a los doctorandos en el consejo del LaBRI (UMR 5800), participando en las discusiones y votaciones de las decisiones colectivas, dos veces al año.",
+        "fr": "J'ai représenté les doctorants au conseil du LaBRI (UMR 5800), en participant aux discussions et aux votes sur les décisions collectives, deux fois par an."
+      }
+    }
+  ]
 }

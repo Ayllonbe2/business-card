@@ -171,33 +171,46 @@
   },
   "grants": [
     {
-      "year": "2020–2021",
+      "date": "2020-12",
+      "title": {
+        "en": "KSLA grant (GFS2020-0131)",
+        "es": "Beca KSLA (GFS2020-0131)",
+        "fr": "Financement KSLA (GFS2020-0131)"
+      },
+      "text": {
+        "en": "Principal investigator, €9,819.60, from the Kungl. Skogs- och Lantbruksakademien (KSLA): integrating gene expression and scientific-literature knowledge to improve the accuracy of gene inference networks.",
+        "es": "Investigador principal, 9.819,60 €, de la Kungl. Skogs- och Lantbruksakademien (KSLA): integrar expresión génica y conocimiento de la literatura científica para mejorar la precisión de las redes de inferencia génica.",
+        "fr": "Chercheur principal, 9 819,60 €, de la Kungl. Skogs- och Lantbruksakademien (KSLA) : intégrer l'expression des gènes et les connaissances de la littérature scientifique pour améliorer la précision des réseaux d'inférence génique."
+      }
+    },
+    {
+      "date": "2020-10",
+      "title": {
+        "en": "SPPS grant (project 516035121)",
+        "es": "Beca SPPS (proyecto 516035121)",
+        "fr": "Financement SPPS (projet 516035121)"
+      },
+      "text": {
+        "en": "Principal investigator, €1,964.46, from the Scandinavian Plant Physiology Society (SPPS), funded at a ~50% success rate: retrieving information from the scientific literature to improve functional gene annotation in conifers.",
+        "es": "Investigador principal, 1.964,46 €, de la Scandinavian Plant Physiology Society (SPPS), con una tasa de éxito de ~50%: extraer información de la literatura científica para mejorar la anotación funcional de genes en coníferas.",
+        "fr": "Chercheur principal, 1 964,46 €, de la Scandinavian Plant Physiology Society (SPPS), avec un taux de succès d'environ 50 % : extraire l'information de la littérature scientifique pour améliorer l'annotation fonctionnelle des gènes chez les conifères."
+      }
+    },
+    {
+      "date": "2020-02",
       "title": {
         "en": "Kempestiftelserna Fellowship",
         "es": "Beca Kempestiftelserna",
         "fr": "Bourse Kempestiftelserna"
       },
       "text": {
-        "en": "Postdoctoral fellowship at Umeå Plant Science Centre to combine ontology-based semantic similarity with deep learning for functional gene annotation in non-model organisms.",
-        "es": "Beca postdoctoral en el Umeå Plant Science Centre para combinar la similitud semántica basada en ontologías con deep learning en la anotación funcional de genes de organismos no modelo.",
-        "fr": "Bourse postdoctorale à l'Umeå Plant Science Centre pour associer similarité sémantique à base d'ontologies et deep learning dans l'annotation fonctionnelle de gènes chez des organismes non-modèles."
+        "en": "Postdoctoral fellowship at Umeå Plant Science Centre to combine ontology-based semantic similarity with deep learning for functional gene annotation in non-model organisms. Project SMK-1950.1 (€56,754.15), participant investigator; the foundation funds postdoctoral candidates at roughly a 25% success rate.",
+        "es": "Beca postdoctoral en el Umeå Plant Science Centre para combinar la similitud semántica basada en ontologías con deep learning en la anotación funcional de genes de organismos no modelo. Proyecto SMK-1950.1 (56.754,15 €), investigador participante; la fundación financia a candidatos postdoctorales con una tasa de éxito de alrededor del 25%.",
+        "fr": "Bourse postdoctorale à l'Umeå Plant Science Centre pour associer similarité sémantique à base d'ontologies et deep learning dans l'annotation fonctionnelle de gènes chez des organismes non-modèles. Projet SMK-1950.1 (56 754,15 €), chercheur participant ; la fondation finance des candidats postdoctoraux avec un taux de succès d'environ 25 %."
       }
     },
     {
-      "year": "2020–2021",
-      "title": {
-        "en": "KSLA and SPPS grants",
-        "es": "Becas KSLA y SPPS",
-        "fr": "Financements KSLA et SPPS"
-      },
-      "text": {
-        "en": "Two further competitive research grants, secured as main author.",
-        "es": "Otras dos becas de investigación competitivas, obtenidas como autor principal.",
-        "fr": "Deux autres financements de recherche compétitifs, obtenus en auteur principal."
-      }
-    },
-    {
-      "year": "2017",
+      "date": "2017",
       "title": {
         "en": "SFBI travel grant",
         "es": "Beca de viaje SFBI",
@@ -207,6 +220,19 @@
         "en": "Travel grant from the Société Française de BioInformatique (SFBI) for the invited talk at IEEE Information Visualization in London.",
         "es": "Beca de viaje de la Société Française de BioInformatique (SFBI) para la ponencia invitada en IEEE Information Visualization en Londres.",
         "fr": "Bourse de voyage de la Société Française de BioInformatique (SFBI) pour la conférence invitée à IEEE Information Visualization à Londres."
+      }
+    },
+    {
+      "date": "2015-08/2015-09",
+      "title": {
+        "en": "Maths4Life internship grant (IRB Barcelona)",
+        "es": "Beca de prácticas Maths4Life (IRB Barcelona)",
+        "fr": "Bourse de stage Maths4Life (IRB Barcelona)"
+      },
+      "text": {
+        "en": "One of four two-month internship grants offered by the Maths4Life programme of the Institute for Research in Biomedicine, spent in its bioinformatics facility.",
+        "es": "Una de las cuatro becas de prácticas de dos meses del programa Maths4Life del Institute for Research in Biomedicine, disfrutada en su plataforma de bioinformática.",
+        "fr": "L'une des quatre bourses de stage de deux mois du programme Maths4Life de l'Institute for Research in Biomedicine, effectuée dans sa plateforme de bioinformatique."
       }
     }
   ],

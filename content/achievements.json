@@ -39,6 +39,11 @@
       "en": "Science communication",
       "es": "Divulgación científica",
       "fr": "Vulgarisation scientifique"
+    },
+    "award": {
+      "en": "Award",
+      "es": "Premio",
+      "fr": "Prix"
     }
   },
   "impact": [
@@ -178,36 +183,45 @@
       "date": "2019-10",
       "kind": "debate",
       "text": {
-        "en": "<strong>Science–Media–Society debate (SMS)</strong> — participant, third edition.",
-        "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong> — participante, tercera edición.",
-        "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong> — participant, troisième édition."
-      }
-    },
-    {
-      "date": "2018-05",
-      "kind": "competition",
-      "text": {
-        "en": "<strong>Scientific Game Jam</strong>, University of Bordeaux (first edition) — presented my PhD research and won with a pixel-art game about destroying viruses and collecting DNA to upgrade weapons, an analogy for using ontologies to decipher the unknowns of genes.",
-        "es": "<strong>Scientific Game Jam</strong>, Universidad de Burdeos (primera edición) — presenté mi investigación doctoral y gané con un juego de pixel art sobre destruir virus y recoger ADN para mejorar armas, una analogía del uso de ontologías para descifrar las incógnitas de los genes.",
-        "fr": "<strong>Scientific Game Jam</strong>, Université de Bordeaux (première édition) — j'ai présenté ma recherche doctorale et gagné avec un jeu en pixel art où il fallait détruire des virus et collecter de l'ADN pour améliorer ses armes, une analogie de l'usage des ontologies pour déchiffrer les inconnues des gènes."
-      }
-    },
-    {
-      "date": "2018-04",
-      "kind": "debate",
-      "text": {
-        "en": "<strong>Science–Media–Society debate (SMS)</strong> — participant, first edition.",
-        "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong> — participante, primera edición.",
-        "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong> — participant, première édition."
+        "en": "<strong>Science–Media–Society debate (SMS)</strong>, Cap Sciences, Bordeaux — third edition: 3-minute talk introducing artificial intelligence through the story of Alan Turing.",
+        "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong>, Cap Sciences, Burdeos — tercera edición: charla de 3 minutos que introduce la inteligencia artificial a través de la historia de Alan Turing.",
+        "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong>, Cap Sciences, Bordeaux — troisième édition : intervention de 3 minutes présentant l'intelligence artificielle à travers l'histoire d'Alan Turing."
       }
     },
     {
       "date": "2018-03",
       "kind": "competition",
       "text": {
-        "en": "<strong>Ma thèse en 180 secondes (MT180s)</strong> — competitor: presented my PhD research in three minutes.",
-        "es": "<strong>Ma thèse en 180 secondes (MT180s)</strong> — participante: presenté mi investigación doctoral en tres minutos.",
-        "fr": "<strong>Ma thèse en 180 secondes (MT180s)</strong> — candidat : j'ai présenté ma recherche doctorale en trois minutes."
+        "en": "<strong>Scientific Game Jam</strong>, University of Bordeaux (first edition, Domaine du Haut-Carré) — presented my PhD research and won first prize with a pixel-art game about destroying viruses and collecting DNA to upgrade weapons, an analogy for using ontologies to decipher the unknowns of genes.",
+        "es": "<strong>Scientific Game Jam</strong>, Universidad de Burdeos (primera edición, Domaine du Haut-Carré) — presenté mi investigación doctoral y gané el primer premio con un juego de pixel art sobre destruir virus y recoger ADN para mejorar armas, una analogía del uso de ontologías para descifrar las incógnitas de los genes.",
+        "fr": "<strong>Scientific Game Jam</strong>, Université de Bordeaux (première édition, Domaine du Haut-Carré) — j'ai présenté ma recherche doctorale et remporté le premier prix avec un jeu en pixel art où il fallait détruire des virus et collecter de l'ADN pour améliorer ses armes, une analogie de l'usage des ontologies pour déchiffrer les inconnues des gènes."
+      }
+    },
+    {
+      "date": "2018-04",
+      "kind": "debate",
+      "text": {
+        "en": "<strong>Science–Media–Society debate (SMS)</strong>, Cap Sciences, Bordeaux — first edition: 3-minute talk on fake news in medicine, the false link between vaccination and autism.",
+        "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong>, Cap Sciences, Burdeos — primera edición: charla de 3 minutos sobre las fake news en medicina: el falso vínculo entre vacunación y autismo.",
+        "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong>, Cap Sciences, Bordeaux — première édition : intervention de 3 minutes sur les fake news en médecine, le faux lien entre vaccination et autisme."
+      }
+    },
+    {
+      "date": "2018-02",
+      "kind": "competition",
+      "text": {
+        "en": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, University of Bordeaux (Domaine du Haut-Carré) — competitor: presented my PhD research in three minutes to the general public.",
+        "es": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, Universidad de Burdeos (Domaine du Haut-Carré) — participante: presenté mi investigación doctoral en tres minutos para el público general.",
+        "fr": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, Université de Bordeaux (Domaine du Haut-Carré) — candidat : j'ai présenté ma recherche doctorale en trois minutes devant le grand public."
+      }
+    },
+    {
+      "date": "2016",
+      "kind": "award",
+      "text": {
+        "en": "<strong>Infinite Salud award</strong> (Fundación Séneca) — prize for the best master's internship manuscript, from my internship at the Université de Bordeaux on a bioinformatics method to ease the biological interpretation of genes.",
+        "es": "<strong>Premio Infinite Salud</strong> (Fundación Séneca) — premio al mejor manuscrito de prácticas de máster, de mis prácticas en la Université de Bordeaux, sobre un método bioinformático para facilitar la interpretación biológica de los genes.",
+        "fr": "<strong>Prix Infinite Salud</strong> (Fondation Séneca) — prix du meilleur manuscrit de stage de master, issu de mon stage à l'Université de Bordeaux, portant sur une méthode bioinformatique pour faciliter l'interprétation biologique des gènes."
       }
     }
   ]

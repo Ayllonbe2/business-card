@@ -4,9 +4,9 @@
     "description": null
   },
   "intro": {
-    "en": "Five roles from bioinformatics research to leading AI and ML platforms. Platform outcomes are detailed on the Projects page.",
-    "es": "Cinco puestos, de la investigación en bioinformática a liderar plataformas de IA y ML. Los resultados de las plataformas se detallan en la página de Proyectos.",
-    "fr": "Cinq postes, de la recherche en bioinformatique à la direction de plateformes IA et ML. Les résultats des plateformes sont détaillés dans la page Projets."
+    "en": "Nine positions, from research internships to leading AI and ML platforms. Platform outcomes are detailed on the Projects page.",
+    "es": "Nueve puestos, de las prácticas de investigación a liderar plataformas de IA y ML. Los resultados de las plataformas se detallan en la página de Proyectos.",
+    "fr": "Neuf postes, des stages de recherche à la direction de plateformes IA et ML. Les résultats des plateformes sont détaillés dans la page Projets."
   },
   "roles": [
     {
@@ -166,6 +166,35 @@
       ]
     },
     {
+      "id": "adera",
+      "current": false,
+      "early": true,
+      "glance": false,
+      "dates": {
+        "en": "Oct – Dec 2019",
+        "es": "oct – dic 2019",
+        "fr": "oct. – déc. 2019"
+      },
+      "company": {
+        "en": "ADERA — Bordeaux, France",
+        "es": "ADERA — Burdeos, Francia",
+        "fr": "ADERA — Bordeaux, France"
+      },
+      "role": {
+        "en": "Bioinformatics Engineer",
+        "es": "Ingeniero bioinformático",
+        "fr": "Ingénieur bioinformaticien"
+      },
+      "projects": [],
+      "bullets": [
+        {
+          "en": "At the Bordeaux University Hospital (CHU de Bordeaux), applied gene prediction from protein data to assess whether recurring patterns could be detected that would inform HIV vaccine studies, a computational-biology engagement at the interface with vaccine research.",
+          "es": "En el Hospital Universitario de Burdeos (CHU de Bordeaux), apliqué la predicción de genes a partir de datos de proteínas para evaluar si podían detectarse patrones recurrentes útiles para el estudio de vacunas contra el VIH, un trabajo de biología computacional en la frontera con la investigación de vacunas.",
+          "fr": "Au CHU de Bordeaux, j'ai appliqué la prédiction de gènes à partir de données protéiques pour évaluer s'il était possible de détecter des motifs récurrents utiles à l'étude de vaccins contre le VIH, un travail de biologie computationnelle à l'interface de la recherche vaccinale."
+        }
+      ]
+    },
+    {
       "id": "bordeaux-phd",
       "current": false,
       "early": true,
@@ -245,6 +274,108 @@
           "en": "Identified the limitations of standard enrichment analysis on real multi-omics data — the insight that directly seeded the semantic-similarity methodology later developed into <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a> during my PhD — and published the resulting work as first author in PLoS ONE (2018), with Thiébaut as co-author.",
           "es": "Identifiqué las limitaciones del análisis de enriquecimiento estándar sobre datos multi-ómicos reales (la idea que dio origen directamente a la metodología de similitud semántica que después se convirtió en <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a> durante mi doctorado) y publiqué el trabajo resultante como primer autor en PLoS ONE (2018), con Thiébaut como coautor.",
           "fr": "Identification des limites de l'analyse d'enrichissement standard sur de vraies données multi-omiques — l'intuition à l'origine directe de la méthodologie de similarité sémantique devenue <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a> pendant ma thèse — et publication des résultats en premier auteur dans PLoS ONE (2018), avec Thiébaut en co-auteur."
+        }
+      ]
+    },
+    {
+      "id": "intern-institute",
+      "current": false,
+      "early": true,
+      "glance": false,
+      "dates": {
+        "en": "Aug – Sep 2015",
+        "es": "ago – sep 2015",
+        "fr": "août – sept. 2015"
+      },
+      "company": {
+        "en": "Institute for Research in Biomedicine (IRB Barcelona) — Barcelona, Spain",
+        "es": "Institute for Research in Biomedicine (IRB Barcelona) — Barcelona, España",
+        "fr": "Institute for Research in Biomedicine (IRB Barcelona) — Barcelone, Espagne"
+      },
+      "role": {
+        "en": "Research Intern",
+        "es": "Investigador en prácticas",
+        "fr": "Stagiaire de recherche"
+      },
+      "projects": [],
+      "bullets": [
+        {
+          "en": "Selected for one of the four two-month internship grants offered by IRB Barcelona's Maths4Life programme.",
+          "es": "Seleccionado para una de las cuatro becas de prácticas de dos meses que ofrecía el programa Maths4Life del IRB Barcelona.",
+          "fr": "Sélectionné pour l'une des quatre bourses de stage de deux mois proposées par le programme Maths4Life de l'IRB Barcelona."
+        },
+        {
+          "en": "Worked in the bioinformatics facility, helping researchers with a range of bioinformatics questions, mainly with the Galaxy platform.",
+          "es": "Trabajé en la plataforma de bioinformática, ayudando a los investigadores con diversas cuestiones de bioinformática, sobre todo con la plataforma Galaxy.",
+          "fr": "J'ai travaillé à la plateforme de bioinformatique, en aidant les chercheurs sur diverses questions de bioinformatique, principalement avec la plateforme Galaxy."
+        }
+      ]
+    },
+    {
+      "id": "intern-bordeaux",
+      "current": false,
+      "early": true,
+      "glance": false,
+      "dates": {
+        "en": "Feb – Jul 2015",
+        "es": "feb – jul 2015",
+        "fr": "févr. – juil. 2015"
+      },
+      "company": {
+        "en": "Université de Bordeaux — Bordeaux, France",
+        "es": "Université de Bordeaux — Burdeos, Francia",
+        "fr": "Université de Bordeaux — Bordeaux, France"
+      },
+      "role": {
+        "en": "Research Intern",
+        "es": "Investigador en prácticas",
+        "fr": "Stagiaire de recherche"
+      },
+      "projects": [],
+      "bullets": [
+        {
+          "en": "Master's internship before starting the PhD: carried out a first analysis to assess the efficiency and feasibility of the thesis project on gene-set annotation.",
+          "es": "Prácticas de máster antes de empezar el doctorado: realicé un primer análisis para evaluar la eficacia y la viabilidad del proyecto de tesis sobre anotación de conjuntos génicos.",
+          "fr": "Stage de master avant de commencer la thèse : première analyse pour évaluer l'efficacité et la faisabilité du projet de thèse sur l'annotation de jeux de gènes."
+        },
+        {
+          "en": "The internship manuscript won the Infinite Salud award (Fundación Séneca, 2016) for the best master's internship manuscript.",
+          "es": "El manuscrito de las prácticas obtuvo el premio Infinite Salud (Fundación Séneca, 2016) al mejor manuscrito de prácticas de máster.",
+          "fr": "Le manuscrit du stage a reçu le prix Infinite Salud (Fondation Séneca, 2016) du meilleur manuscrit de stage de master."
+        }
+      ]
+    },
+    {
+      "id": "intern-murcia",
+      "current": false,
+      "early": true,
+      "glance": false,
+      "dates": {
+        "en": "Feb – Jul 2014",
+        "es": "feb – jul 2014",
+        "fr": "févr. – juil. 2014"
+      },
+      "company": {
+        "en": "University of Murcia, Department of Physical Chemistry — Murcia, Spain",
+        "es": "University of Murcia, Departamento de Química Física — Murcia, España",
+        "fr": "University of Murcia, département de chimie physique — Murcie, Espagne"
+      },
+      "role": {
+        "en": "Research Intern",
+        "es": "Investigador en prácticas",
+        "fr": "Stagiaire de recherche"
+      },
+      "projects": [],
+      "bullets": [
+        {
+          "en": "Research internship that led to my first publication, as first author, in BMC Biophysics (2015).",
+          "es": "Prácticas de investigación que dieron lugar a mi primera publicación, como primer autor, en BMC Biophysics (2015).",
+          "fr": "Stage de recherche à l'origine de ma première publication, en premier auteur, dans BMC Biophysics (2015)."
+        },
+        {
+          "en": "Worked on a coarse-grained Brownian dynamics scheme (one bead per nucleotide, with an elastic network and excluded-volume interactions) to predict the solution properties of RNA molecules (radius of gyration, diffusion coefficient, rotational relaxation time) for <em>E. coli</em> 5S ribosomal RNA and yeast phenylalanine tRNA, in good agreement with experimental data.",
+          "es": "Trabajé en un esquema de dinámica browniana de grano grueso (una partícula por nucleótido, con una red elástica e interacciones de volumen excluido) para predecir las propiedades en disolución de moléculas de ARN (radio de giro, coeficiente de difusión, tiempo de relajación rotacional) del ARN ribosómico 5S de <em>E. coli</em> y del ARN de transferencia de fenilalanina de levadura, en buen acuerdo con los datos experimentales.",
+          "fr": "J'ai travaillé sur un schéma de dynamique brownienne gros-grain (une bille par nucléotide, avec un réseau élastique et des interactions de volume exclu) pour prédire les propriétés en solution de molécules d'ARN (rayon de giration, coefficient de diffusion, temps de relaxation rotationnelle) pour l'ARN ribosomique 5S d'<em>E. coli</em> et l'ARN de transfert de la phénylalanine de levure, en bon accord avec les données expérimentales."
         }
       ]
     }
