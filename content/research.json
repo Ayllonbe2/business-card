@@ -281,7 +281,16 @@
         "fr": "Conférence nationale française de bioinformatique (Journées Ouvertes en Biologie, Informatique et Mathématiques). Présente le travail publié dans PLoS ONE (2018). Actes, p. 118-119."
       },
       "authors": "<strong>A. Ayllon-Benitez</strong>, P. Thébault, F. Mougin",
-      "links": []
+      "links": [
+        {
+          "label": {
+            "en": "Proceedings ↗",
+            "es": "Actas ↗",
+            "fr": "Actes ↗"
+          },
+          "url": "https://uncloud.univ-nantes.fr/index.php/s/wsXfE8zqEaqsiNk"
+        }
+      ]
     },
     {
       "id": "jobim-2019-poster",
@@ -305,7 +314,16 @@
         "fr": "Poster présentant le serveur web GSAn, publié ensuite dans NAR Genomics and Bioinformatics (2020). Actes, p. 268."
       },
       "authors": "<strong>A. Ayllon-Benitez</strong>, P. Thébault, F. Mougin",
-      "links": []
+      "links": [
+        {
+          "label": {
+            "en": "Proceedings ↗",
+            "es": "Actas ↗",
+            "fr": "Actes ↗"
+          },
+          "url": "https://uncloud.univ-nantes.fr/index.php/s/wsXfE8zqEaqsiNk"
+        }
+      ]
     },
     {
       "id": "plos-one",
@@ -620,9 +638,9 @@
     {
       "date": "2020-09/2021-06",
       "title": {
-        "en": "Umeå Postdoc Society — executive board",
-        "es": "Umeå Postdoc Society — junta directiva",
-        "fr": "Umeå Postdoc Society — comité exécutif"
+        "en": "<a href=\"https://umeapostdocsociety.se/\" target=\"_blank\" rel=\"noopener\">Umeå Postdoc Society</a> — executive board",
+        "es": "<a href=\"https://umeapostdocsociety.se/\" target=\"_blank\" rel=\"noopener\">Umeå Postdoc Society</a> — junta directiva",
+        "fr": "<a href=\"https://umeapostdocsociety.se/\" target=\"_blank\" rel=\"noopener\">Umeå Postdoc Society</a> — comité exécutif"
       },
       "text": {
         "en": "Open and inclusive society for postdocs in Umeå. Chaired the website group, in charge of maintaining the society's website, and represented the postdocs of the Umeå Plant Science Centre.",
