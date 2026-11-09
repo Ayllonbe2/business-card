@@ -652,8 +652,26 @@ svg.i {
   .tile-lead { background: none; border: 1px solid var(--line); }
   .tile-lead .impact-cap { color: var(--muted); }
   .tile-lead::before { display: none; }
-  .timeline > li, .proj, .pub-item { break-inside: avoid; }
+  .timeline > li, .proj, .pub-item, .ach { break-inside: avoid; }
   a { color: inherit; text-decoration: none; }
   .footer { background: none; color: var(--text); }
   .footer a { color: var(--text); }
 }
+
+/* ---------- Achievements ---------- */
+.year-nav { margin: 0 0 1.75rem; }
+.year-nav .chip { font-variant-numeric: tabular-nums; }
+.ach {
+  display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.15rem 1.25rem;
+  padding: 1.1rem 0; border-bottom: 1px solid var(--line);
+}
+.ach:last-child { border-bottom: 0; }
+.ach-when { padding-top: 0.15rem; color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+.ach-main .badge-type { display: inline-block; margin-bottom: 0.45rem; }
+.ach h3 { font: 700 1.02rem/1.35 var(--font-head); letter-spacing: -0.01em; color: var(--accent); }
+.ach-text { margin-top: 0.35rem; font-size: 0.92rem; line-height: 1.6; }
+.ach-metric { margin-top: 0.55rem; font-size: 0.82rem; font-weight: 600; line-height: 1.45; color: var(--accent); }
+.ach:target { margin: 0 -0.75rem; padding-left: 0.75rem; padding-right: 0.75rem; background: var(--accent-tint); border-radius: 10px; }
+.glance-what strong a { color: inherit; }
+.glance-what strong a:hover { color: var(--accent); }
+@media (max-width: 479.98px) { .ach { grid-template-columns: 1fr; } }

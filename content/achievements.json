@@ -1,228 +1,491 @@
 {
   "intro": {
-    "en": "Dated outcomes and public milestones: what the work delivered for the business, and where it was shared, awarded or debated.",
-    "es": "Resultados con fecha e hitos públicos: lo que el trabajo aportó al negocio y dónde se compartió, se premió o se debatió.",
-    "fr": "Résultats datés et jalons publics : ce que le travail a apporté à l'entreprise, et où il a été partagé, récompensé ou débattu."
+    "en": "Every result worth keeping, newest first: what changed, by how much, and where it came from. The landing page shows only a selection.",
+    "es": "Cada resultado que merece guardarse, del más reciente al más antiguo: qué cambió, cuánto y de dónde viene. La página de inicio solo muestra una selección.",
+    "fr": "Chaque résultat qui mérite d'être conservé, du plus récent au plus ancien : ce qui a changé, de combien, et d'où cela vient. La page d'accueil n'en présente qu'une sélection."
   },
-  "impact_title": {
-    "en": "Business impact",
-    "es": "Impacto de negocio",
-    "fr": "Impact business"
+  "present": {
+    "en": "Present",
+    "es": "Actualidad",
+    "fr": "Aujourd'hui"
   },
-  "recognition_title": {
-    "en": "Speaking, media & awards",
-    "es": "Ponencias, medios y premios",
-    "fr": "Conférences, médias et prix"
+  "related": {
+    "en": "Related",
+    "es": "Relacionado",
+    "fr": "Associé"
   },
-  "kinds": {
-    "talk": {
-      "en": "Talk",
-      "es": "Ponencia",
-      "fr": "Conférence"
-    },
-    "podcast": {
-      "en": "Podcast",
-      "es": "Podcast",
-      "fr": "Podcast"
-    },
-    "debate": {
-      "en": "Debate",
-      "es": "Debate",
-      "fr": "Débat"
-    },
-    "competition": {
-      "en": "Competition",
-      "es": "Concurso",
-      "fr": "Concours"
-    },
-    "communication": {
-      "en": "Science communication",
-      "es": "Divulgación científica",
-      "fr": "Vulgarisation scientifique"
-    },
-    "award": {
-      "en": "Award",
-      "es": "Premio",
-      "fr": "Prix"
-    }
+  "years_label": {
+    "en": "Jump to year",
+    "es": "Ir al año",
+    "fr": "Aller à l'année"
   },
-  "impact": [
+  "types": [
     {
-      "date": "2026",
-      "link": {
-        "page": "projects",
-        "anchor": "platforms"
-      },
-      "title": {
-        "en": "€3.5M+ recurring savings from portfolio decisions",
-        "es": "3,5M€+ de ahorro recurrente por decisiones de portafolio",
-        "fr": "3,5M€+ d'économies récurrentes issues des décisions de portefeuille"
-      },
-      "text": {
-        "en": "Transferred the CV/MLOps platform to its best-fit owner (~€2M recurring savings) and closed the forecasting platform after an ROI review (~€1.5M savings).",
-        "es": "Transferí la plataforma de visión por computador / MLOps a su mejor propietario (~2M€ de ahorro recurrente) y cerré la plataforma de forecasting tras una revisión de ROI (~1,5M€ de ahorro).",
-        "fr": "J'ai transféré la plateforme vision par ordinateur / MLOps à son meilleur propriétaire (~2M€ d'économies récurrentes) et fermé la plateforme de forecasting après une revue de ROI (~1,5M€ d'économies)."
+      "id": "impact",
+      "label": {
+        "en": "Business impact",
+        "es": "Impacto de negocio",
+        "fr": "Impact métier"
       }
     },
     {
-      "date": "2025",
-      "link": {
-        "page": "experience",
-        "anchor": "basf-head"
-      },
-      "title": {
-        "en": "Team scaled from 8 to 16",
-        "es": "Equipo escalado de 8 a 16 personas",
-        "fr": "Équipe passée de 8 à 16 personnes"
-      },
-      "text": {
-        "en": "Scaled the team from 8 to 16 data scientists, ML/software engineers and solution designers through structured hiring and career-path design.",
-        "es": "Escalé el equipo de 8 a 16 científicos de datos, ingenieros de ML/software y solution designers con una contratación estructurada y el diseño de planes de carrera.",
-        "fr": "J'ai fait passer l'équipe de 8 à 16 data scientists, ingénieurs ML/logiciel et solution designers grâce à un recrutement structuré et à la conception de plans de carrière."
+      "id": "leadership",
+      "label": {
+        "en": "Leadership",
+        "es": "Liderazgo",
+        "fr": "Leadership"
       }
     },
     {
-      "date": "2024",
-      "link": {
-        "page": "projects",
-        "anchor": "genai-labelling"
-      },
-      "title": {
-        "en": "Funding secured for GenAI labelling automation",
-        "es": "Financiación conseguida para automatizar el etiquetado con GenAI",
-        "fr": "Financement obtenu pour automatiser l'étiquetage par GenAI"
-      },
-      "text": {
-        "en": "Turned an image-labelling bottleneck into a quantified business case presented directly to VP stakeholders, and secured funding for GenAI-powered labelling automation.",
-        "es": "Convertí un cuello de botella en el etiquetado de imágenes en un caso de negocio cuantificado, presentado directamente a VPs, y conseguí financiación para automatizar el etiquetado con GenAI.",
-        "fr": "J'ai transformé un goulot d'étranglement dans l'étiquetage d'images en business case chiffré, présenté directement aux VP, et obtenu le financement de l'automatisation de l'étiquetage par GenAI."
+      "id": "research",
+      "label": {
+        "en": "Research",
+        "es": "Investigación",
+        "fr": "Recherche"
       }
     },
     {
-      "date": "2023",
-      "link": {
-        "page": "projects",
-        "anchor": "cv-mlops"
-      },
-      "title": {
-        "en": "~90% less effort per new project after standardising computer vision",
-        "es": "~90% menos esfuerzo por proyecto nuevo tras estandarizar la visión por computador",
-        "fr": "~90% d'effort en moins par nouveau projet après la standardisation de la vision par ordinateur"
-      },
-      "text": {
-        "en": "Standardised the computer vision platform around a peer-reviewed library of 70 reusable templates, cutting the effort of each new project by ~90% for ~100 data scientists.",
-        "es": "Estandaricé la plataforma de visión por computador en torno a una biblioteca de 70 plantillas reutilizables revisadas por pares, con ~90% menos esfuerzo en cada proyecto nuevo para ~100 científicos de datos.",
-        "fr": "J'ai standardisé la plateforme de vision par ordinateur autour d'une bibliothèque de 70 templates réutilisables relus par les pairs, avec ~90% d'effort en moins sur chaque nouveau projet pour ~100 data scientists."
+      "id": "recognition",
+      "label": {
+        "en": "Talks, media & awards",
+        "es": "Ponencias, medios y premios",
+        "fr": "Conférences, médias et prix"
       }
     },
     {
-      "date": "2021",
-      "link": {
-        "page": "projects",
-        "anchor": "ontology-kg"
-      },
-      "title": {
-        "en": "20 bio-ontologies adopted as the department vocabulary standard",
-        "es": "20 bio-ontologías adoptadas como estándar de vocabulario del departamento",
-        "fr": "20 bio-ontologies adoptées comme standard de vocabulaire du département"
-      },
-      "text": {
-        "en": "Delivered 20 bio-ontologies, several authored in-house, adopted by every internal tool across the R&D Agricultural Solutions department within 6–12 months.",
-        "es": "Entregué 20 bio-ontologías, varias desarrolladas internamente, adoptadas por todas las herramientas internas del departamento de I+D de Agricultural Solutions en 6–12 meses.",
-        "fr": "J'ai livré 20 bio-ontologies, dont plusieurs conçues en interne, adoptées par l'ensemble des outils internes du département R&D Agricultural Solutions en 6–12 mois."
+      "id": "venture",
+      "label": {
+        "en": "Entrepreneurship",
+        "es": "Emprendimiento",
+        "fr": "Entrepreneuriat"
       }
     }
   ],
-  "recognition": [
+  "items": [
     {
+      "id": "vigia-closed-beta",
+      "date": "2026-09",
+      "type": "venture",
+      "featured": true,
+      "title": {
+        "en": "Proyecto Vigía: B2B marketplace built end to end and in closed beta",
+        "es": "Proyecto Vigía: marketplace B2B construido de extremo a extremo y en beta cerrada",
+        "fr": "Proyecto Vigía : marketplace B2B construit de bout en bout et en bêta fermée"
+      },
+      "body": {
+        "en": "Took the platform from architecture to closed beta solo in ~3 months (June–September 2026), using AI-assisted development tooling (Claude Code) to accelerate delivery; now collecting structured feedback from the closed-beta cohort ahead of a planned public launch.",
+        "es": "Llevé la plataforma de la arquitectura a la beta cerrada yo solo en ~3 meses (junio–septiembre de 2026), con herramientas de desarrollo asistido por IA (Claude Code) para acelerar la entrega; ahora recojo feedback estructurado de la cohorte de la beta antes del lanzamiento público previsto.",
+        "fr": "J'ai mené seul la plateforme de l'architecture à la bêta fermée en ~3 mois (juin–septembre 2026), avec des outils de développement assisté par IA (Claude Code) pour accélérer la livraison ; je recueille désormais des retours structurés auprès de la cohorte de bêta avant un lancement public prévu."
+      },
+      "metric": {
+        "en": "Architecture to closed beta in ~3 months, solo",
+        "es": "De la arquitectura a la beta cerrada en ~3 meses, en solitario",
+        "fr": "De l'architecture à la bêta fermée en ~3 mois, seul"
+      },
+      "projects": [
+        "vigia"
+      ]
+    },
+    {
+      "id": "tech-show-madrid-2026",
       "date": "2026-11",
-      "kind": "talk",
-      "text": {
+      "type": "recognition",
+      "featured": true,
+      "title": {
+        "en": "Roundtable panelist at Tech Show Madrid 2026",
+        "es": "Panelista en la mesa redonda de Tech Show Madrid 2026",
+        "fr": "Panéliste à la table ronde du Tech Show Madrid 2026"
+      },
+      "body": {
         "en": "<strong>Tech Show Madrid 2026</strong> (AI Cluster of the Community of Madrid) — roundtable panelist: \"Generative AI, creativity and new digital business models\".",
         "es": "<strong>Tech Show Madrid 2026</strong> (Clúster IA de la Comunidad de Madrid) — participante en la mesa redonda «IA generativa, creatividad y nuevos modelos de negocio digitales».",
         "fr": "<strong>Tech Show Madrid 2026</strong> (Cluster IA de la Communauté de Madrid) — intervenant à la table ronde « IA générative, créativité et nouveaux modèles économiques numériques »."
       }
     },
     {
-      "date": "2026-03",
-      "kind": "podcast",
-      "text": {
-        "en": "<strong>AI Cluster of the Community of Madrid</strong> — podcast guest: \"Build vs Buy vs Open Source in GenAI\".",
-        "es": "<strong>Clúster IA de la Comunidad de Madrid</strong> — invitado en podcast: «Build vs Buy vs Open Source en GenAI».",
-        "fr": "<strong>Cluster IA de la Communauté de Madrid</strong> — invité podcast : « Build vs Buy vs Open Source en GenAI »."
-      }
+      "id": "eppo-open-source",
+      "date": "2023",
+      "type": "research",
+      "featured": true,
+      "title": {
+        "en": "EPPO Ontology published in Frontiers in AI and released as open source",
+        "es": "Ontología EPPO publicada en Frontiers in AI y liberada como open source",
+        "fr": "Ontologie EPPO publiée dans Frontiers in AI et diffusée en open source"
+      },
+      "body": {
+        "en": "Led the EPPO Ontology development for plant and pest code representation, published in Frontiers in Artificial Intelligence and released as open source.",
+        "es": "Lideré el desarrollo de la ontología EPPO para la representación de códigos de plantas y plagas, publicada en Frontiers in Artificial Intelligence y liberada como open source.",
+        "fr": "J'ai piloté le développement de l'ontologie EPPO pour la représentation des codes de plantes et de ravageurs, publiée dans Frontiers in Artificial Intelligence et diffusée en open source."
+      },
+      "role": "basf-ontology",
+      "projects": [
+        "eppo"
+      ],
+      "pubs": [
+        "eppo-frontiers"
+      ]
     },
     {
+      "id": "expoquimia-2023",
       "date": "2023-06",
-      "kind": "talk",
-      "text": {
+      "type": "recognition",
+      "title": {
+        "en": "Industry showcase speaker at EXPOQUIMIA 2023",
+        "es": "Ponente en el showcase de industria de EXPOQUIMIA 2023",
+        "fr": "Intervenant au showcase industriel d'EXPOQUIMIA 2023"
+      },
+      "body": {
         "en": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — industry showcase speaker on advanced image analysis for the chemical industry, plus roundtable participation.",
         "es": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — ponente en el showcase industrial sobre análisis de imagen avanzado para la industria química, además de participación en mesa redonda.",
         "fr": "<strong>EXPOQUIMIA 2023</strong>, Barcelone — intervenant du showcase industriel sur l'analyse d'image avancée pour l'industrie chimique, plus participation à une table ronde."
       }
     },
     {
+      "id": "genai-labelling-funded",
+      "date": "2024",
+      "type": "impact",
+      "featured": true,
+      "title": {
+        "en": "Business case for GenAI labelling automation funded",
+        "es": "Caso de negocio para automatizar el etiquetado con GenAI, financiado",
+        "fr": "Business case d'automatisation de l'étiquetage par GenAI financé"
+      },
+      "body": {
+        "en": "Turned an image-labelling bottleneck into a quantified business case presented directly to VP stakeholders, and secured funding for GenAI-powered labelling automation. Ran a proof-of-concept of SIGMA AI and benchmarked competing tools to inform the build-vs-buy decision.",
+        "es": "Convertí un cuello de botella en el etiquetado de imágenes en un caso de negocio cuantificado, presentado directamente a VPs, y conseguí financiación para automatizar el etiquetado con GenAI. Ejecuté una prueba de concepto de SIGMA AI y comparé herramientas competidoras para fundamentar la decisión de construir o comprar.",
+        "fr": "J'ai transformé un goulot d'étranglement dans l'étiquetage d'images en business case chiffré, présenté directement aux VP, et obtenu le financement de l'automatisation de l'étiquetage par GenAI. J'ai mené une preuve de concept de SIGMA AI et comparé les outils concurrents pour éclairer la décision build-vs-buy."
+      },
+      "role": "basf-head",
+      "projects": [
+        "genai-labelling"
+      ]
+    },
+    {
+      "id": "portfolio-savings",
+      "date": "2026",
+      "type": "impact",
+      "title": {
+        "en": "Portfolio decisions delivering recurring savings",
+        "es": "Decisiones de portafolio que generan ahorro recurrente",
+        "fr": "Décisions de portefeuille génératrices d'économies récurrentes"
+      },
+      "body": {
+        "en": "Scaled BASF's computer vision / MLOps platform and transferred it to its best-fit owner once mature; recommended closing the self-service forecasting platform after an ROI and adoption review.",
+        "es": "Escalé la plataforma de visión por computador / MLOps de BASF y la transferí a su mejor propietario una vez madura; recomendé cerrar la plataforma de forecasting self-service tras una revisión de ROI y adopción.",
+        "fr": "J'ai fait passer à l'échelle la plateforme vision par ordinateur / MLOps de BASF et l'ai transférée à son meilleur propriétaire une fois mature ; j'ai recommandé la fermeture de la plateforme de forecasting en libre-service après une revue du ROI et de l'adoption."
+      },
+      "metric": {
+        "en": "€3.5M+ recurring savings · ~€2M from the CV/MLOps platform, ~€1.5M from the forecasting closure",
+        "es": "3,5M€+ de ahorro recurrente · ~2M€ de la plataforma de CV/MLOps, ~1,5M€ del cierre de forecasting",
+        "fr": "3,5M€+ d'économies récurrentes · ~2M€ de la plateforme CV/MLOps, ~1,5M€ de la fermeture du forecasting"
+      },
+      "role": "basf-head",
+      "projects": [
+        "cv-mlops",
+        "forecasting"
+      ]
+    },
+    {
+      "id": "cv-platform-standardised",
+      "date": "2023",
+      "type": "impact",
+      "title": {
+        "en": "Standardised computer vision platform: ~90% less effort per new project",
+        "es": "Plataforma de visión por computador estandarizada: ~90% menos esfuerzo por proyecto nuevo",
+        "fr": "Plateforme de vision par ordinateur standardisée : ~90% d'effort en moins par nouveau projet"
+      },
+      "body": {
+        "en": "Instituted peer-reviewed governance for the 70-template library and tracked platform health via active-user adoption and time saved per user, validated through internal satisfaction surveys.",
+        "es": "Instauré un gobierno con revisión por pares para la biblioteca de 70 plantillas y medí la salud de la plataforma mediante la adopción de usuarios activos y el tiempo ahorrado por usuario, validado con encuestas internas de satisfacción.",
+        "fr": "J'ai instauré une gouvernance avec relecture par les pairs pour la bibliothèque de 70 templates et suivi la santé de la plateforme via l'adoption des utilisateurs actifs et le temps gagné par utilisateur, validés par des enquêtes de satisfaction internes."
+      },
+      "metric": {
+        "en": "~€2M recurring savings · 70 templates · ~90% effort reduction for ~100 data scientists",
+        "es": "~2M€ de ahorro recurrente · 70 plantillas · ~90% menos esfuerzo para ~100 científicos de datos",
+        "fr": "~2M€ d'économies récurrentes · 70 templates · ~90% d'effort en moins pour ~100 data scientists"
+      },
+      "role": "basf-head",
+      "projects": [
+        "cv-mlops"
+      ]
+    },
+    {
+      "id": "team-8-to-16",
+      "date": "2025",
+      "type": "leadership",
+      "title": {
+        "en": "Scaled the team from 8 to 16",
+        "es": "Equipo escalado de 8 a 16 personas",
+        "fr": "Équipe passée de 8 à 16 personnes"
+      },
+      "body": {
+        "en": "Scaled the team from 8 to 16 data scientists, ML/software engineers and solution designers through structured hiring and career-path design, directly mentoring both managers and junior scientists and owning performance management, including underperformance.",
+        "es": "Escalé el equipo de 8 a 16 científicos de datos, ingenieros de ML/software y solution designers con una contratación estructurada y el diseño de planes de carrera, mentorizando directamente tanto a managers como a científicos junior y asumiendo la gestión del desempeño, incluido el bajo rendimiento.",
+        "fr": "J'ai fait passer l'équipe de 8 à 16 data scientists, ingénieurs ML/logiciel et solution designers grâce à un recrutement structuré et à la conception de plans de carrière, en accompagnant directement managers et scientifiques juniors et en assumant la gestion de la performance, y compris la sous-performance."
+      },
+      "role": "basf-head"
+    },
+    {
+      "id": "gomo-ismb-2022",
+      "date": "2022",
+      "type": "research",
+      "title": {
+        "en": "GOMO ontology governance framework published at ISMB 2022",
+        "es": "Marco de gobierno de ontologías GOMO publicado en ISMB 2022",
+        "fr": "Cadre de gouvernance d'ontologies GOMO publié à ISMB 2022"
+      },
+      "body": {
+        "en": "Co-authored BASF's GOMO ontology governance framework (published, ISMB 2022) with the Ontology Engineering Group at Universidad Politécnica de Madrid.",
+        "es": "Coautor del marco de gobierno de ontologías GOMO de BASF (publicado, ISMB 2022) con el Ontology Engineering Group de la Universidad Politécnica de Madrid.",
+        "fr": "Co-auteur du cadre de gouvernance d'ontologies GOMO de BASF (publié, ISMB 2022) avec l'Ontology Engineering Group de l'Universidad Politécnica de Madrid."
+      },
+      "role": "basf-ontology",
+      "projects": [
+        "ontology-kg"
+      ],
+      "pubs": [
+        "gomo-ismb"
+      ]
+    },
+    {
+      "id": "ontology-standard",
+      "date": "2021",
+      "until": "2022",
+      "type": "impact",
+      "title": {
+        "en": "20 bio-ontologies adopted as the department vocabulary standard",
+        "es": "20 bio-ontologías adoptadas como estándar de vocabulario del departamento",
+        "fr": "20 bio-ontologies adoptées comme standard de vocabulaire du département"
+      },
+      "body": {
+        "en": "Delivered 20 bio-ontologies, several authored in-house, adopted as the vocabulary standard across the R&D Agricultural Solutions department by every internal tool within 6–12 months.",
+        "es": "Entregué 20 bio-ontologías, varias desarrolladas internamente, adoptadas como estándar de vocabulario en todo el departamento de I+D de Agricultural Solutions por todas las herramientas internas en 6–12 meses.",
+        "fr": "J'ai livré 20 bio-ontologies, dont plusieurs conçues en interne, adoptées comme standard de vocabulaire dans tout le département R&D Agricultural Solutions par l'ensemble des outils internes en 6–12 mois."
+      },
+      "role": "basf-ontology",
+      "projects": [
+        "ontology-kg"
+      ]
+    },
+    {
+      "id": "nature-comms-2021",
+      "date": "2021",
+      "type": "research",
+      "title": {
+        "en": "Contribution to BloodGen3 published in Nature Communications",
+        "es": "Contribución a BloodGen3 publicada en Nature Communications",
+        "fr": "Contribution à BloodGen3 publiée dans Nature Communications"
+      },
+      "body": {
+        "en": "Multi-author collaboration presenting BloodGen3, a reusable framework of 382 transcriptional modules for analysing blood transcriptome data across immunological states. My contribution: functional annotation of modules using <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>.",
+        "es": "Colaboración multi-autor que presenta BloodGen3, un marco reutilizable de 382 módulos transcripcionales para analizar datos transcriptómicos sanguíneos en distintos estados inmunológicos. Mi contribución: anotación funcional de los módulos con <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>.",
+        "fr": "Collaboration multi-auteurs présentant BloodGen3, un cadre réutilisable de 382 modules transcriptionnels pour analyser des données transcriptomiques sanguines à travers les états immunologiques. Ma contribution : annotation fonctionnelle des modules via <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>."
+      },
+      "projects": [
+        "gsan"
+      ],
+      "pubs": [
+        "nature-comms"
+      ]
+    },
+    {
+      "id": "kempe-fellowship",
+      "date": "2020",
+      "until": "2021",
+      "type": "recognition",
+      "title": {
+        "en": "Kempestiftelserna Fellowship and two further competitive grants",
+        "es": "Beca Kempestiftelserna y dos ayudas competitivas más",
+        "fr": "Bourse Kempestiftelserna et deux autres financements compétitifs"
+      },
+      "body": {
+        "en": "Postdoctoral fellowship at Umeå Plant Science Centre to combine ontology-based semantic similarity with deep learning for functional gene annotation in non-model organisms. Two further competitive research grants, secured as main author.",
+        "es": "Beca postdoctoral en el Umeå Plant Science Centre para combinar la similitud semántica basada en ontologías con deep learning en la anotación funcional de genes de organismos no modelo. Otras dos becas de investigación competitivas, obtenidas como autor principal.",
+        "fr": "Bourse postdoctorale à l'Umeå Plant Science Centre pour associer similarité sémantique à base d'ontologies et deep learning dans l'annotation fonctionnelle de gènes chez des organismes non-modèles. Deux autres financements de recherche compétitifs, obtenus en auteur principal."
+      },
+      "role": "umea-postdoc"
+    },
+    {
+      "id": "gsan-nar-2020",
+      "date": "2020",
+      "type": "research",
+      "title": {
+        "en": "GSAn published in NAR Genomics and Bioinformatics",
+        "es": "GSAn publicado en NAR Genomics and Bioinformatics",
+        "fr": "GSAn publié dans NAR Genomics and Bioinformatics"
+      },
+      "body": {
+        "en": "Presents <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, a web server offering an alternative to classical over-representation analysis. Clusters semantic relationships between annotation terms to provide richer, more interpretable gene-set annotations. Still live and in use.",
+        "es": "Presenta <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, un servidor web que ofrece una alternativa al análisis clásico de sobrerrepresentación. Agrupa relaciones semánticas entre términos de anotación para dar anotaciones más ricas e interpretables. Sigue operativo y en uso.",
+        "fr": "Présente <a href='https://gsan.labri.fr/' target='_blank' rel='noopener'>GSAn</a>, serveur web offrant une alternative à l'analyse classique de sur-représentation. Regroupe les relations sémantiques entre termes d'annotation pour des annotations plus riches et interprétables. Toujours en ligne et utilisé."
+      },
+      "metric": {
+        "en": "18+ citations · still in active use",
+        "es": "18+ citas · todavía en uso activo",
+        "fr": "18+ citations · toujours activement utilisé"
+      },
+      "role": "bordeaux-phd",
+      "projects": [
+        "gsan"
+      ],
+      "pubs": [
+        "gsan-nar"
+      ]
+    },
+    {
+      "id": "sfbi-travel-grant",
+      "date": "2017",
+      "type": "recognition",
+      "title": {
+        "en": "SFBI travel grant",
+        "es": "Beca de viaje SFBI",
+        "fr": "Bourse de voyage SFBI"
+      },
+      "body": {
+        "en": "Travel grant from the Société Française de BioInformatique (SFBI) for the invited talk at IEEE Information Visualization in London.",
+        "es": "Beca de viaje de la Société Française de BioInformatique (SFBI) para la ponencia invitada en IEEE Information Visualization en Londres.",
+        "fr": "Bourse de voyage de la Société Française de BioInformatique (SFBI) pour la conférence invitée à IEEE Information Visualization à Londres."
+      },
+      "role": "bordeaux-phd",
+      "pubs": [
+        "ieee-iv"
+      ]
+    },
+    {
+      "id": "podcast-ai-cluster-2026",
+      "date": "2026-03",
+      "type": "recognition",
+      "title": {
+        "en": "Podcast guest on build vs buy vs open source in GenAI",
+        "es": "Invitado en un podcast sobre build vs buy vs open source en GenAI",
+        "fr": "Invité d'un podcast sur le build vs buy vs open source en GenAI"
+      },
+      "body": {
+        "en": "<strong>AI Cluster of the Community of Madrid</strong> — podcast guest: \"Build vs Buy vs Open Source in GenAI\".",
+        "es": "<strong>Clúster IA de la Comunidad de Madrid</strong> — invitado en podcast: «Build vs Buy vs Open Source en GenAI».",
+        "fr": "<strong>Cluster IA de la Communauté de Madrid</strong> — invité podcast : « Build vs Buy vs Open Source en GenAI »."
+      }
+    },
+    {
+      "id": "podcast-tecnalia-2023",
       "date": "2023-06",
-      "kind": "podcast",
-      "text": {
+      "type": "recognition",
+      "title": {
+        "en": "Podcast guest at TECNALIA",
+        "es": "Invitado en un podcast de TECNALIA",
+        "fr": "Invité d'un podcast de TECNALIA"
+      },
+      "body": {
         "en": "<strong>TECNALIA</strong> — podcast guest: \"Tecnología, Pasión y Futuro\".",
         "es": "<strong>TECNALIA</strong> — invitado en podcast: «Tecnología, Pasión y Futuro».",
         "fr": "<strong>TECNALIA</strong> — invité podcast : « Tecnología, Pasión y Futuro »."
       }
     },
     {
+      "id": "thesis-1024-2019",
       "date": "2019-11",
-      "kind": "communication",
-      "text": {
-        "en": "<strong>\"Ma thèse en 1024 caractères\"</strong> — my PhD thesis summarised in French in 1024 characters, selected from hundreds of applications and published in <em>1024 – Bulletin de la Société informatique de France</em>, no. 14, p. 88 (<a href=\"https://1024.socinfo.fr/2019/11/1024_14_2019_88.pdf\" target=\"_blank\" rel=\"noopener\">PDF ↗</a>).",
-        "es": "<strong>«Ma thèse en 1024 caractères»</strong> — mi tesis doctoral resumida en francés en 1024 caracteres, seleccionada entre cientos de candidaturas y publicada en <em>1024 – Bulletin de la Société informatique de France</em>, n.º 14, p. 88 (<a href=\"https://1024.socinfo.fr/2019/11/1024_14_2019_88.pdf\" target=\"_blank\" rel=\"noopener\">PDF ↗</a>).",
-        "fr": "<strong>« Ma thèse en 1024 caractères »</strong> — ma thèse résumée en 1024 caractères, retenue parmi des centaines de candidatures et publiée dans <em>1024 – Bulletin de la Société informatique de France</em>, n° 14, p. 88 (<a href=\"https://1024.socinfo.fr/2019/11/1024_14_2019_88.pdf\" target=\"_blank\" rel=\"noopener\">PDF ↗</a>)."
-      }
+      "type": "recognition",
+      "title": {
+        "en": "PhD thesis summarised in 1024 characters and published",
+        "es": "Tesis doctoral resumida en 1024 caracteres y publicada",
+        "fr": "Thèse résumée en 1024 caractères et publiée"
+      },
+      "body": {
+        "en": "<strong>\"Ma thèse en 1024 caractères\"</strong> — my PhD thesis summarised in French in 1024 characters, selected from hundreds of applications and published in <em>1024 – Bulletin de la Société informatique de France</em>, no. 14, p. 88.",
+        "es": "<strong>«Ma thèse en 1024 caractères»</strong> — mi tesis doctoral resumida en francés en 1024 caracteres, seleccionada entre cientos de candidaturas y publicada en <em>1024 – Bulletin de la Société informatique de France</em>, n.º 14, p. 88.",
+        "fr": "<strong>« Ma thèse en 1024 caractères »</strong> — ma thèse résumée en 1024 caractères, retenue parmi des centaines de candidatures et publiée dans <em>1024 – Bulletin de la Société informatique de France</em>, n° 14, p. 88."
+      },
+      "role": "bordeaux-phd",
+      "links": [
+        {
+          "label": {
+            "en": "Bulletin PDF ↗",
+            "es": "PDF del boletín ↗",
+            "fr": "PDF du bulletin ↗"
+          },
+          "url": "https://1024.socinfo.fr/2019/11/1024_14_2019_88.pdf"
+        }
+      ]
     },
     {
+      "id": "sms-debate-2019",
       "date": "2019-10",
-      "kind": "debate",
-      "text": {
+      "type": "recognition",
+      "title": {
+        "en": "Science–Media–Society debate: a talk on AI through Alan Turing",
+        "es": "Debate Ciencia–Medios–Sociedad: una charla sobre IA a través de Alan Turing",
+        "fr": "Débat Sciences–Médias–Société : une intervention sur l'IA à travers Alan Turing"
+      },
+      "body": {
         "en": "<strong>Science–Media–Society debate (SMS)</strong>, Cap Sciences, Bordeaux — third edition: 3-minute talk introducing artificial intelligence through the story of Alan Turing.",
         "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong>, Cap Sciences, Burdeos — tercera edición: charla de 3 minutos que introduce la inteligencia artificial a través de la historia de Alan Turing.",
         "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong>, Cap Sciences, Bordeaux — troisième édition : intervention de 3 minutes présentant l'intelligence artificielle à travers l'histoire d'Alan Turing."
-      }
+      },
+      "role": "bordeaux-phd"
     },
     {
-      "date": "2018-03",
-      "kind": "competition",
-      "text": {
-        "en": "<strong>Scientific Game Jam</strong>, University of Bordeaux (first edition, Domaine du Haut-Carré) — presented my PhD research and won first prize with a pixel-art game about destroying viruses and collecting DNA to upgrade weapons, an analogy for using ontologies to decipher the unknowns of genes.",
-        "es": "<strong>Scientific Game Jam</strong>, Universidad de Burdeos (primera edición, Domaine du Haut-Carré) — presenté mi investigación doctoral y gané el primer premio con un juego de pixel art sobre destruir virus y recoger ADN para mejorar armas, una analogía del uso de ontologías para descifrar las incógnitas de los genes.",
-        "fr": "<strong>Scientific Game Jam</strong>, Université de Bordeaux (première édition, Domaine du Haut-Carré) — j'ai présenté ma recherche doctorale et remporté le premier prix avec un jeu en pixel art où il fallait détruire des virus et collecter de l'ADN pour améliorer ses armes, une analogie de l'usage des ontologies pour déchiffrer les inconnues des gènes."
-      }
-    },
-    {
+      "id": "sms-debate-2018",
       "date": "2018-04",
-      "kind": "debate",
-      "text": {
+      "type": "recognition",
+      "title": {
+        "en": "Science–Media–Society debate: a talk on fake news in medicine",
+        "es": "Debate Ciencia–Medios–Sociedad: una charla sobre fake news en medicina",
+        "fr": "Débat Sciences–Médias–Société : une intervention sur les fake news en médecine"
+      },
+      "body": {
         "en": "<strong>Science–Media–Society debate (SMS)</strong>, Cap Sciences, Bordeaux — first edition: 3-minute talk on fake news in medicine, the false link between vaccination and autism.",
         "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong>, Cap Sciences, Burdeos — primera edición: charla de 3 minutos sobre las fake news en medicina: el falso vínculo entre vacunación y autismo.",
         "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong>, Cap Sciences, Bordeaux — première édition : intervention de 3 minutes sur les fake news en médecine, le faux lien entre vaccination et autisme."
-      }
+      },
+      "role": "bordeaux-phd"
     },
     {
+      "id": "game-jam-2018",
+      "date": "2018-03",
+      "type": "recognition",
+      "title": {
+        "en": "First prize at the first Scientific Game Jam of the University of Bordeaux",
+        "es": "Primer premio en la primera Scientific Game Jam de la Universidad de Burdeos",
+        "fr": "Premier prix à la première Scientific Game Jam de l'Université de Bordeaux"
+      },
+      "body": {
+        "en": "<strong>Scientific Game Jam</strong>, University of Bordeaux (first edition, Domaine du Haut-Carré) — presented my PhD research and won first prize with a pixel-art game about destroying viruses and collecting DNA to upgrade weapons, an analogy for using ontologies to decipher the unknowns of genes.",
+        "es": "<strong>Scientific Game Jam</strong>, Universidad de Burdeos (primera edición, Domaine du Haut-Carré) — presenté mi investigación doctoral y gané el primer premio con un juego de pixel art sobre destruir virus y recoger ADN para mejorar armas, una analogía del uso de ontologías para descifrar las incógnitas de los genes.",
+        "fr": "<strong>Scientific Game Jam</strong>, Université de Bordeaux (première édition, Domaine du Haut-Carré) — j'ai présenté ma recherche doctorale et remporté le premier prix avec un jeu en pixel art où il fallait détruire des virus et collecter de l'ADN pour améliorer ses armes, une analogie de l'usage des ontologies pour déchiffrer les inconnues des gènes."
+      },
+      "role": "bordeaux-phd"
+    },
+    {
+      "id": "mt180s-2018",
       "date": "2018-02",
-      "kind": "competition",
-      "text": {
+      "type": "recognition",
+      "title": {
+        "en": "Competitor in Ma thèse en 180 secondes (MT180s)",
+        "es": "Participante en Ma thèse en 180 secondes (MT180s)",
+        "fr": "Candidat à Ma thèse en 180 secondes (MT180s)"
+      },
+      "body": {
         "en": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, University of Bordeaux (Domaine du Haut-Carré) — competitor: presented my PhD research in three minutes to the general public.",
         "es": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, Universidad de Burdeos (Domaine du Haut-Carré) — participante: presenté mi investigación doctoral en tres minutos para el público general.",
         "fr": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, Université de Bordeaux (Domaine du Haut-Carré) — candidat : j'ai présenté ma recherche doctorale en trois minutes devant le grand public."
-      }
+      },
+      "role": "bordeaux-phd"
     },
     {
+      "id": "infinite-salud-2016",
       "date": "2016",
-      "kind": "award",
-      "text": {
+      "type": "recognition",
+      "title": {
+        "en": "Infinite Salud award for the best master's internship manuscript",
+        "es": "Premio Infinite Salud al mejor manuscrito de prácticas de máster",
+        "fr": "Prix Infinite Salud du meilleur manuscrit de stage de master"
+      },
+      "body": {
         "en": "<strong>Infinite Salud award</strong> (Fundación Séneca) — prize for the best master's internship manuscript, from my internship at the Université de Bordeaux on a bioinformatics method to ease the biological interpretation of genes.",
         "es": "<strong>Premio Infinite Salud</strong> (Fundación Séneca) — premio al mejor manuscrito de prácticas de máster, de mis prácticas en la Université de Bordeaux, sobre un método bioinformático para facilitar la interpretación biológica de los genes.",
         "fr": "<strong>Prix Infinite Salud</strong> (Fondation Séneca) — prix du meilleur manuscrit de stage de master, issu de mon stage à l'Université de Bordeaux, portant sur une méthode bioinformatique pour faciliter l'interprétation biologique des gènes."
-      }
+      },
+      "role": "intern-bordeaux"
     }
   ]
 }

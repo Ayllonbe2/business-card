@@ -443,6 +443,40 @@
     "es": "Ponencias y medios",
     "fr": "Conférences et médias"
   },
+  "talks": [
+    {
+      "date": "2026-11",
+      "text": {
+        "en": "<strong>Tech Show Madrid 2026</strong> (AI Cluster of the Community of Madrid) — roundtable panelist: \"Generative AI, creativity and new digital business models\".",
+        "es": "<strong>Tech Show Madrid 2026</strong> (Clúster IA de la Comunidad de Madrid) — participante en la mesa redonda «IA generativa, creatividad y nuevos modelos de negocio digitales».",
+        "fr": "<strong>Tech Show Madrid 2026</strong> (Cluster IA de la Communauté de Madrid) — intervenant à la table ronde « IA générative, créativité et nouveaux modèles économiques numériques »."
+      }
+    },
+    {
+      "date": "2026-03",
+      "text": {
+        "en": "<strong>AI Cluster of the Community of Madrid</strong> — podcast guest: \"Build vs Buy vs Open Source in GenAI\".",
+        "es": "<strong>Clúster IA de la Comunidad de Madrid</strong> — invitado en podcast: «Build vs Buy vs Open Source en GenAI».",
+        "fr": "<strong>Cluster IA de la Communauté de Madrid</strong> — invité podcast : « Build vs Buy vs Open Source en GenAI »."
+      }
+    },
+    {
+      "date": "2023-06",
+      "text": {
+        "en": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — industry showcase speaker on advanced image analysis for the chemical industry, plus roundtable participation.",
+        "es": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — ponente en el showcase industrial sobre análisis de imagen avanzado para la industria química, además de participación en mesa redonda.",
+        "fr": "<strong>EXPOQUIMIA 2023</strong>, Barcelone — intervenant du showcase industriel sur l'analyse d'image avancée pour l'industrie chimique, plus participation à une table ronde."
+      }
+    },
+    {
+      "date": "2023-06",
+      "text": {
+        "en": "<strong>TECNALIA</strong> — podcast guest: \"Tecnología, Pasión y Futuro\".",
+        "es": "<strong>TECNALIA</strong> — invitado en podcast: «Tecnología, Pasión y Futuro».",
+        "fr": "<strong>TECNALIA</strong> — invité podcast : « Tecnología, Pasión y Futuro »."
+      }
+    }
+  ],
   "editorial_title": {
     "en": "Editorial & funding",
     "es": "Editorial y financiación",

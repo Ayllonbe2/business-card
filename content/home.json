@@ -78,11 +78,6 @@
       }
     }
   ],
-  "impact_cta": {
-    "en": "Achievements timeline",
-    "es": "Cronología de logros",
-    "fr": "Chronologie des réalisations"
-  },
   "about": {
     "text": {
       "en": "Data scientist turned AI/ML leader — PhD in Computer Science, MSc in Artificial Intelligence. I lead a multidisciplinary team and a ~€1.3M platform budget at BASF Digital Solutions and make the portfolio calls: what to scale, what to hand over, what to shut down.",
@@ -172,5 +167,18 @@
       "es": "Cómo lidero",
       "fr": "Ma façon de diriger"
     }
+  },
+  "achievements": {
+    "text": {
+      "en": "A growing log of results: what changed, by how much, and where it came from. These are the most recent highlights; the archive keeps all of them.",
+      "es": "Un registro vivo de resultados: qué cambió, cuánto y de dónde viene. Aquí van los más recientes; el archivo los guarda todos.",
+      "fr": "Un journal de résultats en continu : ce qui a changé, de combien, et d'où cela vient. Voici les plus récents ; l'archive les conserve tous."
+    },
+    "cta": {
+      "en": "All achievements",
+      "es": "Todos los logros",
+      "fr": "Toutes les réalisations"
+    },
+    "limit": 4
   }
 }
