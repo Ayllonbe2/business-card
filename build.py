@@ -49,6 +49,7 @@ ICONS = {
     "scholar": '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>',
     "mic": '<path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/>',
     "pen": '<path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/>',
+    "chevron": '<path d="m6 9 6 6 6-6"/>',
     "menu": '<line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/>',
 }
 
@@ -260,6 +261,16 @@ class Site:
                 raise BuildError(f"home featured publication '{pb}' not found")
         for c in self.edu["certifications"] + self.edu["grants"] + self.res["service"]:
             date_key(c["date"])
+        pub_types = {t["id"] for t in self.res["pub_types"]}
+        for p in self.res["publications"]:
+            if p.get("type") not in pub_types:
+                raise BuildError(f"publication {p['id']}: unknown type '{p.get('type')}' (known: {sorted(pub_types)})")
+        for i, x in enumerate(self.res["talks"]):
+            if x.get("kind") not in self.res["talk_kinds"]:
+                raise BuildError(f"research.talks[{i}]: unknown kind '{x.get('kind')}'")
+        for c in self.edu["certifications"]:
+            if c.get("logo") and not (STATIC / c["logo"]["src"]).is_file():
+                raise BuildError(f"certification '{c['title']['en']}': logo file static/{c['logo']['src']} not found")
         flagged = {p["id"] for p in self.res["publications"] if p.get("featured")}
         if flagged != set(self.home["research"]["featured"]):
             raise BuildError("research 'featured' flags and home.research.featured differ")
@@ -441,6 +452,14 @@ def cert_credential(S, lang, c):
         return ""
     site = f' · <a href="{attr(cr["url"])}" target="_blank" rel="noopener">{html.escape(cr["site"])} ↗</a>' if cr.get("url") else ""
     return f'<p class="cred">{rich(S.edu["credential_label"], lang)}: <span class="cred-id">{html.escape(cr["id"])}</span>{site}</p>'
+
+
+def cert_logo(c, lang):
+    lg = c.get("logo")
+    if not lg:
+        return '<div class="cert-logo"></div>'
+    return (f'<div class="cert-logo"><img src="/{attr(lg["src"])}" alt="{attr(plain(lg["alt"], lang))}" '
+            f'width="{lg["w"]}" height="{lg["h"]}" loading="lazy" /></div>')
 
 
 def cert_title(c, lang):
@@ -672,20 +691,21 @@ def render_experience(S, lang):
 
 
 def project_article(S, lang, p):
+    """A collapsed card (icon, badge, title, one-line summary, headline metric); the detail opens on click."""
     body = "".join(f"<p>{rich(x, lang)}</p>" for x in p["body"])
     points = ""
     if p.get("points"):
-        points = '\n          <ul class="points">\n' + "\n".join(f"            <li>{rich(x, lang)}</li>" for x in p["points"]) + "\n          </ul>"
+        points = '\n            <ul class="points">\n' + "\n".join(f"              <li>{rich(x, lang)}</li>" for x in p["points"]) + "\n            </ul>"
     sub = ""
     if p.get("subtitle"):
         dates = f'<span class="role-dates">{rich(p["dates"], lang)}</span>' if p.get("dates") else ""
-        sub = f'\n          <div class="proj-sub">{rich(p["subtitle"], lang)}{dates}</div>'
+        sub = f'\n            <span class="proj-sub">{rich(p["subtitle"], lang)}{dates}</span>'
     access = ""
     foot_links = [f'<a href="{attr(l["url"])}" target="_blank" rel="noopener">{rich(l["label"], lang)}</a>' for l in p.get("links", [])]
     if p.get("access"):
-        access = f'\n          <p class="venture-access">{"".join(foot_links)}<span>{rich(p["access"], lang)}</span></p>'
+        access = f'\n            <p class="venture-access">{"".join(foot_links)}<span>{rich(p["access"], lang)}</span></p>'
         foot_links = []
-    metric = f'\n          <span class="pf-metric">{rich(p["metric"], lang)}</span>' if p.get("metric") else ""
+    metric = f'\n            <span class="pf-metric">{rich(p["metric"], lang)}</span>' if p.get("metric") else ""
     foot = list(foot_links)
     if p.get("pubs"):
         pubs = " · ".join(
@@ -695,17 +715,19 @@ def project_article(S, lang, p):
         foot.append(f'<span><span class="label">{rich(S.ui["related_pubs"], lang)}:</span> {pubs}</span>')
     if p.get("role"):
         foot.append(f'<a href="{url(lang, "experience", p["role"])}">{rich(S.ui["role_details"], lang)} →</a>')
-    foot_html = f'\n          <div class="proj-foot">{"".join(foot)}</div>' if foot else ""
-    return f"""        <article class="card proj" id="{p["id"]}">
-          <div class="pf-top">
+    foot_html = f'\n            <div class="proj-foot">{"".join(foot)}</div>' if foot else ""
+    return f"""        <details class="card proj" id="{p["id"]}">
+          <summary>
             <span class="pf-icon">{icon(p["icon"])}</span>
             <span class="badge-type">{rich(p["badge"], lang)}</span>
+            <h3>{rich(p["title"], lang)}</h3>{sub}
+            <span class="proj-short">{rich(p["short"], lang)}</span>{metric}
+            <span class="proj-chev" aria-hidden="true">{icon("chevron", 18)}</span>
+          </summary>
+          <div class="proj-detail">
+            <div class="proj-body">{body}</div>{points}{access}{foot_html}
           </div>
-          <h3>{rich(p["title"], lang)}</h3>{sub}
-          <div class="proj-body">{body}</div>{points}{access}
-          <div class="proj-end">{metric}{foot_html}
-          </div>
-        </article>"""
+        </details>"""
 
 
 def render_projects(S, lang):
@@ -784,21 +806,39 @@ def render_achievements(S, lang):
     return f"{plain(S.nav['achievements'], lang)} · {S.site['name']}", plain(A["intro"], lang), main
 
 
+def pub_item(p, lang):
+    place = f'&nbsp;· {html.escape(p["place"])}' if p.get("place") else ""
+    links = "".join(f'<a href="{attr(l["url"])}" target="_blank" rel="noopener">{rich(l["label"], lang)}</a>' for l in p["links"])
+    links_html = f'\n                <div class="pub-links">{links}</div>' if links else ""
+    return f"""            <li class="pub-item" id="pub-{p["id"]}">
+              <div class="pub-when">{p["year"]}</div>
+              <div class="pub-main">
+                <div class="pub-venue"><strong>{html.escape(p["venue"])}</strong>{place}&nbsp;· <em>{rich(p["badge"], lang)}</em></div>
+                <h4 class="pub-title">{rich(p["title"], lang)}</h4>
+                <div class="pub-authors">{p["authors"]}</div>
+                <p class="pub-desc">{rich(p["desc"], lang)}</p>{links_html}
+              </div>
+            </li>"""
+
+
 def render_research(S, lang):
     R = S.res
-    pubs = []
-    for p in R["publications"]:
-        place = f'&nbsp;· {html.escape(p["place"])}' if p.get("place") else ""
-        links = "".join(f'<a href="{attr(l["url"])}" target="_blank" rel="noopener">{rich(l["label"], lang)}</a>' for l in p["links"])
-        pubs.append(f"""            <li class="pub-item" id="pub-{p["id"]}">
-              <div class="pub-venue"><strong>{html.escape(p["venue"])}</strong>&nbsp;· <span class="pub-year">{p["year"]}</span>{place}&nbsp;· <em>{rich(p["badge"], lang)}</em></div>
-              <h4 class="pub-title">{rich(p["title"], lang)}</h4>
-              <div class="pub-authors">{p["authors"]}</div>
-              <p class="pub-desc">{rich(p["desc"], lang)}</p>
-              <div class="pub-links">{links}</div>
-            </li>""")
+    groups = []
+    for pt in R["pub_types"]:
+        items = sorted((p for p in R["publications"] if p["type"] == pt["id"]), key=lambda p: -p["year"])  # stable
+        if not items:
+            continue
+        groups.append(f"""          <h3 class="sub-block-title">{rich(pt["label"], lang)}<span class="count">{len(items)}</span></h3>
+          <div class="card pad">
+            <ol class="pub-list">
+{chr(10).join(pub_item(p, lang) for p in items)}
+            </ol>
+          </div>""")
     talks = "\n".join(
-        f'              <li><span class="talk-year">{fmt_date(x["date"], lang)}</span>{rich(x["text"], lang)}</li>'
+        f"""            <div class="entry">
+              <div class="entry-year">{fmt_date(x["date"], lang)}</div>
+              <div><span class="badge-type">{rich(R["talk_kinds"][x["kind"]], lang)}</span><p>{rich(x["text"], lang)}</p></div>
+            </div>"""
         for x in newest_first(R["talks"])
     )
     scholar = S.site["links"]["scholar"]
@@ -816,29 +856,23 @@ def render_research(S, lang):
             </div>"""
         for x in newest_first(R["service"])
     )
-    inner = f"""        <div class="research-main">
-          <div class="card panel">
-            <div class="panel-head"><h2 class="panel-title">{rich(R["publications_title"], lang)}</h2></div>
-            <ol class="pub-list">
-{chr(10).join(pubs)}
-            </ol>
-            <div class="panel-foot">
-              <a class="btn btn-secondary" href="{attr(scholar)}" target="_blank" rel="noopener">{icon("scholar", 18)}<span>{rich(R["scholar_cta"], lang)}</span></a>
-            </div>
-          </div>
-          <div class="micro-stack">
-            <div class="card micro">
-              <div class="micro-head"><span class="micro-icon">{icon("mic", 16)}</span><h2>{rich(R["talks_title"], lang)}</h2></div>
-              <ul>
+    inner = f"""        <section class="block" id="publications">
+          <h2 class="block-title">{rich(R["publications_title"], lang)}</h2>
+{chr(10).join(groups)}
+          <p class="cta-row">
+            <a class="btn btn-secondary" href="{attr(scholar)}" target="_blank" rel="noopener">{icon("scholar", 18)}<span>{rich(R["scholar_cta"], lang)}</span></a>
+          </p>
+        </section>
+        <section class="block" id="media">
+          <h2 class="block-title">{rich(R["talks_title"], lang)}</h2>
+          <div class="card pad">
 {talks}
-              </ul>
-            </div>
-            <div class="card micro">
-              <div class="micro-head"><span class="micro-icon">{icon("pen", 16)}</span><h2>{rich(R["editorial_title"], lang)}</h2></div>
-              <p>{rich(R["editorial"], lang)}</p>
-            </div>
           </div>
-        </div>
+        </section>
+        <section class="block" id="editorial">
+          <h2 class="block-title">{rich(R["editorial_title"], lang)}</h2>
+          <div class="card text-card"><p>{rich(R["editorial"], lang)}</p></div>
+        </section>
         <section class="block">
           <h2 class="block-title">{rich(pr["title"], lang)}</h2>
           {peer_table}
@@ -879,8 +913,9 @@ def render_education(S, lang):
         for x in E["languages"]
     )
     certs = "\n".join(
-        f"""            <div class="entry">
+        f"""            <div class="entry cert-entry">
               <div class="entry-year">{fmt_date(c["date"], lang)}</div>
+              {cert_logo(c, lang)}
               <div><h3>{cert_title(c, lang)}</h3><p>{rich(c["issuer"], lang)} · {rich(c["kind"], lang)}</p>{cert_credential(S, lang, c)}</div>
             </div>"""
         for c in cert_items(S)
@@ -951,7 +986,7 @@ def render_about(S, lang):
     )
     inner = f"""        <section class="block">
           <h2 class="block-title">{rich(A["summary_title"], lang)}</h2>
-          <div class="summary-text">{summary}</div>
+          <div class="card text-card summary-text">{summary}</div>
         </section>
         <section class="block">
           <h2 class="block-title">{rich(A["skills_title"], lang)}</h2>

@@ -61,6 +61,27 @@
   Array.prototype.forEach.call(blocks, glueSeparators);
   Array.prototype.forEach.call(blocks, preventWidow);
 
+  /* ---------- Projects: collapsible cards ---------- */
+
+  // A link to /projects/#id (from the landing page, the experience timeline, the achievements log)
+  // opens the card it points to.
+  function openLinkedProject() {
+    var id = "";
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (e) { return; }
+    var el = id ? document.getElementById(id) : null;
+    if (el && el.tagName === "DETAILS" && !el.open) {
+      el.open = true;
+      el.scrollIntoView();
+    }
+  }
+  window.addEventListener("hashchange", openLinkedProject);
+  openLinkedProject();
+
+  // Printing shows every project in full.
+  window.addEventListener("beforeprint", function () {
+    Array.prototype.forEach.call(document.querySelectorAll("details.proj"), function (d) { d.open = true; });
+  });
+
   /* ---------- Mobile navigation ---------- */
 
   var nav = document.querySelector(".nav");
