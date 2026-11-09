@@ -85,6 +85,39 @@
     {
       "date": "2026-11",
       "title": {
+        "en": "Building effective human-agent teams",
+        "es": "Building effective human-agent teams",
+        "fr": "Building effective human-agent teams"
+      },
+      "issuer": {
+        "en": "Claude Academy (Anthropic)",
+        "es": "Claude Academy (Anthropic)",
+        "fr": "Claude Academy (Anthropic)"
+      },
+      "kind": {
+        "en": "Course completion badge",
+        "es": "Insignia de finalización de curso",
+        "fr": "Badge de fin de cours"
+      },
+      "credential": {
+        "id": "b1e610617835a2a97fcf828a5da1913a",
+        "url": "https://academy.claude.com/verify/b1e610617835a2a97fcf828a5da1913a",
+        "site": "academy.claude.com"
+      },
+      "logo": {
+        "src": "certs/claude-academy-human-agent-teams.png",
+        "w": 200,
+        "h": 200,
+        "alt": {
+          "en": "Claude Academy badge: Building effective human-agent teams",
+          "es": "Insignia de Claude Academy: Building effective human-agent teams",
+          "fr": "Badge Claude Academy : Building effective human-agent teams"
+        }
+      }
+    },
+    {
+      "date": "2026-11",
+      "title": {
         "en": "Databricks AI Agent Fundamentals Accreditation",
         "es": "Databricks AI Agent Fundamentals Accreditation",
         "fr": "Databricks AI Agent Fundamentals Accreditation"
