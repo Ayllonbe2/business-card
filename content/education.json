@@ -85,9 +85,9 @@
     {
       "date": "2026-11",
       "title": {
-        "en": "Databricks Accredited AI Agent Fundamentals",
-        "es": "Databricks Accredited AI Agent Fundamentals",
-        "fr": "Databricks Accredited AI Agent Fundamentals"
+        "en": "Databricks AI Agent Fundamentals Accreditation",
+        "es": "Databricks AI Agent Fundamentals Accreditation",
+        "fr": "Databricks AI Agent Fundamentals Accreditation"
       },
       "issuer": {
         "en": "Databricks Academy",
@@ -99,14 +99,24 @@
         "es": "Acreditación",
         "fr": "Accréditation"
       },
-      "featured": true
+      "featured": true,
+      "logo": {
+        "src": "certs/databricks-ai-agent-fundamentals.png",
+        "w": 180,
+        "h": 200,
+        "alt": {
+          "en": "Databricks AI Agent Fundamentals badge",
+          "es": "Insignia Databricks AI Agent Fundamentals",
+          "fr": "Badge Databricks AI Agent Fundamentals"
+        }
+      }
     },
     {
       "date": "2026-11",
       "title": {
-        "en": "Databricks Accredited Databricks Fundamentals",
-        "es": "Databricks Accredited Databricks Fundamentals",
-        "fr": "Databricks Accredited Databricks Fundamentals"
+        "en": "Databricks Fundamentals Accreditation",
+        "es": "Databricks Fundamentals Accreditation",
+        "fr": "Databricks Fundamentals Accreditation"
       },
       "issuer": {
         "en": "Databricks Academy",
@@ -118,7 +128,17 @@
         "es": "Acreditación",
         "fr": "Accréditation"
       },
-      "featured": true
+      "featured": true,
+      "logo": {
+        "src": "certs/databricks-fundamentals.png",
+        "w": 180,
+        "h": 200,
+        "alt": {
+          "en": "Databricks Fundamentals badge",
+          "es": "Insignia Databricks Fundamentals",
+          "fr": "Badge Databricks Fundamentals"
+        }
+      }
     },
     {
       "date": "2023-10",
@@ -142,7 +162,17 @@
         "url": "https://verify.certiport.com/",
         "site": "verify.certiport.com"
       },
-      "featured": true
+      "featured": true,
+      "logo": {
+        "src": "certs/microsoft-azure-fundamentals.png",
+        "w": 193,
+        "h": 200,
+        "alt": {
+          "en": "Microsoft Certified: Fundamentals badge",
+          "es": "Insignia Microsoft Certified: Fundamentals",
+          "fr": "Badge Microsoft Certified : Fundamentals"
+        }
+      }
     },
     {
       "date": "2023",
@@ -161,7 +191,17 @@
         "es": "Curso universitario",
         "fr": "Cours universitaire"
       },
-      "featured": true
+      "featured": true,
+      "logo": {
+        "src": "universidades/UNIR.JPG",
+        "w": 1168,
+        "h": 379,
+        "alt": {
+          "en": "UNIR logo",
+          "es": "Logotipo de UNIR",
+          "fr": "Logo de l'UNIR"
+        }
+      }
     }
   ],
   "grants_title": {

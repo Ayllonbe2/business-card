@@ -40,7 +40,8 @@
           },
           "url": "https://doi.org/10.1111/ppl.14537"
         }
-      ]
+      ],
+      "type": "journal"
     },
     {
       "id": "eppo-frontiers",
@@ -72,7 +73,8 @@
           },
           "url": "https://www.frontiersin.org/articles/10.3389/frai.2023.1131667/full"
         }
-      ]
+      ],
+      "type": "journal"
     },
     {
       "id": "gomo-ismb",
@@ -113,7 +115,8 @@
           "url": "https://doi.org/10.5281/zenodo.7007495"
         }
       ],
-      "place": "Madison, WI"
+      "place": "Madison, WI",
+      "type": "international"
     },
     {
       "id": "federated-ismb",
@@ -153,7 +156,8 @@
           },
           "url": "https://arxiv.org/abs/2206.01594"
         }
-      ]
+      ],
+      "type": "international"
     },
     {
       "id": "nature-comms",
@@ -185,7 +189,8 @@
           },
           "url": "https://www.nature.com/articles/s41467-021-24584-w"
         }
-      ]
+      ],
+      "type": "journal"
     },
     {
       "id": "plantgenie-plaza",
@@ -217,7 +222,8 @@
           },
           "url": "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A1426556"
         }
-      ]
+      ],
+      "type": "preprint"
     },
     {
       "id": "gsan-nar",
@@ -257,7 +263,8 @@
           },
           "url": "https://gsan.labri.fr/"
         }
-      ]
+      ],
+      "type": "journal"
     },
     {
       "id": "jobim-2019-talk",
@@ -290,7 +297,8 @@
           },
           "url": "https://uncloud.univ-nantes.fr/index.php/s/wsXfE8zqEaqsiNk"
         }
-      ]
+      ],
+      "type": "national"
     },
     {
       "id": "jobim-2019-poster",
@@ -323,7 +331,8 @@
           },
           "url": "https://uncloud.univ-nantes.fr/index.php/s/wsXfE8zqEaqsiNk"
         }
-      ]
+      ],
+      "type": "national"
     },
     {
       "id": "plos-one",
@@ -355,7 +364,8 @@
           },
           "url": "https://doi.org/10.1371/journal.pone.0208037"
         }
-      ]
+      ],
+      "type": "journal"
     },
     {
       "id": "jobim-2018-motvis",
@@ -388,7 +398,8 @@
           },
           "url": "https://jobim2018.sciencesconf.org/data/pages/Book_JOBIM2018_V3.pdf"
         }
-      ]
+      ],
+      "type": "national"
     },
     {
       "id": "ieee-iv",
@@ -421,7 +432,8 @@
           "url": "https://doi.org/10.1109/iV.2017.18"
         }
       ],
-      "place": "London"
+      "place": "London",
+      "type": "international"
     },
     {
       "id": "bmc-biophysics",
@@ -453,13 +465,26 @@
           },
           "url": "https://doi.org/10.1186/s13628-015-0025-7"
         }
-      ]
+      ],
+      "type": "journal"
     }
   ],
   "talks_title": {
     "en": "Speaking & media",
     "es": "Ponencias y medios",
     "fr": "Conférences et médias"
+  },
+  "talk_kinds": {
+    "talk": {
+      "en": "Talk",
+      "es": "Ponencia",
+      "fr": "Conférence"
+    },
+    "podcast": {
+      "en": "Podcast",
+      "es": "Podcast",
+      "fr": "Podcast"
+    }
   },
   "talks": [
     {
@@ -468,7 +493,8 @@
         "en": "<strong>Tech Show Madrid 2026</strong> (AI Cluster of the Community of Madrid) — roundtable panelist: \"Generative AI, creativity and new digital business models\".",
         "es": "<strong>Tech Show Madrid 2026</strong> (Clúster IA de la Comunidad de Madrid) — participante en la mesa redonda «IA generativa, creatividad y nuevos modelos de negocio digitales».",
         "fr": "<strong>Tech Show Madrid 2026</strong> (Cluster IA de la Communauté de Madrid) — intervenant à la table ronde « IA générative, créativité et nouveaux modèles économiques numériques »."
-      }
+      },
+      "kind": "talk"
     },
     {
       "date": "2026-03",
@@ -476,7 +502,8 @@
         "en": "<strong>AI Cluster of the Community of Madrid</strong> — podcast guest: \"Build vs Buy vs Open Source in GenAI\".",
         "es": "<strong>Clúster IA de la Comunidad de Madrid</strong> — invitado en podcast: «Build vs Buy vs Open Source en GenAI».",
         "fr": "<strong>Cluster IA de la Communauté de Madrid</strong> — invité podcast : « Build vs Buy vs Open Source en GenAI »."
-      }
+      },
+      "kind": "podcast"
     },
     {
       "date": "2023-06",
@@ -484,7 +511,8 @@
         "en": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — industry showcase speaker on advanced image analysis for the chemical industry, plus roundtable participation.",
         "es": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — ponente en el showcase industrial sobre análisis de imagen avanzado para la industria química, además de participación en mesa redonda.",
         "fr": "<strong>EXPOQUIMIA 2023</strong>, Barcelone — intervenant du showcase industriel sur l'analyse d'image avancée pour l'industrie chimique, plus participation à une table ronde."
-      }
+      },
+      "kind": "talk"
     },
     {
       "date": "2023-06",
@@ -492,7 +520,8 @@
         "en": "<strong>TECNALIA</strong> — podcast guest: \"Tecnología, Pasión y Futuro\".",
         "es": "<strong>TECNALIA</strong> — invitado en podcast: «Tecnología, Pasión y Futuro».",
         "fr": "<strong>TECNALIA</strong> — invité podcast : « Tecnología, Pasión y Futuro »."
-      }
+      },
+      "kind": "podcast"
     }
   ],
   "editorial_title": {
@@ -510,6 +539,40 @@
     "es": "Publicaciones",
     "fr": "Publications"
   },
+  "pub_types": [
+    {
+      "id": "journal",
+      "label": {
+        "en": "Journal articles",
+        "es": "Artículos en revistas",
+        "fr": "Articles de revue"
+      }
+    },
+    {
+      "id": "international",
+      "label": {
+        "en": "International conferences",
+        "es": "Congresos internacionales",
+        "fr": "Conférences internationales"
+      }
+    },
+    {
+      "id": "national",
+      "label": {
+        "en": "National conferences (JOBIM)",
+        "es": "Congresos nacionales (JOBIM)",
+        "fr": "Conférences nationales (JOBIM)"
+      }
+    },
+    {
+      "id": "preprint",
+      "label": {
+        "en": "Preprints",
+        "es": "Preprints",
+        "fr": "Preprints"
+      }
+    }
+  ],
   "peer_review": {
     "title": {
       "en": "Peer review",
