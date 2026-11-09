@@ -199,6 +199,8 @@ class Site:
                 raise BuildError(f"achievements entry {i}: unknown kind '{x['kind']}'")
             if x.get("link") and x["link"]["page"] not in PAGES:
                 raise BuildError(f"achievements entry {i}: unknown page '{x['link']['page']}'")
+        for c in self.edu["certifications"]:
+            date_key(c["date"])
         flagged = {p["id"] for p in self.res["publications"] if p.get("featured")}
         if flagged != set(self.home["research"]["featured"]):
             raise BuildError("research 'featured' flags and home.research.featured differ")
@@ -318,8 +320,17 @@ def data_table(lang, caption, cols, rows, foot=None):
 
 # ------------------------------------------------------------------------------ landing page
 def cert_items(S):
-    """Certifications and courses, newest first (input order kept within a year)."""
-    return sorted(S.edu["certifications"], key=lambda c: -int(c["year"]))
+    """Certifications and courses, newest first (input order kept within a month, or within a year when no month)."""
+    return newest_first(S.edu["certifications"])
+
+
+def cert_credential(S, lang, c):
+    """Optional line with the verification code of a credential and a link to the verifier."""
+    cr = c.get("credential")
+    if not cr:
+        return ""
+    site = f' · <a href="{attr(cr["url"])}" target="_blank" rel="noopener">{html.escape(cr["site"])} ↗</a>' if cr.get("url") else ""
+    return f'<p class="cred">{rich(S.edu["credential_label"], lang)}: <span class="cred-id">{html.escape(cr["id"])}</span>{site}</p>'
 
 
 def cert_title(c, lang):
@@ -383,7 +394,7 @@ def render_home(S, lang):
     )
     cert_rows = "".join(
         f"""            <div class="glance-row">
-              <div class="glance-when">{c["year"]}</div>
+              <div class="glance-when">{fmt_date(c["date"], lang)}</div>
               <div class="glance-what"><strong>{rich(c["title"], lang)}</strong><span>{rich(c["issuer"], lang)}</span></div>
             </div>
 """
@@ -702,8 +713,8 @@ def render_education(S, lang):
     )
     certs = "\n".join(
         f"""            <div class="entry">
-              <div class="entry-year">{c["year"]}</div>
-              <div><h3>{cert_title(c, lang)}</h3><p>{rich(c["issuer"], lang)} · {rich(c["kind"], lang)}</p></div>
+              <div class="entry-year">{fmt_date(c["date"], lang)}</div>
+              <div><h3>{cert_title(c, lang)}</h3><p>{rich(c["issuer"], lang)} · {rich(c["kind"], lang)}</p>{cert_credential(S, lang, c)}</div>
             </div>"""
         for c in cert_items(S)
     )
@@ -773,7 +784,7 @@ def render_about(S, lang):
     )
     inner = f"""        <section class="block">
           <h2 class="block-title">{rich(A["summary_title"], lang)}</h2>
-          <div class="summary-cols">{summary}</div>
+          <div class="summary-text">{summary}</div>
         </section>
         <section class="block">
           <h2 class="block-title">{rich(A["skills_title"], lang)}</h2>

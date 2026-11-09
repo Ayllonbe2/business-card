@@ -76,32 +76,56 @@
     "es": "Certificaciones y formación",
     "fr": "Certifications et formations"
   },
+  "credential_label": {
+    "en": "Verification code",
+    "es": "Código de verificación",
+    "fr": "Code de vérification"
+  },
   "certifications": [
     {
-      "year": "2026",
+      "date": "2026-11",
       "title": {
-        "en": "Databricks Fundamentals Accreditation",
-        "es": "Databricks Fundamentals Accreditation",
-        "fr": "Databricks Fundamentals Accreditation"
+        "en": "Databricks Accredited AI Agent Fundamentals",
+        "es": "Databricks Accredited AI Agent Fundamentals",
+        "fr": "Databricks Accredited AI Agent Fundamentals"
       },
       "issuer": {
-        "en": "Databricks",
-        "es": "Databricks",
-        "fr": "Databricks"
+        "en": "Databricks Academy",
+        "es": "Databricks Academy",
+        "fr": "Databricks Academy"
       },
       "kind": {
-        "en": "Certification",
-        "es": "Certificación",
-        "fr": "Certification"
+        "en": "Accreditation",
+        "es": "Acreditación",
+        "fr": "Accréditation"
       },
       "featured": true
     },
     {
-      "year": "2023",
+      "date": "2026-11",
       "title": {
-        "en": "AZ-900: Microsoft Azure Fundamentals",
-        "es": "AZ-900: Microsoft Azure Fundamentals",
-        "fr": "AZ-900: Microsoft Azure Fundamentals"
+        "en": "Databricks Accredited Databricks Fundamentals",
+        "es": "Databricks Accredited Databricks Fundamentals",
+        "fr": "Databricks Accredited Databricks Fundamentals"
+      },
+      "issuer": {
+        "en": "Databricks Academy",
+        "es": "Databricks Academy",
+        "fr": "Databricks Academy"
+      },
+      "kind": {
+        "en": "Accreditation",
+        "es": "Acreditación",
+        "fr": "Accréditation"
+      },
+      "featured": true
+    },
+    {
+      "date": "2023-10",
+      "title": {
+        "en": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+        "es": "Microsoft Certified: Azure Fundamentals (AZ-900)",
+        "fr": "Microsoft Certified: Azure Fundamentals (AZ-900)"
       },
       "issuer": {
         "en": "Microsoft",
@@ -113,10 +137,15 @@
         "es": "Certificación",
         "fr": "Certification"
       },
+      "credential": {
+        "id": "ELwJ-uTbx",
+        "url": "https://verify.certiport.com/",
+        "site": "verify.certiport.com"
+      },
       "featured": true
     },
     {
-      "year": "2023",
+      "date": "2023",
       "title": {
         "en": "Advanced University Course in Data Analyst for Artificial Intelligence",
         "es": "Curso Universitario Avanzado en Data analyst para Inteligencia Artificial",

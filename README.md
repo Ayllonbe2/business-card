@@ -33,7 +33,7 @@ an unknown project/publication/role, or if an internal link or `#anchor` does no
   To show it on the landing page, add its id to `projects.featured` in `content/home.json`.
 * **A publication** — add it to `publications` in `content/research.json`. `featured: true` puts it on the landing page and
   must match `research.featured` in `content/home.json`.
-* **A certification or course** — add an object to `certifications` in `content/education.json` (`year`, `title`, `issuer`, `kind`; optional `url` links the credential; `featured: true` also lists it on the landing page). Newest year first on the page.
+* **A certification or course** — add an object to `certifications` in `content/education.json` (`date` as `"YYYY"` or `"YYYY-MM"`, `title`, `issuer`, `kind`; optional `url` links the credential, optional `credential` = `{id, url, site}` prints the verification code with a link to the verifier; `featured: true` also lists it on the landing page). Newest first on the page; input order breaks ties within the same month.
 * **An achievement** — `content/achievements.json`. `impact` (business results) and `recognition` (talks, podcasts, debates,
   competitions, science communication) are lists of entries with a `date` as `"YYYY"` or `"YYYY-MM"` (shown as "Nov 2026",
   localised per language; a bare year sorts after the months of that year). Order in the file does not matter: pages sort
