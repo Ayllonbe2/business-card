@@ -1,6 +1,6 @@
 # Aarón Ayllón Benítez — career archive
 
-A small static site: a short landing page plus detail pages (Experience, Projects, Research, Education, About),
+A small static site: a short landing page plus detail pages (Experience, Projects, Achievements, Research, Education, About),
 published in English (`/`), Spanish (`/es/`) and French (`/fr/`). Deployed as Cloudflare static assets from `public/`.
 
 ## Layout
@@ -34,7 +34,12 @@ an unknown project/publication/role, or if an internal link or `#anchor` does no
 * **A publication** — add it to `publications` in `content/research.json`. `featured: true` puts it on the landing page and
   must match `research.featured` in `content/home.json`.
 * **A certification or course** — add an object to `certifications` in `content/education.json` (`year`, `title`, `issuer`, `kind`; optional `url` links the credential; `featured: true` also lists it on the landing page). Newest year first on the page.
-* **Talks, grants, degrees, skills, principles** — the matching arrays in `research.json`, `education.json`, `about.json`.
+* **An achievement** — `content/achievements.json`. `impact` (business results) and `recognition` (talks, podcasts, debates,
+  competitions, science communication) are lists of entries with a `date` as `"YYYY"` or `"YYYY-MM"` (shown as "Nov 2026",
+  localised per language; a bare year sorts after the months of that year). Order in the file does not matter: pages sort
+  newest first. `impact` entries take an optional `link` (`page` + `anchor`); `recognition` entries take a `kind` from `kinds`.
+  Recognition entries of kind `talk` or `podcast` also feed the "Speaking & media" card on `/research/`.
+* **Grants, degrees, skills, principles** — the matching arrays in `education.json`, `about.json`.
 
 Strings that contain `<` are treated as HTML (`<strong>`, `<em>`, `<a href=…>`); plain strings are escaped.
 Set `base_url` in `content/site.json` to enable canonical/hreflang tags, `sitemap.xml` and `robots.txt`.

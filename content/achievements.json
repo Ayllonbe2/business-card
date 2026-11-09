@@ -1,0 +1,214 @@
+{
+  "intro": {
+    "en": "Dated outcomes and public milestones: what the work delivered for the business, and where it was shared, awarded or debated.",
+    "es": "Resultados con fecha e hitos públicos: lo que el trabajo aportó al negocio y dónde se compartió, se premió o se debatió.",
+    "fr": "Résultats datés et jalons publics : ce que le travail a apporté à l'entreprise, et où il a été partagé, récompensé ou débattu."
+  },
+  "impact_title": {
+    "en": "Business impact",
+    "es": "Impacto de negocio",
+    "fr": "Impact business"
+  },
+  "recognition_title": {
+    "en": "Speaking, media & awards",
+    "es": "Ponencias, medios y premios",
+    "fr": "Conférences, médias et prix"
+  },
+  "kinds": {
+    "talk": {
+      "en": "Talk",
+      "es": "Ponencia",
+      "fr": "Conférence"
+    },
+    "podcast": {
+      "en": "Podcast",
+      "es": "Podcast",
+      "fr": "Podcast"
+    },
+    "debate": {
+      "en": "Debate",
+      "es": "Debate",
+      "fr": "Débat"
+    },
+    "competition": {
+      "en": "Competition",
+      "es": "Concurso",
+      "fr": "Concours"
+    },
+    "communication": {
+      "en": "Science communication",
+      "es": "Divulgación científica",
+      "fr": "Vulgarisation scientifique"
+    }
+  },
+  "impact": [
+    {
+      "date": "2026",
+      "link": {
+        "page": "projects",
+        "anchor": "platforms"
+      },
+      "title": {
+        "en": "€3.5M+ recurring savings from portfolio decisions",
+        "es": "3,5M€+ de ahorro recurrente por decisiones de portafolio",
+        "fr": "3,5M€+ d'économies récurrentes issues des décisions de portefeuille"
+      },
+      "text": {
+        "en": "Transferred the CV/MLOps platform to its best-fit owner (~€2M recurring savings) and closed the forecasting platform after an ROI review (~€1.5M savings).",
+        "es": "Transferí la plataforma de visión por computador / MLOps a su mejor propietario (~2M€ de ahorro recurrente) y cerré la plataforma de forecasting tras una revisión de ROI (~1,5M€ de ahorro).",
+        "fr": "J'ai transféré la plateforme vision par ordinateur / MLOps à son meilleur propriétaire (~2M€ d'économies récurrentes) et fermé la plateforme de forecasting après une revue de ROI (~1,5M€ d'économies)."
+      }
+    },
+    {
+      "date": "2025",
+      "link": {
+        "page": "experience",
+        "anchor": "basf-head"
+      },
+      "title": {
+        "en": "Team scaled from 8 to 16",
+        "es": "Equipo escalado de 8 a 16 personas",
+        "fr": "Équipe passée de 8 à 16 personnes"
+      },
+      "text": {
+        "en": "Scaled the team from 8 to 16 data scientists, ML/software engineers and solution designers through structured hiring and career-path design.",
+        "es": "Escalé el equipo de 8 a 16 científicos de datos, ingenieros de ML/software y solution designers con una contratación estructurada y el diseño de planes de carrera.",
+        "fr": "J'ai fait passer l'équipe de 8 à 16 data scientists, ingénieurs ML/logiciel et solution designers grâce à un recrutement structuré et à la conception de plans de carrière."
+      }
+    },
+    {
+      "date": "2024",
+      "link": {
+        "page": "projects",
+        "anchor": "genai-labelling"
+      },
+      "title": {
+        "en": "Funding secured for GenAI labelling automation",
+        "es": "Financiación conseguida para automatizar el etiquetado con GenAI",
+        "fr": "Financement obtenu pour automatiser l'étiquetage par GenAI"
+      },
+      "text": {
+        "en": "Turned an image-labelling bottleneck into a quantified business case presented directly to VP stakeholders, and secured funding for GenAI-powered labelling automation.",
+        "es": "Convertí un cuello de botella en el etiquetado de imágenes en un caso de negocio cuantificado, presentado directamente a VPs, y conseguí financiación para automatizar el etiquetado con GenAI.",
+        "fr": "J'ai transformé un goulot d'étranglement dans l'étiquetage d'images en business case chiffré, présenté directement aux VP, et obtenu le financement de l'automatisation de l'étiquetage par GenAI."
+      }
+    },
+    {
+      "date": "2023",
+      "link": {
+        "page": "projects",
+        "anchor": "cv-mlops"
+      },
+      "title": {
+        "en": "~90% less effort per new project after standardising computer vision",
+        "es": "~90% menos esfuerzo por proyecto nuevo tras estandarizar la visión por computador",
+        "fr": "~90% d'effort en moins par nouveau projet après la standardisation de la vision par ordinateur"
+      },
+      "text": {
+        "en": "Standardised the computer vision platform around a peer-reviewed library of 70 reusable templates, cutting the effort of each new project by ~90% for ~100 data scientists.",
+        "es": "Estandaricé la plataforma de visión por computador en torno a una biblioteca de 70 plantillas reutilizables revisadas por pares, con ~90% menos esfuerzo en cada proyecto nuevo para ~100 científicos de datos.",
+        "fr": "J'ai standardisé la plateforme de vision par ordinateur autour d'une bibliothèque de 70 templates réutilisables relus par les pairs, avec ~90% d'effort en moins sur chaque nouveau projet pour ~100 data scientists."
+      }
+    },
+    {
+      "date": "2021",
+      "link": {
+        "page": "projects",
+        "anchor": "ontology-kg"
+      },
+      "title": {
+        "en": "20 bio-ontologies adopted as the department vocabulary standard",
+        "es": "20 bio-ontologías adoptadas como estándar de vocabulario del departamento",
+        "fr": "20 bio-ontologies adoptées comme standard de vocabulaire du département"
+      },
+      "text": {
+        "en": "Delivered 20 bio-ontologies, several authored in-house, adopted by every internal tool across the R&D Agricultural Solutions department within 6–12 months.",
+        "es": "Entregué 20 bio-ontologías, varias desarrolladas internamente, adoptadas por todas las herramientas internas del departamento de I+D de Agricultural Solutions en 6–12 meses.",
+        "fr": "J'ai livré 20 bio-ontologies, dont plusieurs conçues en interne, adoptées par l'ensemble des outils internes du département R&D Agricultural Solutions en 6–12 mois."
+      }
+    }
+  ],
+  "recognition": [
+    {
+      "date": "2026-11",
+      "kind": "talk",
+      "text": {
+        "en": "<strong>Tech Show Madrid 2026</strong> (AI Cluster of the Community of Madrid) — roundtable panelist: \"Generative AI, creativity and new digital business models\".",
+        "es": "<strong>Tech Show Madrid 2026</strong> (Clúster IA de la Comunidad de Madrid) — participante en la mesa redonda «IA generativa, creatividad y nuevos modelos de negocio digitales».",
+        "fr": "<strong>Tech Show Madrid 2026</strong> (Cluster IA de la Communauté de Madrid) — intervenant à la table ronde « IA générative, créativité et nouveaux modèles économiques numériques »."
+      }
+    },
+    {
+      "date": "2026-03",
+      "kind": "podcast",
+      "text": {
+        "en": "<strong>AI Cluster of the Community of Madrid</strong> — podcast guest: \"Build vs Buy vs Open Source in GenAI\".",
+        "es": "<strong>Clúster IA de la Comunidad de Madrid</strong> — invitado en podcast: «Build vs Buy vs Open Source en GenAI».",
+        "fr": "<strong>Cluster IA de la Communauté de Madrid</strong> — invité podcast : « Build vs Buy vs Open Source en GenAI »."
+      }
+    },
+    {
+      "date": "2023-06",
+      "kind": "talk",
+      "text": {
+        "en": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — industry showcase speaker on advanced image analysis for the chemical industry, plus roundtable participation.",
+        "es": "<strong>EXPOQUIMIA 2023</strong>, Barcelona — ponente en el showcase industrial sobre análisis de imagen avanzado para la industria química, además de participación en mesa redonda.",
+        "fr": "<strong>EXPOQUIMIA 2023</strong>, Barcelone — intervenant du showcase industriel sur l'analyse d'image avancée pour l'industrie chimique, plus participation à une table ronde."
+      }
+    },
+    {
+      "date": "2023-06",
+      "kind": "podcast",
+      "text": {
+        "en": "<strong>TECNALIA</strong> — podcast guest: \"Tecnología, Pasión y Futuro\".",
+        "es": "<strong>TECNALIA</strong> — invitado en podcast: «Tecnología, Pasión y Futuro».",
+        "fr": "<strong>TECNALIA</strong> — invité podcast : « Tecnología, Pasión y Futuro »."
+      }
+    },
+    {
+      "date": "2019-11",
+      "kind": "communication",
+      "text": {
+        "en": "<strong>\"Ma thèse en 1024 caractères\"</strong> — my PhD thesis summarised in French in 1024 characters, selected from hundreds of applications and published in <em>1024 – Bulletin de la Société informatique de France</em>, no. 14, p. 88 (<a href=\"https://1024.socinfo.fr/2019/11/1024_14_2019_88.pdf\" target=\"_blank\" rel=\"noopener\">PDF ↗</a>).",
+        "es": "<strong>«Ma thèse en 1024 caractères»</strong> — mi tesis doctoral resumida en francés en 1024 caracteres, seleccionada entre cientos de candidaturas y publicada en <em>1024 – Bulletin de la Société informatique de France</em>, n.º 14, p. 88 (<a href=\"https://1024.socinfo.fr/2019/11/1024_14_2019_88.pdf\" target=\"_blank\" rel=\"noopener\">PDF ↗</a>).",
+        "fr": "<strong>« Ma thèse en 1024 caractères »</strong> — ma thèse résumée en 1024 caractères, retenue parmi des centaines de candidatures et publiée dans <em>1024 – Bulletin de la Société informatique de France</em>, n° 14, p. 88 (<a href=\"https://1024.socinfo.fr/2019/11/1024_14_2019_88.pdf\" target=\"_blank\" rel=\"noopener\">PDF ↗</a>)."
+      }
+    },
+    {
+      "date": "2019-10",
+      "kind": "debate",
+      "text": {
+        "en": "<strong>Science–Media–Society debate (SMS)</strong> — participant, third edition.",
+        "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong> — participante, tercera edición.",
+        "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong> — participant, troisième édition."
+      }
+    },
+    {
+      "date": "2018-05",
+      "kind": "competition",
+      "text": {
+        "en": "<strong>Scientific Game Jam</strong>, University of Bordeaux (first edition) — presented my PhD research and won with a pixel-art game about destroying viruses and collecting DNA to upgrade weapons, an analogy for using ontologies to decipher the unknowns of genes.",
+        "es": "<strong>Scientific Game Jam</strong>, Universidad de Burdeos (primera edición) — presenté mi investigación doctoral y gané con un juego de pixel art sobre destruir virus y recoger ADN para mejorar armas, una analogía del uso de ontologías para descifrar las incógnitas de los genes.",
+        "fr": "<strong>Scientific Game Jam</strong>, Université de Bordeaux (première édition) — j'ai présenté ma recherche doctorale et gagné avec un jeu en pixel art où il fallait détruire des virus et collecter de l'ADN pour améliorer ses armes, une analogie de l'usage des ontologies pour déchiffrer les inconnues des gènes."
+      }
+    },
+    {
+      "date": "2018-04",
+      "kind": "debate",
+      "text": {
+        "en": "<strong>Science–Media–Society debate (SMS)</strong> — participant, first edition.",
+        "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong> — participante, primera edición.",
+        "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong> — participant, première édition."
+      }
+    },
+    {
+      "date": "2018-03",
+      "kind": "competition",
+      "text": {
+        "en": "<strong>Ma thèse en 180 secondes (MT180s)</strong> — competitor: presented my PhD research in three minutes.",
+        "es": "<strong>Ma thèse en 180 secondes (MT180s)</strong> — participante: presenté mi investigación doctoral en tres minutos.",
+        "fr": "<strong>Ma thèse en 180 secondes (MT180s)</strong> — candidat : j'ai présenté ma recherche doctorale en trois minutes."
+      }
+    }
+  ]
+}

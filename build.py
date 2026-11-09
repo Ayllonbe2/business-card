@@ -20,7 +20,13 @@ CONTENT, STATIC, OUT = ROOT / "content", ROOT / "static", ROOT / "public"
 LANGS = ("en", "es", "fr")
 LANG_NAMES = {"en": "English", "es": "Español", "fr": "Français"}
 OG_LOCALE = {"en": "en_US", "es": "es_ES", "fr": "fr_FR"}
-PAGES = ("", "experience", "projects", "research", "education", "about")
+PAGES = ("", "experience", "projects", "achievements", "research", "education", "about")
+RESEARCH_KINDS = ("talk", "podcast")  # recognition kinds that also appear in the "Speaking & media" card of /research/
+MONTHS = {
+    "en": "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(),
+    "es": "ene feb mar abr may jun jul ago sep oct nov dic".split(),
+    "fr": "janv. févr. mars avr. mai juin juil. août sept. oct. nov. déc.".split(),
+}
 
 ICONS = {
     "eye": '<path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/>',
@@ -127,6 +133,23 @@ def url(lang, page="", anchor=""):
     return path + (f"#{anchor}" if anchor else "")
 
 
+def date_key(d):
+    """'2026-11' -> (2026, 11); a year alone ('2026') sorts as month 0, i.e. after every month of that year when newest-first."""
+    m = re.fullmatch(r"(\d{4})(?:-(0[1-9]|1[0-2]))?", d)
+    if not m:
+        raise BuildError(f"bad date {d!r}: expected YYYY or YYYY-MM")
+    return int(m.group(1)), int(m.group(2) or 0)
+
+
+def fmt_date(d, lang):
+    year, month = date_key(d)
+    return f"{MONTHS[lang][month - 1].capitalize()} {year}" if month else str(year)
+
+
+def newest_first(items):
+    return sorted(items, key=lambda x: date_key(x["date"]), reverse=True)  # reverse keeps input order on ties
+
+
 def split_company(s):
     parts = re.split(r"\s+—\s+", s, maxsplit=1)
     return (parts[0], parts[1]) if len(parts) == 2 else (s, "")
@@ -141,8 +164,10 @@ class Site:
         self.res = load("research")
         self.edu = load("education")
         self.about = load("about")
+        self.ach = load("achievements")
         for name, data in (("site", self.site), ("home", self.home), ("experience", self.exp), ("projects", self.proj),
-                           ("research", self.res), ("education", self.edu), ("about", self.about)):
+                           ("research", self.res), ("education", self.edu), ("about", self.about),
+                           ("achievements", self.ach)):
             validate(data, name)
         self.projects = {i["id"]: i for g in self.proj["groups"] for i in g["items"]}
         self.pubs = {p["id"]: p for p in self.res["publications"]}
@@ -168,6 +193,12 @@ class Site:
         for pb in self.home["research"]["featured"]:
             if pb not in self.pubs:
                 raise BuildError(f"home featured publication '{pb}' not found")
+        for i, x in enumerate(self.ach["impact"] + self.ach["recognition"]):
+            date_key(x["date"])
+            if x.get("kind") and x["kind"] not in self.ach["kinds"]:
+                raise BuildError(f"achievements entry {i}: unknown kind '{x['kind']}'")
+            if x.get("link") and x["link"]["page"] not in PAGES:
+                raise BuildError(f"achievements entry {i}: unknown page '{x['link']['page']}'")
         flagged = {p["id"] for p in self.res["publications"] if p.get("featured")}
         if flagged != set(self.home["research"]["featured"]):
             raise BuildError("research 'featured' flags and home.research.featured differ")
@@ -383,6 +414,7 @@ def render_home(S, lang):
       <div class="container">
         <div class="bento">
 {impact}        </div>
+        <p class="cta-row">{more_link(lang, "achievements", H["impact_cta"])}</p>
       </div>
     </section>
 
@@ -568,7 +600,10 @@ def render_research(S, lang):
               <p class="pub-desc">{rich(p["desc"], lang)}</p>
               <div class="pub-links">{links}</div>
             </li>""")
-    talks = "\n".join(f'              <li><span class="talk-year">{x["year"]}</span>{rich(x["text"], lang)}</li>' for x in R["talks"])
+    talks = "\n".join(
+        f'              <li><span class="talk-year">{fmt_date(x["date"], lang)}</span>{rich(x["text"], lang)}</li>'
+        for x in newest_first(S.ach["recognition"]) if x["kind"] in RESEARCH_KINDS
+    )
     scholar = S.site["links"]["scholar"]
     pr = R["peer_review"]
     pc = pr["columns"]
@@ -606,6 +641,38 @@ def render_research(S, lang):
         </section>"""
     main = page_head(S, lang, "research", R["intro"]) + "\n" + wrap_body(inner)
     return f"{plain(S.nav['research'], lang)} · {S.site['name']}", plain(R["intro"], lang), main
+
+
+def render_achievements(S, lang):
+    A = S.ach
+    impact = "\n".join(
+        f"""            <div class="entry">
+              <div class="entry-year">{fmt_date(x["date"], lang)}</div>
+              <div><h3><a href="{url(lang, x["link"]["page"], x["link"].get("anchor", ""))}">{rich(x["title"], lang)}</a></h3><p>{rich(x["text"], lang)}</p></div>
+            </div>"""
+        for x in newest_first(A["impact"])
+    )
+    recognition = "\n".join(
+        f"""            <div class="entry">
+              <div class="entry-year">{fmt_date(x["date"], lang)}</div>
+              <div><span class="badge-type">{rich(A["kinds"][x["kind"]], lang)}</span><p>{rich(x["text"], lang)}</p></div>
+            </div>"""
+        for x in newest_first(A["recognition"])
+    )
+    inner = f"""        <section class="block" id="impact">
+          <h2 class="block-title">{rich(A["impact_title"], lang)}</h2>
+          <div class="card pad">
+{impact}
+          </div>
+        </section>
+        <section class="block" id="recognition">
+          <h2 class="block-title">{rich(A["recognition_title"], lang)}</h2>
+          <div class="card pad">
+{recognition}
+          </div>
+        </section>"""
+    main = page_head(S, lang, "achievements", A["intro"]) + "\n" + wrap_body(inner)
+    return f"{plain(S.nav['achievements'], lang)} · {S.site['name']}", plain(A["intro"], lang), main
 
 
 def render_education(S, lang):
@@ -736,7 +803,7 @@ def render_about(S, lang):
 
 RENDER = {
     "": render_home, "experience": render_experience, "projects": render_projects,
-    "research": render_research, "education": render_education, "about": render_about,
+    "achievements": render_achievements, "research": render_research, "education": render_education, "about": render_about,
 }
 
 

@@ -78,6 +78,11 @@
       }
     }
   ],
+  "impact_cta": {
+    "en": "Achievements timeline",
+    "es": "Cronología de logros",
+    "fr": "Chronologie des réalisations"
+  },
   "about": {
     "text": {
       "en": "Data scientist turned AI/ML leader — PhD in Computer Science, MSc in Artificial Intelligence. I lead a multidisciplinary team and a ~€1.3M platform budget at BASF Digital Solutions and make the portfolio calls: what to scale, what to hand over, what to shut down.",
