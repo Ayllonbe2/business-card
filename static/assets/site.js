@@ -7,6 +7,17 @@
   // single word never ends up alone on the last line, at any viewport width.
   var WIDOW_SELECTOR = "p, li, h1, h2, h3, h4, .pf-metric, .role-line, .role-official, .skill-list, .pub-venue, .lang-level";
 
+  // Whitespace-only text between block-level siblings is source formatting, not a gap between words.
+  function isBlockGap(node) {
+    if (/\S/.test(node.nodeValue)) return false;
+    var sibs = [node.previousSibling, node.nextSibling];
+    for (var s = 0; s < sibs.length; s++) {
+      var sib = sibs[s];
+      if (sib && sib.nodeType === 1 && window.getComputedStyle(sib).display.indexOf("inline") !== 0) return true;
+    }
+    return false;
+  }
+
   function preventWidow(el) {
     var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
     var nodes = [];
@@ -14,6 +25,7 @@
     var seenWord = false;
     for (var i = nodes.length - 1; i >= 0; i--) {
       var text = nodes[i].nodeValue;
+      if (seenWord && isBlockGap(nodes[i])) return; // never glue across a block boundary
       for (var j = text.length - 1; j >= 0; j--) {
         var c = text[j];
         if (c === "\u00A0") {

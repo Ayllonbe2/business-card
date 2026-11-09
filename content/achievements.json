@@ -47,9 +47,9 @@
     {
       "id": "recognition",
       "label": {
-        "en": "Recognition",
-        "es": "Reconocimiento",
-        "fr": "Reconnaissance"
+        "en": "Talks, media & awards",
+        "es": "Ponencias, medios y premios",
+        "fr": "Conférences, médias et prix"
       }
     },
     {
@@ -88,7 +88,7 @@
     },
     {
       "id": "tech-show-madrid-2026",
-      "date": "2026",
+      "date": "2026-11",
       "type": "recognition",
       "featured": true,
       "title": {
@@ -127,7 +127,7 @@
     },
     {
       "id": "expoquimia-2023",
-      "date": "2023",
+      "date": "2023-06",
       "type": "recognition",
       "title": {
         "en": "Industry showcase speaker at EXPOQUIMIA 2023",
@@ -142,8 +142,7 @@
     },
     {
       "id": "genai-labelling-funded",
-      "date": "2022",
-      "until": "present",
+      "date": "2024",
       "type": "impact",
       "featured": true,
       "title": {
@@ -156,11 +155,6 @@
         "es": "Convertí un cuello de botella en el etiquetado de imágenes en un caso de negocio cuantificado, presentado directamente a VPs, y conseguí financiación para automatizar el etiquetado con GenAI. Ejecuté una prueba de concepto de SIGMA AI y comparé herramientas competidoras para fundamentar la decisión de construir o comprar.",
         "fr": "J'ai transformé un goulot d'étranglement dans l'étiquetage d'images en business case chiffré, présenté directement aux VP, et obtenu le financement de l'automatisation de l'étiquetage par GenAI. J'ai mené une preuve de concept de SIGMA AI et comparé les outils concurrents pour éclairer la décision build-vs-buy."
       },
-      "metric": {
-        "en": "€560K secured · five further innovation initiatives",
-        "es": "560K€ conseguidos · otras cinco iniciativas de innovación",
-        "fr": "560K€ obtenus · cinq autres initiatives d'innovation"
-      },
       "role": "basf-head",
       "projects": [
         "genai-labelling"
@@ -168,8 +162,7 @@
     },
     {
       "id": "portfolio-savings",
-      "date": "2022",
-      "until": "present",
+      "date": "2026",
       "type": "impact",
       "title": {
         "en": "Portfolio decisions delivering recurring savings",
@@ -194,8 +187,7 @@
     },
     {
       "id": "cv-platform-standardised",
-      "date": "2022",
-      "until": "present",
+      "date": "2023",
       "type": "impact",
       "title": {
         "en": "Standardised computer vision platform: ~90% less effort per new project",
@@ -219,8 +211,7 @@
     },
     {
       "id": "team-8-to-16",
-      "date": "2022",
-      "until": "present",
+      "date": "2025",
       "type": "leadership",
       "title": {
         "en": "Scaled the team from 8 to 16",
@@ -359,6 +350,142 @@
       "pubs": [
         "ieee-iv"
       ]
+    },
+    {
+      "id": "podcast-ai-cluster-2026",
+      "date": "2026-03",
+      "type": "recognition",
+      "title": {
+        "en": "Podcast guest on build vs buy vs open source in GenAI",
+        "es": "Invitado en un podcast sobre build vs buy vs open source en GenAI",
+        "fr": "Invité d'un podcast sur le build vs buy vs open source en GenAI"
+      },
+      "body": {
+        "en": "<strong>AI Cluster of the Community of Madrid</strong> — podcast guest: \"Build vs Buy vs Open Source in GenAI\".",
+        "es": "<strong>Clúster IA de la Comunidad de Madrid</strong> — invitado en podcast: «Build vs Buy vs Open Source en GenAI».",
+        "fr": "<strong>Cluster IA de la Communauté de Madrid</strong> — invité podcast : « Build vs Buy vs Open Source en GenAI »."
+      }
+    },
+    {
+      "id": "podcast-tecnalia-2023",
+      "date": "2023-06",
+      "type": "recognition",
+      "title": {
+        "en": "Podcast guest at TECNALIA",
+        "es": "Invitado en un podcast de TECNALIA",
+        "fr": "Invité d'un podcast de TECNALIA"
+      },
+      "body": {
+        "en": "<strong>TECNALIA</strong> — podcast guest: \"Tecnología, Pasión y Futuro\".",
+        "es": "<strong>TECNALIA</strong> — invitado en podcast: «Tecnología, Pasión y Futuro».",
+        "fr": "<strong>TECNALIA</strong> — invité podcast : « Tecnología, Pasión y Futuro »."
+      }
+    },
+    {
+      "id": "thesis-1024-2019",
+      "date": "2019-11",
+      "type": "recognition",
+      "title": {
+        "en": "PhD thesis summarised in 1024 characters and published",
+        "es": "Tesis doctoral resumida en 1024 caracteres y publicada",
+        "fr": "Thèse résumée en 1024 caractères et publiée"
+      },
+      "body": {
+        "en": "<strong>\"Ma thèse en 1024 caractères\"</strong> — my PhD thesis summarised in French in 1024 characters, selected from hundreds of applications and published in <em>1024 – Bulletin de la Société informatique de France</em>, no. 14, p. 88.",
+        "es": "<strong>«Ma thèse en 1024 caractères»</strong> — mi tesis doctoral resumida en francés en 1024 caracteres, seleccionada entre cientos de candidaturas y publicada en <em>1024 – Bulletin de la Société informatique de France</em>, n.º 14, p. 88.",
+        "fr": "<strong>« Ma thèse en 1024 caractères »</strong> — ma thèse résumée en 1024 caractères, retenue parmi des centaines de candidatures et publiée dans <em>1024 – Bulletin de la Société informatique de France</em>, n° 14, p. 88."
+      },
+      "role": "bordeaux-phd",
+      "links": [
+        {
+          "label": {
+            "en": "Bulletin PDF ↗",
+            "es": "PDF del boletín ↗",
+            "fr": "PDF du bulletin ↗"
+          },
+          "url": "https://1024.socinfo.fr/2019/11/1024_14_2019_88.pdf"
+        }
+      ]
+    },
+    {
+      "id": "sms-debate-2019",
+      "date": "2019-10",
+      "type": "recognition",
+      "title": {
+        "en": "Science–Media–Society debate: a talk on AI through Alan Turing",
+        "es": "Debate Ciencia–Medios–Sociedad: una charla sobre IA a través de Alan Turing",
+        "fr": "Débat Sciences–Médias–Société : une intervention sur l'IA à travers Alan Turing"
+      },
+      "body": {
+        "en": "<strong>Science–Media–Society debate (SMS)</strong>, Cap Sciences, Bordeaux — third edition: 3-minute talk introducing artificial intelligence through the story of Alan Turing.",
+        "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong>, Cap Sciences, Burdeos — tercera edición: charla de 3 minutos que introduce la inteligencia artificial a través de la historia de Alan Turing.",
+        "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong>, Cap Sciences, Bordeaux — troisième édition : intervention de 3 minutes présentant l'intelligence artificielle à travers l'histoire d'Alan Turing."
+      },
+      "role": "bordeaux-phd"
+    },
+    {
+      "id": "sms-debate-2018",
+      "date": "2018-04",
+      "type": "recognition",
+      "title": {
+        "en": "Science–Media–Society debate: a talk on fake news in medicine",
+        "es": "Debate Ciencia–Medios–Sociedad: una charla sobre fake news en medicina",
+        "fr": "Débat Sciences–Médias–Société : une intervention sur les fake news en médecine"
+      },
+      "body": {
+        "en": "<strong>Science–Media–Society debate (SMS)</strong>, Cap Sciences, Bordeaux — first edition: 3-minute talk on fake news in medicine, the false link between vaccination and autism.",
+        "es": "<strong>Debate Ciencia–Medios–Sociedad (SMS)</strong>, Cap Sciences, Burdeos — primera edición: charla de 3 minutos sobre las fake news en medicina: el falso vínculo entre vacunación y autismo.",
+        "fr": "<strong>Débat Sciences–Médias–Société (SMS)</strong>, Cap Sciences, Bordeaux — première édition : intervention de 3 minutes sur les fake news en médecine, le faux lien entre vaccination et autisme."
+      },
+      "role": "bordeaux-phd"
+    },
+    {
+      "id": "game-jam-2018",
+      "date": "2018-03",
+      "type": "recognition",
+      "title": {
+        "en": "First prize at the first Scientific Game Jam of the University of Bordeaux",
+        "es": "Primer premio en la primera Scientific Game Jam de la Universidad de Burdeos",
+        "fr": "Premier prix à la première Scientific Game Jam de l'Université de Bordeaux"
+      },
+      "body": {
+        "en": "<strong>Scientific Game Jam</strong>, University of Bordeaux (first edition, Domaine du Haut-Carré) — presented my PhD research and won first prize with a pixel-art game about destroying viruses and collecting DNA to upgrade weapons, an analogy for using ontologies to decipher the unknowns of genes.",
+        "es": "<strong>Scientific Game Jam</strong>, Universidad de Burdeos (primera edición, Domaine du Haut-Carré) — presenté mi investigación doctoral y gané el primer premio con un juego de pixel art sobre destruir virus y recoger ADN para mejorar armas, una analogía del uso de ontologías para descifrar las incógnitas de los genes.",
+        "fr": "<strong>Scientific Game Jam</strong>, Université de Bordeaux (première édition, Domaine du Haut-Carré) — j'ai présenté ma recherche doctorale et remporté le premier prix avec un jeu en pixel art où il fallait détruire des virus et collecter de l'ADN pour améliorer ses armes, une analogie de l'usage des ontologies pour déchiffrer les inconnues des gènes."
+      },
+      "role": "bordeaux-phd"
+    },
+    {
+      "id": "mt180s-2018",
+      "date": "2018-02",
+      "type": "recognition",
+      "title": {
+        "en": "Competitor in Ma thèse en 180 secondes (MT180s)",
+        "es": "Participante en Ma thèse en 180 secondes (MT180s)",
+        "fr": "Candidat à Ma thèse en 180 secondes (MT180s)"
+      },
+      "body": {
+        "en": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, University of Bordeaux (Domaine du Haut-Carré) — competitor: presented my PhD research in three minutes to the general public.",
+        "es": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, Universidad de Burdeos (Domaine du Haut-Carré) — participante: presenté mi investigación doctoral en tres minutos para el público general.",
+        "fr": "<strong>Ma thèse en 180 secondes (MT180s)</strong>, Université de Bordeaux (Domaine du Haut-Carré) — candidat : j'ai présenté ma recherche doctorale en trois minutes devant le grand public."
+      },
+      "role": "bordeaux-phd"
+    },
+    {
+      "id": "infinite-salud-2016",
+      "date": "2016",
+      "type": "recognition",
+      "title": {
+        "en": "Infinite Salud award for the best master's internship manuscript",
+        "es": "Premio Infinite Salud al mejor manuscrito de prácticas de máster",
+        "fr": "Prix Infinite Salud du meilleur manuscrit de stage de master"
+      },
+      "body": {
+        "en": "<strong>Infinite Salud award</strong> (Fundación Séneca) — prize for the best master's internship manuscript, from my internship at the Université de Bordeaux on a bioinformatics method to ease the biological interpretation of genes.",
+        "es": "<strong>Premio Infinite Salud</strong> (Fundación Séneca) — premio al mejor manuscrito de prácticas de máster, de mis prácticas en la Université de Bordeaux, sobre un método bioinformático para facilitar la interpretación biológica de los genes.",
+        "fr": "<strong>Prix Infinite Salud</strong> (Fondation Séneca) — prix du meilleur manuscrit de stage de master, issu de mon stage à l'Université de Bordeaux, portant sur une méthode bioinformatique pour faciliter l'interprétation biologique des gènes."
+      },
+      "role": "intern-bordeaux"
     }
   ]
 }

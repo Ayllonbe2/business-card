@@ -152,16 +152,6 @@ def ar(v, lang):
     return f'<span lang="en">{out}</span>' if fell_back else out
 
 
-def date_key(d):
-    year, _, month = d.partition("-")
-    return int(year), int(month or 0)
-
-
-def fmt_date(d, lang):
-    year, month = date_key(d)
-    return f"{MONTHS[lang][month - 1]} {year}" if month else str(year)
-
-
 def pub_label(pb):
     return pb["venue"] if str(pb["year"]) in pb["venue"] else f'{pb["venue"]}, {pb["year"]}'
 
@@ -188,6 +178,35 @@ def url(lang, page="", anchor=""):
     base = ("" if lang == "en" else f"/{lang}") + "/"
     path = base + (f"{page}/" if page else "")
     return path + (f"#{anchor}" if anchor else "")
+
+
+def _parse_date(d):
+    m = re.fullmatch(r"(\d{4})(?:-(0[1-9]|1[0-2]))?", d)
+    if not m:
+        raise BuildError(f"bad date {d!r}: expected YYYY or YYYY-MM (optionally 'start/end')")
+    return int(m.group(1)), int(m.group(2) or 0)
+
+
+def date_key(d):
+    """'2026-11' -> (2026, 11); a year alone ('2026') sorts as month 0, i.e. after every month of that year when
+    newest-first. A range 'start/end' ('2018/2019') sorts by its start."""
+    parts = d.split("/")
+    if len(parts) > 2:
+        raise BuildError(f"bad date {d!r}: expected YYYY or YYYY-MM (optionally 'start/end')")
+    return [_parse_date(p) for p in parts][0]
+
+
+def fmt_date(d, lang):
+    date_key(d)
+    out = []
+    for p in d.split("/"):
+        year, month = _parse_date(p)
+        out.append(f"{MONTHS[lang][month - 1]} {year}" if month else str(year))
+    return " – ".join(out)
+
+
+def newest_first(items):
+    return sorted(items, key=lambda x: date_key(x["date"]), reverse=True)  # reverse keeps input order on ties
 
 
 def split_company(s):
@@ -239,6 +258,8 @@ class Site:
         for pb in self.home["research"]["featured"]:
             if pb not in self.pubs:
                 raise BuildError(f"home featured publication '{pb}' not found")
+        for c in self.edu["certifications"] + self.edu["grants"] + self.res["service"]:
+            date_key(c["date"])
         flagged = {p["id"] for p in self.res["publications"] if p.get("featured")}
         if flagged != set(self.home["research"]["featured"]):
             raise BuildError("research 'featured' flags and home.research.featured differ")
@@ -409,8 +430,17 @@ def data_table(lang, caption, cols, rows, foot=None):
 
 # ------------------------------------------------------------------------------ landing page
 def cert_items(S):
-    """Certifications and courses, newest first (input order kept within a year)."""
-    return sorted(S.edu["certifications"], key=lambda c: -int(c["year"]))
+    """Certifications and courses, newest first (input order kept within a month, or within a year when no month)."""
+    return newest_first(S.edu["certifications"])
+
+
+def cert_credential(S, lang, c):
+    """Optional line with the verification code of a credential and a link to the verifier."""
+    cr = c.get("credential")
+    if not cr:
+        return ""
+    site = f' · <a href="{attr(cr["url"])}" target="_blank" rel="noopener">{html.escape(cr["site"])} ↗</a>' if cr.get("url") else ""
+    return f'<p class="cred">{rich(S.edu["credential_label"], lang)}: <span class="cred-id">{html.escape(cr["id"])}</span>{site}</p>'
 
 
 def cert_title(c, lang):
@@ -449,7 +479,7 @@ def render_home(S, lang):
               <div class="glance-what"><strong>{rich(r["role"], lang)}</strong><span>{html.escape(split_company(t(r["company"], lang))[0])}</span></div>
             </div>
 """
-        for r in S.exp["roles"]
+        for r in S.exp["roles"] if r.get("glance", True)
     )
     degrees = "".join(
         f"""            <div class="glance-row">
@@ -474,7 +504,7 @@ def render_home(S, lang):
     )
     cert_rows = "".join(
         f"""            <div class="glance-row">
-              <div class="glance-when">{c["year"]}</div>
+              <div class="glance-when">{fmt_date(c["date"], lang)}</div>
               <div class="glance-what"><strong>{rich(c["title"], lang)}</strong><span>{rich(c["issuer"], lang)}</span></div>
             </div>
 """
@@ -618,24 +648,23 @@ def render_experience(S, lang):
         loc_html = f'<span class="role-loc">{html.escape(loc)}</span>' if loc else ""
         official = f'\n            <div class="role-official">{rich(r["official"], lang)}</div>' if r.get("official") else ""
         summary = f'\n            <p class="role-summary">{rich(r["summary"], lang)}</p>' if r.get("summary") else ""
-        bullets = "\n".join(f"              <li>{rich(b, lang)}</li>" for b in r["bullets"])
+        points = ""
+        if r["bullets"]:
+            lis = "\n".join(f"              <li>{rich(b, lang)}</li>" for b in r["bullets"])
+            points = f'\n            <ul class="points">\n{lis}\n            </ul>'
         chips = ""
         if r.get("projects"):
             links = "".join(
                 f'<a class="chip" href="{url(lang, "projects", pid)}">{rich(S.projects[pid]["title"], lang)}</a>' for pid in r["projects"]
             )
             chips = f'\n            <div class="chips"><span class="label">{rich(S.ui["related_projects"], lang)}</span>{links}</div>'
+        body = f'\n          <div class="role-body">{summary}{points}{chips}\n          </div>' if (summary or points or chips) else ""
         items.append(f"""        <li id="{r["id"]}"{' class="early-role"' if r.get("early") else ""}>
           <div class="role-meta">
             <span class="role-dates">{rich(r["dates"], lang)}</span>
             <h3>{rich(r["role"], lang)}</h3>
             <div class="role-company">{html.escape(company)}{loc_html}</div>{official}
-          </div>
-          <div class="role-body">{summary}
-            <ul class="points">
-{bullets}
-            </ul>{chips}
-          </div>
+          </div>{body}
         </li>""")
     inner = '        <ul class="timeline">\n' + "\n".join(items) + "\n        </ul>"
     main = page_head(S, lang, "experience", S.exp["intro"]) + "\n" + wrap_body(inner)
@@ -768,7 +797,10 @@ def render_research(S, lang):
               <p class="pub-desc">{rich(p["desc"], lang)}</p>
               <div class="pub-links">{links}</div>
             </li>""")
-    talks = "\n".join(f'              <li><span class="talk-year">{x["year"]}</span>{rich(x["text"], lang)}</li>' for x in R["talks"])
+    talks = "\n".join(
+        f'              <li><span class="talk-year">{fmt_date(x["date"], lang)}</span>{rich(x["text"], lang)}</li>'
+        for x in newest_first(R["talks"])
+    )
     scholar = S.site["links"]["scholar"]
     pr = R["peer_review"]
     pc = pr["columns"]
@@ -776,6 +808,13 @@ def render_research(S, lang):
         lang, pr["title"],
         [(pc["venue"], "c-main"), (pc["role"], ""), (pc["place"], ""), (pc["year"], "num")],
         [[html.escape(r["venue"]), rich(r["role"], lang), rich(r["place"], lang) if r.get("place") else "", r["year"]] for r in pr["rows"]],
+    )
+    service = "\n".join(
+        f"""            <div class="entry">
+              <div class="entry-year">{fmt_date(x["date"], lang)}</div>
+              <div><h3>{rich(x["title"], lang)}</h3><p>{rich(x["text"], lang)}</p></div>
+            </div>"""
+        for x in newest_first(R["service"])
     )
     inner = f"""        <div class="research-main">
           <div class="card panel">
@@ -803,6 +842,12 @@ def render_research(S, lang):
         <section class="block">
           <h2 class="block-title">{rich(pr["title"], lang)}</h2>
           {peer_table}
+        </section>
+        <section class="block" id="service">
+          <h2 class="block-title">{rich(R["service_title"], lang)}</h2>
+          <div class="card pad">
+{service}
+          </div>
         </section>"""
     main = page_head(S, lang, "research", R["intro"]) + "\n" + wrap_body(inner)
     return f"{plain(S.nav['research'], lang)} · {S.site['name']}", plain(R["intro"], lang), main
@@ -821,10 +866,10 @@ def render_education(S, lang):
     )
     grants = "\n".join(
         f"""            <div class="entry">
-              <div class="entry-year">{g["year"]}</div>
+              <div class="entry-year">{fmt_date(g["date"], lang)}</div>
               <div><h3>{rich(g["title"], lang)}</h3><p>{rich(g["text"], lang)}</p></div>
             </div>"""
-        for g in E["grants"]
+        for g in newest_first(E["grants"])
     )
     langs = "\n".join(
         f"""          <div class="card lang-item">
@@ -835,8 +880,8 @@ def render_education(S, lang):
     )
     certs = "\n".join(
         f"""            <div class="entry">
-              <div class="entry-year">{c["year"]}</div>
-              <div><h3>{cert_title(c, lang)}</h3><p>{rich(c["issuer"], lang)} · {rich(c["kind"], lang)}</p></div>
+              <div class="entry-year">{fmt_date(c["date"], lang)}</div>
+              <div><h3>{cert_title(c, lang)}</h3><p>{rich(c["issuer"], lang)} · {rich(c["kind"], lang)}</p>{cert_credential(S, lang, c)}</div>
             </div>"""
         for c in cert_items(S)
     )
@@ -906,7 +951,7 @@ def render_about(S, lang):
     )
     inner = f"""        <section class="block">
           <h2 class="block-title">{rich(A["summary_title"], lang)}</h2>
-          <div class="summary-cols">{summary}</div>
+          <div class="summary-text">{summary}</div>
         </section>
         <section class="block">
           <h2 class="block-title">{rich(A["skills_title"], lang)}</h2>

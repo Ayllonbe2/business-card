@@ -28,15 +28,23 @@ an unknown project/publication/role, or if an internal link or `#anchor` does no
 ## Adding content
 
 * **A role** — add an object to `roles` in `content/experience.json` (`id`, `dates`, `company` as `"Company — City"`,
-  `role`, optional `official` / `summary`, `bullets`, and `projects` ids that become chips linking to `/projects/`).
+  `role`, optional `official` / `summary`, `bullets` (may be empty), and `projects` ids that become chips linking to `/projects/`).
+  `early: true` styles a role as early career; `glance: false` keeps it off the landing-page career card (the Experience
+  page still lists it). The home and Experience intros state the number of positions: update them when adding one.
 * **A project** — add an item to a group in `content/projects.json`. Set `short` (landing card), `body`, `points`,
   `metric`, `links`, and optionally `pubs` (publication ids) and `role` (experience id).
   To show it on the landing page, add its id to `projects.featured` in `content/home.json`.
-* **A publication** — add it to `publications` in `content/research.json`. `featured: true` puts it on the landing page and
-  must match `research.featured` in `content/home.json`.
+* **A publication** — add it to `publications` in `content/research.json`, newest year first (journals, preprints,
+  conference talks and posters all live there). `featured: true` puts it on the landing page and must match
+  `research.featured` in `content/home.json`.
+* **A service or community role** — add an entry to `service` in `content/research.json` (`date` as `"YYYY"`, `"YYYY-MM"`
+  or a range `"YYYY/YYYY"`, `title`, `text`); it appears under "Service & community" on `/research/`.
+* **A certification or course** — add an object to `certifications` in `content/education.json` (`date` as `"YYYY"` or `"YYYY-MM"`, `title`, `issuer`, `kind`; optional `url` links the credential, optional `credential` = `{id, url, site}` prints the verification code with a link to the verifier; `featured: true` also lists it on the landing page). Newest first on the page; input order breaks ties within the same month.
 * **An achievement** — add an object to `items` in `content/achievements.json` (see *Achievements log* below).
-* **A certification or course** — add an object to `certifications` in `content/education.json` (`year`, `title`, `issuer`, `kind`; optional `url` links the credential; `featured: true` also lists it on the landing page). Newest year first on the page.
-* **Talks, grants, degrees, skills, principles** — the matching arrays in `research.json`, `education.json`, `about.json`.
+* **Grants** — `grants` in `content/education.json`, each with a `date` (`"YYYY"` or `"YYYY-MM"`), `title` and `text`; newest first on the page.
+* **A talk or podcast** — add an entry to `talks` in `content/research.json` (`date` as `"YYYY"` or `"YYYY-MM"`, `text`); it feeds the
+  "Speaking & media" card of `/research/`. Log it in the achievements log as well if it deserves its own entry.
+* **Degrees, skills, principles** — the matching arrays in `education.json`, `about.json`.
 
 ## Achievements log
 

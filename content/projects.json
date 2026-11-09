@@ -329,6 +329,48 @@
           ]
         },
         {
+          "id": "motvis",
+          "icon": "chart",
+          "role": "bordeaux-phd",
+          "badge": {
+            "en": "Visualisation prototype",
+            "es": "Prototipo de visualización",
+            "fr": "Prototype de visualisation"
+          },
+          "title": {
+            "en": "MoTVIS",
+            "es": "MoTVIS",
+            "fr": "MoTVIS"
+          },
+          "short": {
+            "en": "Interactive visualisation of the annotations of many gene sets at once, combining a treemap and an indented tree.",
+            "es": "Visualización interactiva de las anotaciones de muchos conjuntos génicos a la vez, que combina un treemap y un árbol con sangría.",
+            "fr": "Visualisation interactive des annotations de nombreux jeux de gènes à la fois, combinant un treemap et un arbre indenté."
+          },
+          "body": [
+            {
+              "en": "MoTVIS (MOdular Term VISualisation) is an interactive visualisation prototype built with the University of Murcia to explore the annotations of several gene sets in a single view. It combines two linked metaphors, a treemap and an indented tree, so that each compensates for the limits of the other. Its visualisation was later embedded in GSAn.",
+              "es": "MoTVIS (MOdular Term VISualisation) es un prototipo de visualización interactiva creado con la Universidad de Murcia para explorar en una sola vista las anotaciones de varios conjuntos génicos. Combina dos metáforas enlazadas, un treemap y un árbol con sangría, de modo que cada una compensa los límites de la otra. Su visualización se integró después en GSAn.",
+              "fr": "MoTVIS (MOdular Term VISualisation) est un prototype de visualisation interactive développé avec l'Université de Murcie pour explorer dans une seule vue les annotations de plusieurs jeux de gènes. Il combine deux métaphores liées, un treemap et un arbre indenté, de sorte que chacune compense les limites de l'autre. Sa visualisation a ensuite été intégrée à GSAn."
+            }
+          ],
+          "points": [],
+          "links": [
+            {
+              "label": {
+                "en": "Demo ↗",
+                "es": "Demo ↗",
+                "fr": "Démo ↗"
+              },
+              "url": "https://ayllonbe.github.io/MoTVIS/"
+            }
+          ],
+          "pubs": [
+            "ieee-iv",
+            "jobim-2018-motvis"
+          ]
+        },
+        {
           "id": "eppo",
           "icon": "leaf",
           "role": "basf-ontology",
