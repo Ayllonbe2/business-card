@@ -45,11 +45,19 @@ an unknown project/publication/role, or if an internal link or `#anchor` does no
 * **A talk or podcast** — add an entry to `talks` in `content/research.json` (`date` as `"YYYY"` or `"YYYY-MM"`, `text`); it feeds the
   "Speaking & media" card of `/research/`. Log it in the achievements log as well if it deserves its own entry.
 * **Degrees, skills, principles** — the matching arrays in `education.json`, `about.json`.
+* **The landing page** — `content/home.json`:
+  * `hero.subtitle` is the positioning line under the name and `hero.tagline` the sentence below it. The buttons are
+    fixed: email (`email` in `site.json`), LinkedIn, then the CV as a plain link.
+  * `impact` holds the four headline figures (`num`, `caption`); the first is the large tile. An optional `breakdown`
+    list prints one line per part under the caption (for example the two decisions behind a total).
+  * `fit` is the "Where I fit best" card under the figures: `title`, `areas` (one chip each) and `place`. Remove the
+    whole `fit` object to hide the card.
 
 ## Achievements log
 
-`content/achievements.json` is the place to record every result as it happens. The landing page shows the newest
-`featured` ones (as many as `achievements.limit` in `content/home.json`); `/achievements/` lists all of them by year.
+`content/achievements.json` is the place to record every result as it happens. The landing page shows the
+`featured` ones (as many as `achievements.limit` in `content/home.json`): entries with `"pin": true` first, then the
+newest. `/achievements/` lists all of them by year and ignores `pin`.
 Entries are sorted by `date`, newest first; entries with the same date keep their order in the file.
 
 ```json
@@ -65,13 +73,15 @@ Entries are sorted by `date`, newest first; entries with the same date keep thei
   "projects": ["cv-mlops"],
   "pubs": ["gsan-nar"],
   "links": [{ "label": { "en": "Press", "es": "Prensa", "fr": "Presse" }, "url": "https://…" }],
-  "featured": true
+  "featured": true,
+  "pin": true
 }
 ```
 
 * Required: `id` (unique, lowercase, hyphens), `date` (`YYYY` or `YYYY-MM`), `type` (one of `types` in the same file:
   `impact`, `leadership`, `research`, `recognition`, `venture`), `title`. Everything else is optional.
 * `until` (`YYYY`, `YYYY-MM` or `"present"`) turns the date into a range such as “2022 – Present”.
+* `pin` (only with `featured`) keeps an entry at the top of the landing-page list whatever its date.
 * `role`, `projects` and `pubs` must be existing ids; they become chips linking to those pages. A typo fails the build,
   and so does any unknown field name.
 * **Translations are optional here**: only `en` is required. A missing `es` / `fr` falls back to the English text

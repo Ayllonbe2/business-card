@@ -31,7 +31,7 @@ MONTHS = {
     "es": ("ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"),
     "fr": ("janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."),
 }
-ACH_KEYS = {"id", "date", "until", "type", "title", "body", "metric", "role", "projects", "pubs", "links", "featured"}
+ACH_KEYS = {"id", "date", "until", "type", "title", "body", "metric", "role", "projects", "pubs", "links", "featured", "pin"}
 ACH_REQUIRED = ("id", "date", "type", "title")
 ACH_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 ACH_DATE = re.compile(r"^(\d{4})(?:-(0[1-9]|1[0-2]))?$")
@@ -45,6 +45,7 @@ ICONS = {
     "flask": '<path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/>',
     "leaf": '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>',
     "download": '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+    "mail": '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
     "linkedin": '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>',
     "scholar": '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>',
     "mic": '<path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/>',
@@ -239,6 +240,10 @@ class Site:
         self.pending = []  # (where, lang) of achievement strings that fall back to English
         self._check_refs()
         self._check_achievements()
+        fit = self.home.get("fit")
+        if fit is not None and not (isinstance(fit, dict) and {"title", "areas", "place"} <= set(fit)
+                                    and isinstance(fit["areas"], list) and fit["areas"]):
+            raise BuildError('home.fit must have "title", a non-empty "areas" list and "place"')
         # Newest first; entries with the same date keep the order they have in the file.
         self.achievements = sorted(self.ach["items"], key=lambda a: date_key(a["date"]), reverse=True)
 
@@ -308,6 +313,10 @@ class Site:
                 raise BuildError(f"{where}: unknown type '{a['type']}' (known: {sorted(self.atypes)})")
             if "featured" in a and not isinstance(a["featured"], bool):
                 raise BuildError(f"{where}: featured must be true or false")
+            if "pin" in a and not isinstance(a["pin"], bool):
+                raise BuildError(f"{where}: pin must be true or false")
+            if a.get("pin") and not a.get("featured"):
+                raise BuildError(f"{where}: pin only applies to featured entries (it puts them first on the landing page)")
             for k in ("title", "body", "metric"):
                 if k in a and not (isinstance(a[k], dict) and a[k] and set(a[k]) <= set(LANGS)):
                     raise BuildError(f"{where}: {k} must be an object like {{\"en\": ..., \"es\": ..., \"fr\": ...}}")
@@ -481,13 +490,53 @@ def project_card(S, lang, p, link_to_detail=True):
           </article>"""
 
 
+def impact_note(x, lang):
+    """Optional lines under an impact tile: the breakdown behind the number, one line per part."""
+    if not x.get("breakdown"):
+        return ""
+    lines = "".join(f"<li>{rich(b, lang)}</li>" for b in x["breakdown"])
+    return f'\n          <ul class="impact-note">{lines}</ul>'
+
+
+def contact_buttons(S, lang):
+    """The two ways to get in touch, used in the hero and in the 'fit' card."""
+    site = S.site
+    return (f'<a class="btn btn-primary" href="mailto:{attr(site["email"])}">{icon("mail", 18)}<span>{rich(S.ui["email_cta"], lang)}</span></a>\n'
+            f'            <a class="btn btn-secondary" href="{attr(site["links"]["linkedin"])}" target="_blank" rel="noopener noreferrer">'
+            f'{icon("linkedin", 18)}<span>LinkedIn</span></a>')
+
+
+def fit_section(S, lang):
+    """A neutral 'where I fit' card: the kind of work, where I am based, how to reach me. Optional (home.fit)."""
+    fit = S.home.get("fit")
+    if not fit:
+        return ""
+    areas = "".join(f"<li>{rich(a, lang)}</li>" for a in fit["areas"])
+    return f"""    <section class="fit" id="fit">
+      <div class="container">
+        <div class="card fit-card">
+          <div class="fit-copy">
+            <h2 class="fit-title">{rich(fit["title"], lang)}</h2>
+            <ul class="fit-areas">{areas}</ul>
+            <p class="fit-place">{rich(fit["place"], lang)}</p>
+          </div>
+          <div class="fit-actions">
+            {contact_buttons(S, lang)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+"""
+
+
 def render_home(S, lang):
     H, ui = S.home, S.ui
     hero, site = H["hero"], S.site
     impact = "".join(
         f"""        <div class="tile{" tile-lead" if i == 0 else " tile-wide" if i == 1 else ""}">
           <div class="impact-num">{rich(x["num"], lang)}</div>
-          <div class="impact-cap">{rich(x["caption"], lang)}</div>
+          <div class="impact-cap">{rich(x["caption"], lang)}</div>{impact_note(x, lang)}
         </div>
 """
         for i, x in enumerate(H["impact"])
@@ -536,7 +585,7 @@ def render_home(S, lang):
               <div class="glance-what"><strong><a href="{url(lang, "achievements", "a-" + a["id"])}">{ar(a["title"], lang)}</a></strong><span>{rich(S.atypes[a["type"]], lang)}</span></div>
             </div>
 """
-        for a in [x for x in S.achievements if x.get("featured")][: H["achievements"]["limit"]]
+        for a in sorted((x for x in S.achievements if x.get("featured")), key=lambda x: not x.get("pin"))[: H["achievements"]["limit"]]
     )
     ach_section = f"""    <section class="section section-tint" id="achievements">
       <div class="container split">
@@ -557,9 +606,8 @@ def render_home(S, lang):
           <p class="hero-sub">{rich(hero["subtitle"], lang)}</p>
           <p class="hero-tagline">{rich(hero["tagline"], lang)}</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="/{attr(site["links"]["cv"])}" target="_blank" rel="noopener">{icon("download", 18)}<span>{rich(ui["download_cv"], lang)}</span></a>
-            <a class="icon-btn" href="{attr(site["links"]["linkedin"])}" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">{icon("linkedin", 19)}</a>
-            <a class="icon-btn" href="{attr(site["links"]["scholar"])}" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar">{icon("scholar", 19)}</a>
+            {contact_buttons(S, lang)}
+            <a class="quiet-link" href="/{attr(site["links"]["cv"])}" target="_blank" rel="noopener">{icon("download", 16)}<span>{rich(ui["download_cv"], lang)}</span></a>
           </div>
         </div>
         <div class="hero-photo">
@@ -577,7 +625,7 @@ def render_home(S, lang):
       </div>
     </section>
 
-    <section class="section" id="about">
+{fit_section(S, lang)}    <section class="section" id="about">
       <div class="container">
         <div class="section-head section-head--row">
           <div class="lead-text">
@@ -1005,9 +1053,9 @@ def render_about(S, lang):
           <h2 class="block-title">{rich(S.ui["contact"], lang)}</h2>
           <div class="card contact-card">
             <a class="mail" href="mailto:{attr(site["email"])}">{html.escape(site["email"])}</a>
-            <a class="btn btn-primary" href="/{attr(site["links"]["cv"])}" target="_blank" rel="noopener">{icon("download", 18)}<span>{rich(S.ui["download_cv"], lang)}</span></a>
-            <a class="icon-btn" href="{attr(site["links"]["linkedin"])}" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">{icon("linkedin", 19)}</a>
+            {contact_buttons(S, lang)}
             <a class="icon-btn" href="{attr(site["links"]["scholar"])}" target="_blank" rel="noopener noreferrer" title="Google Scholar" aria-label="Google Scholar">{icon("scholar", 19)}</a>
+            <a class="quiet-link" href="/{attr(site["links"]["cv"])}" target="_blank" rel="noopener">{icon("download", 16)}<span>{rich(S.ui["download_cv"], lang)}</span></a>
           </div>
         </section>"""
     main = page_head(S, lang, "about", A["intro"]) + "\n" + wrap_body(inner)
