@@ -18,9 +18,9 @@
         "fr": "Quatre initiatives qui montrent comment je pilote un portefeuille IA : ce qu'on construit, ce qu'on passe à l'échelle, ce qu'on transfère — et ce qu'on arrête."
       },
       "note": {
-        "en": "Transferred the CV/MLOps platform to its best-fit owner (~€2M recurring savings, 70 reusable templates, ~90% effort reduction for ~100 data scientists) and closed the forecasting platform after ROI review (~€1.5M savings).",
-        "es": "Transferí la plataforma de visión por computador / MLOps a su mejor propietario (~2M€ de ahorro recurrente, 70 plantillas reutilizables, ~90% menos esfuerzo para ~100 científicos de datos) y cerré la plataforma de forecasting tras una revisión de ROI (~1,5M€ de ahorro).",
-        "fr": "J'ai transféré la plateforme vision par ordinateur / MLOps à son meilleur propriétaire (~2M€ d'économies récurrentes, 70 templates réutilisables, ~90% d'effort en moins pour ~100 data scientists) et fermé la plateforme de forecasting après une revue de ROI (~1,5M€ d'économies)."
+        "en": "Two decisions, €3.5M+ in recurring savings: I transferred the CV/MLOps platform to its best-fit owner (~€2M) and closed the forecasting platform after an ROI review (~€1.5M). Standardising the CV platform on 70 reusable templates cut the effort per new project by ~90% for its ~100 users: BASF's data scientists, not my team.",
+        "es": "Dos decisiones, más de 3,5M€ de ahorro recurrente: transferí la plataforma de visión por computador / MLOps a su mejor propietario (~2M€) y cerré la plataforma de forecasting tras una revisión de ROI (~1,5M€). Estandarizar la plataforma de visión por computador con 70 plantillas reutilizables redujo ~90% el esfuerzo por proyecto nuevo para sus ~100 usuarios: los científicos de datos de BASF, no mi equipo.",
+        "fr": "Deux décisions, plus de 3,5M€ d'économies récurrentes : j'ai transféré la plateforme vision par ordinateur / MLOps à son meilleur propriétaire (~2M€) et fermé la plateforme de forecasting après une revue de ROI (~1,5M€). La standardisation de la plateforme de vision par ordinateur autour de 70 templates réutilisables a réduit d'environ 90% l'effort par nouveau projet pour ses ~100 utilisateurs : les data scientists de BASF, pas mon équipe."
       },
       "items": [
         {
@@ -62,9 +62,9 @@
             }
           ],
           "metric": {
-            "en": "~€2M recurring savings · 70 templates · ~90% effort reduction for ~100 data scientists",
-            "es": "~2M€ de ahorro recurrente · 70 plantillas · ~90% menos esfuerzo para ~100 científicos de datos",
-            "fr": "~2M€ d'économies récurrentes · 70 templates · ~90% d'effort en moins pour ~100 data scientists"
+            "en": "~€2M recurring savings from the transfer · 70 templates · ~90% less effort per new project for ~100 platform users",
+            "es": "~2M€ de ahorro recurrente por la transferencia · 70 plantillas · ~90% menos esfuerzo por proyecto nuevo para ~100 usuarios de la plataforma",
+            "fr": "~2M€ d'économies récurrentes grâce au transfert · 70 templates · ~90% d'effort en moins par nouveau projet pour ~100 utilisateurs de la plateforme"
           },
           "links": []
         },
@@ -96,9 +96,9 @@
           ],
           "points": [],
           "metric": {
-            "en": "~€1.5M savings from the closure decision",
-            "es": "~1,5M€ de ahorro derivados de la decisión de cierre",
-            "fr": "~1,5M€ d'économies issues de la décision de fermeture"
+            "en": "~€1.5M recurring savings from the closure decision",
+            "es": "~1,5M€ de ahorro recurrente derivados de la decisión de cierre",
+            "fr": "~1,5M€ d'économies récurrentes issues de la décision de fermeture"
           },
           "links": []
         },
@@ -182,94 +182,6 @@
           "pubs": [
             "gomo-ismb",
             "eppo-frontiers"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "venture",
-      "title": {
-        "en": "Entrepreneurship",
-        "es": "Emprendimiento",
-        "fr": "Entrepreneuriat"
-      },
-      "items": [
-        {
-          "id": "vigia",
-          "icon": "briefcase",
-          "badge": {
-            "en": "Closed beta",
-            "es": "Beta cerrada",
-            "fr": "Bêta fermée"
-          },
-          "title": {
-            "en": "Proyecto Vigía — Spain",
-            "es": "Proyecto Vigía — España",
-            "fr": "Proyecto Vigía — Espagne"
-          },
-          "subtitle": {
-            "en": "Co-founder (50%) & Sole Developer",
-            "es": "Cofundador (50%) y único desarrollador",
-            "fr": "Cofondateur (50%) & seul développeur"
-          },
-          "dates": {
-            "en": "2026 – Present",
-            "es": "2026 – Actualidad",
-            "fr": "2026 – Aujourd'hui"
-          },
-          "short": {
-            "en": "B2B marketplace for a regulated Spanish services sector, built end to end and now in closed beta.",
-            "es": "Marketplace B2B para un sector de servicios regulado en España, construido de extremo a extremo y ahora en beta cerrada.",
-            "fr": "Marketplace B2B pour un secteur de services réglementé en Espagne, construit de bout en bout et désormais en bêta fermée."
-          },
-          "body": [
-            {
-              "en": "Co-founded and single-handedly designed and built, end to end, a B2B marketplace platform for a regulated Spanish services sector: Java/Spring Boot backend, React/TypeScript frontend, Keycloak-based identity and access management, geospatial PostgreSQL/PostGIS, document-processing pipeline with OCR, GDPR-compliant data handling, and Verifactu-compliant e-invoicing — from architecture through production deployment.",
-              "es": "Cofundé y diseñé y desarrollé yo solo, de extremo a extremo, un marketplace B2B para un sector de servicios regulado en España: backend en Java/Spring Boot, frontend en React/TypeScript, gestión de identidad y accesos con Keycloak, datos geoespaciales en PostgreSQL/PostGIS, pipeline de procesamiento documental con OCR, tratamiento de datos conforme al RGPD y facturación electrónica conforme a Verifactu, desde la arquitectura hasta el despliegue en producción.",
-              "fr": "Cofondateur, j'ai conçu et développé seul, de bout en bout, une marketplace B2B pour un secteur de services réglementé en Espagne : backend Java/Spring Boot, frontend React/TypeScript, gestion des identités et des accès avec Keycloak, données géospatiales PostgreSQL/PostGIS, pipeline de traitement documentaire avec OCR, traitement des données conforme au RGPD et facturation électronique conforme à Verifactu — de l'architecture jusqu'au déploiement en production."
-            }
-          ],
-          "points": [
-            {
-              "en": "Took the platform from architecture to closed beta solo in ~3 months (June–September 2026), using AI-assisted development tooling (Claude Code) to accelerate delivery; now collecting structured feedback from the closed-beta cohort ahead of a planned public launch.",
-              "es": "Llevé la plataforma de la arquitectura a la beta cerrada yo solo en ~3 meses (junio–septiembre de 2026), con herramientas de desarrollo asistido por IA (Claude Code) para acelerar la entrega; ahora recojo feedback estructurado de la cohorte de la beta antes del lanzamiento público previsto.",
-              "fr": "J'ai mené seul la plateforme de l'architecture à la bêta fermée en ~3 mois (juin–septembre 2026), avec des outils de développement assisté par IA (Claude Code) pour accélérer la livraison ; je recueille désormais des retours structurés auprès de la cohorte de bêta avant un lancement public prévu."
-            },
-            {
-              "en": "Conducted a self-led security review of the platform, identifying and remediating several vulnerabilities before the beta launch.",
-              "es": "Realicé una revisión de seguridad propia de la plataforma, identificando y corrigiendo varias vulnerabilidades antes del lanzamiento de la beta.",
-              "fr": "J'ai mené moi-même une revue de sécurité de la plateforme, en identifiant et corrigeant plusieurs vulnérabilités avant le lancement de la bêta."
-            },
-            {
-              "en": "Optimised infrastructure cost by architecting on ARM-based cloud instances (Hetzner), balancing performance against a bootstrapped budget without compromising reliability.",
-              "es": "Optimicé el coste de infraestructura con una arquitectura sobre instancias cloud ARM (Hetzner), equilibrando rendimiento y un presupuesto bootstrapped sin comprometer la fiabilidad.",
-              "fr": "J'ai optimisé le coût d'infrastructure en architecturant sur des instances cloud ARM (Hetzner), en équilibrant performance et budget bootstrappé sans compromettre la fiabilité."
-            },
-            {
-              "en": "Evaluating monetisation models — transaction-based commission versus a premium subscription tier — to shape the platform's go-to-market approach.",
-              "es": "Evalúo modelos de monetización (comisión por transacción frente a una suscripción premium) para definir la estrategia de salida al mercado de la plataforma.",
-              "fr": "J'évalue les modèles de monétisation — commission par transaction ou abonnement premium — pour définir l'approche go-to-market de la plateforme."
-            }
-          ],
-          "metric": {
-            "en": "Architecture to closed beta in ~3 months, solo",
-            "es": "De la arquitectura a la beta cerrada en ~3 meses, en solitario",
-            "fr": "De l'architecture à la bêta fermée en ~3 mois, seul"
-          },
-          "access": {
-            "en": "Access requires invitation credentials.",
-            "es": "El acceso requiere credenciales de invitación.",
-            "fr": "L'accès nécessite des identifiants d'invitation."
-          },
-          "links": [
-            {
-              "label": {
-                "en": "vigiaprl.es ↗",
-                "es": "vigiaprl.es ↗",
-                "fr": "vigiaprl.es ↗"
-              },
-              "url": "https://vigiaprl.es"
-            }
           ]
         }
       ]
@@ -400,6 +312,94 @@
           "links": [],
           "pubs": [
             "eppo-frontiers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "venture",
+      "title": {
+        "en": "Side project",
+        "es": "Proyecto paralelo",
+        "fr": "Projet parallèle"
+      },
+      "items": [
+        {
+          "id": "vigia",
+          "icon": "briefcase",
+          "badge": {
+            "en": "Closed beta",
+            "es": "Beta cerrada",
+            "fr": "Bêta fermée"
+          },
+          "title": {
+            "en": "Proyecto Vigía — Spain",
+            "es": "Proyecto Vigía — España",
+            "fr": "Proyecto Vigía — Espagne"
+          },
+          "subtitle": {
+            "en": "Co-founder & sole developer, in my own time",
+            "es": "Cofundador y único desarrollador, en mi tiempo libre",
+            "fr": "Cofondateur & seul développeur, sur mon temps libre"
+          },
+          "dates": {
+            "en": "2026 – Present",
+            "es": "2026 – Actualidad",
+            "fr": "2026 – Aujourd'hui"
+          },
+          "short": {
+            "en": "A side project that shows I still build product myself: a B2B marketplace for a regulated Spanish services sector, built end to end and now in closed beta.",
+            "es": "Un proyecto paralelo que demuestra que sigo construyendo producto yo mismo: un marketplace B2B para un sector de servicios regulado en España, construido de extremo a extremo y ahora en beta cerrada.",
+            "fr": "Un projet parallèle qui montre que je construis encore du produit moi-même : un marketplace B2B pour un secteur de services réglementé en Espagne, construit de bout en bout et désormais en bêta fermée."
+          },
+          "body": [
+            {
+              "en": "Co-founded and single-handedly designed and built, end to end, a B2B marketplace platform for a regulated Spanish services sector: Java/Spring Boot backend, React/TypeScript frontend, Keycloak-based identity and access management, geospatial PostgreSQL/PostGIS, document-processing pipeline with OCR, GDPR-compliant data handling, and Verifactu-compliant e-invoicing — from architecture through production deployment.",
+              "es": "Cofundé y diseñé y desarrollé yo solo, de extremo a extremo, un marketplace B2B para un sector de servicios regulado en España: backend en Java/Spring Boot, frontend en React/TypeScript, gestión de identidad y accesos con Keycloak, datos geoespaciales en PostgreSQL/PostGIS, pipeline de procesamiento documental con OCR, tratamiento de datos conforme al RGPD y facturación electrónica conforme a Verifactu, desde la arquitectura hasta el despliegue en producción.",
+              "fr": "Cofondateur, j'ai conçu et développé seul, de bout en bout, une marketplace B2B pour un secteur de services réglementé en Espagne : backend Java/Spring Boot, frontend React/TypeScript, gestion des identités et des accès avec Keycloak, données géospatiales PostgreSQL/PostGIS, pipeline de traitement documentaire avec OCR, traitement des données conforme au RGPD et facturation électronique conforme à Verifactu — de l'architecture jusqu'au déploiement en production."
+            }
+          ],
+          "points": [
+            {
+              "en": "Took the platform from architecture to closed beta solo in ~3 months (June–September 2026), using AI-assisted development tooling (Claude Code) to accelerate delivery; now collecting structured feedback from the closed-beta cohort ahead of a planned public launch.",
+              "es": "Llevé la plataforma de la arquitectura a la beta cerrada yo solo en ~3 meses (junio–septiembre de 2026), con herramientas de desarrollo asistido por IA (Claude Code) para acelerar la entrega; ahora recojo feedback estructurado de la cohorte de la beta antes del lanzamiento público previsto.",
+              "fr": "J'ai mené seul la plateforme de l'architecture à la bêta fermée en ~3 mois (juin–septembre 2026), avec des outils de développement assisté par IA (Claude Code) pour accélérer la livraison ; je recueille désormais des retours structurés auprès de la cohorte de bêta avant un lancement public prévu."
+            },
+            {
+              "en": "Conducted a self-led security review of the platform, identifying and remediating several vulnerabilities before the beta launch.",
+              "es": "Realicé una revisión de seguridad propia de la plataforma, identificando y corrigiendo varias vulnerabilidades antes del lanzamiento de la beta.",
+              "fr": "J'ai mené moi-même une revue de sécurité de la plateforme, en identifiant et corrigeant plusieurs vulnérabilités avant le lancement de la bêta."
+            },
+            {
+              "en": "Optimised infrastructure cost by architecting on ARM-based cloud instances (Hetzner), balancing performance against a bootstrapped budget without compromising reliability.",
+              "es": "Optimicé el coste de infraestructura con una arquitectura sobre instancias cloud ARM (Hetzner), equilibrando rendimiento y un presupuesto bootstrapped sin comprometer la fiabilidad.",
+              "fr": "J'ai optimisé le coût d'infrastructure en architecturant sur des instances cloud ARM (Hetzner), en équilibrant performance et budget bootstrappé sans compromettre la fiabilité."
+            },
+            {
+              "en": "Evaluating monetisation models — transaction-based commission versus a premium subscription tier — to shape the platform's go-to-market approach.",
+              "es": "Evalúo modelos de monetización (comisión por transacción frente a una suscripción premium) para definir la estrategia de salida al mercado de la plataforma.",
+              "fr": "J'évalue les modèles de monétisation — commission par transaction ou abonnement premium — pour définir l'approche go-to-market de la plateforme."
+            }
+          ],
+          "metric": {
+            "en": "Architecture to closed beta in ~3 months, solo",
+            "es": "De la arquitectura a la beta cerrada en ~3 meses, en solitario",
+            "fr": "De l'architecture à la bêta fermée en ~3 mois, seul"
+          },
+          "access": {
+            "en": "Access requires invitation credentials.",
+            "es": "El acceso requiere credenciales de invitación.",
+            "fr": "L'accès nécessite des identifiants d'invitation."
+          },
+          "links": [
+            {
+              "label": {
+                "en": "vigiaprl.es ↗",
+                "es": "vigiaprl.es ↗",
+                "fr": "vigiaprl.es ↗"
+              },
+              "url": "https://vigiaprl.es"
+            }
           ]
         }
       ]

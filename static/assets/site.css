@@ -674,3 +674,28 @@ details.proj[open] .proj-chev { transform: rotate(180deg); }
 .glance-what strong a { color: inherit; }
 .glance-what strong a:hover { color: var(--accent); }
 @media (max-width: 479.98px) { .ach { grid-template-columns: 1fr; } }
+
+/* ---------- Contact-first hero, impact breakdown, "where I fit" card ---------- */
+.quiet-link {
+  display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.35rem;
+  font-size: 0.9rem; font-weight: 500; color: var(--accent-soft);
+}
+.quiet-link:hover { color: var(--accent); }
+.impact-note { margin-top: 0.5rem; font-size: 0.8rem; line-height: 1.45; color: var(--muted); }
+.impact-note li + li { margin-top: 0.1rem; }
+.tile-lead .impact-note { position: relative; font-size: 0.86rem; color: rgba(255, 255, 255, 0.78); }
+.fit { padding: 1.25rem 0 0; }
+.fit-card { display: grid; gap: 1.1rem 2rem; align-items: center; padding: 1.35rem 1.5rem; }
+@media (min-width: 900px) { .fit-card { grid-template-columns: minmax(0, 1fr) auto; } }
+.fit-title { font: 700 1.15rem/1.3 var(--font-head); letter-spacing: -0.01em; color: var(--ink); }
+.fit-areas { display: flex; flex-wrap: wrap; gap: 0.45rem 0.5rem; margin-top: 0.7rem; }
+.fit-areas li {
+  padding: 0.3rem 0.75rem; border-radius: 999px; background: var(--accent-tint); color: var(--accent);
+  border: 1px solid rgba(31, 58, 95, 0.12); font-size: 0.86rem; font-weight: 600; line-height: 1.4;
+}
+.fit-place { margin-top: 0.7rem; color: var(--muted); font-size: 0.9rem; }
+.fit-actions { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+@media print {
+  .tile-lead .impact-note { color: var(--muted); }
+  .fit { padding-top: 0.75rem; }
+}
